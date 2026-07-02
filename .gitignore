@@ -1,0 +1,7 @@
+.codex/.agents-pending-restart
+
+# Local/editor noise
+.DS_Store
+Thumbs.db
+*.log
+
