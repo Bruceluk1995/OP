@@ -1,0 +1,4 @@
+interface:
+  display_name: "JP Josei Fantasy Plan"
+  short_description: "Plan Japanese female fantasy romance"
+  default_prompt: "Use $jp-josei-fantasy-plan to design a Japanese female-audience fantasy romance premise."

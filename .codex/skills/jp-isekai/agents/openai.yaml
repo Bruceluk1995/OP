@@ -1,0 +1,4 @@
+interface:
+  display_name: "JP Isekai Suite"
+  short_description: "Router for Japanese male isekai workflows"
+  default_prompt: "Use $jp-isekai to route a Japanese male-audience isekai writing task."

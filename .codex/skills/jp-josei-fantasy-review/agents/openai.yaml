@@ -1,0 +1,4 @@
+interface:
+  display_name: "JP Josei Fantasy Review"
+  short_description: "Review Japanese female fantasy romance drafts"
+  default_prompt: "Use $jp-josei-fantasy-review to check a Japanese female-audience fantasy romance draft."

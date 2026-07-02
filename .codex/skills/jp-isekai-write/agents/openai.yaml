@@ -1,0 +1,4 @@
+interface:
+  display_name: "JP Isekai Write"
+  short_description: "Draft Japanese male isekai webnovel episodes"
+  default_prompt: "Use $jp-isekai-write to draft a first-person Japanese isekai episode."

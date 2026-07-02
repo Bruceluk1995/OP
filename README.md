@@ -17,6 +17,14 @@ Open this folder in Codex, then start a new thread with:
 
 If `/skills` does not show `$story`, `$jp-isekai`, or related writing skills, install or copy the Codex skills into that computer's `C:\Users\<your-user>\.codex\skills` folder, then open a new Codex thread.
 
+This repo includes the project skills under `.codex/skills`. On Windows, install them into the local Codex registry with:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install-codex-skills.ps1
+```
+
+After the script finishes, restart Codex and open a new thread. Existing threads may still show an old `/skills` registry.
+
 ## Important files
 
 - `AGENTS.md` - project routing and collaboration rules.

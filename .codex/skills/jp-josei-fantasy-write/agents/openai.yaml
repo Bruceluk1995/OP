@@ -1,0 +1,4 @@
+interface:
+  display_name: "JP Josei Fantasy Write"
+  short_description: "Write Japanese female fantasy romance prose"
+  default_prompt: "Use $jp-josei-fantasy-write to draft Japanese female-audience fantasy romance prose."
