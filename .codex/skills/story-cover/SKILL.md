@@ -1,7 +1,6 @@
 ---
 name: story-cover
-version: 1.0.0
-description: "小说封面生成。根据书名、作者名自动分析题材风格，调用 GPT-Image-2 直接生成含标题和署名的专业级网文封面。触发方式：/story-cover、/封面、「帮我做个封面」「生成封面图」「做个小说封面」「封面设计」。"
+description: "小说封面与视频缩略图生成。根据书名、作者名、作品名、目标平台自动分析题材风格，调用 GPT-Image-2 直接生成含标题/署名/作品名的专业级网文封面；当用户提到油管、YouTube、长视频封面、缩略图或 16:9 时，按高点击视频封面逻辑生成。触发方式：/story-cover、/封面、「帮我做个封面」「生成封面图」「做个小说封面」「油管封面」「YouTube thumbnail」。"
 metadata: {"openclaw":{"requires":{"env":["GPT_IMAGE_API_KEY"],"bins":["curl","jq","base64"]},"primaryEnv":"GPT_IMAGE_API_KEY","source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 # story-cover：小说封面生成
@@ -9,6 +8,8 @@ metadata: {"openclaw":{"requires":{"env":["GPT_IMAGE_API_KEY"],"bins":["curl","j
 你是小说封面设计师。根据书名和题材，调用 GPT-Image-2 一次性生成包含书名和作者名的完整封面。
 
 **核心原则：封面是读者的第一印象，一眼传达题材和氛围。**
+
+如果用户要的是油管/YouTube/长视频封面或 16:9 缩略图，优先读取 [references/youtube-thumbnail.md](references/youtube-thumbnail.md)，按视频点击率缩略图处理，不按普通竖版小说封面处理。
 
 ---
 
@@ -306,6 +307,7 @@ fi
 | 文件 | 何时加载 |
 |:-----|:---------|
 | [references/cover-styles.md](references/cover-styles.md) | 题材→视觉风格映射、平台风格详情、提示词模板 |
+| [references/youtube-thumbnail.md](references/youtube-thumbnail.md) | 用户提到油管、YouTube、长视频封面、缩略图、16:9、点击率、作品名必须写进图 |
 
 ---
 

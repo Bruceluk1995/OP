@@ -1,6 +1,6 @@
 ---
 name: jp-isekai-write
-description: "Write Japanese male-audience isekai prose. Use for drafting or rewriting なろう系/カクヨム風 Japanese first-person episodes, 1万-2万字 Japanese webnovel installments, male protagonist RPG fantasy, cheat-skill slow life, adventurer guild/dungeon arcs, humorous inner monologue, and Japanese localization of Chinese webnovel settings without Chinese fantasy terminology."
+description: "Write and package Japanese male-audience isekai episodes. Use for drafting or rewriting なろう系/カクヨム風 Japanese first-person episodes, 1万-2万字 installments, male protagonist RPG fantasy, cheat-skill slow life, adventurer guild/dungeon arcs, humorous inner monologue, Chinese-to-Japanese isekai localization without xianxia terms, and project-bound episode folders with title files, character prompts, and 16:9 YouTube thumbnail covers."
 ---
 
 # JP Isekai Write
@@ -11,6 +11,7 @@ Write Japanese web-novel episodes for male-audience isekai. Use this for final p
 
 - Read `references/style-guide.md` before writing prose.
 - Read `references/terminology.md` before writing if the source material contains Chinese fantasy terms or the user asks to avoid Chinese elements.
+- Read `references/episode-delivery.md` when the user wants a finished episode, long-form serialization, per-episode files, character prompts, covers/thumbnails, YouTube, or project-bound output.
 
 ## Drafting Workflow
 
@@ -30,11 +31,15 @@ Write Japanese web-novel episodes for male-audience isekai. Use this for final p
    - Use short inner-commentary beats for humor.
    - Keep paragraphs readable for web serialization.
    - Do not insert Chinese names, cultivation terms, sect terms, or Chinese monster taxonomy.
-4. Save long outputs to a file when the result would be too large for chat. Report the absolute path and character count.
-5. Validate:
+4. Save long outputs to a file when the result would be too large for chat. For project-bound episodes, create the per-episode delivery folder described in `references/episode-delivery.md`.
+5. Package delivery assets when applicable:
+   - `正文.md`, `标题.md`, `角色提示词.md`, `封面.md`, and an actual generated `封面.png`.
+   - Continue syncing a flat `episodes/episode_XXX_ja.md` only for compatibility when the project already uses it.
+6. Validate:
    - Count Japanese characters with Python.
    - Scan for banned Chinese leakage using `references/terminology.md`.
    - If below target by more than 10%, expand existing dense beats rather than adding random scenes.
+   - If a cover is expected, verify `封面.png` exists, is 16:9, includes the episode click-title and the series/work title, and is an actual image file rather than only a prompt.
 
 ## Quality Bar
 
