@@ -51,13 +51,32 @@ If a previous local convention uses `正文.md`, `标题.md`, `角色提示词.m
 The cover means an actual image file, not only a prompt.
 
 - Use 16:9 horizontal composition for YouTube long videos. Prefer 1280x720 when doing local post-processing.
+- Directly generate the thumbnail with Japanese title text inside the image, following the `jp-isekai-write` episode-cover workflow. Do not use a no-text background plus local text overlay unless the user explicitly asks for it or a generated text layer is unusable and the user approves repair.
+- Do not force a left black text panel. Use full-image high-CTR composition: big emotional faces, one clear conflict object, readable title blocks, and a smaller series title banner or corner label.
 - Design for mobile readability: huge faces, one clear conflict, strong emotion, strong contrast, and short large text.
-- Use a clean negative-space area for title text. Do not place key faces or hands under the text.
 - Prefer a thumbnail hook over a light-novel poster: close-up heroine + male lead + visible threat beats full-body beauty shots.
 - Keep the cover copy to the episode title's core conflict. Avoid cramming the full series title if it becomes tiny.
-- Generate a no-text background first when possible, inspect it, then overlay exact Japanese text locally with a real Japanese font so the title does not become pseudo-text.
 - Regenerate the background if it looks like a pretty book cover but would not get clicks as a YouTube thumbnail.
 - Back up existing covers before overwriting unless the user explicitly wants replacement.
+
+Direct Image2 prompt pattern:
+
+```text
+Create a premium 16:9 YouTube long-form thumbnail for a Japanese female-audience fantasy romance story video. It must look like a high-performing Japanese anime fantasy thumbnail: beautiful emotional faces, romantic suspense, dramatic lighting, ornate readable Japanese title design, strong contrast, clickable composition.
+
+The image MUST include BOTH text layers below, in Japanese, with no other text, no logo, no watermark, no gibberish:
+
+Main large click title text:
+「<click title line 1>」
+「<click title line 2>」
+
+Series/work title in a smaller bottom banner or corner label:
+『<series title>』
+
+Visual concept: <heroine emotion>, <male lead presence>, <one conflict object or pressure source>. Keep the composition uncluttered, with text integrated into the art rather than isolated in a blank black panel.
+
+Avoid: text mistakes, extra text, small unreadable typography, cluttered group portrait, light-novel poster layout, Chinese xianxia, modern objects, oversexualized clothing, horror, gore, watermark, logo.
+```
 
 ## Handoff
 
