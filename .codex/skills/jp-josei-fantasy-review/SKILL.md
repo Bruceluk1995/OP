@@ -24,6 +24,14 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
    - Passive heroine who only waits to be rescued.
    - Male lead's love reads as generic possession rather than specific recognition.
    - Zamaa payoff lacks evidence, social logic, or emotional clarity.
+   - Episode has no full episode blueprint logic: unclear target emotion, episode position, core payoff, cost/risk, dense/sparse beat split, or ending hook.
+   - Episode 2+ opens as a reset instead of continuing the previous episode's unresolved hook.
+   - First sentence is scenery, abstract emotion, destiny, quiet morning, or generic pain instead of a concrete social/emotional bomb.
+   - Mid-episode has two or more 800-1200 character stretches without evidence, public pressure, heroine choice, male-lead action, zamaa setup/payoff, romantic recognition, legal/family/church consequence, or next-hook escalation.
+   - Dense beats are not denser than transitions; the prose spends similar weight on etiquette/scenery/sadness and payoff.
+   - Prose is padded with vague AI-flavored adjectives or summary paragraphs instead of documents, witnesses, choices, etiquette, contracts, and consequences.
+   - Draft fails JP anti-AI gates: generic destiny/light/silence texture, author explanation, stock summary ending, uniform rhythm, over-polished dialogue, or emotional lines without document/action/social consequence.
+   - Saved file has not been checked with local `check-ai-patterns.js` / `check-degeneration.js`, or blocking findings were ignored.
 3. Check genre fit:
    - Clear heroine wound and agency.
    - Tag promise appears early.

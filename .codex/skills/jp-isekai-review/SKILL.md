@@ -23,6 +23,14 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
    - Japanese prose that reads like machine translation or Chinese sentence order.
    - Cheat rules unclear or not repeatable.
    - Episode lacks opening hook, practical payoff, or next hook.
+   - Episode has no full episode blueprint logic: unclear target emotion, episode position, core payoff, cost/risk, dense/sparse beat split, or ending hook.
+   - Episode 2+ opens as a reset instead of continuing the previous episode's unresolved hook.
+   - First sentence is atmosphere, abstract emotion, destiny, scenery, or generic inner monologue instead of a concrete plot bomb.
+   - Mid-episode has two or more 800-1200 character stretches without concrete problem, skill experiment, public reaction, cost/reward/status consequence, comic reversal, object/monster behavior, or meaningful choice.
+   - Dense beats are not denser than transitions; the prose spends similar weight on travel/mood and payoff.
+   - Prose is padded with vague AI-flavored adjectives or summary paragraphs instead of scene-level objects, choices, witnesses, and consequences.
+   - Draft fails JP anti-AI gates: generic destiny/light/silence texture, author explanation, stock summary ending, uniform rhythm, over-polished dialogue, or emotional lines without object/action/consequence.
+   - Saved file has not been checked with local `check-ai-patterns.js` / `check-degeneration.js`, or blocking findings were ignored.
 3. Check genre fit:
    - Male-audience protagonist agency.
    - Social unfairness or pressure.

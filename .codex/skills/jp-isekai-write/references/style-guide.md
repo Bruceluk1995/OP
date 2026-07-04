@@ -11,12 +11,19 @@ Use before drafting prose.
 
 ## Web Prose Rhythm
 
-- For episode 2 and later, place a 1-2 sentence "3-second recap hook" immediately after the title: remind new viewers what just happened, name the current trouble, and add one protagonist-style complaint. Keep it as prose, not a recap label.
-- Hook within the first 300-500 Japanese characters.
+- Before prose, create the `episode-blueprint.md` working blueprint: target emotion, episode position, first-sentence bomb, previous-episode bridge, core payoff, cost/risk, dense/sparse beat budget, and ending hook.
+- Keep `anti-ai-gates.md` active while drafting: generic texture, author explanation, equal-weight paragraphs, and summary emotion should be fixed before delivery, not left for later.
+- For episode 2 and later, do not restart the story. The first screen must continue the previous episode's unresolved danger, reward, shame, debt, promise, or discovery.
+- The first sentence must be a plot-bomb sentence: a concrete event, accusation, choice, reveal, or danger. Do not open with scenery, abstract emotion, destiny, quiet morning, or "I never imagined..." unless that sentence also contains the concrete bomb.
+- Immediately after the plot-bomb sentence, give a short previous-episode recap bridge in prose: what just happened, what problem remains, and why the protagonist must act now.
+- Hook within the first 150-250 Japanese characters for push-video narration. The older 300-500 character hook window is only acceptable for ordinary webnovel chapters, not recap/push episodes.
 - Keep paragraphs short enough for mobile reading.
 - Mix short punchline paragraphs with longer action/explanation paragraphs.
 - Use concrete objects: rusty pan lid, old collar, guild tag, copper coins, feed sack, broken tool.
 - Avoid overexplaining the system before it affects a scene.
+- Cut generic AI filler: vague adjectives, repeated "chest tightened" beats, destiny/light/silence metaphors, decorative scenery, and moral summaries. Replace each with an object, action, line of dialogue, price, wound, document, witness, monster, guild rule, or failed experiment.
+- Expand length by deepening dense beats from the blueprint, not by adding new mood paragraphs. Transitions stay sparse.
+- File deliveries must run the local anti-AI scripts from this skill when possible; blocking findings are fixed before handoff.
 
 ## Episode Structure
 

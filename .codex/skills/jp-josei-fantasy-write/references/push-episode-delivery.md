@@ -2,6 +2,8 @@
 
 Use this when the user wants Japanese female-audience fantasy romance as anime-style 推文 / recap-like episodes, especially with per-episode files, character prompts, or YouTube covers.
 
+This reference governs push-format delivery, opening retention, folders, covers, and handoff. Use it together with `episode-blueprint.md`, which governs the whole episode's emotion target, dense/sparse beats, payoff, cost, and ending hook, and `anti-ai-gates.md`, which governs final prose cleanup and script-based checks.
+
 ## Language Contract
 
 - Use the user's language for coordination, questions, and status updates.
@@ -12,10 +14,57 @@ Use this when the user wants Japanese female-audience fantasy romance as anime-s
 
 - Treat each episode as a first-person viewing/narration experience, not a standard chapter summary.
 - Default viewpoint for 推文 episodes: `私`, close to the heroine's fear, calculation, shame, relief, and attraction.
-- Open with a 1-2 sentence hook that lets a new viewer understand the immediate danger or humiliation.
+- Open with the whole episode's biggest social/emotional bomb in sentence one. Use accusation, annulment, witness testimony, betrayal, contract reveal, curse symptom, public choice, debt, trial, inheritance theft, or male-lead intervention. Do not open with scenery, weather, abstract mood, or a soft "I never imagined..." line unless the same sentence contains the concrete bomb.
+- Immediately after sentence one, give a previous-episode bridge in prose: what happened last episode, what evidence/object/person remains unresolved, and why the heroine must act now. New viewers should understand the last hook by line five.
 - Keep the episode moving through scenes: pressure -> heroine choice -> male lead action -> social consequence -> emotional aftertaste -> next hook.
+- Build the full `episode-blueprint.md` before prose so the episode has a clear position, dense/sparse beat budget, concrete payoff, cost, and ending hook.
 - If the user sets a target such as 2万字 per episode, preserve that as the active project target until changed.
 - Do not pad with generic adjectives, repeated sighing, decorative scenery, or abstract declarations. Use documents, doors, witnesses, names, hands, contracts, etiquette, injuries, rumors, and concrete gestures.
+- Before handoff, run the `anti-ai-gates.md` final self-check. If the prose is saved to a file, run the local anti-AI scripts and fix blocking findings.
+
+## Mandatory Opening Order
+
+For episode 2 or later, write the first 250-500 Japanese characters in this order:
+
+1. **Plot-bomb first sentence.** Put the full pressure in sentence one: public accusation, broken engagement, false saint claim, cursed prince collapse, contract term, family betrayal, or witness reveal.
+2. **Previous-episode bridge.** In 1-3 sentences, name what happened last episode and what remains unresolved. Use names, documents, witnesses, titles, injuries, contracts, rumors, or exact promises.
+3. **Now-problem.** Name the immediate social or emotional obstacle forcing the current scene.
+4. **Heroine reaction.** Give one close first-person reaction tied to a concrete body action or decision, not vague sadness.
+5. **Scene entry.** Move into dialogue, a document, a door opening, a witness stepping forward, or the male lead taking action.
+
+Do not label these parts as "recap" or "summary" in the prose unless the user explicitly asks for script labels.
+
+## Anti-AI Push Prose
+
+Ban or heavily restrict:
+
+- abstract theme sentences
+- generic emotional adjectives without action
+- repeated sighs, trembling, tears, warmth, light, silence, destiny
+- "as if the world..." metaphors
+- paragraphs that only tell the reader the heroine is hurt, brave, beautiful, loved, or reborn
+- recap that says "many things happened" instead of naming the actual incident
+
+Prefer:
+
+- documents, seals, witness names, etiquette mistakes, seating order, titles, contracts, rumor source, injuries, debt, doors, gloves, letters, family ledgers, church records
+- dialogue that changes social status
+- heroine choices that cost something
+- male-lead recognition shown through a specific action, not generic praise
+- cause-effect bridges: because X happened last episode, Y is dangerous now, so the heroine chooses Z
+
+## Beat Density
+
+Every 800-1200 Japanese characters should contain at least one of:
+
+- new evidence
+- public pressure
+- heroine choice
+- male-lead action with social cost
+- zamaa setup or payoff
+- romantic recognition through behavior
+- legal/family/church/court consequence
+- next-hook escalation
 
 ## Title Format
 
