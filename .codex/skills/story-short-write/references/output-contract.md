@@ -153,7 +153,7 @@ Stage 6 内容写完后、`stages_completed[6]` append 前，跑三道检查：
 ```bash
 ls 拆文库/{书名}/   # 应有：原文/ 拆文报告.md 情节节点.md 写作手法.md _meta.json
 /story-short-write 拆文库/{书名}/
-# 通过：输出 8000+ 字同题材新短篇，prose 有源文对话节奏和画面感
+# 通过：输出 14,500+ 字同题材新短篇（用户明确指定短稿除外），prose 有源文对话节奏和画面感
 # 失败：写得像填空 / 或 short-write 找不到三个 markdown
 ```
 

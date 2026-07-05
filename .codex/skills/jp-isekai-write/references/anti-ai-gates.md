@@ -64,8 +64,20 @@ Use body/object behavior:
 - Sparse beats get one or two sentences.
 - Do not make every paragraph the same length.
 - Do not create a chain of tiny one-sentence paragraphs unless the scene is a pressure beat.
+- In a 15,000-character episode, do not use long quiet stretches as filler. Any long stretch must change, prepare, or pay off information, resource, risk, status, relationship, skill understanding, enemy pressure, objective, or next decision.
+- Delete paragraphs that only describe atmosphere, scenery, awe, loneliness, silence, light, destiny, or vague feelings without changing the state above.
 - If `scripts/check-ai-patterns.js` reports `period-stutter`, merge short fragments into a fuller action chain.
 - If it reports `long-paragraph`, split by new action, object, line of dialogue, or information turn.
+
+## Gate D2: No Pretty Dead Text
+
+For each suspect paragraph, ask:
+
+```text
+What changed because this paragraph exists?
+```
+
+Keep it only if the answer names a concrete change: a price is learned, a skill behaves differently, a witness reacts, a monster/tool/guild rule changes the plan, money/status/risk moves, or the protagonist makes a choice. If the answer is only "atmosphere", "beauty", "loneliness", "tension", or "style", cut it or rewrite it around an object/action/consequence.
 
 ## Gate E: Make Dialogue Human
 
@@ -123,6 +135,7 @@ Interpretation:
 
 - Did I remove abstract filler without deleting plot function?
 - Does every emotional line have an object, action, dialogue, body response, or consequence?
+- Does every long stretch in a long episode have a function beyond atmosphere, scenery, mood, or adjectives?
 - Are dense beats visibly denser than transitions?
 - Does the ending hook point to a concrete next action?
 - Did no engineering words, placeholders, or model refusal text leak into prose?

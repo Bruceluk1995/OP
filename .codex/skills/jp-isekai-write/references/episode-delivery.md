@@ -2,6 +2,8 @@
 
 Use this reference when an episode should be delivered as project files, especially for long-form Japanese isekai YouTube narration workflows.
 
+For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose, the default body target is 14,500-16,500 Japanese characters unless the user sets another length. Count the saved `正文.md` before handoff and keep expanding dense plot/progression beats if it is below 14,500.
+
 ## Folder Contract
 
 Create one folder per episode:
@@ -69,12 +71,16 @@ Avoid: ugly faces, cheap sticker text, text mistakes, extra text, random symbols
 
 ## Tracking
 
-After packaging, update `追踪/上下文.md` if it exists:
+After packaging a project-bound episode, update the project memory files described in `../../jp-isekai/references/project-memory.md`:
 
 - last completed episode/chapter
 - delivery folder path
 - cover status and any notable caveats
 - next episode outline status
+- new/advanced/resolved hooks in `追踪/伏笔.md`
+- event order in `追踪/时间线.md`
+- character state changes in `追踪/角色状态.md`
+- one generated-history record in `男频异世界知识库/generated-ledger.jsonl`
 ## Character Prompt Format
 
 Write `角色提示词.md` as direct, single-paragraph visual prompts, not field-by-field bullet sheets. Keep one heading per character, then one complete paragraph that can be pasted into an image/character generation tool.

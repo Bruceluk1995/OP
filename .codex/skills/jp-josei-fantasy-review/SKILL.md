@@ -11,6 +11,7 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
 
 - Read `references/review-checklist.md` before a full review.
 - Read `references/terminology.md` whenever checking Chinese-to-Japanese adaptation leakage.
+- If the draft or outline names a lane, read the best available benchmark/type-pack material before judging genre fit: project拆文, live benchmark card, project-local `女频幻想恋爱知识库/type-packs/{lane}.md`, then bundled `../jp-josei-fantasy-plan/references/type-packs/{lane}.md` as fallback.
 
 ## Review Workflow
 
@@ -19,6 +20,10 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
    - First person or third person.
    - Chapter length and platform style, if given.
 2. Check blocking issues first:
+   - Project-bound draft has no matching `大纲/细纲_第XXX章.md`, or the prose clearly ignores the available outline.
+   - Project-bound continuation did not read/update `追踪/上下文.md`, `追踪/伏笔.md`, `追踪/时间线.md`, or relevant `追踪/角色状态.md`.
+   - New concept/episode repeats a recent `女频幻想恋爱知识库/generated-ledger.jsonl` combination without changing at least two key fields.
+   - Project-bound outline names a subtype lane but the plan/prose used only generic josei fantasy rules and did not load the benchmark/type-pack priority chain.
    - Chinese fantasy institutions, xianxia terms, or Chinese sentence logic leaking into a Japanese fantasy-romance setting.
    - Male-audience progression systems overpowering romance and dignity recovery.
    - Passive heroine who only waits to be rescued.
@@ -28,6 +33,7 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
    - Episode 2+ opens as a reset instead of continuing the previous episode's unresolved hook.
    - First sentence is scenery, abstract emotion, destiny, quiet morning, or generic pain instead of a concrete social/emotional bomb.
    - Mid-episode has two or more 800-1200 character stretches without evidence, public pressure, heroine choice, male-lead action, zamaa setup/payoff, romantic recognition, legal/family/church consequence, or next-hook escalation.
+   - A 15,000-character episode uses length to pad mood, scenery, beauty, sadness, etiquette, or adjectives; long stretches can be deleted without changing evidence, social pressure, relationship, romance, cost, setup, aftershock, or next choice.
    - Dense beats are not denser than transitions; the prose spends similar weight on etiquette/scenery/sadness and payoff.
    - Prose is padded with vague AI-flavored adjectives or summary paragraphs instead of documents, witnesses, choices, etiquette, contracts, and consequences.
    - Draft fails JP anti-AI gates: generic destiny/light/silence texture, author explanation, stock summary ending, uniform rhythm, over-polished dialogue, or emotional lines without document/action/social consequence.
@@ -38,9 +44,12 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
    - Romantic tension grows through action, not only declarations.
    - Noble/court/church/family rules produce believable pressure.
    - Happy-ending direction remains visible even during abuse or revenge.
+   - The selected lane has its own visible engine: engagement evidence, villainess flags, saintess proof, contract clauses, craft products, palace/family records, loop flags, interspecies rules, strong-heroine action, or misunderstanding objects. Do not accept generic court romance as a replacement for the lane promise.
 4. Return:
    - Findings ordered by severity.
    - Concrete line or phrase examples if a draft file is available.
+   - Project-memory gaps: missing outline, stale tracking, missing ledger record, or repeated wound-romance-reversal engine.
+   - Density gaps: paragraphs or stretches that can be deleted without changing social/emotional story state.
    - A concise fix plan.
    - Optional rewritten sample only for the affected paragraph unless the user asks for a full rewrite.
 

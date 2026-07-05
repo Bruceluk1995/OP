@@ -1,0 +1,4 @@
+interface:
+  display_name: "Econ Finance Explainer"
+  short_description: "Economics and finance explainers"
+  default_prompt: "Use $econ-finance-explainer to draft a Japanese or English economics or finance explainer for a Japan, US, or Europe audience."

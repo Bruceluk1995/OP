@@ -71,8 +71,20 @@ Stronger:
 - Sparse beats get one or two sentences.
 - Do not make every paragraph the same length.
 - Do not let etiquette, scenery, or sadness receive the same weight as accusation, proof, or romantic recognition.
+- In a 15,000-character episode, do not use long quiet stretches as filler. Any long stretch must change, prepare, or pay off social/emotional story state: evidence, reputation, relationship, legal/family pressure, public position, heroine choice, male-lead recognition, antagonist risk, or next decision.
+- Delete paragraphs that only describe atmosphere, scenery, beauty, sadness, silence, light, destiny, or vague tenderness without changing the state above.
 - If `scripts/check-ai-patterns.js` reports `period-stutter`, merge short fragments into a fuller action chain.
 - If it reports `long-paragraph`, split by new action, object, line of dialogue, or social turn.
+
+## Gate D2: No Pretty Dead Text
+
+For each suspect paragraph, ask:
+
+```text
+What changed because this paragraph exists?
+```
+
+Keep it only if the answer names a concrete change: a document is used, a witness reacts, a title/status shifts, a contract term matters, the heroine chooses with cost, the male lead recognizes her through action, or the antagonist's risk changes. If the answer is only "atmosphere", "beauty", "sadness", "romance mood", or "style", cut it or rewrite it around a document/action/witness/consequence.
 
 ## Gate E: Make Dialogue Social
 
@@ -130,6 +142,7 @@ Interpretation:
 
 - Did I remove abstract filler without deleting evidence, romance, or zamaa function?
 - Does every emotional line have an object, action, dialogue, body response, or social consequence?
+- Does every long stretch in a long episode have a function beyond atmosphere, scenery, beauty, sadness, tenderness, or adjectives?
 - Are dense beats visibly denser than transitions?
 - Does the ending hook point to a concrete next witness, document, accusation, romantic question, or public choice?
 - Did no engineering words, placeholders, or model refusal text leak into prose?

@@ -1,6 +1,6 @@
 ---
 name: jp-isekai-review
-description: "Review Japanese male-audience isekai drafts for genre fit, localization, and readability. Use when checking なろう系/カクヨム風 prose, Japanese first-person isekai episodes, Chinese-to-Japanese adaptation drafts, banned Chinese fantasy term leakage, RPG terminology consistency, male-audience hooks, humor, slow-life payoff, and Japanese naturalness."
+description: "Review Japanese male-audience isekai drafts for genre fit, localization, and readability. Use when checking なろう系/カクヨム風 prose, Japanese first-person isekai episodes, battle leveling, monster grinding, dungeon boss fights, overpowered protagonist, OP ruler fantasy, 龙傲天, demon-lord/kingdom domination, drops/rank/status growth, Chinese-to-Japanese adaptation drafts, banned Chinese fantasy term leakage, RPG terminology consistency, male-audience hooks, humor, slow-life payoff, and Japanese naturalness."
 ---
 
 # JP Isekai Review
@@ -11,6 +11,7 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
 
 - Read `references/review-checklist.md` before a full review.
 - Read `references/terminology.md` whenever checking Chinese-to-Japanese adaptation leakage.
+- If the draft or outline declares a subtype lane, read the loaded project benchmark card or `对标/{lane}/` report first when available, then the matching `../jp-isekai-plan/references/type-packs/{lane}.md` as fallback, and review against that lane's required payoff loop.
 
 ## Review Workflow
 
@@ -19,14 +20,21 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
    - First-person or third-person.
    - Episode length target, if any.
 2. Check blocking issues first:
+   - Project-bound draft has no matching `大纲/细纲_第XXX章.md`, or the prose clearly ignores the available outline.
+   - Project-bound continuation did not read/update `追踪/上下文.md`, `追踪/伏笔.md`, `追踪/时间线.md`, or relevant `追踪/角色状态.md`.
+   - New concept/episode repeats a recent `男频异世界知识库/generated-ledger.jsonl` combination without changing at least two key fields.
    - Chinese fantasy terms or institutions leaking into a Japanese RPG fantasy setting.
    - Japanese prose that reads like machine translation or Chinese sentence order.
    - Cheat rules unclear or not repeatable.
    - Episode lacks opening hook, practical payoff, or next hook.
+   - Project-bound outline names a subtype lane but uses only generic isekai rules when a project拆文, dynamic benchmark card, project subtype note, or matching type pack should have been loaded.
+   - OP premise is only instant victory with no enemy misread, restraint, information gap, subordinate/faction pressure, public identity issue, reputation consequence, or larger-stage hook.
+   - Battle-upgrade premise drifts into only commerce, herbs, shopkeeping, travel, or comfort scenes without a monster/combat problem, tactical skill use, visible win/loss, or drop/rank/level/status consequence.
    - Episode has no full episode blueprint logic: unclear target emotion, episode position, core payoff, cost/risk, dense/sparse beat split, or ending hook.
    - Episode 2+ opens as a reset instead of continuing the previous episode's unresolved hook.
    - First sentence is atmosphere, abstract emotion, destiny, scenery, or generic inner monologue instead of a concrete plot bomb.
    - Mid-episode has two or more 800-1200 character stretches without concrete problem, skill experiment, public reaction, cost/reward/status consequence, comic reversal, object/monster behavior, or meaningful choice.
+   - A 15,000-character episode uses length to pad mood, scenery, travel, explanation, or adjectives; long stretches can be deleted without changing plot, pressure, relationship, cost, reward, setup, aftershock, or next choice.
    - Dense beats are not denser than transitions; the prose spends similar weight on travel/mood and payoff.
    - Prose is padded with vague AI-flavored adjectives or summary paragraphs instead of scene-level objects, choices, witnesses, and consequences.
    - Draft fails JP anti-AI gates: generic destiny/light/silence texture, author explanation, stock summary ending, uniform rhythm, over-polished dialogue, or emotional lines without object/action/consequence.
@@ -34,12 +42,17 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
 3. Check genre fit:
    - Male-audience protagonist agency.
    - Social unfairness or pressure.
+   - OP dominance loop if that is the chosen flavor: enemy/world misread, restrained decision, overwhelming reveal/command, witness/subordinate reaction, reputation/territory/faction consequence, stronger stage hook.
+   - Battle/progression loop if that is the chosen flavor: monster problem, skill under pressure, tactical adjustment, drop/rank/level/status result, stronger next threat.
+   - Exile/academy/Earth-commute/tamer/dungeon-master loops when chosen: each must have its own visible engine, not generic slow-life filler.
    - Optimization/crafting/status/guild/dungeon loop.
    - Comic inner commentary and reactions.
    - Slow-life desire vs escalating trouble if that is the chosen flavor.
 4. Return:
    - Findings ordered by severity.
    - Concrete line/phrase examples if a draft file is available.
+   - Project-memory gaps: missing outline, stale tracking, missing ledger record, or repeated engine.
+   - Density gaps: paragraphs or stretches that can be deleted without changing plot state.
    - A concise fix plan.
    - Optional rewritten sample only for the affected paragraph unless the user asks for a full rewrite.
 

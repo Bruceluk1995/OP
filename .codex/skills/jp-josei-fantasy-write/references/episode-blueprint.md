@@ -12,7 +12,7 @@ Create this working blueprint before prose:
 ## Episode Blueprint
 
 - Episode number/title:
-- Target length:
+- Target length: default 14,500-16,500 Japanese characters for finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose unless the user says otherwise.
 - Target emotion:
 - Episode position: high-pressure humiliation / proof-gathering / romance recognition / zamaa setup / tenderness recovery / court info / low-pressure aftermath
 - First-sentence bomb:
@@ -51,6 +51,28 @@ Budget total:
 - A sparse transition should usually be one or two sentences. Do not let transition beats become decorative sadness.
 - Each beat must say "who does what" plus a function tag such as setup, evidence, humiliation, heroine choice, recognition, zamaa, tenderness, cost, or hook.
 
+## 15k Long-Episode Density Contract
+
+For an episode around 15,000 Japanese characters, do not scale by adding scenery, adjectives, etiquette filler, repeated tears, or vague sadness. Scale by adding more social and emotional state changes inside the planned engine.
+
+Functional working shape:
+
+- Do not add a fixed beat quota. Let the beat count follow the episode's outline, rhythm, and emotional target.
+- Use enough dense beats to justify the length; sparse beats may bridge, settle, or prepare later payoff.
+- Any long stretch must have a function: change evidence, reputation, relationship, legal/family pressure, public position, heroine choice, male-lead recognition, antagonist risk, or next decision; or prepare/pay off one of these through a concrete object, etiquette move, witness, document, or choice.
+- Every 2,500-3,000 Japanese characters should contain visible proof, romantic recognition, social cost, zamaa setup/payoff, or a new accusation.
+- No scene may exist only to describe room mood, beauty, silence, loneliness, destiny, sadness, or noble atmosphere.
+
+Beat test:
+
+```text
+If I delete this paragraph, does the social/emotional state change?
+- yes: keep or sharpen.
+- no: cut it, or attach it to a document/action/witness/consequence.
+```
+
+Allowed expansion for 15k: split a dense beat into accusation -> evidence -> heroine calculation -> witness reaction -> male-lead move -> social consequence -> new choice. Do not expand by lingering on atmosphere.
+
 ## Per-Episode Payoff Floor
 
 Each episode needs at least one clear reason to continue watching:
@@ -58,6 +80,22 @@ Each episode needs at least one clear reason to continue watching:
 - High-pressure humiliation/proof/zamaa episodes: include one visible payoff every 3000-5000 Japanese characters, with smaller hooks every 800-1200 characters.
 - Tenderness, aftermath, or court-info episodes: a big zamaa payoff is not required, but include a specific romantic recognition, heroine agency choice, new evidence, rule reveal, or next public threat.
 - Never deliver only atmosphere. If the episode has no revenge payoff, it must have a stronger romance payoff, dignity-recovery payoff, evidence payoff, or next-problem hook.
+
+## Lane Payoff Floor
+
+When a plan names a subtype lane, every episode must carry that lane's engine at scene level:
+
+- Engagement annulment/zamaa: accusation, evidence object, witness, legal/social venue, public consequence, or better-match recognition.
+- Villainess/otome: route flag, changed action, social ripple, fate pressure, or new-route uncertainty.
+- Saintess/church: false evaluation, ritual/healing rule, church record, witness, cost, or inquiry.
+- Contract marriage: contract clause, household proof, forced-proximity pressure, rule change, or public spouse recognition.
+- Frontier/duke: old rejection, new-home problem, estate consequence, protective respect, or home choice.
+- Craft/job: named product or service, customer proof, money/reputation/access change, or romance through work respect.
+- Palace/family/inheritance: record, will, ledger, child/stepfamily bond, palace office pressure, or legal correction.
+- Loop/foreknowledge: known flag, changed choice, unexpected ripple, trust decision, or hidden-cause evidence.
+- Monster/demon/dragon romance: interspecies rule, culture misunderstanding, nonhuman tenderness, ritual/public choice, or human-side threat.
+- Strong heroine/status gap: visible action, status pressure, risk, male-lead respect for capability, or public re-evaluation.
+- Letter/misunderstanding comedy: message object, wrong assumption, social witness, action caused by the misunderstanding, or sincere re-choice.
 
 ## Continuity Lock
 
@@ -90,7 +128,8 @@ Before delivering:
 
 - First sentence contains a concrete social/emotional bomb.
 - Line five makes the previous hook understandable for new viewers.
-- Every 800-1200 Japanese characters contains a concrete beat or hook.
+- Long stretches without a concrete beat, setup, consequence, choice, romantic/social pressure change, or public-position change are cut or rewritten.
 - Dense beats are visibly denser than transitions.
 - At least one evidence/romance/status consequence lands on the page.
 - The final paragraph points to the next episode through a specific witness, document, accusation, romantic question, or public choice.
+- Count the saved prose. For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose, 14,500-16,500 Japanese characters is the default pass range. If it is below 14,500, expand only dense beats with new evidence, witness pressure, heroine agency, romantic recognition, legal/family/social consequence, zamaa setup/payoff, or next-hook escalation. Do not pad with etiquette, scenery, repeated tears, or abstract emotion.

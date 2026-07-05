@@ -14,6 +14,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 | 用户意图 | 关键词示例 | 路由到 |
 |---|---|---|
 | 写长篇 | 开书、写大纲、长篇、连载 | `/story-long-write` |
+| 短季分集小说 | 短季、分集、每集、6集、油管朗读连载 | `/story-long-write`（短季模式：固定首季 6 集） |
 | 写短篇 | 短篇、盐言、一万字 | `/story-short-write` |
 | 长篇拆文 | 拆文、分析这本书、黄金三章 | `/story-long-analyze` |
 | 短篇拆文 | 拆短篇、分析这个故事 | `/story-short-analyze` |
@@ -36,7 +37,11 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 2. 匹配上表，找到对应的 skill
 3. 如果能明确匹配，直接调用对应 skill（Claude/OpenCode 可用 `Skill("skill-name")` 或 slash command；Codex 用 `$skill-name` / `/skills`；OpenClaw 用 `/skill skill-name` 或自然语言点名）
 4. 如果无法匹配，询问用户想做什么（从上表中选择）
-5. 如果用户说"我想写小说"但未指定长篇/短篇，询问篇幅类型后再路由
+5. 如果用户说"我想写小说"但未指定形态，询问篇幅/工程类型后再路由：长篇连载、短篇、短季分集小说（固定首季 6 集，仍按小说章节文件写，不做几百章规划）
+
+### 长正文长度门槛
+
+当用户选择完整正文、YouTube、朗读、推文、或 6 集短季单集正文，且没有另给长度时，路由到具体写作 skill 后默认按 14,500-16,500 日文字符交付。写作 skill 必须在交付前计数；低于 14,500 不算完成，除非用户明确同意较短版本。扩写只能扩真实密集情节：证据、见证、战斗/技能、社会压力、恋爱推进、法律/家庭/金钱/照护后果、下一钩子；不能用风景、情绪、形容词、水回忆补字数。
 
 ## 查询降级
 

@@ -12,6 +12,30 @@ Build Japanese-style female-audience fantasy romance plans. This skill is for co
 - Read `references/market-patterns.md` when the user asks for hot themes, Syosetu/Kakuyomu fit, or tag combinations.
 - Read `references/planning-template.md` before producing a full concept package.
 - Read `references/terminology.md` whenever adapting from Chinese fantasy or when the user says not to use Chinese elements.
+- Read `references/dynamic-benchmarking.md` when the user wants current market fit, website-based拆书, hottest works, or when no strong project benchmark exists for the chosen subtype.
+- Read `../jp-josei-fantasy/references/project-memory.md` before opening a project, continuing a serial, creating chapter outlines, or trying to avoid repeated premises.
+- Before planning any subtype, resolve its benchmark priority: project拆文 or live website benchmark first, project subtype notes second, bundled type pack only as fallback. Do not rely on the generic josei fantasy rules alone.
+
+Type pack routing:
+
+- 婚約破棄 / public accusation / ざまぁ -> `references/type-packs/engagement-annulment-zamaa.md`
+- 悪役令嬢 / 乙女ゲーム / manga or novel reincarnation / death flags -> `references/type-packs/villainess-otome-game.md`
+- 聖女 / 偽聖女 / church proof / healing or purification -> `references/type-packs/saint-replacement-church.md`
+- 契約結婚 / 白い結婚 / political marriage / forced proximity -> `references/type-packs/contract-marriage-white-marriage.md`
+- 溺愛公爵 / 辺境伯 / cursed duke or prince / new home -> `references/type-packs/beloved-duke-frontier.md`
+- 職人 / shop / craft / magic tool / job competence -> `references/type-packs/craft-job-competence.md`
+- 王宮 / family coldness / inheritance / stepfamily / divorce or remarriage -> `references/type-packs/palace-family-inheritance.md`
+- ループ / やり直し / foreknowledge / tragedy prevention -> `references/type-packs/time-loop-foreknowledge.md`
+- 魔王 / 勇者 / 竜人 / interspecies marriage / culture-gap romance -> `references/type-packs/monster-demon-interspecies-romance.md`
+- 強いヒロイン / status gap / exile action romance -> `references/type-packs/strong-heroine-status-gap.md`
+- 手紙 / すれ違い / misunderstanding romantic comedy -> `references/type-packs/letter-misunderstanding-comedy.md`
+
+Benchmark priority:
+
+1. If `对标/{lane}/{work}/拆文报告.md` or `拆文库/{work}/` exists, read it before bundled type packs.
+2. If the user asks for current/hot/platform-fit or there is no project benchmark, browse the relevant public ranking/tag pages and create a Dynamic Benchmark Card from `references/dynamic-benchmarking.md`.
+3. Read any project-local `女频幻想恋爱知识库/type-packs/{lane}.md`.
+4. Read the bundled `references/type-packs/{lane}.md` only as fallback scaffolding.
 
 ## Planning Workflow
 
@@ -23,6 +47,11 @@ Build Japanese-style female-audience fantasy romance plans. This skill is for co
    - `契約婚 -> daily care -> mutual devotion`
    - `追放 / frontier -> slow life -> competence and beloved place`
    - `loop -> tragedy prevention -> chosen happiness`
+   - `craft/job false evaluation -> product proof -> respected work and love`
+   - `palace/family/inheritance wound -> record proof -> chosen family`
+   - `monster/demon/dragon marriage -> culture rule -> accepted bond`
+   - `strong heroine/status gap -> action proof -> honored love`
+   - After choosing a subtype, follow the benchmark priority above. Use the bundled type pack only to fill gaps after dynamic/project benchmarks are loaded.
 2. Design the heroine's wound and agency:
    - What was taken from her: reputation, fiance, inheritance, magic credit, family love, public trust.
    - What she can do: knowledge, etiquette, healing, territory work, magic, negotiation, cooking, record keeping, courage.
@@ -34,7 +63,17 @@ Build Japanese-style female-audience fantasy romance plans. This skill is for co
 4. Build a clean antagonist system:
    - Antagonists should expose themselves through greed, lies, abuse, class arrogance, stolen credit, or political overreach.
    - Ensure the punishment follows social/legal logic, not author fiat.
-5. Output a usable package:
+5. Set the project scale before making outlines:
+   - Default for YouTube/push/episode-like serials: short-season novel, fixed 6 episodes/chapters.
+   - Keep short-season outlines at exactly 6 episodes/chapters.
+   - Keep the prose and files novel-style (`细纲_第XXX章.md`, episode folders, tracking files); do not switch to screenplay format.
+   - Do not plan a hundred-chapter roadmap unless the user explicitly asks for a long webnovel.
+6. If the task is project-bound, materialize the plan into the common project files:
+   - Create or update `设定/题材定位.md`, heroine/male-lead/antagonist `设定/角色/` files, faction/house files, and reusable court/church/world files.
+   - Create `大纲/大纲.md`, `大纲/卷纲_第X卷.md`, and the first rolling batch of `大纲/细纲_第XXX章.md`.
+   - Create or update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
+   - Run the `女频幻想恋爱知识库` ledger check before finalizing a wound-romance-reversal engine, then add a compact record after generation.
+7. Output a usable package:
    - Japanese title candidates, tag cluster, one-line hook, heroine, male lead, antagonists, world rules, romance progression, zamaa progression, first 5-10 chapter beats, terminology map, banned leakage list.
 
 ## Output Rules
@@ -42,4 +81,5 @@ Build Japanese-style female-audience fantasy romance plans. This skill is for co
 - Keep the structure readable in Chinese unless the user requests Japanese planning notes.
 - Use Japanese genre labels and terms for titles/tags.
 - Do not stack all 30 themes into one story. Pick 3-5 primary tags and 1-2 secondary flavors.
+- Do not leave a project-bound plan only in chat when the user expects a reusable writing project; write the corresponding `设定/`, `大纲/`, and `追踪/` artifacts.
 - If the user asks to write next, hand off to `$jp-josei-fantasy-write` with the tag cluster, heroine wound, romance ladder, and chapter beats.

@@ -4,6 +4,8 @@ Use this when the user wants Japanese female-audience fantasy romance as anime-s
 
 This reference governs push-format delivery, opening retention, folders, covers, and handoff. Use it together with `episode-blueprint.md`, which governs the whole episode's emotion target, dense/sparse beats, payoff, cost, and ending hook, and `anti-ai-gates.md`, which governs final prose cleanup and script-based checks.
 
+For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose, the default body target is 14,500-16,500 Japanese characters unless the user sets another length. Count the saved body before handoff and keep expanding dense evidence/romance/zamaa beats if it is below 14,500.
+
 ## Language Contract
 
 - Use the user's language for coordination, questions, and status updates.
@@ -128,5 +130,13 @@ Avoid: text mistakes, extra text, small unreadable typography, cluttered group p
 ```
 
 ## Handoff
+
+After packaging a project-bound episode, update the project memory files described in `../../jp-josei-fantasy/references/project-memory.md`:
+
+- last completed episode/chapter, saved folder, cover/package status, and next outline status in `追踪/上下文.md`
+- new/advanced/resolved hooks in `追踪/伏笔.md`
+- event order in `追踪/时间线.md`
+- heroine, male-lead, antagonist, family, reputation, contract, curse, or romance state changes in `追踪/角色状态.md`
+- one generated-history record in `女频幻想恋爱知识库/generated-ledger.jsonl`
 
 At the end, report the saved folder and important files. If an image was generated, show the actual `cover.png` inline when the environment supports local image rendering.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shanhe Explainer"
+  short_description: "World-history and strategy explainers"
+  default_prompt: "Use $shanhe-explainer to draft a Japanese or English world-history or strategy explainer for a Japan, US, or Europe audience."

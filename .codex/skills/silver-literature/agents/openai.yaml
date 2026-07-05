@@ -1,0 +1,4 @@
+interface:
+  display_name: "Silver Literature"
+  short_description: "Japanese silver-life story planning and writing"
+  default_prompt: "Use $silver-literature to plan, benchmark, draft, or review a Japanese silver-literature story with subtype routing and anti-homogenization."
