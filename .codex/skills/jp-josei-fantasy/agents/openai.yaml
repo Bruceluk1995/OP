@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Josei Fantasy Suite"
-  short_description: "Router for Japanese female fantasy romance"
-  default_prompt: "Use $jp-josei-fantasy to route a Japanese female-audience fantasy romance task."
+  short_description: "Router for josei fantasy romance and hot-topic discovery"
+  default_prompt: "Use $jp-josei-fantasy to route a Japanese female-audience fantasy romance task, including Google Trends, YouTube/TikTok, ranking, or evergreen premise discovery."

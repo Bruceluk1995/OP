@@ -2,6 +2,8 @@
 
 Use this before planning a Japanese female-audience fantasy romance subtype when the user wants market fit, current popular works, website-based book analysis, or when no strong project benchmark exists.
 
+If the user asks for Google Trends, YouTube, TikTok, viral videos, weird news, 热点选题, or 全源选题, first use `../../jp-josei-fantasy/references/hot-source-router.md` and the matching hot-source reference, then return here only when ranking/tag benchmarking is also needed.
+
 ## Priority
 
 1. Project benchmark report: `对标/{lane}/{work}/拆文报告.md` or `拆文库/{work}/`.
@@ -20,6 +22,15 @@ When browsing is allowed or requested:
 - Select one primary benchmark and one or two contrast benchmarks.
 - Prefer currently visible ranking/tag pages over older memory.
 - Use metadata, titles, tags, ranking context, and short public premise signals only. Do not copy prose, scene order, dialogue, or proprietary outlines.
+
+## Hot Source Scan
+
+When the request starts from a hot source instead of a novel platform:
+
+- Collect a small batch from the requested source: 5-10 Google Trends JP items, 3-5 YouTube/TikTok hook mechanics, 5-8 weird/social-news seeds, or mixed batches for 全选.
+- Score candidates with the matching hot-source reference before choosing one.
+- Convert only the underlying female-audience mechanism: public humiliation, reputation repair, contract pressure, family wound, ceremony, social proof, etiquette trap, comfort desire, or relationship recognition.
+- After selecting a seed, read `../../jp-josei-fantasy/references/trend-theme-router.md` and map the seed to a josei fantasy route before building the Dynamic Benchmark Card or outline.
 
 ## Benchmark Card
 

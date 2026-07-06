@@ -1,6 +1,6 @@
 ---
 name: jp-josei-fantasy-plan
-description: "Plan Japanese female-audience fantasy romance novels and adaptations. Use for 女性向け異世界恋愛 premise design, 悪役令嬢 openings, 婚約破棄 and ざまぁ structures, 溺愛 male leads, 聖女 replacement plots, 契約婚, 令嬢 noble-house conflict, time-loop revenge, court romance, chapter outlines, and Chinese-to-Japanese localization away from xianxia or Chinese webnovel defaults."
+description: "Plan Japanese female-audience fantasy romance novels and adaptations. Use for 女性向け異世界恋愛 premise design, 悪役令嬢 openings, 婚約破棄 and ざまぁ structures, 溺愛 male leads, 聖女 replacement plots, 契約婚, 令嬢 noble-house conflict, time-loop revenge, court romance, chapter outlines, YouTube/TikTok/Google Trends JP hot-topic conversion, and Chinese-to-Japanese localization away from xianxia or Chinese webnovel defaults."
 ---
 
 # JP Josei Fantasy Plan
@@ -13,6 +13,11 @@ Build Japanese-style female-audience fantasy romance plans. This skill is for co
 - Read `references/planning-template.md` before producing a full concept package.
 - Read `references/terminology.md` whenever adapting from Chinese fantasy or when the user says not to use Chinese elements.
 - Read `references/dynamic-benchmarking.md` when the user wants current market fit, website-based拆书, hottest works, or when no strong project benchmark exists for the chosen subtype.
+- Read `../jp-josei-fantasy/references/hot-source-router.md` when the user has no premise, wants 热点选题, asks for YouTube/TikTok/Google Trends/news/all-source selection, or rejects the current source as boring.
+- Read `../jp-josei-fantasy/references/trend-benchmarking.md` when the user wants Google Trends JP or hot/current topic conversion.
+- Read `../jp-josei-fantasy/references/social-video-trends.md` when the user wants YouTube/TikTok/Shorts/video hooks.
+- Read `../jp-josei-fantasy/references/absurd-news-benchmarking.md` when the user wants 离谱新闻, 逆天新闻, or Japanese social-news hooks.
+- Read `../jp-josei-fantasy/references/trend-theme-router.md` after selecting any hot seed, before choosing the final tag cluster, heroine wound, proof object, male-lead recognition mode, or outline.
 - Read `../jp-josei-fantasy/references/project-memory.md` before opening a project, continuing a serial, creating chapter outlines, or trying to avoid repeated premises.
 - Before planning any subtype, resolve its benchmark priority: project拆文 or live website benchmark first, project subtype notes second, bundled type pack only as fallback. Do not rely on the generic josei fantasy rules alone.
 
@@ -33,7 +38,7 @@ Type pack routing:
 Benchmark priority:
 
 1. If `对标/{lane}/{work}/拆文报告.md` or `拆文库/{work}/` exists, read it before bundled type packs.
-2. If the user asks for current/hot/platform-fit or there is no project benchmark, browse the relevant public ranking/tag pages and create a Dynamic Benchmark Card from `references/dynamic-benchmarking.md`.
+2. If the user asks for current/hot/platform-fit or there is no project benchmark, browse the relevant public ranking/tag pages and create a Dynamic Benchmark Card from `references/dynamic-benchmarking.md`. If the user asks for Google Trends, YouTube, TikTok, weird news, or all-source discovery, use the hot-source references above and then convert the selected seed with `trend-theme-router.md`.
 3. Read any project-local `女频幻想恋爱知识库/type-packs/{lane}.md`.
 4. Read the bundled `references/type-packs/{lane}.md` only as fallback scaffolding.
 
@@ -51,6 +56,7 @@ Benchmark priority:
    - `palace/family/inheritance wound -> record proof -> chosen family`
    - `monster/demon/dragon marriage -> culture rule -> accepted bond`
    - `strong heroine/status gap -> action proof -> honored love`
+   - `hot trend / video / news seed -> emotion or social rule -> josei fantasy proof and romance route`
    - After choosing a subtype, follow the benchmark priority above. Use the bundled type pack only to fill gaps after dynamic/project benchmarks are loaded.
 2. Design the heroine's wound and agency:
    - What was taken from her: reputation, fiance, inheritance, magic credit, family love, public trust.
@@ -80,6 +86,7 @@ Benchmark priority:
 
 - Keep the structure readable in Chinese unless the user requests Japanese planning notes.
 - Use Japanese genre labels and terms for titles/tags.
+- For trend-driven concept batches, include source mode, seed, selected josei route, backup route, heroine-empathy score, converted proof/romance mechanism, safety transform, and why the seed works for Japanese female-audience fantasy romance.
 - Do not stack all 30 themes into one story. Pick 3-5 primary tags and 1-2 secondary flavors.
 - Do not leave a project-bound plan only in chat when the user expects a reusable writing project; write the corresponding `设定/`, `大纲/`, and `追踪/` artifacts.
 - If the user asks to write next, hand off to `$jp-josei-fantasy-write` with the tag cluster, heroine wound, romance ladder, and chapter beats.

@@ -1,6 +1,6 @@
 ---
 name: jp-josei-fantasy-oneshot
-description: Standalone Japanese female-audience fantasy romance short-story writing skill. Use when the user wants 女频幻想恋爱短篇, 女性向け異世界恋愛 one-shot, 15000字单篇, 一发完结, 非连续剧, 悪役令嬢短篇, 婚約破棄ざまぁ短篇, 聖女/契約婚/辺境伯/溺愛/ループ/令嬢 standalone romance, or a complete Japanese josei fantasy story that resolves in one file.
+description: Standalone Japanese female-audience fantasy romance short-story writing skill. Use when the user wants 女频幻想恋爱短篇, 女性向け異世界恋愛 one-shot, 15000字单篇, 一发完结, 非连续剧, 悪役令嬢短篇, 婚約破棄ざまぁ短篇, 聖女/契約婚/辺境伯/溺愛/ループ/令嬢 standalone romance, YouTube/TikTok/Shorts 热门视频转女频幻想恋爱钩子, Google Trends JP 热点蹭选题, 日本离谱新闻/社会热点转令嬢/聖女/契約婚/ざまぁ/溺愛故事, or a complete Japanese josei fantasy story that resolves in one file.
 ---
 
 # JP Josei Fantasy Oneshot
@@ -21,6 +21,7 @@ Write complete standalone Japanese female-audience fantasy romance short stories
 ## Workflow
 
 1. If the user has no premise, ask a compact intake:
+   - 选题来源: YouTube/TikTok 热门视频 / Google Trends JP 热点 / 日本离谱新闻或社会热点 / 女性向けランキング・タグ页 / 生活痛点关键词 / 常青类型 / 用户给关键词 / 全选.
    - 题材类型: 婚約破棄ざまぁ / 悪役令嬢 / 聖女 / 契約結婚 / 辺境伯溺愛 / 職人令嬢 / 相続家族 / ループ / 異類婚姻 / 強いヒロイン / 手紙すれ違い.
    - 情绪主轴: 屈辱逆转 / 证据反杀 / 被尊重治愈 / 契约变真爱 / 家族切割 / 公开名誉恢复.
    - 男主作用: 保护证据 / 公开承认 / 法律或爵位支持 / 温柔尊重 / 共犯式反击.
@@ -29,24 +30,35 @@ Write complete standalone Japanese female-audience fantasy romance short stories
    - `references/anti-water.md`
    - `../jp-josei-fantasy-write/references/terminology.md` when adapting from Chinese material, checking localization, or avoiding Chinese court/xianxia leakage.
    - `../jp-josei-fantasy-write/references/self-check.md` as the Codex AI self-check pattern, adapted to one-shot closure instead of serial continuity.
+   - `../jp-josei-fantasy/references/hot-source-router.md` when the user has no premise, wants 热点选题, asks for all-source discovery, or asks which platform to search.
+   - `../jp-josei-fantasy/references/trend-benchmarking.md` when the user asks for 热点, Google Trends, 蹭热点, current topic selection, or trend-to-romance conversion.
+   - `../jp-josei-fantasy/references/absurd-news-benchmarking.md` when the user asks for 离谱新闻, 逆天新闻, 日本社会怪事, bizarre news, or stronger conflict than Google Trends.
+   - `../jp-josei-fantasy/references/social-video-trends.md` when the user asks for TikTok, YouTube, Shorts, viral videos, 热门视频, or short-video hooks.
+   - `../jp-josei-fantasy/references/trend-theme-router.md` after selecting any hot seed, or whenever the user wants the seed auto-matched to a josei fantasy subtype/type-pack.
    - `references/oneshot-delivery.md` before saving a full one-shot package, character prompts, cover prompt, or any project-bound output.
-3. If the user asks for current market, ranking, or "现在日本什么火", browse current public ranking/tag pages before making market claims.
-4. Check anti-homogenization if a ledger exists:
+3. If the user asks for current market, ranking, Google Trends, YouTube, TikTok, or "现在日本什么火", browse/fetch current sources before making market claims. For Japan hot-topic ideation, start with the user's chosen source; if no source is chosen, ask the source menu from `hot-source-router.md`.
+   - Do not pick the highest-traffic trend automatically. Score candidates by heroine empathy, romance/zamaa engine fit, female-audience payoff, safety, and title clickability.
+   - Prefer女性向け可转译 seeds: public humiliation, reputation repair, unfair family/work/school rules, money or inheritance anxiety, beauty/health fatigue, food/home comfort, communication failure, weather/disaster shelter, pets/animals, weddings, contracts, etiquette, and "nobody believed me until proof appeared" hooks.
+   - Downrank remote spectacle, celebrity gossip, crime/tragedy, politics rage bait, or pure sports results unless they can be converted into a fictional social rule, public proof, contract, ceremony, or relationship recognition scene.
+   - After selecting a hot seed, route it to the best josei type route before choosing the final title, heroine wound, male lead, proof object, or outline.
+4. If the user asks for 离谱新闻/逆天新闻 or rejects Google Trends as boring, browse current Japanese weird/social-news sources and use absurdity scoring first. The best female-fantasy seed is usually a fictionalizable unfair rule, etiquette trap, contract loophole, family/property conflict, service failure, school/workplace humiliation, mistaken record, or public apology failure.
+5. If the user asks for TikTok/YouTube or rejects news/Trends as boring, browse current social-video trend sources and use video-hook scoring first. Prefer YouTube Japan category trends when TikTok public pages are blocked; use TikTok Creative Center or `$browser-cdp` with logged-in browser only when available.
+6. Check anti-homogenization if a ledger exists:
    - `python .codex/skills/jp-josei-fantasy-oneshot/scripts/ledger.py --root . summary`
    - `python .codex/skills/jp-josei-fantasy-oneshot/scripts/ledger.py --root . check ...`
-5. Build a brief one-shot blueprint before prose. Do not require project `大纲/细纲` files for one-shot work.
-6. Save complete long prose as a one-shot package under `episodes/oneshots/<short-title>/` unless the user asks for chat-only output.
+7. Build a brief one-shot blueprint before prose. Do not require project `大纲/细纲` files for one-shot work.
+8. Save complete long prose as a one-shot package under `episodes/oneshots/<short-title>/` unless the user asks for chat-only output.
    - Required package folders/files: `正文/正文.md`, `正文/标题.md`, `角色提示词/角色提示词.md`, `封面/封面.md`, and `作品资料.md`.
    - Generate `封面/封面.png` only when image generation is requested or available; otherwise mark `封面/封面.md` as prompt-only.
    - Do not deliver only a single mixed markdown file.
-7. After saving, count only `正文/正文.md`. Do not report completion below 14,500 Japanese characters unless the user explicitly approved a shorter story.
-8. After saving, run a Codex AI one-shot self-check by rereading the saved body, title file, character prompts, cover brief, and `作品资料.md`:
+9. After saving, count only `正文/正文.md`. Do not report completion below 14,500 Japanese characters unless the user explicitly approved a shorter story.
+10. After saving, run a Codex AI one-shot self-check by rereading the saved body, title file, character prompts, cover brief, and `作品资料.md`:
    - Verify the body is Japanese audience-facing prose only, with no Chinese planning notes, source-language leftovers, or meta/production leakage.
    - Verify one-shot closure: heroine wound, accusation/proof, romance recognition, zamaa/social consequence, and happy-ending promise all resolve in this file.
    - Verify localization: if the source came from Chinese court drama or xianxia, the functions have been rebuilt as Japanese romance fantasy mechanisms such as 王宮/貴族院/神殿/社交界/修道院/爵位剥奪/領地没収/王命, not literal 宫斗/后宫/冷宫/嫡庶/夺嫡 carryover.
    - Verify prose freshness with Codex judgment: cut repeated decorative adjectives, atmosphere padding, stacked tears, vague pain, and uniform short-sentence stutter; rewrite the saved body if the check finds real issues.
    - Treat this quality gate as a reasoning pass over the actual saved artifacts.
-9. Append a ledger record unless the user says not to.
+11. Append a ledger record unless the user says not to.
 
 ## One-Shot Defaults
 
@@ -58,10 +70,13 @@ Write complete standalone Japanese female-audience fantasy romance short stories
   - `封面/封面.md`: cover/thumbnail brief, final image prompt, text layers, and status.
   - `作品资料.md`: blueprint, source notes, character count, checks, and ledger notes.
 - Ending: closed happy ending or satisfying hopeful ending. A lingering romantic future is allowed, but the central accusation, wound, or contract conflict must be resolved.
+- Trend/news/video-driven titles: show Chinese working title + Japanese publish title + seed + selected josei route + converted proof/romance mechanism + why the seed becomes a female-audience payoff.
 
 ## Hard Rules
 
 - Do not turn a one-shot into a season outline.
+- Do not paste real trending celebrities, scandals, crime, tragedies, sports trivia, or private-person details into the romance story. Convert only the underlying desire, anxiety, object, rule, ceremony, social pressure, proof mechanism, or relationship tension.
+- Do not copy TikTok/YouTube creators, scenes, jokes, clips, songs, anime/game IP, dialogue, or exact video order. Extract only the hook mechanic and rebuild an original romance-fantasy premise.
 - Do not leave the core injustice, romance recognition, or heroine's choice unresolved.
 - Do not pad to 15k with room atmosphere, noble etiquette filler, repeated tears, vague pain, or decorative beauty.
 - Do not make the male lead solve everything while the heroine only cries. She must make at least one costly choice.
@@ -74,7 +89,7 @@ Write complete standalone Japanese female-audience fantasy romance short stories
 For a full one-shot:
 
 1. Chinese working title + Japanese publish title.
-2. Subtype, heroine wound, romance engine, zamaa/proof engine, happy-ending shape.
+2. Subtype/theme route, hot seed if any, heroine wound, romance engine, zamaa/proof engine, happy-ending shape.
 3. Brief one-shot blueprint.
 4. Saved package path and primary file paths.
 5. Body character count.
