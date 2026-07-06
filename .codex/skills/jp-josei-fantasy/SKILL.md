@@ -9,6 +9,7 @@ Use this as the router for Japanese female-audience fantasy romance work. Prefer
 
 - `$jp-josei-fantasy-plan`: premise, tag cluster, heroine wound, male lead, court/noble rules, revenge/romance arc, chapter beats.
 - `$jp-josei-fantasy-write`: Japanese prose drafting or rewriting for 女性向け異世界恋愛 / 令嬢 / 溺愛 / ざまぁ stories.
+- `$jp-josei-fantasy-oneshot`: standalone 14,500-16,500 character Japanese female-audience fantasy romance short stories that fully resolve in one file, not serial episodes or 6-episode seasons.
 - `$jp-josei-fantasy-review`: genre fit, Japanese readability, romance payoff, zamaa logic, and Chinese-term leakage checks.
 
 ## Core Contract
@@ -38,6 +39,7 @@ Detailed protocol: `references/project-memory.md`.
 ## Workflow
 
 1. Determine the task:
+   - Standalone short story, one-shot, 一发完结, 15000字短篇, or "不是连续剧" -> use `$jp-josei-fantasy-oneshot`.
    - New concept, tag strategy, Chinese-to-Japanese localization, or outline -> use `$jp-josei-fantasy-plan`.
    - Write or rewrite Japanese chapters/scenes -> use `$jp-josei-fantasy-write`.
    - Check an existing draft -> use `$jp-josei-fantasy-review`.

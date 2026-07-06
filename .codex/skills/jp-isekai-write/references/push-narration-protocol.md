@@ -2,7 +2,7 @@
 
 Use this when writing serial Japanese male-audience isekai for video recap, push narration, or project episodes that must connect across installments.
 
-This protocol governs the opening and retention surface. Use it together with `episode-blueprint.md`, which governs the whole episode's emotion target, dense/sparse beats, payoff, cost, and ending hook, and `anti-ai-gates.md`, which governs final prose cleanup and script-based checks.
+This protocol governs the opening and retention surface. Use it together with `episode-blueprint.md`, which governs the whole episode's emotion target, dense/sparse beats, payoff, cost, and ending hook, and `anti-ai-gates.md`, which governs Codex AI final prose cleanup.
 
 ## Why The Old Output Feels AI
 
@@ -25,7 +25,7 @@ Write the first 250-500 Japanese characters in this order:
 4. **Protagonist reaction.** Add one short male-protagonist inner comment or practical complaint.
 5. **Scene entry.** Move into action, dialogue, or a visible object. Do not stay in explanation.
 
-Do not label these parts as recap or summary inside the prose unless the user explicitly asks for narration-script labels.
+Do not label these parts as recap or summary inside the prose unless the user explicitly asks for narration labels.
 
 ## Continuity Inputs
 
@@ -77,4 +77,4 @@ Before delivering, answer internally:
 - Does the first scene begin from the previous ending rather than a reset?
 - Are there at least three concrete nouns in the first 250 Japanese characters?
 - Did I remove decorative AI water before expanding length?
-- If the prose is saved to a file, did local anti-AI scripts run and did blocking findings get fixed?
+- If the prose is saved to a file, did Codex AI reread the saved file and fix real issues?

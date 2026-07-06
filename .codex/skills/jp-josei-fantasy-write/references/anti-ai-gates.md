@@ -73,7 +73,7 @@ Stronger:
 - Do not let etiquette, scenery, or sadness receive the same weight as accusation, proof, or romantic recognition.
 - In a 15,000-character episode, do not use long quiet stretches as filler. Any long stretch must change, prepare, or pay off social/emotional story state: evidence, reputation, relationship, legal/family pressure, public position, heroine choice, male-lead recognition, antagonist risk, or next decision.
 - Delete paragraphs that only describe atmosphere, scenery, beauty, sadness, silence, light, destiny, or vague tenderness without changing the state above.
-- If `scripts/check-ai-patterns.js` reports `period-stutter`, merge short fragments into a fuller action chain.
+- If the Codex AI reread notices short-sentence stutter, merge short fragments into a fuller action chain.
 - If it reports `long-paragraph`, split by new action, object, line of dialogue, or social turn.
 
 ## Gate D2: No Pretty Dead Text
@@ -120,23 +120,29 @@ Delete or convert:
 
 Convert them into what the heroine can see, hear, touch, count, misread, or choose now.
 
-## Deterministic File Pass
+## Gate H: Remove Production Metadata Leakage
 
-When the episode is saved to a file, run the local scripts from this skill:
+Episode structure is for the working blueprint, title file, and thumbnail only. It must not leak into first-person prose.
 
-```powershell
-node .codex/skills/jp-josei-fantasy-write/scripts/check-ai-patterns.js --check --fail-on=blocking <episode-file>
-node .codex/skills/jp-josei-fantasy-write/scripts/check-degeneration.js --check --fail-on=blocking <episode-file>
-node .codex/skills/jp-josei-fantasy-write/scripts/normalize-punctuation.js <episode-file>
-```
+Delete or convert:
 
-If running from inside the skill directory, use `node scripts/...`.
+- `第4話で...`
+- `第3話の時...`
+- `第6話で終わらせる`
+- `前回`, `次回`, `本話`, `本集`
+- `読者`, `視聴者`, `この作品`, `本編`
 
-Interpretation:
+Convert them into story-world anchors:
 
-- `blocking`: fix or regenerate the affected paragraph before delivery.
-- `advisory`: inspect manually; keep justified court reasoning, social silence, or deliberate short emotional beats.
-- The scripts are conservative and language-mixed. They catch punctuation, stutter, long paragraphs, meta leakage, and some Chinese AI structures; they do not replace human Japanese prose review.
+- `あの地下広間で...`
+- `夜明け前の森で...`
+- `リリに初めて触れた時...`
+- `ここで終わらせる`
+- the carried contract, witness name, injury, seal, room, door, promise, or document that actually links the scenes
+
+## Codex AI File Pass
+
+When the episode is saved to a file, Codex must reread the saved file itself before delivery. Do not rely on a mechanical gate. Check for AI texture, production metadata leakage, Chinese leakage, repeated rhythm, and dead paragraphs by reasoning over the scene function and surrounding context.
 
 ## Final Self-Check
 
@@ -145,4 +151,4 @@ Interpretation:
 - Does every long stretch in a long episode have a function beyond atmosphere, scenery, beauty, sadness, tenderness, or adjectives?
 - Are dense beats visibly denser than transitions?
 - Does the ending hook point to a concrete next witness, document, accusation, romantic question, or public choice?
-- Did no engineering words, placeholders, or model refusal text leak into prose?
+- Did no engineering words, placeholders, model refusal text, or production markers like `第4話で` leak into prose?

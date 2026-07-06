@@ -11,6 +11,7 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
 
 - Read `references/review-checklist.md` before a full review.
 - Read `references/terminology.md` whenever checking Chinese-to-Japanese adaptation leakage.
+- Read `../jp-isekai-write/references/self-check.md` when reviewing saved episodes, project-bound output, per-episode folders, continuity, plot bugs, package completeness, RPG-rule consistency, or Chinese leakage.
 - If the draft or outline declares a subtype lane, read the loaded project benchmark card or `对标/{lane}/` report first when available, then the matching `../jp-isekai-plan/references/type-packs/{lane}.md` as fallback, and review against that lane's required payoff loop.
 
 ## Review Workflow
@@ -24,6 +25,7 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
    - Project-bound continuation did not read/update `追踪/上下文.md`, `追踪/伏笔.md`, `追踪/时间线.md`, or relevant `追踪/角色状态.md`.
    - New concept/episode repeats a recent `男频异世界知识库/generated-ledger.jsonl` combination without changing at least two key fields.
    - Chinese fantasy terms or institutions leaking into a Japanese RPG fantasy setting.
+   - Chinese court-drama institutions or social logic leaking through literal translation: emperor/harem/cold-palace/concubine/嫡庶/夺嫡 logic remains instead of Japanese RPG/fantasy royal, guild, noble, territory, or faction systems.
    - Japanese prose that reads like machine translation or Chinese sentence order.
    - Cheat rules unclear or not repeatable.
    - Episode lacks opening hook, practical payoff, or next hook.
@@ -38,7 +40,8 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
    - Dense beats are not denser than transitions; the prose spends similar weight on travel/mood and payoff.
    - Prose is padded with vague AI-flavored adjectives or summary paragraphs instead of scene-level objects, choices, witnesses, and consequences.
    - Draft fails JP anti-AI gates: generic destiny/light/silence texture, author explanation, stock summary ending, uniform rhythm, over-polished dialogue, or emotional lines without object/action/consequence.
-   - Saved file has not been checked with local `check-ai-patterns.js` / `check-degeneration.js`, or blocking findings were ignored.
+   - Saved file or episode folder has not received a Codex AI self-check over outline, tracking files, previous episode tail, current body, and package assets.
+   - Codex AI self-check fails: continuity reset, character-state contradiction, RPG rule contradiction, unexplained reward/drop/rank-up, unused extra character prompt, missing package file, cover not actual 16:9 image, or unresolved Chinese leakage.
 3. Check genre fit:
    - Male-audience protagonist agency.
    - Social unfairness or pressure.

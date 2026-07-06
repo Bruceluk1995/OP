@@ -1,6 +1,6 @@
 ---
 name: shanhe-explainer
-description: World-history, Japan-focused history/society, geopolitics, science, economics, and social-institution short-video explainer scripting distilled from a Shanhe-style Bilibili subtitle corpus, then adapted for Japanese, American, or European audiences. Use when the user asks for 山河有声风格, 日本史/日本社会讲解, 世界史讲解, 外国史, 国际战略杂谈, 科普短视频, 社会制度/经济常识讲解, "为什么/为何/到底/怎么" analytical scripts, or Japanese/English narration optimized for non-Chinese audiences.
+description: World-history, Japan-focused history/society, geopolitics, science, economics, and social-institution short-video explainer scripting distilled from a Shanhe-style Bilibili subtitle corpus, then adapted for Japanese, American, or European audiences. Use when the user asks for 山河有声风格, 日本史/日本社会讲解, 世界史讲解, 外国史, 国际战略杂谈, 科普短视频, 社会制度/经济常识讲解, YouTube/TikTok/Google Trends/新闻/全源热点选题, "为什么/为何/到底/怎么" analytical scripts, or Japanese/English narration optimized for non-Chinese audiences.
 ---
 
 # Shanhe Explainer
@@ -43,6 +43,7 @@ Use the corpus as a structural benchmark, not as a topic menu. The source channe
    - `references/structure-template.md`
    - `references/localization.md`
    - `references/anti-homogenization.md`
+   - `references/hot-source-router.md` when the user has no topic, wants 热点选题, asks for YouTube/TikTok/Google Trends/news/all-source selection, or rejects the current source as boring.
    - `references/trend-benchmarking.md` when the user wants hot/current/platform-fit topics or selected angle/title generation from trends.
 6. Select one topic pack before outlining:
    - Japan-focused history, society, economy, institutions, postwar order, aging, energy, or island geopolitics -> `references/topic-packs/japan-history-society.md`
@@ -58,6 +59,9 @@ Use the corpus as a structural benchmark, not as a topic menu. The source channe
    - If the user specifies language but not audience in an interactive chat, ask the audience question first.
    - If the user explicitly says "你自己决定" or the workflow is noninteractive, use Japan for Japanese and United States for English unless the topic is clearly European.
 8. For trend-driven angle/title batches:
+   - If the user has not selected a source, ask the hotspot source menu from `references/hot-source-router.md`.
+   - If the user chooses 全选, collect from multiple source types and score candidates together before applying the selected topic lane.
+   - Prefer YouTube/TikTok when the user wants short-video hooks, public reactions, or a stronger first 30 seconds. Prefer official/data/report sources when the topic is policy, demographics, energy, economics, health, public systems, or geopolitics.
    - Use Google Trends JP for Japanese audiences unless the user provides another market.
    - Treat trend source scope and topic lane as separate gates. "All categories" only broadens trend collection; it must not broaden the already selected topic lane.
    - Apply the selected topic pack as a hard filter before converting trends into titles.
@@ -115,5 +119,6 @@ For only title/angle work, provide:
 1. Chinese working title.
 2. Japanese publish title.
 3. Trend seed or evergreen seed.
-4. Short Chinese note on the promised argument.
-5. Risk/fact-check note if needed.
+4. Hot source mode and source type when trend-driven.
+5. Short Chinese note on the promised argument.
+6. Risk/fact-check note if needed.

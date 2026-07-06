@@ -1,0 +1,4 @@
+interface:
+  display_name: "JP Josei Fantasy Oneshot"
+  short_description: "Packaged 15k josei fantasy romance with AI self-check"
+  default_prompt: "Use $jp-josei-fantasy-oneshot to plan and write a complete standalone Japanese female-audience fantasy romance one-shot package with body, character prompts, cover prompt, Japanese localization, and Codex AI self-check."

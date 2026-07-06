@@ -1,8 +1,10 @@
 # Trend Benchmarking
 
-Use this when the user wants current, hot, platform-fit, or trend-driven economics and finance angle generation.
+Use this when the user wants current, hot, platform-fit, or trend-driven economics and finance angle generation. If the user wants YouTube/TikTok/news/social complaints/official data/all-source selection, read `hot-source-router.md` first.
 
 ## Source Protocol
+
+If the source is not selected, ask the source menu from `hot-source-router.md`.
 
 Pick the trend source by audience:
 
@@ -47,6 +49,8 @@ For each title, include:
 
 - Chinese working title.
 - Target-language publish title.
+- Hot source mode.
+- Source type.
 - Trend seed.
 - Topic pack.
 - Market/audience.
@@ -60,6 +64,8 @@ Example:
 1. 中文标题：为什么日元贬值不只是旅游便宜？
    日语标题：円安はなぜ、旅行の話だけでは終わらないのか
    - Trend seed: 円安
+   - Hot source mode: google-trends
+   - Source type: search-trend
    - Topic pack: macro-money-policy
    - Market/audience: Japan
    - Promised mechanism: import prices, wages, energy dependence, and household purchasing power

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from collections import Counter
 from datetime import date
 from pathlib import Path
@@ -15,6 +16,8 @@ FIELDS = (
     "topic_pack",
     "audience_pack",
     "trend_source",
+    "hot_source_mode",
+    "source_type",
     "trend_seed",
     "domain",
     "question_type",
@@ -23,6 +26,12 @@ FIELDS = (
     "thesis_shape",
     "target_language",
 )
+
+
+def configure_stdio() -> None:
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
 
 
 def ledger_path(root: str) -> Path:
@@ -88,28 +97,18 @@ def check(records: list[dict], candidate: dict, limit: int) -> int:
 
 def add_record(path: Path, args: argparse.Namespace) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    record = {
-        "date": args.date or date.today().isoformat(),
-        "title": args.title,
-        "topic_pack": args.topic_pack,
-        "audience_pack": args.audience_pack,
-        "trend_source": args.trend_source,
-        "trend_seed": args.trend_seed,
-        "domain": args.domain,
-        "question_type": args.question_type,
-        "opening_analogy": args.opening_analogy,
-        "evidence_axis": args.evidence_axis,
-        "thesis_shape": args.thesis_shape,
-        "target_language": args.target_language,
-        "path": args.path,
-        "notes": args.notes,
-    }
+    record = {"date": args.date or date.today().isoformat(), "title": args.title}
+    for field in FIELDS:
+        record[field] = getattr(args, field)
+    record["path"] = args.path
+    record["notes"] = args.notes
     with path.open("a", encoding="utf-8", newline="\n") as handle:
         handle.write(json.dumps(record, ensure_ascii=False) + "\n")
     print(f"added: {path}")
 
 
 def main() -> int:
+    configure_stdio()
     parser = argparse.ArgumentParser(description="Manage shanhe-explainer generated-content ledger.")
     parser.add_argument("--root", default=".", help="Project root containing the ledger.")
     sub = parser.add_subparsers(dest="command", required=True)

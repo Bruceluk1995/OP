@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from collections import Counter
 from datetime import date
 from pathlib import Path
@@ -16,6 +17,8 @@ FIELDS = (
     "audience_pack",
     "market_region",
     "trend_source",
+    "hot_source_mode",
+    "source_type",
     "trend_seed",
     "domain",
     "question_type",
@@ -25,6 +28,12 @@ FIELDS = (
     "thesis_shape",
     "target_language",
 )
+
+
+def configure_stdio() -> None:
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
 
 
 def ledger_path(root: str) -> Path:
@@ -102,6 +111,7 @@ def add_record(path: Path, args: argparse.Namespace) -> None:
 
 
 def main() -> int:
+    configure_stdio()
     parser = argparse.ArgumentParser(description="Manage econ-finance-explainer generated-content ledger.")
     parser.add_argument("--root", default=".", help="Project root containing the ledger.")
     sub = parser.add_subparsers(dest="command", required=True)

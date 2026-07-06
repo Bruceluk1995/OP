@@ -1,0 +1,81 @@
+---
+name: jp-josei-fantasy-oneshot
+description: Standalone Japanese female-audience fantasy romance short-story writing skill. Use when the user wants 女频幻想恋爱短篇, 女性向け異世界恋愛 one-shot, 15000字单篇, 一发完结, 非连续剧, 悪役令嬢短篇, 婚約破棄ざまぁ短篇, 聖女/契約婚/辺境伯/溺愛/ループ/令嬢 standalone romance, or a complete Japanese josei fantasy story that resolves in one file.
+---
+
+# JP Josei Fantasy Oneshot
+
+Write complete standalone Japanese female-audience fantasy romance short stories around 14,500-16,500 Japanese characters. This skill is for one-shot stories, not serial episodes, not 6-episode short seasons, and not long webnovel chapter planning.
+
+## Core Contract
+
+- Write audience-facing prose in Japanese unless the user asks otherwise. Keep planning notes in Chinese by default.
+- Center the heroine's dignity, agency, emotional recovery, romance recognition, and happy ending.
+- `ざまぁ` must be emotionally and logically earned through evidence, witness, etiquette, contract, law, church record, family ledger, or public social consequence.
+- `溺愛` must be protective, respectful, and specific; avoid flattening the heroine into a reward object.
+- A one-shot must resolve the core wound and relationship promise in one file.
+- Do not create `6集`, previous-episode bridge, serial folder logic, or next-episode cliffhanger unless the user asks for a serial.
+- Avoid male-audience RPG optimization, harem framing, and Chinese court/xianxia defaults.
+- When adapting Chinese 古言、宫斗、朝堂、玄幻、穿书 material, rebuild the story function for Japanese female-audience fantasy romance instead of translating institutions literally. Do not carry over 皇帝/后宫/冷宫/赐婚/嫡庶/夺嫡/太监/宫女/抄家灭族 logic unless the user explicitly wants a Chinese setting.
+
+## Workflow
+
+1. If the user has no premise, ask a compact intake:
+   - 题材类型: 婚約破棄ざまぁ / 悪役令嬢 / 聖女 / 契約結婚 / 辺境伯溺愛 / 職人令嬢 / 相続家族 / ループ / 異類婚姻 / 強いヒロイン / 手紙すれ違い.
+   - 情绪主轴: 屈辱逆转 / 证据反杀 / 被尊重治愈 / 契约变真爱 / 家族切割 / 公开名誉恢复.
+   - 男主作用: 保护证据 / 公开承认 / 法律或爵位支持 / 温柔尊重 / 共犯式反击.
+2. Before writing, read:
+   - `references/oneshot-blueprint.md`
+   - `references/anti-water.md`
+   - `../jp-josei-fantasy-write/references/terminology.md` when adapting from Chinese material, checking localization, or avoiding Chinese court/xianxia leakage.
+   - `../jp-josei-fantasy-write/references/self-check.md` as the Codex AI self-check pattern, adapted to one-shot closure instead of serial continuity.
+   - `references/oneshot-delivery.md` before saving a full one-shot package, character prompts, cover prompt, or any project-bound output.
+3. If the user asks for current market, ranking, or "现在日本什么火", browse current public ranking/tag pages before making market claims.
+4. Check anti-homogenization if a ledger exists:
+   - `python .codex/skills/jp-josei-fantasy-oneshot/scripts/ledger.py --root . summary`
+   - `python .codex/skills/jp-josei-fantasy-oneshot/scripts/ledger.py --root . check ...`
+5. Build a brief one-shot blueprint before prose. Do not require project `大纲/细纲` files for one-shot work.
+6. Save complete long prose as a one-shot package under `episodes/oneshots/<short-title>/` unless the user asks for chat-only output.
+   - Required package folders/files: `正文/正文.md`, `正文/标题.md`, `角色提示词/角色提示词.md`, `封面/封面.md`, and `作品资料.md`.
+   - Generate `封面/封面.png` only when image generation is requested or available; otherwise mark `封面/封面.md` as prompt-only.
+   - Do not deliver only a single mixed markdown file.
+7. After saving, count only `正文/正文.md`. Do not report completion below 14,500 Japanese characters unless the user explicitly approved a shorter story.
+8. After saving, run a Codex AI one-shot self-check by rereading the saved body, title file, character prompts, cover brief, and `作品资料.md`:
+   - Verify the body is Japanese audience-facing prose only, with no Chinese planning notes, source-language leftovers, or meta/production leakage.
+   - Verify one-shot closure: heroine wound, accusation/proof, romance recognition, zamaa/social consequence, and happy-ending promise all resolve in this file.
+   - Verify localization: if the source came from Chinese court drama or xianxia, the functions have been rebuilt as Japanese romance fantasy mechanisms such as 王宮/貴族院/神殿/社交界/修道院/爵位剥奪/領地没収/王命, not literal 宫斗/后宫/冷宫/嫡庶/夺嫡 carryover.
+   - Verify prose freshness with Codex judgment: cut repeated decorative adjectives, atmosphere padding, stacked tears, vague pain, and uniform short-sentence stutter; rewrite the saved body if the check finds real issues.
+   - Treat this quality gate as a reasoning pass over the actual saved artifacts.
+9. Append a ledger record unless the user says not to.
+
+## One-Shot Defaults
+
+- Target length: 14,500-16,500 Japanese characters.
+- Package shape:
+  - `正文/正文.md`: Japanese body only.
+  - `正文/标题.md`: Chinese working title, Japanese publish title, and short click title.
+  - `角色提示词/角色提示词.md`: image-ready character prompts for all major characters.
+  - `封面/封面.md`: cover/thumbnail brief, final image prompt, text layers, and status.
+  - `作品资料.md`: blueprint, source notes, character count, checks, and ledger notes.
+- Ending: closed happy ending or satisfying hopeful ending. A lingering romantic future is allowed, but the central accusation, wound, or contract conflict must be resolved.
+
+## Hard Rules
+
+- Do not turn a one-shot into a season outline.
+- Do not leave the core injustice, romance recognition, or heroine's choice unresolved.
+- Do not pad to 15k with room atmosphere, noble etiquette filler, repeated tears, vague pain, or decorative beauty.
+- Do not make the male lead solve everything while the heroine only cries. She must make at least one costly choice.
+- Do not make `ざまぁ` happen by coincidence; it must follow from evidence, witness, law, contract, church rule, or the antagonist's own action.
+- Do not preserve Chinese palace-drama terms or logic by surface translation. Convert their function into Japanese female-fantasy equivalents: social rank, engagement law, church record, aristocratic inheritance, public trial, salon rumor, convent exile, territorial confiscation, or title loss.
+- Do not report "done" until the saved body count is in range or the user approved shorter output.
+
+## Deliverable
+
+For a full one-shot:
+
+1. Chinese working title + Japanese publish title.
+2. Subtype, heroine wound, romance engine, zamaa/proof engine, happy-ending shape.
+3. Brief one-shot blueprint.
+4. Saved package path and primary file paths.
+5. Body character count.
+6. Codex AI self-check result and ledger status.

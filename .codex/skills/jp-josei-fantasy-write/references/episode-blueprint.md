@@ -110,6 +110,7 @@ For episode 2 or later, read the previous episode or folder before planning. Ext
 - emotional residue between heroine and male lead
 
 The first scene must begin from one of these extracted items. Do not reopen the story as if the heroine's last choice never happened.
+Convert the continuity bridge into in-world memory. Never write production labels such as `第4話で`, `第3話の時`, `前回`, `次回`, `読者`, or `視聴者` in the body prose; use concrete locations, documents, wounds, promises, or witness names instead.
 
 ## Anti-Water Expansion
 
@@ -132,4 +133,5 @@ Before delivering:
 - Dense beats are visibly denser than transitions.
 - At least one evidence/romance/status consequence lands on the page.
 - The final paragraph points to the next episode through a specific witness, document, accusation, romantic question, or public choice.
+- Body prose contains no production metadata leakage. `第N話` may appear in title headings, but not in narration or dialogue.
 - Count the saved prose. For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose, 14,500-16,500 Japanese characters is the default pass range. If it is below 14,500, expand only dense beats with new evidence, witness pressure, heroine agency, romantic recognition, legal/family/social consequence, zamaa setup/payoff, or next-hook escalation. Do not pad with etiquette, scenery, repeated tears, or abstract emotion.

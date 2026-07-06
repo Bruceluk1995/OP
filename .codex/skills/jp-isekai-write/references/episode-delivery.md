@@ -85,10 +85,10 @@ After packaging a project-bound episode, update the project memory files describ
 
 Write `角色提示词.md` as direct, single-paragraph visual prompts, not field-by-field bullet sheets. Keep one heading per character, then one complete paragraph that can be pasted into an image/character generation tool.
 
-Default order inside each paragraph: age and identity/species; height and body type; hair color, hairstyle, and hair texture; eye color, facial features, expression, and temperament; clothing, accessories, weapons/tools, emblem, and cleanliness/wear; episode-relevant pose, prop, or scene use if needed.
+Default order inside each paragraph: age and identity/species; height and body type; hair color, hairstyle, and hair texture; eye color, facial features, expression, and temperament; clothing, accessories, stable weapons/tools, emblem, and cleanliness/wear.
 
 Template style:
 
 `一位17岁左右的西欧系贵族少年，身高176cm左右，体型修长挺拔，银色短发到耳下，发丝柔顺，有贵族感，蓝灰色眼睛，五官精致，表情从容自信。脸型清秀，气质优雅但不阴柔。身穿异世界贵族少年剑士服：白色或浅灰色高领上衣，深蓝色短披风，银色纽扣，腰间佩戴细剑，胸前或肩部有贵族纹章装饰，靴子干净精致。`
 
-Avoid fragmented labels such as `本集重点姿态：` unless the user explicitly asks for structured fields.
+Character prompts are stable visual identity only. Do not add cover composition, camera framing, scene action, one-off plot movement, or lines such as `适合封面姿态：`, `本集重点姿态：`, `封面构图：`, or `画面中：`. Put those instructions only in `封面.md`.

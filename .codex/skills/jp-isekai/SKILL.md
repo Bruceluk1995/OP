@@ -9,6 +9,7 @@ Use this as the router for Japanese male-audience isekai work. Prefer the dedica
 
 - `$jp-isekai-plan`: premise, world rules, protagonist, cheat design, first arc, episode outline.
 - `$jp-isekai-write`: Japanese first-person episode drafting, usually 8k-20k Japanese characters.
+- `$jp-isekai-oneshot`: standalone 14,500-16,500 character Japanese male-audience isekai short stories that fully resolve in one file, not serial episodes or 6-episode seasons.
 - `$jp-isekai-review`: localization, Japanese readability, genre-fit, and Chinese-term leakage checks.
 
 ## Core Contract
@@ -41,6 +42,7 @@ Detailed protocol: `references/project-memory.md`.
 ## Workflow
 
 1. Determine the task:
+   - Standalone short story, one-shot, 一发完结, 15000字短篇, or "不是连续剧" -> use `$jp-isekai-oneshot`.
    - New concept or Chinese-to-Japanese adaptation -> use `$jp-isekai-plan`.
    - Write a full episode or rewrite draft in Japanese -> use `$jp-isekai-write`.
    - Check an existing draft -> use `$jp-isekai-review`.

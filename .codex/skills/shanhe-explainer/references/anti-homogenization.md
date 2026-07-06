@@ -18,6 +18,8 @@ Before generating titles, outlines, or full scripts:
    - thesis_shape
    - target_language
    - trend_source
+   - hot_source_mode
+   - source_type
    - trend_seed
 4. If the user explicitly asks for a similar topic, keep the requested field but vary at least three others.
 
@@ -27,7 +29,9 @@ Before generating titles, outlines, or full scripts:
 |---|---|
 | topic_pack | japan-history-society, world-history, geopolitics-strategy, institutions-economy-power, science-technology, social-common-sense |
 | audience_pack | japan, united-states, europe |
-| trend_source | google-trends-jp, evergreen, user-seed, none |
+| trend_source | google-trends-jp, youtube-jp, tiktok-jp, news-social, official-data, evergreen, user-seed, mixed, none |
+| hot_source_mode | google-trends, social-video, news-social, official-data, evergreen, all-source, user-seed |
+| source_type | search-trend, video-hook, news-event, data-report, evergreen-angle, user-keyword |
 | trend_seed | original trend keyword or query cluster |
 | domain | world history, modern history, foreign history, geopolitics, military logistics, institutional design, science history, everyday economics, social common sense |
 | question_type | why failed, why survived, why misunderstood, how possible, what hidden constraint, which choice was least bad, why obvious answer is wrong |
@@ -54,5 +58,5 @@ Prefer changing audience pack, opening analogy, and evidence axis first, because
 Append one JSON line after each generated concept, outline, or script:
 
 ```json
-{"date":"YYYY-MM-DD","title":"...","topic_pack":"world-history","audience_pack":"japan","trend_source":"google-trends-jp","trend_seed":"...","domain":"foreign history","question_type":"why failed","opening_analogy":"map/geography image","evidence_axis":"logistics","thesis_shape":"strength became trap","target_language":"ja","path":"chat-only","notes":"one-line promise"}
+{"date":"YYYY-MM-DD","title":"...","topic_pack":"world-history","audience_pack":"japan","trend_source":"google-trends-jp","hot_source_mode":"google-trends","source_type":"search-trend","trend_seed":"...","domain":"foreign history","question_type":"why failed","opening_analogy":"map/geography image","evidence_axis":"logistics","thesis_shape":"strength became trap","target_language":"ja","path":"chat-only","notes":"one-line promise"}
 ```

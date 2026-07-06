@@ -1,6 +1,6 @@
 ---
 name: econ-finance-explainer
-description: Economics and finance explainer scripting suite distilled from the local 代数学家89 subtitle corpus, then expanded into longer Shanhe-length analytical videos. Use when the user asks for 经济学讲解, 财经科普, 金融市场/宏观经济/债务/房价/消费/就业/平台经济/行为经济学/投资风险/骗局拆解, "普通人为什么赚不到钱", "钱去哪了", "谁在承担成本", or Japanese/English/Chinese economics narration optimized for Japan, US, Europe, or international audiences.
+description: Economics and finance explainer scripting suite distilled from the local 代数学家89 subtitle corpus, then expanded into longer Shanhe-length analytical videos. Use when the user asks for 经济学讲解, 财经科普, 金融市场/宏观经济/债务/房价/消费/就业/平台经济/行为经济学/投资风险/骗局拆解, YouTube/TikTok/Google Trends/新闻/数据/全源财经热点选题, "普通人为什么赚不到钱", "钱去哪了", "谁在承担成本", or Japanese/English/Chinese economics narration optimized for Japan, US, Europe, or international audiences.
 ---
 
 # Econ Finance Explainer
@@ -43,6 +43,7 @@ Do not copy recurring names, exact story shells, or source phrasing. Create fres
    - `references/localization.md`
    - `references/fact-checking.md`
    - `references/anti-homogenization.md`
+   - `references/hot-source-router.md` when the user has no topic, wants 热点选题, asks for YouTube/TikTok/Google Trends/news/data/all-source selection, or rejects the current source as boring.
    - `references/trend-benchmarking.md` when the user wants hot/current/platform-fit topics or title generation from trends.
 4. Select one topic pack:
    - Household money, consumption, debt traps, education, career choice, sunk cost -> `references/topic-packs/household-money.md`
@@ -57,10 +58,14 @@ Do not copy recurring names, exact story shells, or source phrasing. Create fres
    - European audience or EU/UK-oriented English narration -> `references/audience-packs/europe.md`
    - Chinese-speaking audience -> use `references/localization.md` and keep examples domestic or generic unless the user says otherwise.
 6. If the topic involves current prices, interest rates, jobs, inflation, stocks, funds, crypto, real estate, regulation, tax, pensions, or public finance, verify with current reliable sources before writing. Do not invent figures, rankings, rates, dates, or policy details.
-7. Before proposing a new angle or full script, check the ledger if present:
+7. For trend-driven angle/title batches:
+   - If the source is missing, ask the source menu from `references/hot-source-router.md`.
+   - If the user chooses 全选, collect from multiple source types and score candidates together.
+   - Prefer YouTube/TikTok when the user wants ordinary-life hooks, scams, platform work, creator economy, or consumer traps. Prefer official data and finance news when the topic needs current rates, prices, policy, market, or regulatory facts.
+8. Before proposing a new angle or full script, check the ledger if present:
    - `python .codex/skills/econ-finance-explainer/scripts/ledger.py --root . summary`
    - `python .codex/skills/econ-finance-explainer/scripts/ledger.py --root . check ...`
-8. After delivering a concept, outline, or script, append a ledger record unless the user says not to.
+9. After delivering a concept, outline, or script, append a ledger record unless the user says not to.
 
 ## Output Defaults
 
@@ -103,6 +108,7 @@ For title/angle work, provide:
 1. Chinese working title.
 2. Target-language publish title.
 3. Trend seed, evergreen seed, or user keyword.
-4. Promised economic mechanism.
-5. Audience-specific hook.
-6. Risk/fact-check note.
+4. Hot source mode and source type when trend-driven.
+5. Promised economic mechanism.
+6. Audience-specific hook.
+7. Risk/fact-check note.

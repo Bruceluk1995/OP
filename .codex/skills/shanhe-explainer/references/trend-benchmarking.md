@@ -1,12 +1,13 @@
 # Trend Benchmarking
 
-Use this when the user wants current, hot, platform-fit, or trend-driven angle/title generation. For Japanese audiences, Google Trends JP is the default trend source:
+Use this when the user wants current, hot, platform-fit, or trend-driven angle/title generation. If the user wants YouTube/TikTok/news/official-data/all-source selection, read `hot-source-router.md` first. For Japanese audiences, Google Trends JP is only one available trend source:
 
 `https://trends.google.com/trending?geo=JP`
 
 ## Source Protocol
 
-1. Open Google Trends JP.
+0. If the source is not selected, ask the source menu from `hot-source-router.md`.
+1. Open Google Trends JP only when Google Trends is selected or when all-source mode includes it.
 2. Use `Past 24 hours` for hot reactions, `Past 7 days` for less noisy topics.
 3. Prefer categories that can become explanatory scripts:
    - Business and Finance
@@ -94,6 +95,8 @@ For each title, include:
 
 - Chinese working title.
 - Japanese publish title.
+- Hot source mode.
+- Source type.
 - Trend seed.
 - Topic pack.
 - Why now.
@@ -107,6 +110,8 @@ Example:
 1. 中文标题：为什么日本电费很难真正降下来？
    日语标题：なぜ日本の電気代は、下がりにくいのか
    - Trend seed: 電気代 / energy price query
+   - Hot source mode: google-trends
+   - Source type: search trend
    - Topic pack: japan-history-society + institutions-economy-power
    - Why now: household cost searches are rising
    - Promised argument: the issue is not only fuel price, but island energy security, grid structure, and post-Fukushima choices

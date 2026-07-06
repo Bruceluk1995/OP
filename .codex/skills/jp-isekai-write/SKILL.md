@@ -15,6 +15,7 @@ Write Japanese web-novel episodes for male-audience isekai. Use this for final p
 - Read `references/anti-ai-gates.md` before drafting and again before final delivery when the user mentions AI flavor, wateriness, weak prose, or when producing a saved episode file.
 - Read `references/episode-delivery.md` when the user wants a finished episode, long-form serialization, per-episode files, character prompts, covers/thumbnails, YouTube, or project-bound output.
 - Read `references/push-narration-protocol.md` when writing episode 2 or later, adapting for YouTube/recap narration, continuing from previous files, or when the user complains about AI flavor, weak hooks, wateriness, or failure to connect the last episode.
+- Read `references/self-check.md` before final delivery of any saved episode, project-bound output, or per-episode folder.
 - Read `../jp-isekai/references/project-memory.md` before writing any saved/project-bound episode, continuing a serial, or checking anti-homogenization.
 - If the outline or user request names a subtype lane, read the loaded project benchmark card or `对标/{lane}/` report first when available, then project subtype notes, then the matching `../jp-isekai-plan/references/type-packs/{lane}.md` only as fallback. The episode must follow the selected lane's benchmark/payoff engine instead of generic isekai.
 
@@ -52,10 +53,7 @@ Write Japanese web-novel episodes for male-audience isekai. Use this for final p
    - Convert mood/summary lines into objects, actions, dialogue, body response, price, rule, witness, or consequence.
    - Break uniform rhythm; keep dense beats visibly denser than transitions.
    - Delete or rewrite scenery, adjectives, atmosphere, or inner reflection that does not change information, risk, resources, status, relationship, or the protagonist's next action.
-   - If prose was saved to a file, run the local scripts:
-     `node .codex/skills/jp-isekai-write/scripts/check-ai-patterns.js --check --fail-on=blocking <file>`
-     `node .codex/skills/jp-isekai-write/scripts/check-degeneration.js --check --fail-on=blocking <file>`
-     `node .codex/skills/jp-isekai-write/scripts/normalize-punctuation.js <file>`
+   - If prose was saved to a file, reread the saved file with Codex AI and revise any real issue directly. Do not use a mechanical gate as the default self-check.
 6. Save long outputs to a file when the result would be too large for chat. For project-bound episodes, create the per-episode delivery folder described in `references/episode-delivery.md`.
 7. Package delivery assets when applicable:
    - `正文.md`, `标题.md`, `角色提示词.md`, `封面.md`, and an actual generated `封面.png`.
@@ -67,6 +65,8 @@ Write Japanese web-novel episodes for male-audience isekai. Use this for final p
    - Count Japanese characters with Python.
    - For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose, do not report completion below 14,500 Japanese characters unless the user explicitly approved a shorter length. If below target, continue expanding existing dense beats with more combat/problem tests, OP restraint/reveal, witness reaction, cost, reward, status movement, faction consequence, or next-threat setup.
    - Scan for banned Chinese leakage using `references/terminology.md`.
+   - If the source was Chinese 古言/朝堂/宫斗, verify the power structure was rebuilt for Japanese RPG/fantasy readers instead of directly carrying over emperor, harem, cold-palace, concubine, or legitimate/concubine-born systems.
+   - Run the Codex AI story/package audit in `references/self-check.md`; fix story bugs, Chinese leakage, package omissions, unused character prompts, and cover-image problems before reporting completion.
    - Check the draft against `references/episode-blueprint.md`: target emotion delivered, dense beats expanded, sparse beats compressed, cost/reward/status consequence present, and ending hook specific.
    - Scan the first 600 Japanese characters against `references/push-narration-protocol.md`: plot-bomb sentence, previous-episode recap bridge, concrete conflict, and no generic AI-flavored filler.
    - Scan the whole draft against `references/anti-ai-gates.md`: no generic texture, stock summary lines, author explanation, uniform paragraph rhythm, or model/meta leakage.
@@ -76,4 +76,4 @@ Write Japanese web-novel episodes for male-audience isekai. Use this for final p
 
 ## Quality Bar
 
-The episode must feel like Japanese isekai, not translated Chinese xianxia. The reader should immediately understand the social system, the cheat's rule, why the protagonist wants survival/profit/level-up/slow life, and what problem pulls him into the next installment.
+The episode must feel like Japanese isekai, not translated Chinese xianxia or Chinese court drama with RPG labels pasted on top. The reader should immediately understand the social system, the cheat's rule, why the protagonist wants survival/profit/level-up/slow life, and what problem pulls him into the next installment.

@@ -13,3 +13,18 @@ Replace with Japanese RPG/fantasy equivalents:
 - `ポーション`, `魔道具`, `アーティファクト`
 
 If the user specifically asks for "no Chinese elements", also avoid Chinese-flavored names, sect ranks, Daoist imagery, flying swords, cultivation stages, and beast names that feel like xianxia taxonomy.
+
+## Cultural Localization, Not Literal Translation
+
+When adapting Chinese 古言/朝堂/宫斗 material into Japanese male-audience isekai, do not preserve Chinese court institutions unless the user explicitly wants a Chinese setting. Translate the story function into a Japanese RPG/fantasy power structure.
+
+Replace or reframe:
+
+- `皇帝`, `皇上`, `圣上` -> `国王`, `帝国皇帝` only when the setting is explicitly an empire; otherwise use `領主`, `王都`, `王国`, `貴族院`.
+- `皇子`, `太子`, `夺嫡` -> `王太子`, `第二王子`, `王位継承争い`, `派閥争い`.
+- `后宫`, `贵妃`, `妃嫔`, `冷宫` -> usually avoid; if relevant, convert to `宮廷派閥`, `王妃/側妃`, `離宮への幽閉`, or a noble-house scandal.
+- `嫡子`, `庶子`, `嫡庶` -> `正妻の子`, `後妻の子`, `異母兄弟`, `家督争い`, `相続順位`.
+- `太监`, `宫女`, `嬷嬷`, `内侍` -> `侍従`, `侍女`, `執事`, `王宮官吏`, `神官`.
+- `圣旨`, `赐婚`, `抄家`, `灭族` -> `王命`, `勅命`, `爵位剥奪`, `領地没収`, `一族追放`, `ギルド除名`, `処刑判決`.
+
+Do not translate only the label. Convert the function into the target lane: guild pressure, noble monopoly, royal decree, succession feud, dungeon permit, taxation, exile, reward, or faction consequence.

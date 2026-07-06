@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Josei Fantasy Write"
   short_description: "Draft push-ready Japanese female fantasy romance"
-  default_prompt: "Use $jp-josei-fantasy-write to draft Japanese female-audience fantasy romance from a full episode blueprint: plot-bomb opening, previous-episode bridge, dense/sparse emotional beats, heroine agency, romance/zamaa payoff, JP anti-AI gates, and local script checks for saved files."
+  default_prompt: "Use $jp-josei-fantasy-write to draft Japanese female-audience fantasy romance from a full episode blueprint: plot-bomb opening, previous-episode bridge, dense/sparse emotional beats, heroine agency, romance/zamaa payoff, JP anti-AI gates, and Codex AI saved-file reread."

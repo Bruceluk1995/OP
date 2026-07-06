@@ -1,4 +1,4 @@
 interface:
   display_name: "Econ Finance Explainer"
-  short_description: "Economics and finance explainers"
-  default_prompt: "Use $econ-finance-explainer to draft a Japanese or English economics or finance explainer for a Japan, US, or Europe audience."
+  short_description: "All-source economics explainers"
+  default_prompt: "Use $econ-finance-explainer to find a finance topic from YouTube, TikTok, Trends, news, social complaints, official data, or evergreen mechanisms, then draft a Japanese or English economics explainer."

@@ -14,6 +14,7 @@ Write Japanese web-novel prose for female-audience fantasy romance. Use this for
 - Read `references/episode-blueprint.md` before drafting any episode/chapter prose, especially serial episodes that must hold viewer retention.
 - Read `references/anti-ai-gates.md` before drafting and again before final delivery when the user mentions AI flavor, wateriness, weak prose, or when producing a saved episode file.
 - Read `references/push-episode-delivery.md` when writing episode 2 or later, YouTube/recap/push narration, per-episode folders, character prompts, covers, or when the user complains about AI flavor, weak hooks, wateriness, or failure to connect the previous episode.
+- Read `references/self-check.md` before final delivery of any saved episode, project-bound output, or per-episode folder.
 - Read `../jp-josei-fantasy/references/project-memory.md` before writing any saved/project-bound episode, continuing a serial, or checking anti-homogenization.
 - If the outline or user names a lane, read the best available benchmark/type-pack material before prose: project拆文, live benchmark card, project-local `女频幻想恋爱知识库/type-packs/{lane}.md`, then bundled `../jp-josei-fantasy-plan/references/type-packs/{lane}.md` as fallback.
 
@@ -50,10 +51,7 @@ Write Japanese web-novel prose for female-audience fantasy romance. Use this for
    - Convert mood/summary lines into documents, hands, doors, witnesses, contracts, titles, injuries, choices, or social consequences.
    - Break uniform rhythm; keep dense beats visibly denser than transitions.
    - Delete or rewrite etiquette, scenery, sadness, beauty, or inner reflection that does not change information, reputation, relationship, evidence, risk, status, or the heroine's next action.
-   - If prose was saved to a file, run the local scripts:
-     `node .codex/skills/jp-josei-fantasy-write/scripts/check-ai-patterns.js --check --fail-on=blocking <file>`
-     `node .codex/skills/jp-josei-fantasy-write/scripts/check-degeneration.js --check --fail-on=blocking <file>`
-     `node .codex/skills/jp-josei-fantasy-write/scripts/normalize-punctuation.js <file>`
+   - If prose was saved to a file, reread the saved file with Codex AI and revise any real issue directly. Do not use a mechanical gate as the default self-check.
 6. Save long outputs to a file when the result would be too large for chat. For project-bound episodes, create or update the per-episode folder described in `references/push-episode-delivery.md`.
 7. After saving a project-bound episode, update project memory:
    - Update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
@@ -62,6 +60,8 @@ Write Japanese web-novel prose for female-audience fantasy romance. Use this for
    - Count Japanese characters with Python.
    - For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose, do not report completion below 14,500 Japanese characters unless the user explicitly approved a shorter length. If below target, continue expanding existing dense beats with more evidence movement, public pressure, heroine choice, male-lead recognition, legal/family consequence, romance shift, zamaa setup/payoff, or next threat.
    - Scan for Chinese/xianxia leakage using `references/terminology.md`.
+   - If the source was Chinese 古言/宫斗/朝堂, verify the court-drama function was rebuilt for Japanese female-fantasy readers instead of directly carrying over emperor, harem, cold-palace, concubine, or legitimate/concubine-born systems.
+   - Run the Codex AI story/package audit in `references/self-check.md`; fix story bugs, Chinese leakage, package omissions, unused character prompts, and cover-image problems before reporting completion.
    - Check that the heroine acts, the romance advances, and the scene promise matches the chosen tags.
    - Check the draft against `references/episode-blueprint.md`: target emotion delivered, dense beats expanded, sparse beats compressed, evidence/romance/status consequence present, and ending hook specific.
    - Scan the first 600 Japanese characters against `references/push-episode-delivery.md`: plot-bomb sentence, previous-episode recap bridge, concrete social pressure, and no generic AI-flavored filler.

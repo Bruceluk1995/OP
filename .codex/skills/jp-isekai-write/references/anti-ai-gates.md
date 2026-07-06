@@ -66,7 +66,7 @@ Use body/object behavior:
 - Do not create a chain of tiny one-sentence paragraphs unless the scene is a pressure beat.
 - In a 15,000-character episode, do not use long quiet stretches as filler. Any long stretch must change, prepare, or pay off information, resource, risk, status, relationship, skill understanding, enemy pressure, objective, or next decision.
 - Delete paragraphs that only describe atmosphere, scenery, awe, loneliness, silence, light, destiny, or vague feelings without changing the state above.
-- If `scripts/check-ai-patterns.js` reports `period-stutter`, merge short fragments into a fuller action chain.
+- If the Codex AI reread notices short-sentence stutter, merge short fragments into a fuller action chain.
 - If it reports `long-paragraph`, split by new action, object, line of dialogue, or information turn.
 
 ## Gate D2: No Pretty Dead Text
@@ -113,23 +113,9 @@ Delete or convert:
 
 Convert them into what the protagonist can see, hear, touch, count, smell, or misunderstand now.
 
-## Deterministic File Pass
+## Codex AI File Pass
 
-When the episode is saved to a file, run the local scripts from this skill:
-
-```powershell
-node .codex/skills/jp-isekai-write/scripts/check-ai-patterns.js --check --fail-on=blocking <episode-file>
-node .codex/skills/jp-isekai-write/scripts/check-degeneration.js --check --fail-on=blocking <episode-file>
-node .codex/skills/jp-isekai-write/scripts/normalize-punctuation.js <episode-file>
-```
-
-If running from inside the skill directory, use `node scripts/...`.
-
-Interpretation:
-
-- `blocking`: fix or regenerate the affected paragraph before delivery.
-- `advisory`: inspect manually; keep justified long reasoning, dialogue rhythm, or deliberate repeated gag.
-- The scripts are conservative and language-mixed. They catch punctuation, stutter, long paragraphs, meta leakage, and some Chinese AI structures; they do not replace human Japanese prose review.
+When the episode is saved to a file, Codex must reread the saved file itself before delivery. Do not rely on a mechanical gate. Check for AI texture, production metadata leakage, Chinese leakage, repeated rhythm, and dead paragraphs by reasoning over the scene function and surrounding context.
 
 ## Final Self-Check
 

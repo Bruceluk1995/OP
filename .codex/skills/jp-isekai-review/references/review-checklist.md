@@ -11,6 +11,9 @@ Use for Japanese male-audience isekai drafts.
 - Are status windows and skill effects integrated into narration instead of dumped as multi-line UI panels?
 - Is the first payoff concrete?
 - Does the episode end with a next hook?
+- Has saved/project-bound output passed the Codex AI story audit in `../jp-isekai-write/references/self-check.md`?
+- Does plot logic break through continuity reset, contradictory rank/money/equipment/injury state, unexplained drops/rewards, unused extra character prompts, or missing package/cover assets?
+- Are Chinese court-drama institutions being translated literally instead of rebuilt as Japanese RPG/fantasy power structures?
 
 ## Genre Fit
 
@@ -18,6 +21,7 @@ Use for Japanese male-audience isekai drafts.
 - Social pressure is legible: debt, rank, guild, noble monopoly, party rejection, class disadvantage.
 - Cheat has repeatable inputs and limitations.
 - Progression is visible: money, rank, companion growth, item, base, reputation.
+- RPG state is consistent: skill limits, cooldowns, drops, rank, money, equipment, and monster behavior do not contradict prior tracking.
 - Humor fits the narrator's survival mindset.
 - Slow-life desire creates irony because success attracts trouble.
 
@@ -25,6 +29,7 @@ Use for Japanese male-audience isekai drafts.
 
 - Terms are common Japanese RPG/light-novel terms.
 - Names are pronounceable and not Chinese-coded unless intended.
+- Chinese 古言/朝堂/宫斗 functions are localized into guild, noble, royal, territory, succession, permit, tax, exile, or faction systems; they are not direct word swaps.
 - Paragraphing is mobile-readable.
 - Internal monologue sounds casual, not formal essay-like.
 - UI/status text is short and consistent.

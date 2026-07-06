@@ -15,7 +15,7 @@ Use this before drafting audience-facing Japanese prose.
 - Keep paragraphs web-readable. Use dialogue and internal reaction to vary pace.
 - Cut generic AI filler: vague beauty, vague pain, repeated trembling, sighing, tears, warmth, light, silence, destiny, and moral summaries. Replace each with etiquette, documents, witnesses, doors, hands, contracts, titles, rumors, scars, seals, injuries, money, or a line of dialogue that changes status.
 - Expand length by deepening dense beats from the blueprint, not by adding new mood paragraphs. Transitions stay sparse.
-- File deliveries must run the local anti-AI scripts from this skill when possible; blocking findings are fixed before handoff.
+- File deliveries must be reread by Codex AI before handoff; real prose, continuity, and localization issues are fixed directly.
 
 ## Female-Reader Fantasy Romance Priorities
 

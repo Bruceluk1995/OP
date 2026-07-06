@@ -11,6 +11,7 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
 
 - Read `references/review-checklist.md` before a full review.
 - Read `references/terminology.md` whenever checking Chinese-to-Japanese adaptation leakage.
+- Read `../jp-josei-fantasy-write/references/self-check.md` when reviewing saved episodes, project-bound output, per-episode folders, continuity, plot bugs, package completeness, or Chinese leakage.
 - If the draft or outline names a lane, read the best available benchmark/type-pack material before judging genre fit: project拆文, live benchmark card, project-local `女频幻想恋爱知识库/type-packs/{lane}.md`, then bundled `../jp-josei-fantasy-plan/references/type-packs/{lane}.md` as fallback.
 
 ## Review Workflow
@@ -25,6 +26,7 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
    - New concept/episode repeats a recent `女频幻想恋爱知识库/generated-ledger.jsonl` combination without changing at least two key fields.
    - Project-bound outline names a subtype lane but the plan/prose used only generic josei fantasy rules and did not load the benchmark/type-pack priority chain.
    - Chinese fantasy institutions, xianxia terms, or Chinese sentence logic leaking into a Japanese fantasy-romance setting.
+   - Chinese court-drama institutions or social logic leaking through literal translation: emperor/harem/cold-palace/concubine/嫡庶/夺嫡 logic remains instead of Japanese noble, church, court, or social-season mechanisms.
    - Male-audience progression systems overpowering romance and dignity recovery.
    - Passive heroine who only waits to be rescued.
    - Male lead's love reads as generic possession rather than specific recognition.
@@ -37,7 +39,8 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
    - Dense beats are not denser than transitions; the prose spends similar weight on etiquette/scenery/sadness and payoff.
    - Prose is padded with vague AI-flavored adjectives or summary paragraphs instead of documents, witnesses, choices, etiquette, contracts, and consequences.
    - Draft fails JP anti-AI gates: generic destiny/light/silence texture, author explanation, stock summary ending, uniform rhythm, over-polished dialogue, or emotional lines without document/action/social consequence.
-   - Saved file has not been checked with local `check-ai-patterns.js` / `check-degeneration.js`, or blocking findings were ignored.
+   - Saved file or episode folder has not received a Codex AI self-check over outline, tracking files, previous episode tail, current body, and package assets.
+   - Codex AI self-check fails: continuity reset, character-state contradiction, unexplained power/legal rule, unused extra character prompt, missing package file, cover not actual 16:9 image, or unresolved Chinese leakage.
 3. Check genre fit:
    - Clear heroine wound and agency.
    - Tag promise appears early.

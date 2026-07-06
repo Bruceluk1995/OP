@@ -23,7 +23,7 @@ Use before drafting prose.
 - Avoid overexplaining the system before it affects a scene.
 - Cut generic AI filler: vague adjectives, repeated "chest tightened" beats, destiny/light/silence metaphors, decorative scenery, and moral summaries. Replace each with an object, action, line of dialogue, price, wound, document, witness, monster, guild rule, or failed experiment.
 - Expand length by deepening dense beats from the blueprint, not by adding new mood paragraphs. Transitions stay sparse.
-- File deliveries must run the local anti-AI scripts from this skill when possible; blocking findings are fixed before handoff.
+- File deliveries must be reread by Codex AI before handoff; real prose, continuity, and localization issues are fixed directly.
 
 ## Episode Structure
 

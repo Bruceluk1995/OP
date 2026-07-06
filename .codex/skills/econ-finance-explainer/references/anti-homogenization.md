@@ -20,6 +20,8 @@ Before generating titles, outlines, or full scripts:
    - thesis_shape
    - target_language
    - trend_source
+   - hot_source_mode
+   - source_type
    - trend_seed
 4. If the user explicitly asks for a similar topic, keep the requested field but vary at least three others.
 
@@ -30,6 +32,9 @@ Before generating titles, outlines, or full scripts:
 | topic_pack | household-money, macro-money-policy, markets-risk, public-finance-debt, platform-labor-capital, behavioral-risk-scams |
 | audience_pack | japan, united-states, europe, chinese-speaking, international |
 | market_region | Japan, US, Eurozone, UK, China, global |
+| trend_source | google-trends-jp, google-trends-us, youtube, tiktok, finance-news, social-complaints, official-data, evergreen, mixed, user-seed |
+| hot_source_mode | google-trends, social-video, finance-news, social-complaints, official-data, evergreen, all-source, user-seed |
+| source_type | search-trend, video-hook, news-event, complaint-cluster, data-report, evergreen-angle, user-keyword |
 | domain | household budget, labor market, housing, public finance, asset markets, credit, insurance, platform economy, AI economy, scams, gambling, retirement |
 | question_type | who pays, why looks cheap, why risk spreads, why hard to exit, why effort fails, how leverage amplifies, why policy tradeoff, why free is not free |
 | opening_analogy | salary notification, bill, casino table, theater seating, broken bucket, toll gate, app dashboard, local government project, school credential race, subscription trap |
@@ -55,5 +60,5 @@ Prefer changing opening analogy, mechanism axis, and market region first.
 Append one JSON line after each generated concept, outline, or script:
 
 ```json
-{"date":"YYYY-MM-DD","title":"...","topic_pack":"household-money","audience_pack":"japan","market_region":"Japan","trend_source":"google-trends-jp","trend_seed":"...","domain":"household budget","question_type":"who pays","opening_analogy":"salary notification","mechanism_axis":"cash flow","risk_transfer":"platform to consumer","thesis_shape":"free is prepaid","target_language":"ja","path":"chat-only","notes":"one-line promise"}
+{"date":"YYYY-MM-DD","title":"...","topic_pack":"household-money","audience_pack":"japan","market_region":"Japan","trend_source":"google-trends-jp","hot_source_mode":"google-trends","source_type":"search-trend","trend_seed":"...","domain":"household budget","question_type":"who pays","opening_analogy":"salary notification","mechanism_axis":"cash flow","risk_transfer":"platform to consumer","thesis_shape":"free is prepaid","target_language":"ja","path":"chat-only","notes":"one-line promise"}
 ```

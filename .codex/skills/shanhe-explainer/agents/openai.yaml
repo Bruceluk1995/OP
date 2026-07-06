@@ -1,4 +1,4 @@
 interface:
   display_name: "Shanhe Explainer"
-  short_description: "World-history and strategy explainers"
-  default_prompt: "Use $shanhe-explainer to draft a Japanese or English world-history or strategy explainer for a Japan, US, or Europe audience."
+  short_description: "All-source history and society explainers"
+  default_prompt: "Use $shanhe-explainer to find a hot source from YouTube, TikTok, Trends, news, data, or evergreen angles, then draft a Japanese or English history, society, or strategy explainer."

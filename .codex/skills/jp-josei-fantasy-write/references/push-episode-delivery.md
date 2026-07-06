@@ -2,7 +2,7 @@
 
 Use this when the user wants Japanese female-audience fantasy romance as anime-style 推文 / recap-like episodes, especially with per-episode files, character prompts, or YouTube covers.
 
-This reference governs push-format delivery, opening retention, folders, covers, and handoff. Use it together with `episode-blueprint.md`, which governs the whole episode's emotion target, dense/sparse beats, payoff, cost, and ending hook, and `anti-ai-gates.md`, which governs final prose cleanup and script-based checks.
+This reference governs push-format delivery, opening retention, folders, covers, and handoff. Use it together with `episode-blueprint.md`, which governs the whole episode's emotion target, dense/sparse beats, payoff, cost, and ending hook, and `anti-ai-gates.md`, which governs Codex AI final prose cleanup.
 
 For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose, the default body target is 14,500-16,500 Japanese characters unless the user sets another length. Count the saved body before handoff and keep expanding dense evidence/romance/zamaa beats if it is below 14,500.
 
@@ -18,11 +18,12 @@ For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-s
 - Default viewpoint for 推文 episodes: `私`, close to the heroine's fear, calculation, shame, relief, and attraction.
 - Open with the whole episode's biggest social/emotional bomb in sentence one. Use accusation, annulment, witness testimony, betrayal, contract reveal, curse symptom, public choice, debt, trial, inheritance theft, or male-lead intervention. Do not open with scenery, weather, abstract mood, or a soft "I never imagined..." line unless the same sentence contains the concrete bomb.
 - Immediately after sentence one, give a previous-episode bridge in prose: what happened last episode, what evidence/object/person remains unresolved, and why the heroine must act now. New viewers should understand the last hook by line five.
+- Keep that bridge fully inside the story world. Do not write production markers such as `第4話で`, `第3話の時`, `前回`, `次回`, `本話`, `読者`, or `視聴者` inside the body prose. Use in-world anchors instead: `地下広間で`, `夜明け前の森で`, `リリに初めて触れた時`, `あの婚姻契約書を読んだ夜`.
 - Keep the episode moving through scenes: pressure -> heroine choice -> male lead action -> social consequence -> emotional aftertaste -> next hook.
 - Build the full `episode-blueprint.md` before prose so the episode has a clear position, dense/sparse beat budget, concrete payoff, cost, and ending hook.
 - If the user sets a target such as 2万字 per episode, preserve that as the active project target until changed.
 - Do not pad with generic adjectives, repeated sighing, decorative scenery, or abstract declarations. Use documents, doors, witnesses, names, hands, contracts, etiquette, injuries, rumors, and concrete gestures.
-- Before handoff, run the `anti-ai-gates.md` final self-check. If the prose is saved to a file, run the local anti-AI scripts and fix blocking findings.
+- Before handoff, run the `anti-ai-gates.md` final self-check. If the prose is saved to a file, Codex must reread the saved file and fix real issues before delivery.
 
 ## Mandatory Opening Order
 
@@ -34,7 +35,7 @@ For episode 2 or later, write the first 250-500 Japanese characters in this orde
 4. **Heroine reaction.** Give one close first-person reaction tied to a concrete body action or decision, not vague sadness.
 5. **Scene entry.** Move into dialogue, a document, a door opening, a witness stepping forward, or the male lead taking action.
 
-Do not label these parts as "recap" or "summary" in the prose unless the user explicitly asks for script labels.
+Do not label these parts as "recap" or "summary" in the prose unless the user explicitly asks for narration labels. Episode numbers belong only in `title.md` / title headings, never in first-person body narration.
 
 ## Anti-AI Push Prose
 
@@ -93,9 +94,10 @@ If a previous local convention uses `正文.md`, `标题.md`, `角色提示词.m
 ## Character Prompts
 
 - Reuse existing character prompts when the same characters return.
-- Keep concrete visual continuity: age range, hair, eyes, height, clothing, social role, expression, and episode-specific state.
+- Keep concrete visual continuity: age range, hair, eyes, height, clothing, social role, expression, and stable visual state such as injury, curse mark, ring, or official emblem when it must persist.
 - Add only the characters needed for the current episode. Do not invent extra cast for convenience.
 - If the user shows prior character cards/screenshots, infer missing prompts from the visible names and previous episode context, then state uncertainty briefly.
+- Do not add cover composition, camera framing, scene action, one-off plot movement, or lines such as `适合封面姿态：`, `本集重点姿态：`, `封面构图：`, or `画面中：`. Put those instructions only in the cover prompt file.
 
 ## YouTube Cover Rules
 
