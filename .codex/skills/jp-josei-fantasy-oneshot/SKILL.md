@@ -10,6 +10,7 @@ Write complete standalone Japanese female-audience fantasy romance short stories
 ## Core Contract
 
 - Write audience-facing prose in Japanese unless the user asks otherwise. Keep planning notes in Chinese by default.
+- Reject literary prose: avoid long environment description and long psychology description; use colloquial, direct everyday language to move the story through action, dialogue, choices, evidence, romance movement, and social consequence.
 - Center the heroine's dignity, agency, emotional recovery, romance recognition, and happy ending.
 - `ざまぁ` must be emotionally and logically earned through evidence, witness, etiquette, contract, law, church record, family ledger, or public social consequence.
 - `溺愛` must be protective, respectful, and specific; avoid flattening the heroine into a reward object.
@@ -78,6 +79,7 @@ Write complete standalone Japanese female-audience fantasy romance short stories
 - Do not paste real trending celebrities, scandals, crime, tragedies, sports trivia, or private-person details into the romance story. Convert only the underlying desire, anxiety, object, rule, ceremony, social pressure, proof mechanism, or relationship tension.
 - Do not copy TikTok/YouTube creators, scenes, jokes, clips, songs, anime/game IP, dialogue, or exact video order. Extract only the hook mechanic and rebuild an original romance-fantasy premise.
 - Do not leave the core injustice, romance recognition, or heroine's choice unresolved.
+- Do not use literary padding: no long scenery blocks, no long psychology blocks, no decorative atmosphere when action, dialogue, evidence, or consequence should carry the beat.
 - Do not pad to 15k with room atmosphere, noble etiquette filler, repeated tears, vague pain, or decorative beauty.
 - Do not make the male lead solve everything while the heroine only cries. She must make at least one costly choice.
 - Do not make `ざまぁ` happen by coincidence; it must follow from evidence, witness, law, contract, church rule, or the antagonist's own action.

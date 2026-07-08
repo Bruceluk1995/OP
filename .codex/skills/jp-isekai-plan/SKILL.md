@@ -7,6 +7,8 @@ description: "Plan Japanese male-audience isekai novels and adaptations. Use for
 
 Build Japanese-style male-audience isekai plans. This skill is for concept and structure, not final prose.
 
+When planning prose beats, design colloquial, direct scene movement: action, dialogue, choices, proof, cost, and consequence. Do not plan long scenery passages, long psychology passages, or literary mood filler as a way to carry the story.
+
 ## Required Reads
 
 - Read `references/terminology.md` whenever adapting from Chinese fantasy or when the user says "不要中式".

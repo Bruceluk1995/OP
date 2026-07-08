@@ -31,6 +31,7 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
    - Passive heroine who only waits to be rescued.
    - Male lead's love reads as generic possession rather than specific recognition.
    - Zamaa payoff lacks evidence, social logic, or emotional clarity.
+   - Literary-prose drift: long environment description, long psychology description, decorative mood, or essay-like inner monologue replaces colloquial action, dialogue, evidence, and consequences.
    - Episode has no full episode blueprint logic: unclear target emotion, episode position, core payoff, cost/risk, dense/sparse beat split, or ending hook.
    - Episode 2+ opens as a reset instead of continuing the previous episode's unresolved hook.
    - First sentence is scenery, abstract emotion, destiny, quiet morning, or generic pain instead of a concrete social/emotional bomb.

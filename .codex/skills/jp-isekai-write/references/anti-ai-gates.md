@@ -4,6 +4,8 @@ Use this after the episode blueprint and again after drafting. It adapts the gen
 
 Goal: remove AI texture without destroying Japanese web-novel readability, first-person humor, RPG fantasy vocabulary, or push-narration retention.
 
+Hard style rule: reject literary prose. Do not keep long environment description or long psychology description; rewrite them into colloquial action, dialogue, choice, cost, reward, or consequence.
+
 ## Gate 0: Protect Plot Function
 
 Do not rewrite for prettiness. Keep:
@@ -122,6 +124,7 @@ When the episode is saved to a file, Codex must reread the saved file itself bef
 - Did I remove abstract filler without deleting plot function?
 - Does every emotional line have an object, action, dialogue, body response, or consequence?
 - Does every long stretch in a long episode have a function beyond atmosphere, scenery, mood, or adjectives?
+- Is the prose colloquial and direct rather than literary, ornate, or psychology-heavy?
 - Are dense beats visibly denser than transitions?
 - Does the ending hook point to a concrete next action?
 - Did no engineering words, placeholders, or model refusal text leak into prose?

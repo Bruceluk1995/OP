@@ -9,6 +9,7 @@ Use this before drafting audience-facing Japanese prose.
 - Open with the episode's biggest emotional or social bomb in the first sentence when writing push-video or serial recap episodes. Do not begin with scenery, weather, abstract longing, destiny, quiet morning, or generic sadness.
 - For episode 2 and later, connect directly to the previous episode's ending before starting a new scene. The opening must answer: what just happened, what remains unresolved, and why the heroine cannot avoid the next choice.
 - Hook within the first 150-250 Japanese characters for push-video narration. The older 300-500 character window is only acceptable for ordinary webnovel chapters.
+- Reject literary prose: write in colloquial, direct everyday language. Do not spend paragraphs on scenery, atmosphere, beauty, sadness, or psychology; move the scene through action, dialogue, choices, evidence, romance movement, and social consequence.
 - Keep the heroine close to the reader: shame, restraint, calculation, fear, anger, relief, and hope should be legible.
 - Show status through behavior: seating order, titles, forms of address, witnesses, etiquette, documents, seals, rumors, and servants.
 - Let romance grow through action. A male lead who remembers a detail, believes evidence, shields her reputation, or offers fair terms is stronger than generic praise.

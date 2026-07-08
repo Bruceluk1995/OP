@@ -4,6 +4,8 @@ Use this before drafting any Japanese male-audience isekai episode. It ports the
 
 Do not treat this as optional planning. If the user asks for prose, first build this blueprint briefly, then write from it.
 
+Plan for colloquial, direct prose. Every beat should move through action, dialogue, choice, cost, reward, or consequence; do not reserve space for long scenery, atmosphere, or psychology passages.
+
 ## Required Blueprint
 
 Create this working blueprint before prose:

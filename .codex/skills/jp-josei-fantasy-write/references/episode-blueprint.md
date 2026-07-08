@@ -4,6 +4,8 @@ Use this before drafting any Japanese female-audience fantasy romance episode. I
 
 Do not treat this as optional planning. If the user asks for prose, first build this blueprint briefly, then write from it.
 
+Plan for colloquial, direct prose. Every beat should move through action, dialogue, choice, evidence, romance movement, or social consequence; do not reserve space for long scenery, atmosphere, beauty, sadness, or psychology passages.
+
 ## Required Blueprint
 
 Create this working blueprint before prose:

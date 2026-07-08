@@ -14,6 +14,8 @@ Use this as the router for Japanese male-audience isekai work. Prefer the dedica
 
 ## Core Contract
 
+- Reject literary prose in drafted or rewritten fiction: avoid long environment description and long psychology description; use colloquial, direct everyday language to advance plot through action, dialogue, choices, and consequences.
+
 Always localize toward Japanese web novel / light-novel expectations:
 
 - Use `魔力`, `スキル`, `ステータス`, `ランク`, `冒険者ギルド`, `貴族`, `商会`, `ダンジョン`, `魔物`, `使い魔`, `従魔`, `装備枠`.

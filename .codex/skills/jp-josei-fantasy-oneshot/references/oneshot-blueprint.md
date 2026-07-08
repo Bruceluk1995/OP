@@ -2,6 +2,8 @@
 
 Use before drafting every standalone female-audience fantasy romance short.
 
+Plan for colloquial, direct prose. Every beat should move through action, dialogue, choice, evidence, romance movement, or social consequence; do not reserve space for long scenery, atmosphere, beauty, sadness, or psychology passages.
+
 ## Required Blueprint
 
 ```text

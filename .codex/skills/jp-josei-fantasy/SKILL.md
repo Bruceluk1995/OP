@@ -14,6 +14,8 @@ Use this as the router for Japanese female-audience fantasy romance work. Prefer
 
 ## Core Contract
 
+- Reject literary prose in drafted or rewritten fiction: avoid long environment description and long psychology description; use colloquial, direct everyday language to advance plot through action, dialogue, choices, proof, and consequences.
+
 Always localize toward Japanese female-reader web novel expectations:
 
 - Center the heroine's dignity, emotional recovery, social reputation, and happy ending.

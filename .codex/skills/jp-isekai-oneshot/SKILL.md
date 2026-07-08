@@ -10,6 +10,7 @@ Write complete standalone Japanese male-audience isekai short stories around 14,
 ## Core Contract
 
 - Write audience-facing prose in Japanese unless the user asks otherwise. Keep planning notes in Chinese by default.
+- Reject literary prose: avoid long environment description and long psychology description; use colloquial, direct everyday language to move the plot through action, dialogue, choices, proof, cost, and consequence.
 - Use Japanese RPG/light-novel isekai vocabulary: `スキル`, `ステータス`, `冒険者ギルド`, `ランク`, `魔物`, `ダンジョン`, `商会`, `貴族`, `魔力`.
 - Avoid Chinese xianxia/wuxia terms and Chinese webnovel institutions unless the user explicitly requests them.
 - When adapting Chinese 玄幻、修仙、朝堂、宫斗、赘婿、龙傲天 material, rebuild the power and institution logic into Japanese RPG/light-novel fantasy: guild ranks, dungeon rules, noble factions, royal succession, territory management, merchant contracts, magic academies, monster ecology, or church records. Do not preserve sect/cultivation/court-drama systems by direct translation unless the user wants that setting.
@@ -79,6 +80,7 @@ Write complete standalone Japanese male-audience isekai short stories around 14,
 - Do not turn real absurd news into disguised defamation or tragedy exploitation. Fictionalize names, places, companies, victims, and legal facts; keep only the absurd mechanism.
 - Do not copy TikTok/YouTube creators, scenes, jokes, clips, songs, anime/game IP, dialogue, or exact video order. Extract only the hook mechanic.
 - Do not leave the main enemy, proof, reward, or emotional promise unresolved.
+- Do not use literary padding: no long scenery blocks, no long psychology blocks, no decorative atmosphere when action, dialogue, or consequence should carry the beat.
 - Do not pad to 15k with travel, weather, generic awe, destiny, repeated inner monologue, or scenery.
 - Do not weaken OP protagonists randomly. Tension comes from unknown rules, public identity, collateral cost, information control, faction consequence, or restraint.
 - Do not let battle leveling become only commerce, herbs, or comfort scenes. Include a visible skill/combat/progression result.

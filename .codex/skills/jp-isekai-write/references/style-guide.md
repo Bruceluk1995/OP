@@ -6,6 +6,7 @@ Use before drafting prose.
 
 - Default to first-person `俺` for male-audience isekai.
 - Keep the protagonist practical, self-interested, and funny under pressure.
+- Reject literary prose: write in colloquial, direct everyday language. Do not spend paragraphs on scenery, atmosphere, or psychology; move the scene through action, dialogue, choices, costs, rewards, and consequences.
 - Use inner commentary as short reaction beats, not long stand-up routines.
 - Let jokes arise from mismatch: grand fantasy problem vs cheap tools, weak familiar, guild paperwork, rent, food, debt.
 

@@ -9,6 +9,7 @@ Use this for Japanese female-audience fantasy romance reviews.
 - The romance is generic: the male lead loves her because the plot says so, not because he observes specific value.
 - `ざまぁ` lacks evidence, public consequence, or social/legal logic.
 - The opening does not show the tag promise early enough.
+- The prose drifts into literary style: long scenery, long psychology, decorative atmosphere, vague beauty, or essay-like inner monologue instead of direct action, dialogue, evidence, and consequence.
 - Abuse scenes linger without dignity recovery or happy-ending direction.
 - The prose reads like synopsis, tag explanation, or game log instead of fiction.
 - Body prose contains production metadata leakage such as `第4話で`, `第3話の時`, `前回`, `次回`, `読者`, or `視聴者`; episode numbers belong only in headings/title files.

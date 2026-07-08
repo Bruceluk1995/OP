@@ -16,6 +16,7 @@ Allowed expansion:
 Forbidden expansion:
 
 - weather, moonlight, silence, destiny, vague awe;
+- long environment description, long psychology description, literary mood, or decorative atmosphere;
 - repeated "I changed", "my new life began", "the world moved";
 - long travel between places without a state change;
 - generic skill explanation before the scene proves the rule;

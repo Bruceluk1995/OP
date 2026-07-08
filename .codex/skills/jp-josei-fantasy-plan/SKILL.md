@@ -7,6 +7,8 @@ description: "Plan Japanese female-audience fantasy romance novels and adaptatio
 
 Build Japanese-style female-audience fantasy romance plans. This skill is for concept, market fit, emotional structure, and chapter beats, not final prose.
 
+When planning prose beats, design colloquial, direct scene movement: action, dialogue, choices, evidence, romance movement, and social consequence. Do not plan long scenery passages, long psychology passages, or literary mood filler as a way to carry the story.
+
 ## Required Reads
 
 - Read `references/market-patterns.md` when the user asks for hot themes, Syosetu/Kakuyomu fit, or tag combinations.

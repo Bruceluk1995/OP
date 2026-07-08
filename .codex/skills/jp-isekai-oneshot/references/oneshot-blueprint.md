@@ -2,6 +2,8 @@
 
 Use before drafting every standalone male-audience isekai short.
 
+Plan for colloquial, direct prose. Every beat should move through action, dialogue, choice, proof, cost, reward, or consequence; do not reserve space for long scenery, atmosphere, or psychology passages.
+
 ## Required Blueprint
 
 ```text

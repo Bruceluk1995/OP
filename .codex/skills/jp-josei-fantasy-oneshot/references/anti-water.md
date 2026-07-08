@@ -15,6 +15,7 @@ Allowed expansion:
 Forbidden expansion:
 
 - room atmosphere, moonlight, silence, destiny, vague sadness, repeated tears;
+- long environment description, long psychology description, literary mood, or decorative beauty;
 - generic praise that could fit any heroine;
 - long etiquette explanation without a social consequence;
 - "new life begins" ending without resolving the main accusation/wound;

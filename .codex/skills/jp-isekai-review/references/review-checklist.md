@@ -7,6 +7,7 @@ Use for Japanese male-audience isekai drafts.
 - Does any Chinese fantasy vocabulary remain?
 - Does the prose read like Japanese web fiction rather than Chinese translated word order?
 - Is the protagonist's goal clear in the first scene?
+- Does the prose avoid literary drift: long scenery, long psychology, decorative atmosphere, or essay-like inner monologue instead of direct action and dialogue?
 - Is the cheat rule visible through action?
 - Are status windows and skill effects integrated into narration instead of dumped as multi-line UI panels?
 - Is the first payoff concrete?

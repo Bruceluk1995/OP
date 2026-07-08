@@ -4,6 +4,8 @@ Use this after the episode blueprint and again after drafting. It adapts the gen
 
 Goal: remove AI texture without flattening heroine emotion, romance tension, zamaa satisfaction, or push-narration retention.
 
+Hard style rule: reject literary prose. Do not keep long environment description or long psychology description; rewrite them into colloquial action, dialogue, choice, evidence, romance movement, or social consequence.
+
 ## Gate 0: Protect Plot Function
 
 Do not rewrite for prettiness. Keep:
@@ -149,6 +151,7 @@ When the episode is saved to a file, Codex must reread the saved file itself bef
 - Did I remove abstract filler without deleting evidence, romance, or zamaa function?
 - Does every emotional line have an object, action, dialogue, body response, or social consequence?
 - Does every long stretch in a long episode have a function beyond atmosphere, scenery, beauty, sadness, tenderness, or adjectives?
+- Is the prose colloquial and direct rather than literary, ornate, or psychology-heavy?
 - Are dense beats visibly denser than transitions?
 - Does the ending hook point to a concrete next witness, document, accusation, romantic question, or public choice?
 - Did no engineering words, placeholders, model refusal text, or production markers like `第4話で` leak into prose?

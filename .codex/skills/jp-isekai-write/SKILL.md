@@ -44,6 +44,7 @@ Write Japanese web-novel episodes for male-audience isekai. Use this for final p
    - For any other subtype lane, preserve that type pack's required payoff loop. Do not flatten all lanes into generic guild errands, herbs, shopkeeping, or slow-life comfort.
    - End with a specific next-episode trouble hook.
 4. Write in Japanese prose:
+   - Reject literary prose: use colloquial, direct everyday language; avoid long scenery/environment blocks and long psychology/inner-monologue blocks. Push each paragraph through action, dialogue, choice, cost, reward, or consequence.
    - Prefer `俺` first-person unless the user asks otherwise.
    - Use short inner-commentary beats for humor.
    - Keep paragraphs readable for web serialization.
@@ -70,6 +71,7 @@ Write Japanese web-novel episodes for male-audience isekai. Use this for final p
    - Check the draft against `references/episode-blueprint.md`: target emotion delivered, dense beats expanded, sparse beats compressed, cost/reward/status consequence present, and ending hook specific.
    - Scan the first 600 Japanese characters against `references/push-narration-protocol.md`: plot-bomb sentence, previous-episode recap bridge, concrete conflict, and no generic AI-flavored filler.
    - Scan the whole draft against `references/anti-ai-gates.md`: no generic texture, stock summary lines, author explanation, uniform paragraph rhythm, or model/meta leakage.
+   - Confirm the prose stays colloquial and direct, with no long literary scenery or psychology passages.
    - For project-bound output, verify the outline was read, tracking files were updated, and the ledger record was appended.
    - If below target by more than 10%, expand existing dense beats rather than adding random scenes. If at target but padded, cut the padded text first and then expand real dense beats.
    - If a cover is expected, verify `封面.png` exists, is 16:9, includes the episode click-title and the series/work title, and is an actual image file rather than only a prompt.

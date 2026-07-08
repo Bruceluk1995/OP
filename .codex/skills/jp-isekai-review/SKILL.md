@@ -27,6 +27,7 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
    - Chinese fantasy terms or institutions leaking into a Japanese RPG fantasy setting.
    - Chinese court-drama institutions or social logic leaking through literal translation: emperor/harem/cold-palace/concubine/嫡庶/夺嫡 logic remains instead of Japanese RPG/fantasy royal, guild, noble, territory, or faction systems.
    - Japanese prose that reads like machine translation or Chinese sentence order.
+   - Literary-prose drift: long environment description, long psychology description, decorative mood, or essay-like inner monologue replaces colloquial action, dialogue, choices, and consequences.
    - Cheat rules unclear or not repeatable.
    - Episode lacks opening hook, practical payoff, or next hook.
    - Project-bound outline names a subtype lane but uses only generic isekai rules when a project拆文, dynamic benchmark card, project subtype note, or matching type pack should have been loaded.

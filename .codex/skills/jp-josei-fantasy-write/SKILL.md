@@ -42,6 +42,7 @@ Write Japanese web-novel prose for female-audience fantasy romance. Use this for
    - For 15,000 characters, do not force a fixed beat quota. Plan enough concrete beats for this episode's rhythm, and make any long stretch serve evidence, public pressure, heroine choice, romantic recognition, legal/family consequence, cost, setup, aftershock, or next threat.
    - End with a romance question, social threat, witness, document, or next-stage proof.
 4. Write in Japanese prose:
+   - Reject literary prose: use colloquial, direct everyday language; avoid long scenery/environment blocks and long psychology/inner-monologue blocks. Push each paragraph through action, dialogue, choice, evidence, romance movement, or social consequence.
    - Use natural Japanese paragraphing and dialogue.
    - Let status, rank, magic, and setting emerge through action and social behavior.
    - Make `溺愛` visible through concrete choices: protection, listening, resources, public acknowledgement, remembering details.
@@ -66,6 +67,7 @@ Write Japanese web-novel prose for female-audience fantasy romance. Use this for
    - Check the draft against `references/episode-blueprint.md`: target emotion delivered, dense beats expanded, sparse beats compressed, evidence/romance/status consequence present, and ending hook specific.
    - Scan the first 600 Japanese characters against `references/push-episode-delivery.md`: plot-bomb sentence, previous-episode recap bridge, concrete social pressure, and no generic AI-flavored filler.
    - Scan the whole draft against `references/anti-ai-gates.md`: no generic texture, stock summary lines, author explanation, uniform paragraph rhythm, or model/meta leakage.
+   - Confirm the prose stays colloquial and direct, with no long literary scenery or psychology passages.
    - For project-bound output, verify the outline was read, tracking files were updated, and the ledger record was appended.
    - If the prose reads like a synopsis, expand into scene-level action, dialogue, and internal reaction. If the prose hits length by padding, cut the padded text first and then expand real dense beats.
 
