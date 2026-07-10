@@ -1,6 +1,6 @@
 ---
 name: story-short-write
-description: "短篇网文写作。辅助短篇小说创作，从构思到成稿，聚焦情绪拉扯与节奏把控。触发方式：/story-short-write、/写短篇、「帮我写一篇短篇」「写个盐言故事」。"
+description: "通用中文短篇网文写作。从核心框架、小节大纲到单文件正文与精修，聚焦盐言/番茄短篇等情绪拉扯、反转和节奏。用于写短篇、盐言故事、中文通俗单篇；日本男频异世界或女性向幻想恋爱的一发完结优先使用对应 jp-*-oneshot。"
 metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 # story-short-write：短篇网文写作
@@ -310,6 +310,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 ### Phase 3 完成门槛（进入 Phase 4 前必须通过）
 
 - [ ] 完整正文默认总字数为 14,500-16,500；用户明确指定短稿时，按用户目标作为硬下限（优先用 Python 字符统计验证，兼容 Windows 和中文字符计数）
+- [ ] 每个主要场景都产生可验证状态变化：信息、关系、证据、资源、风险、身份、目标或下一步选择至少一项发生改变；连续两场只有回忆/情绪/解释而无变化时已合并或重写
+- [ ] 开篇承诺、核心反转、情绪兑现和结局余味形成闭环；不能用“再来一个钩子”替代短篇的核心兑现
 - [ ] 每节 ≥ 800 字（爽文等高信息密度题材 ≥ 500 字，见 genre-writing-formulas.md）
 - [ ] 节数 = 小节大纲规划节数（不得合并/省略）
 - [ ] 身体部位同一词全文 ≤ 5 次

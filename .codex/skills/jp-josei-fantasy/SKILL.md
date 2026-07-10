@@ -1,6 +1,7 @@
 ---
 name: jp-josei-fantasy
 description: "Japanese female-audience fantasy romance writing suite router. Use when the user wants 女性向け異世界恋愛, Japanese romantasy, Syosetu/Kakuyomu female-reader fantasy, 悪役令嬢, 婚約破棄, ざまぁ, 溺愛, 聖女, 契約婚, 令嬢, 辺境伯, 宮廷ロマンス, time loop villainess, noble romance, Chinese-to-Japanese localization for female-oriented fantasy romance, or YouTube/TikTok/Google Trends JP hot-topic selection converted into josei fantasy romance."
+metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # JP Josei Fantasy
@@ -42,6 +43,7 @@ Detailed protocol: `references/project-memory.md`.
 
 1. Determine the task:
    - Standalone short story, one-shot, 一发完结, 15000字短篇, or "不是连续剧" -> use `$jp-josei-fantasy-oneshot`.
+   - Explicit one-shot/一发完结 wins even when the prompt also mentions YouTube, thumbnail, 15,000 characters, or a hot topic. Explicit 6-episode/serial/第N話 wins over one-shot and routes through plan/write.
    - New concept, tag strategy, Chinese-to-Japanese localization, or outline -> use `$jp-josei-fantasy-plan`.
    - Write or rewrite Japanese chapters/scenes -> use `$jp-josei-fantasy-write`.
    - Check an existing draft -> use `$jp-josei-fantasy-review`.

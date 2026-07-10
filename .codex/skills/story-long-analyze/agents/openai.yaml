@@ -1,0 +1,4 @@
+interface:
+  display_name: "Long Story Analysis"
+  short_description: "Deconstruct long web novels into reusable evidence"
+  default_prompt: "Use $story-long-analyze to deconstruct this long novel and save the analysis artifacts."

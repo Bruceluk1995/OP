@@ -1,6 +1,7 @@
 ---
 name: jp-josei-fantasy-review
 description: "Review Japanese female-audience fantasy romance drafts for genre fit, localization, and reader payoff. Use when checking 女性向け異世界恋愛, 悪役令嬢, 婚約破棄, ざまぁ, 溺愛, 聖女, 令嬢, 契約婚, court romance, Japanese naturalness, heroine agency, romance chemistry, zamaa logic, and Chinese fantasy term leakage."
+metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # JP Josei Fantasy Review
@@ -21,6 +22,8 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
    - First person or third person.
    - Chapter length and platform style, if given.
 2. Check blocking issues first:
+   - Two or more consecutive major scenes end with the same evidence, reputation, safety, legal/family position, resources, romantic trust, social status, risk, and available choices. Mark the stagnant span and require a heroine decision, proof movement, recognition, or consequence.
+   - The draft advertises romance recognition, zamaa, contract, saintess proof, or reputation repair but only postpones it; a cliffhanger is not a substitute for visible movement or payoff.
    - Project-bound draft has no matching `大纲/细纲_第XXX章.md`, or the prose clearly ignores the available outline.
    - Project-bound continuation did not read/update `追踪/上下文.md`, `追踪/伏笔.md`, `追踪/时间线.md`, or relevant `追踪/角色状态.md`.
    - New concept/episode repeats a recent `女频幻想恋爱知识库/generated-ledger.jsonl` combination without changing at least two key fields.

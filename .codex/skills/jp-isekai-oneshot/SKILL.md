@@ -1,6 +1,7 @@
 ---
 name: jp-isekai-oneshot
 description: Standalone Japanese male-audience isekai short-story writing skill. Use when the user wants 日式男频异世界短篇, 15000字单篇, one-shot, 一发完结, 非连续剧, not a 6-episode season, battle leveling short story, OP/龙傲天 standalone, dungeon/adventurer guild one-shot, exile zamaa one-shot, cheat-skill proof story, YouTube/TikTok/Shorts 热门视频转异世界爽点, Google Trends JP 热点蹭选题, 日本离谱新闻/逆天新闻转异世界爽点, 热点转外挂/技能, 热点自动匹配男频异世界子类型/theme-pack, or a complete Japanese male-audience fantasy short that ends in one file.
+metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # JP Isekai Oneshot
@@ -47,6 +48,8 @@ Write complete standalone Japanese male-audience isekai short stories around 14,
    - `python .codex/skills/jp-isekai-oneshot/scripts/ledger.py --root . summary`
    - `python .codex/skills/jp-isekai-oneshot/scripts/ledger.py --root . check ...`
 7. Build a brief one-shot blueprint before prose. Do not require project `大纲/细纲` files for one-shot work.
+   - Include a closure ledger: opening promise, midpoint irreversible change, public/observable proof, climax result, reward/cost, and final social/emotional state. Every item must resolve inside this file.
+   - Audit major scenes for a state delta in skill knowledge, combat position, drop/resource, rank/reputation, relationship, risk, or objective; compress scenes that only repeat awe, travel, explanation, or inner commentary.
 8. Save complete long prose as a one-shot package under `episodes/oneshots/<short-title>/` unless the user asks for chat-only output.
    - Required package folders/files: `正文/正文.md`, `正文/标题.md`, `角色提示词/角色提示词.md`, `封面/封面.md`, and `作品资料.md`.
    - Generate `封面/封面.png` only when image generation is requested or available; otherwise mark `封面/封面.md` as prompt-only.

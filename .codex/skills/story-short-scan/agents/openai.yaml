@@ -1,0 +1,4 @@
+interface:
+  display_name: "Short Story Market Scan"
+  short_description: "Scan short-form web fiction trends and rankings"
+  default_prompt: "Use $story-short-scan to find promising short-form web fiction topics and emotional hooks."

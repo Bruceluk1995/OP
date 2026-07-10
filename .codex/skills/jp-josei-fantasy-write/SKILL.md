@@ -1,6 +1,7 @@
 ---
 name: jp-josei-fantasy-write
 description: "Write Japanese female-audience fantasy romance prose. Use for drafting or rewriting 女性向け異世界恋愛, 悪役令嬢, 婚約破棄, ざまぁ, 溺愛, 聖女, 契約婚, 令嬢, 宮廷ロマンス, frontier slow life, cursed prince/duke romance, time-loop villainess, and Japanese prose localized away from Chinese fantasy or male-audience RPG defaults."
+metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # JP Josei Fantasy Write
@@ -58,6 +59,8 @@ Write Japanese web-novel prose for female-audience fantasy romance. Use this for
    - Update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
    - Add one record to `女频幻想恋爱知识库/generated-ledger.jsonl` with heroine, wound, romance, pressure, proof, venue, aftertaste, and saved path.
 8. Validate:
+   - Audit every major scene as `entry state -> pressure/choice -> exit state`. At least one of evidence, public reputation, safety, legal/family position, resources, romantic trust, social status, risk, or next choice must change. Repeated sadness, etiquette, beauty, misunderstanding, or consolation without a state delta must be compressed or rewritten.
+   - Verify the episode's advertised romance/zamaa/tag promise is paid or materially advanced, and that the ending threat follows from the heroine's new state rather than resetting her progress.
    - Count Japanese characters with Python.
    - For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose, do not report completion below 14,500 Japanese characters unless the user explicitly approved a shorter length. If below target, continue expanding existing dense beats with more evidence movement, public pressure, heroine choice, male-lead recognition, legal/family consequence, romance shift, zamaa setup/payoff, or next threat.
    - Scan for Chinese/xianxia leakage using `references/terminology.md`.

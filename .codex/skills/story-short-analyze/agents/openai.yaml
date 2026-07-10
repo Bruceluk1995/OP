@@ -1,0 +1,4 @@
+interface:
+  display_name: "Short Story Analysis"
+  short_description: "Deconstruct short web fiction and emotional beats"
+  default_prompt: "Use $story-short-analyze to deconstruct this short story into reusable structure and technique."

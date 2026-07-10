@@ -1,6 +1,6 @@
 ---
 name: story-setup
-description: "网文写作工具集基础设施部署。将 hooks/rules/agents/CLAUDE.md/AGENTS.md 等基础设施部署到用户项目目录，支持 Claude Code / OpenCode / Codex / OpenClaw。触发方式：/story-setup、$story-setup、「准备写书」「帮我搭一下环境」「配置写作项目」。"
+description: "网文写作工具集基础设施部署与升级。动态发现并部署当前完整 skill bundle，同时合并 hooks/rules/agents/CLAUDE.md/AGENTS.md，支持 Claude Code / OpenCode / Codex / OpenClaw。用于准备写书、搭环境、配置写作项目、刷新已部署技能或检查部署完整性。"
 metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 # story-setup：网文写作工具集基础设施部署
@@ -70,7 +70,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 | `skills/story-setup/references/codex/hooks/story_codex_hook.py` | `.codex/hooks/story_codex_hook.py` | story-setup managed | replace | Python syntax valid | target_cli 含 codex |
 | `skills/story-setup/references/agent-references/` | `.codex/skills/story-setup/references/agent-references/` | story-setup managed | replace | every reference resolves | target_cli 含 codex |
 | `skills/story-setup/references/openclaw/AGENTS.md.tmpl` | `AGENTS.md` | user+managed | marker/section merge | contains OpenClaw story skill routing sections | target_cli 含 openclaw |
-| repository `skills/{browser-cdp,story*}/` | `skills/{browser-cdp,story*}/` | story-setup managed for known skill names | replace known skill dirs only | 13 `SKILL.md` files exist; OpenClaw-compatible frontmatter | target_cli 含 openclaw |
+| source skill root 下所有 OpenClaw-compatible skill | `skills/{skill-name}/` | story-setup managed manifest | replace manifest 内目录 only | manifest 中每个 `SKILL.md` 存在且 frontmatter 合规 | target_cli 含 openclaw |
 | `skills/story-setup/references/agent-references/` | `skills/story-setup/references/agent-references/` | story-setup managed | replace via full skill copy | every reference resolves | target_cli 含 openclaw |
 
 ### opencode.json 合并算法
@@ -258,13 +258,14 @@ Codex 项目 hooks 部署到 `.codex/hooks.json`，hook 脚本部署到 `.codex/
 
 OpenClaw Phase 1 只部署 skills，不部署 OpenClaw agents/hooks/plugin。
 
-1. 读取仓库当前 `skills/` 下所有包含 `SKILL.md` 的 story skill 目录（13 个：`browser-cdp` 与 `story*`）。
-2. 写入目标项目 `skills/{skill-name}/`，仅替换这些 story-setup 管理的已知 skill 目录；保留用户在 `skills/` 下的其他目录。
-3. 每个 `SKILL.md` 必须满足 OpenClaw frontmatter 约束：`name` / `description` 是单行键值，`metadata` 是单行 JSON 对象且含 `metadata.openclaw`。
-4. 复制 `skills/story-setup/references/openclaw/AGENTS.md.tmpl` 到项目 `AGENTS.md`，按「AGENTS.md 合并策略」合并。
-5. `.story-deployed` 的 `target_cli` 写入 `openclaw` 或多端组合；`references_dir` 对 OpenClaw 写 `skills/story-setup/references/agent-references`。
-6. 安装报告必须提示：OpenClaw 会在 session 启动时 snapshot eligible skills；部署后如果命令/skills 未出现，需新开 OpenClaw session 或等待 skills watcher 刷新。
-7. 安装报告必须提示：OpenClaw Phase 1 没有硬 hooks/agents；写正文前大纲守卫、commit 提醒、session/compact 自动注入只作为 skill 内软约束，不是运行时强制拦截。
+1. 从当前 `story-setup` 所在技能根目录向上解析 source skill root，动态枚举所有直接子目录中的 `SKILL.md`；不要用固定数量或 `story*` 通配名单。
+2. 只把 frontmatter 含 `metadata.openclaw` 的目录加入本次 managed manifest；把 skill 名、源路径和文件哈希写入安装报告，空 manifest 直接阻断。
+3. 写入目标项目 `skills/{skill-name}/`，仅替换 managed manifest 内目录；保留用户在 `skills/` 下的其他目录。
+4. 每个 `SKILL.md` 必须满足 OpenClaw frontmatter 约束：`name` / `description` 是单行键值，`metadata` 是单行 JSON 对象且含 `metadata.openclaw`；目录名必须等于 `name`。
+5. 复制 `skills/story-setup/references/openclaw/AGENTS.md.tmpl` 到项目 `AGENTS.md`，按「AGENTS.md 合并策略」合并。
+6. `.story-deployed` 的 `target_cli` 写入 `openclaw` 或多端组合；`references_dir` 对 OpenClaw 写 `skills/story-setup/references/agent-references`。
+7. 安装报告必须提示：OpenClaw 会在 session 启动时 snapshot eligible skills；部署后如果命令/skills 未出现，需新开 OpenClaw session 或等待 skills watcher 刷新。
+8. 安装报告必须提示：OpenClaw Phase 1 没有硬 hooks/agents；写正文前大纲守卫、commit 提醒、session/compact 自动注入只作为 skill 内软约束，不是运行时强制拦截。
 
 ### 2.7 创建部署标记
 
@@ -343,7 +344,7 @@ OpenClaw Phase 1 只部署 skills，不部署 OpenClaw agents/hooks/plugin。
     - 安装报告必须提示：Codex 需要 trust 项目 `.codex/` 配置层，并在 `/hooks` review/trust 非 managed hooks；部署后新开 Codex 会话让 custom agents 生效；若当前运行时仍返回 `unknown agent_type`，按各 skill 的 fallback 规则降级 solo/direct
 9. 验证 OpenClaw 部署（仅当 target_cli 含 openclaw 时）：
     - 检查 `AGENTS.md` 含 OpenClaw story skill routing sections
-    - 检查 `skills/` 下 13 个 story skill 目录存在，且每个 `SKILL.md` 包含单行 `name`、单行 `description`、单行 JSON `metadata.openclaw`
+    - 重新动态生成 source managed manifest，与目标 `skills/` 逐项比对目录名、`SKILL.md`、单行 `name`、单行 `description`、单行 JSON `metadata.openclaw` 和文件哈希；不得只比较固定数量
     - 检查 `skills/story-setup/references/agent-references/` 下 reference 文件完整且数量与源目录一致
     - 安装报告必须提示：OpenClaw Phase 1 是 skills-only；未部署 OpenClaw agents/hooks，运行时硬拦截不可用；部署后新开 OpenClaw session 或等待 watcher 刷新
 

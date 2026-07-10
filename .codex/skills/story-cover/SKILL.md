@@ -1,317 +1,102 @@
 ---
 name: story-cover
-description: "小说封面与视频缩略图生成。根据书名、作者名、作品名、目标平台自动分析题材风格，调用 GPT-Image-2 直接生成含标题/署名/作品名的专业级网文封面；当用户提到油管、YouTube、长视频封面、缩略图或 16:9 时，按高点击视频封面逻辑生成。触发方式：/story-cover、/封面、「帮我做个封面」「生成封面图」「做个小说封面」「油管封面」「YouTube thumbnail」。"
-metadata: {"openclaw":{"requires":{"env":["GPT_IMAGE_API_KEY"],"bins":["curl","jq","base64"]},"primaryEnv":"GPT_IMAGE_API_KEY","source":"https://github.com/worldwonderer/oh-story-claudecode"}}
+description: "生成或改造小说封面、作品海报和 YouTube/长视频缩略图。根据书名、题材、受众与平台选择竖版封面或 16:9 高点击缩略图；优先使用运行时原生图像生成/编辑工具，要求标题绝对准确时采用无字底图加确定性文字叠加。触发方式：/story-cover、封面图、小说封面、油管封面、YouTube thumbnail、16:9 缩略图。"
+metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
-# story-cover：小说封面生成
+# story-cover：小说封面与视频缩略图
 
-你是小说封面设计师。根据书名和题材，调用 GPT-Image-2 一次性生成包含书名和作者名的完整封面。
+把封面当作信息设计，而不是单纯插画。交付必须同时解决：题材识别、视觉焦点、标题可读、平台比例和缩小后的点击表现。
 
-**核心原则：封面是读者的第一印象，一眼传达题材和氛围。**
+## 路由守卫
 
-如果用户要的是油管/YouTube/长视频封面或 16:9 缩略图，优先读取 [references/youtube-thumbnail.md](references/youtube-thumbnail.md)，按视频点击率缩略图处理，不按普通竖版小说封面处理。
+- 小说平台竖版封面、电子书封面、作品海报 → 读取 [references/cover-styles.md](references/cover-styles.md)。
+- YouTube、油管、长视频、16:9、缩略图、点击率 → 读取 [references/youtube-thumbnail.md](references/youtube-thumbnail.md)，不要套竖版书封逻辑。
+- 用户提供参考图或要求修改已有图 → 使用图像编辑能力，并先查看参考图；保留用户要求保留的人物、构图或品牌元素。
+- 只要排版建议或 prompt → 不强制生成图片。
 
----
+## 输入解析
 
-## 环境变量
+优先从当前项目的标题文件、简介、角色提示词、正文摘要和已有封面中补齐信息，不重复询问已经存在的字段。
 
-| 变量 | 必填 | 默认 | 说明 |
-|:-----|:----:|:-----|:-----|
-| `GPT_IMAGE_API_KEY` | ✅ | — | OpenAI 或兼容代理的 API Key |
-| `GPT_IMAGE_BASE_URL` | | `https://api.openai.com/v1` | 兼容代理时改这个 |
-| `GPT_IMAGE_MODEL` | | `gpt-image-2` | 仅在测试新模型时覆盖 |
-| `GPT_IMAGE_SIZE` | | `1024x1536` | 目标比例提示（番茄 3:4→`768x1024`，默认 2:3→`1024x1536`）。官方 gpt-image-2 认任意 16 倍数尺寸（比例≤3:1），但**很多中转代理会忽略 size、按预设返回约 2:3**（已实测）——平台尺寸不靠它，由 Step 3.5 兜底 |
-| `UPLOAD_SIZE` | | — | 平台固定上传像素（番茄 `600x800`）；设置后 Step 3.5 居中裁剪+缩放出上传版（不变形、不依赖出图尺寸） |
-| `BOOK_DIR` | ✅ | — | 输出目录，建议 `./covers/<书名>` |
-| `REF_IMAGE` | | — | 参考图本地路径或 URL；设置后走 `images/edits` 图生图 |
+最低输入：
 
-> 备注：`gpt-image-2` 始终返回 base64，请求体不要带 `response_format`（旧 DALL-E 参数，gpt-image 系列不支持）。
+- 作品名或视频标题；
+- 目标平台/比例；
+- 题材或一句话卖点。
 
----
+竖版小说封面通常还需要作者名；YouTube 缩略图不强制作者名。用户没有指定画风时，根据题材和受众直接选择，不要用多轮问答阻塞生成。
 
-## 生成流程
+## 生成能力选择
 
-### Step 1：收集信息
+1. 当前运行时有原生图像生成/编辑工具时优先使用。新图直接生成；编辑参考图时传入全部目标图片。
+2. 没有原生图像工具，但配置了兼容图像 API 时，读取 [references/api-fallback.md](references/api-fallback.md)。
+3. 两者都不可用时，仍交付完整 art brief、最终 prompt、文字层和尺寸规范，并明确标注 prompt-only；不要伪造已生成图片。
 
-必填：书名、作者名（笔名）、目标平台、输出目录 `BOOK_DIR`（建议 `./covers/<书名>`，调用前 export）
-选填：参考图 `REF_IMAGE`（本地路径或 URL，设置后切换到图生图）、风格偏好、尺寸
+## 画面与文字分层
 
-> **书名和笔名是封面必需信息**：缺任一必须先用 AskUserQuestion 问用户补全，不得编造或留空。
+### 画面层
 
-**按目标平台定封面尺寸**：番茄上传 600×800 是 **3:4**（不是 2:3），出图比例不对、平台二次裁剪就会切掉书名/笔名。
+先确定一个核心点击承诺：人物处境、冲突瞬间、身份反差、关系张力或机制奇观。画面只保留一个主焦点和一个辅助冲突，不堆砌所有剧情元素。
 
-| 平台 | 上传尺寸 | 比例 | 生成 `GPT_IMAGE_SIZE`（尽量） |
-|:-----|:--------|:-----|:-------------------|
-| 番茄小说 | 600×800 | 3:4 | `768x1024` |
-| 其他平台（默认竖版） | 按平台规格 | 2:3 | `1024x1536` |
+提示词必须说明：
 
-`export GPT_IMAGE_SIZE` 给目标比例（官方按它出图，很多代理会忽略、返回约 2:3）；平台有固定上传像素再 `export UPLOAD_SIZE`（番茄 `600x800`）。**平台尺寸最终由 Step 3.5 居中裁剪+缩放保证，不依赖代理认不认 size。** 平台与题材风格见 [references/cover-styles.md](references/cover-styles.md)。
+- 主体：人物数量、年龄感、服装、姿态、表情、关键道具；
+- 场景：前景/中景/背景的功能，而不是空泛“精美背景”；
+- 光色：主色、对比色、光源方向；
+- 构图：标题安全区、人物位置、视线方向、裁切范围；
+- 排除项：水印、额外文字、多余人物、畸形手、错误时代服饰、与题材冲突的现代元素。
 
-### Step 1.5：题材判定
+### 文字层
 
-扫描书名（必要时简介）中的关键词，对照 [references/cover-styles.md](references/cover-styles.md) 的「题材推断规则」表选定题材。
+模型直接渲染文字只有在逐字核对无误时才可作为最终稿。中文、日文、长标题或平台要求严格时，默认更稳的两阶段流程：
 
-- 单题材命中 → 直接采用
-- 多题材命中 → 按优先级取一：仙侠 > 西幻 > 古言 > 现言 > 都市 > 悬疑 > 科幻 > 历史 > 灵异 > 轻小说
-- 零命中 → 默认 `都市`
+1. 生成无字底图，并明确预留标题/副标题/作者名安全区；
+2. 用 `scripts/overlay_cover_text.py` 确定性叠字。
 
-### Step 2：构建提示词
+不要把错字、缺字、伪汉字或乱码当作“风格化字体”。无法确认标题完全正确就必须重做文字层。
 
-提示词 = **文字层** + **风格层** + **画面层**，全部用英文编写。
+## 平台规格
 
-#### 文字层：书名 + 作者名字体设计
+| 用途 | 工作比例 | 建议工作尺寸 | 构图重点 |
+|---|---|---|---|
+| 番茄小说 | 3:4 | 1200×1600 | 标题上部，作者下部，中心安全区 |
+| 通用小说封面 | 2:3 | 1024×1536 | 远距离仍能识别题材和书名 |
+| YouTube 长视频 | 16:9 | 1280×720 或更高同比分辨率 | 1 个视觉冲突 + 3-8 个大字，移动端可读 |
 
-在提示词中直接包含中文书名和作者名，GPT-Image-2 可直接渲染。**重点描述字体风格**：
+用户给出平台官方尺寸时以官方尺寸为准。不要拉伸图片；使用等比缩放后居中/焦点裁切。
 
-```
-Title text '书名' at top center in [书名字体风格].
-Author name '作者名' at bottom center in [作者名字体风格].
-```
+## 工作流
 
-#### 书名字体风格
+1. 识别输出类型、题材、受众、卖点、标题层级和平台尺寸。
+2. 读取对应 reference，选定视觉语言和安全区。
+3. 写一个可执行 art brief：核心承诺、主体、冲突、构图、光色、文字层、排除项。
+4. 生成或编辑图片。默认先产出最强方向；用户要求比较时再做 2-3 个差异明确的构图，不做只改一点颜色的伪变体。
+5. 如果文字必须准确，生成无字底图并运行叠字脚本。例如：
 
-| 题材 | 描述关键词 |
-|:-----|:-----------|
-| 玄幻/仙侠 | `bold golden brush calligraphy with metallic glow and sharp strokes` |
-| 都市 | `modern bold sans-serif with metallic silver finish` |
-| 古言/宫斗 | `elegant golden traditional Kai script with ornate decoration` |
-| 现言/甜宠 | `soft rounded handwritten style in white with pink glow` |
-| 悬疑/推理 | `distorted bold cracked letters in blood red` |
-| 科幻/末世 | `neon glowing futuristic font in electric blue` |
-| 西幻 | `metallic embossed fantasy lettering with glow effect` |
-| 历史/军事 | `heavy stone-carved seal script in deep red` |
-| 灵异/恐怖 | `eerie dripping handwritten font in sickly green` |
-| 轻小说 | `colorful cartoon outlined bubbly font` |
+   ```powershell
+   python scripts/overlay_cover_text.py input.png output.png --mode vertical --title "书名" --author "作者名"
+   python scripts/overlay_cover_text.py input.png output.png --mode youtube --title "视频标题" --subtitle "补充钩子"
+   ```
 
-#### 作者名字体风格（重点：作者名必须精心设计，不能只是"小字"）
+   Windows PowerShell 5.1 传递中日文参数可能乱码。该环境把文字写入 UTF-8 JSON（字段 `title`、`subtitle`、`author`），再用 `--text-json text.json`；脚本会按中日文自动选择可用 CJK 字体。
 
-作者名虽小，但是封面专业感的关键。必须指定：**字体 + 颜色 + 装饰元素**，让作者名与书名风格呼应但不抢焦点。
+6. 视觉检查实际图片，而不是只检查 prompt。至少检查标题拼写、人物数量、手部/脸部、服饰时代、边缘裁切、主体遮挡和水印。
+7. 缩小验收：把图按约 25% 尺寸查看；标题、人物表情和主要冲突仍不可读时，不能交付。
+8. 保存项目资产时保留：最终图、无字底图（如有）、最终 prompt/art brief、参考图来源和文字层内容。新版本自增命名，不覆盖用户已有封面。
 
-| 题材 | 作者名风格提示词 |
-|:-----|:----------------|
-| 玄幻/仙侠 | `small refined white serif text with faint golden glow, flanked by delicate cloud-scroll ornaments on both sides, resting on a thin horizontal gold line` |
-| 都市 | `small clean white modern text with subtle drop shadow, positioned above a thin silver horizontal divider line` |
-| 古言/宫斗 | `small elegant dark red traditional text inside a thin golden rectangular border frame with corner decorations` |
-| 现言/甜宠 | `small soft pink-white handwritten text with a tiny heart motif on the left side, light sparkle effect` |
-| 悬疑/推理 | `small pale grey text with slight blur effect, almost hidden in the shadows, a thin cracked line underneath` |
-| 科幻/末世 | `small crisp white monospace text with subtle cyan scanline overlay, flanked by small geometric brackets` |
-| 西幻 | `small bronze medieval script text with aged parchment texture, enclosed in a small decorative shield or banner shape` |
-| 历史/军事 | `small dignified white Song typeface text above a double horizontal line in dark red` |
-| 灵异/恐怖 | `small faded grey-green text slightly tilted, with a thin dripping ink line above` |
-| 轻小说 | `small playful rounded white text with pastel color outline, tiny star decorations on both sides` |
+## 质量门槛
 
-**作者名通用规则**：
-- 大小：`small`（不能太大抢书名焦点，也不能太小看不清）
-- 位置：`at bottom center`，与画面底部保持适当间距
-- 必须有装饰元素：线条/边框/小图标/光效中至少一种
-- 颜色与背景形成对比但不刺眼
+- 题材在一秒内可识别；不是“好看的通用插画”。
+- 标题逐字正确，缩小后仍可读；文字不压脸、不贴边。
+- 竖版封面有书名层级，缩略图有点击冲突；两者不能混用同一排版模板。
+- 人物外观符合项目设定和时代，不因追求流量改成无关现代网红脸。
+- 参考图任务保留用户指定的身份特征和构图锚点。
+- 没有实际图片时只报告 prompt-only，不声称封面已完成。
 
-#### 风格层：平台风格
+## 交付
 
-平台风格的描述关键词统一来自 [references/cover-styles.md](references/cover-styles.md) 的「平台风格」节，按目标平台直接取对应关键词串使用，不在本文件维护副本以免与参考文件漂移。
-
-#### 画面层：题材 + 构图
-
-从 [references/cover-styles.md](references/cover-styles.md) 读取题材对应的风格标签、色彩、人物、背景描述。
-
-构图变体（首次输出 2-3 个方案）：
-
-| 方案 | 构图 | 适合题材 |
-|:-----|:-----|:---------|
-| A | 人物特写 + 场景 | 全题材通用 |
-| B | 全身像 + 动态姿势 | 玄幻、都市、西幻 |
-| C | 纯场景/氛围图 | 悬疑、科幻、历史 |
-
-#### 完整提示词模板
-
-```
-Chinese web novel cover design, [平台风格].
-Title text '{书名}' at top center in [书名字体风格].
-Author name '{作者名}' at bottom center in [作者名字体风格 — 从上表选择].
-[题材风格标签]. [人物描述]. [背景描述].
-[色彩指令]. [光效指令].
-Professional book cover, high detail digital painting, portrait [平台比例：番茄=3:4，默认=2:3] ratio, keep title and author name inside the central safe area away from edges (inner ~85%), no watermark
-```
-
-#### 提示词技巧（实测验证）
-
-- 人物描述越具体越好：服饰、姿态、发型、表情、道具每个维度都指定
-- 背景分层：前景（人物）→ 中景（场景）→ 远景（氛围）
-- 光效是指定光源方向 + 颜色（如 `dramatic golden light from above`）
-- 用 `digital painting style` 而非 `photo`，避免真人照片感
-
-### Step 3：调用 API 并保存
-
-`gpt-image-2` 始终返回 base64，请求体不要带 `response_format`。`$PROMPT` 为 Step 2 拼出的完整提示词。
-
-两种调用方式二选一：未设置 `REF_IMAGE` → 走「文生图」；设置了 → 走「图生图」。
-
-#### 文生图（默认）
-
-```bash
-set -euo pipefail
-: "${GPT_IMAGE_API_KEY:?请设置 export GPT_IMAGE_API_KEY=你的key}"
-: "${PROMPT:?请先 export PROMPT=Step 2 拼好的完整提示词}"
-BASE_URL="${GPT_IMAGE_BASE_URL:-https://api.openai.com/v1}"
-MODEL="${GPT_IMAGE_MODEL:-gpt-image-2}"
-SIZE="${GPT_IMAGE_SIZE:-1024x1536}"
-BOOK_DIR="${BOOK_DIR:?请先 export BOOK_DIR=./covers/<书名>}"
-
-mkdir -p "$BOOK_DIR/封面"
-
-# 自增版本号，避免覆盖之前生成的封面
-i=1
-while [ -f "$BOOK_DIR/封面/封面_v${i}.png" ]; do i=$((i+1)); done
-OUT="$BOOK_DIR/封面/封面_v${i}.png"
-RESP=$(mktemp)
-trap 'rm -f "$RESP"' EXIT
-
-# 用 jq 拼 JSON 体，避免 PROMPT 里的引号/换行/中文把 shell 字符串撑破
-BODY=$(jq -n \
-  --arg m "$MODEL" \
-  --arg p "$PROMPT" \
-  --arg s "$SIZE" \
-  '{model:$m, prompt:$p, size:$s}')
-
-curl -fsS --max-time 180 --retry 2 --retry-delay 5 \
-  "$BASE_URL/images/generations" \
-  -H "Authorization: Bearer $GPT_IMAGE_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d "$BODY" > "$RESP"
-
-# API 出错时早退，避免把 error JSON 当成 base64 写成损坏 PNG
-if jq -e '.error' "$RESP" >/dev/null 2>&1; then
-  echo "API error:" >&2
-  jq '.error' "$RESP" >&2
-  exit 1
-fi
-
-# `// empty` 让缺失字段输出空串而非 "null"，配合下面的 -s 检查避免写出 3 字节假 PNG
-jq -er '.data[0].b64_json // empty' "$RESP" | base64 --decode > "$OUT"
-[ -s "$OUT" ] || { echo "empty or malformed output: $OUT" >&2; head -c 300 "$RESP" >&2; exit 1; }
-
-# 落地提示词副本，方便迭代时基于上一次微调
-printf '%s\n' "$PROMPT" > "${OUT%.png}.prompt.txt"
-
-file "$OUT"
-ls -lt "$BOOK_DIR/封面/"
-```
-
-#### 图生图（提供参考图时）
-
-`/v1/images/edits` 走 `multipart/form-data`，**不能** 用 `Content-Type: application/json`。文本字段用 `--form-string`（避免 `@` 被误判为文件引用），图片字段用 `-F image=@path`。
-
-```bash
-set -euo pipefail
-: "${GPT_IMAGE_API_KEY:?请设置 export GPT_IMAGE_API_KEY=你的key}"
-: "${PROMPT:?请先 export PROMPT=Step 2 拼好的完整提示词}"
-BASE_URL="${GPT_IMAGE_BASE_URL:-https://api.openai.com/v1}"
-MODEL="${GPT_IMAGE_MODEL:-gpt-image-2}"
-SIZE="${GPT_IMAGE_SIZE:-1024x1536}"
-BOOK_DIR="${BOOK_DIR:?请先 export BOOK_DIR=./covers/<书名>}"
-REF_IMAGE="${REF_IMAGE:?请先 export REF_IMAGE=本地路径或 URL}"
-
-mkdir -p "$BOOK_DIR/封面"
-
-# 自增版本号
-i=1
-while [ -f "$BOOK_DIR/封面/封面_v${i}.png" ]; do i=$((i+1)); done
-OUT="$BOOK_DIR/封面/封面_v${i}.png"
-RESP=$(mktemp)
-REF_TMP=""
-trap '[ -n "$REF_TMP" ] && rm -f "$REF_TMP"; rm -f "$RESP"' EXIT
-
-# URL 先下载到临时文件，本地路径直接用。用裸 mktemp 以保证 macOS/Linux 行为一致。
-case "$REF_IMAGE" in
-  http://*|https://*)
-    REF_TMP=$(mktemp)
-    curl -fsSL --max-time 60 -o "$REF_TMP" "$REF_IMAGE"
-    REF_LOCAL="$REF_TMP"
-    ;;
-  *)
-    [ -f "$REF_IMAGE" ] || { echo "参考图不存在: $REF_IMAGE" >&2; exit 1; }
-    REF_LOCAL="$REF_IMAGE"
-    ;;
-esac
-
-curl -fsS --max-time 240 --retry 2 --retry-delay 5 \
-  "$BASE_URL/images/edits" \
-  -H "Authorization: Bearer $GPT_IMAGE_API_KEY" \
-  --form-string "model=$MODEL" \
-  --form-string "size=$SIZE" \
-  --form-string "prompt=$PROMPT" \
-  -F "image=@$REF_LOCAL" > "$RESP"
-
-if jq -e '.error' "$RESP" >/dev/null 2>&1; then
-  echo "API error:" >&2
-  jq '.error' "$RESP" >&2
-  exit 1
-fi
-
-# `// empty` 让缺失字段输出空串而非 "null"，配合 -s 检查避免写出 3 字节假 PNG
-jq -er '.data[0].b64_json // empty' "$RESP" | base64 --decode > "$OUT"
-[ -s "$OUT" ] || { echo "empty or malformed output: $OUT" >&2; head -c 300 "$RESP" >&2; exit 1; }
-
-printf '%s\n' "$PROMPT"    > "${OUT%.png}.prompt.txt"
-printf '%s\n' "$REF_IMAGE" > "${OUT%.png}.ref.txt"
-
-file "$OUT"
-ls -lt "$BOOK_DIR/封面/"
-```
-
-### Step 3.5：导出平台上传尺寸（平台有固定像素时）
-
-设了 `UPLOAD_SIZE`（番茄 600×800）就把原图**居中裁剪+缩放**成上传尺寸——不论出图是 2:3 还是 3:4 都裁成平台精确像素，不变形，避免平台再裁切掉书名/笔名。原图保留、另存 `_上传` 版：
-
-```bash
-SRC="${OUT:-$(ls -t "${BOOK_DIR:-.}"/封面/封面_v*.png 2>/dev/null | grep -v _上传 | head -1)}"  # 复用 Step 3 的 $OUT；新 shell 里从 BOOK_DIR 找最新原图
-TARGET="${UPLOAD_SIZE:-}"   # 番茄=600x800；未设则跳过
-if [ -n "$TARGET" ] && [ -f "$SRC" ]; then
-  UP="${SRC%.png}_上传.png"; W="${TARGET%x*}"; H="${TARGET#*x}"
-  if command -v magick >/dev/null 2>&1; then M=magick
-  elif command -v convert >/dev/null 2>&1; then M=convert; else M=""; fi
-  if [ -n "$M" ]; then
-    "$M" "$SRC" -resize "${W}x${H}^" -gravity center -extent "${W}x${H}" "$UP"  # 缩放填满后居中裁
-  elif command -v sips >/dev/null 2>&1; then
-    cp "$SRC" "$UP"
-    sw=$(sips -g pixelWidth "$UP" | awk '/pixelWidth/{print $NF}')
-    sh=$(sips -g pixelHeight "$UP" | awk '/pixelHeight/{print $NF}')
-    if [ $((sw*H)) -ge $((sh*W)) ]; then sips --resampleHeight "$H" "$UP" >/dev/null
-    else sips --resampleWidth "$W" "$UP" >/dev/null; fi
-    sips -c "$H" "$W" "$UP" >/dev/null   # sips -c 是 高 宽，居中裁
-  else
-    echo "无 magick/convert/sips，跳过；手动把 $SRC 居中裁剪+缩放到 $TARGET 再上传" >&2
-  fi
-  [ -f "$UP" ] && file "$UP"
-fi
-```
-
-> 书名/笔名已在提示词里留中心安全区，居中裁剪不会切到。
-
-### Step 4：质量检查 + 迭代
-
-| 检查项 | 标准 |
-|:-------|:-----|
-| 文字渲染 | 书名清晰可辨，字体风格匹配题材 |
-| 题材匹配 | 视觉风格与书名题材一致 |
-| 构图合理 | 主体突出，文字不遮挡核心画面 |
-| 平台适配 | 符合目标平台的封面风格调性 |
-| 平台尺寸 | 比例与平台一致；缩放到上传尺寸后书名、笔名完整可见、未被裁切 |
-
-不满意时调整方向：更换构图、调整色调、换字体风格、换平台风格。
-
----
-
-## 参考资料
-
-| 文件 | 何时加载 |
-|:-----|:---------|
-| [references/cover-styles.md](references/cover-styles.md) | 题材→视觉风格映射、平台风格详情、提示词模板 |
-| [references/youtube-thumbnail.md](references/youtube-thumbnail.md) | 用户提到油管、YouTube、长视频封面、缩略图、16:9、点击率、作品名必须写进图 |
-
----
+图片生成成功时交付最终图片及必要的项目路径；不要把长篇 prompt 解释盖过图片本身。若用户只要 prompt，则交付一份可直接复制的最终 prompt、负面约束、比例和文字层说明。
 
 ## 语言
 
-- 跟随用户的语言回复，用户用什么语言就用什么语言回复
-- 中文回复遵循《中文文案排版指北》
+跟随用户语言。视觉 prompt 可用英文，但标题、作者名和画面内文字必须保持用户给出的原文。

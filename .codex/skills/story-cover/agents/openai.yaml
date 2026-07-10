@@ -1,0 +1,4 @@
+interface:
+  display_name: "Story Cover"
+  short_description: "Create novel covers and video thumbnails"
+  default_prompt: "Use $story-cover to design a cover or thumbnail for my story and target platform."

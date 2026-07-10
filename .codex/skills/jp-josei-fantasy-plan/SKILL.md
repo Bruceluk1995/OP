@@ -1,6 +1,7 @@
 ---
 name: jp-josei-fantasy-plan
 description: "Plan Japanese female-audience fantasy romance novels and adaptations. Use for 女性向け異世界恋愛 premise design, 悪役令嬢 openings, 婚約破棄 and ざまぁ structures, 溺愛 male leads, 聖女 replacement plots, 契約婚, 令嬢 noble-house conflict, time-loop revenge, court romance, chapter outlines, YouTube/TikTok/Google Trends JP hot-topic conversion, and Chinese-to-Japanese localization away from xianxia or Chinese webnovel defaults."
+metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # JP Josei Fantasy Plan
@@ -71,6 +72,7 @@ Benchmark priority:
 4. Build a clean antagonist system:
    - Antagonists should expose themselves through greed, lies, abuse, class arrogance, stolen credit, or political overreach.
    - Ensure the punishment follows social/legal logic, not author fiat.
+   - For every planned episode, record `romance/social promise -> pressure -> heroine choice -> proof/recognition -> cost -> state delta -> next pressure`. The state delta must change evidence, reputation, safety, legal/family position, resources, relationship trust, or the heroine's available choices. Do not let two adjacent episodes repeat the same humiliation without a new consequence or counter-move.
 5. Set the project scale before making outlines:
    - Default for YouTube/push/episode-like serials: short-season novel, fixed 6 episodes/chapters.
    - Keep short-season outlines at exactly 6 episodes/chapters.

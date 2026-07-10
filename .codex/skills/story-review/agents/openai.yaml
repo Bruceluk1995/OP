@@ -1,0 +1,4 @@
+interface:
+  display_name: "Story Review"
+  short_description: "Review story drafts with structured findings"
+  default_prompt: "Use $story-review to audit this draft and return prioritized, evidence-based findings."

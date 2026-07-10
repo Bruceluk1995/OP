@@ -1,0 +1,4 @@
+interface:
+  display_name: "Long Story Writing"
+  short_description: "Plan and write long-form serialized web fiction"
+  default_prompt: "Use $story-long-write to plan or continue this long-form web fiction project."

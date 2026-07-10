@@ -1,6 +1,7 @@
 ---
 name: jp-isekai-review
 description: "Review Japanese male-audience isekai drafts for genre fit, localization, and readability. Use when checking なろう系/カクヨム風 prose, Japanese first-person isekai episodes, battle leveling, monster grinding, dungeon boss fights, overpowered protagonist, OP ruler fantasy, 龙傲天, demon-lord/kingdom domination, drops/rank/status growth, Chinese-to-Japanese adaptation drafts, banned Chinese fantasy term leakage, RPG terminology consistency, male-audience hooks, humor, slow-life payoff, and Japanese naturalness."
+metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # JP Isekai Review
@@ -21,6 +22,8 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
    - First-person or third-person.
    - Episode length target, if any.
 2. Check blocking issues first:
+   - Two or more consecutive major scenes end with the same material state: no new skill knowledge, combat position, drop/resource, rank, reputation, territory, faction relation, risk, or objective. Mark the exact stagnant span and recommend merge/compression or a concrete state-changing beat.
+   - The episode advertises a monster/skill/OP/zamaa promise but only postpones it; a cliffhanger is not a substitute for visible proof, result, or consequence.
    - Project-bound draft has no matching `大纲/细纲_第XXX章.md`, or the prose clearly ignores the available outline.
    - Project-bound continuation did not read/update `追踪/上下文.md`, `追踪/伏笔.md`, `追踪/时间线.md`, or relevant `追踪/角色状态.md`.
    - New concept/episode repeats a recent `男频异世界知识库/generated-ledger.jsonl` combination without changing at least two key fields.

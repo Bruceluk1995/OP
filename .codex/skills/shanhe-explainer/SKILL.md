@@ -1,6 +1,7 @@
 ---
 name: shanhe-explainer
 description: World-history, Japan-focused history/society, geopolitics, science, economics, and social-institution short-video explainer scripting distilled from a Shanhe-style Bilibili subtitle corpus, then adapted for Japanese, American, or European audiences. Use when the user asks for 山河有声风格, 日本史/日本社会讲解, 世界史讲解, 外国史, 国际战略杂谈, 科普短视频, 社会制度/经济常识讲解, YouTube/TikTok/Google Trends/新闻/全源热点选题, "为什么/为何/到底/怎么" analytical scripts, or Japanese/English narration optimized for non-Chinese audiences.
+metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # Shanhe Explainer
@@ -71,6 +72,8 @@ Use the corpus as a structural benchmark, not as a topic menu. The source channe
    - Convert search trends into durable explanatory questions. Do not simply restate celebrity, sports, or breaking-news queries.
    - Prefer trend seeds that can be reframed through Japan-focused society, world history, geopolitics, institutions/economy, science/technology, or social common sense.
 9. If the topic involves current politics, finance, public health, or fast-changing facts, verify with current reliable sources before writing. Do not invent numbers, dates, laws, quotes, or market claims.
+   - Build a compact claim ledger before prose: `claim | fact/inference | source/date/jurisdiction | confidence | strongest counterexample`. Every major causal link needs either direct evidence or an explicit inference label.
+   - Stress-test the thesis with the strongest plausible rival explanation. Keep it in the final script when it materially changes the conclusion; otherwise note why the chosen mechanism explains more of the evidence.
 10. Before proposing a new angle or full script, check the project ledger if present:
    - `python .codex/skills/shanhe-explainer/scripts/ledger.py --root . summary`
    - `python .codex/skills/shanhe-explainer/scripts/ledger.py --root . check ...`
@@ -112,7 +115,8 @@ For a full script, provide:
 4. Beat outline.
 5. Final narration script.
 6. Character/word count.
-7. Ledger status: checked/recorded or why skipped.
+7. Fact-check sources, date scope, inference/risk note, and unresolved uncertainty.
+8. Ledger status: checked/recorded or why skipped.
 
 For only title/angle work, provide:
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Story Toolbox"
+  short_description: "Route content creation to the right story workflow"
+  default_prompt: "Use $story to choose the right writing, analysis, review, or skill-maintenance workflow."

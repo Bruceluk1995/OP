@@ -1,6 +1,7 @@
 ---
 name: jp-isekai
 description: "Japanese male-audience isekai writing suite router. Use when the user wants 日式RPG异世界, なろう系, カクヨム男性向け, male-protagonist Japanese fantasy, battle leveling, monster grinding, dungeon boss fights, overpowered protagonist, OP ruler fantasy, 龙傲天, demon-lord/kingdom domination, drops, status/rank growth, cheat skill, adventurer guild, slow life, harem-adjacent,ざまぁ, or when adapting Chinese webnovel settings into Japanese-style isekai without Chinese xianxia/wuxia terms."
+metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # JP Isekai
@@ -45,6 +46,7 @@ Detailed protocol: `references/project-memory.md`.
 
 1. Determine the task:
    - Standalone short story, one-shot, 一发完结, 15000字短篇, or "不是连续剧" -> use `$jp-isekai-oneshot`.
+   - Explicit one-shot/一发完结 wins even when the prompt also mentions YouTube, thumbnail, 15,000 characters, or a hot topic. Explicit 6-episode/serial/第N話 wins over one-shot and routes through plan/write.
    - New concept or Chinese-to-Japanese adaptation -> use `$jp-isekai-plan`.
    - Write a full episode or rewrite draft in Japanese -> use `$jp-isekai-write`.
    - Check an existing draft -> use `$jp-isekai-review`.

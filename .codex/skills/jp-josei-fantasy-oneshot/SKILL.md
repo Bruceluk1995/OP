@@ -1,6 +1,7 @@
 ---
 name: jp-josei-fantasy-oneshot
 description: Standalone Japanese female-audience fantasy romance short-story writing skill. Use when the user wants 女频幻想恋爱短篇, 女性向け異世界恋愛 one-shot, 15000字单篇, 一发完结, 非连续剧, 悪役令嬢短篇, 婚約破棄ざまぁ短篇, 聖女/契約婚/辺境伯/溺愛/ループ/令嬢 standalone romance, YouTube/TikTok/Shorts 热门视频转女频幻想恋爱钩子, Google Trends JP 热点蹭选题, 日本离谱新闻/社会热点转令嬢/聖女/契約婚/ざまぁ/溺愛故事, or a complete Japanese josei fantasy story that resolves in one file.
+metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # JP Josei Fantasy Oneshot
@@ -48,6 +49,8 @@ Write complete standalone Japanese female-audience fantasy romance short stories
    - `python .codex/skills/jp-josei-fantasy-oneshot/scripts/ledger.py --root . summary`
    - `python .codex/skills/jp-josei-fantasy-oneshot/scripts/ledger.py --root . check ...`
 7. Build a brief one-shot blueprint before prose. Do not require project `大纲/细纲` files for one-shot work.
+   - Include a closure ledger: heroine wound, public/social pressure, midpoint irreversible choice, proof movement, romantic recognition, zamaa consequence, and final dignity/relationship state. Resolve every item inside this file.
+   - Audit major scenes for a state delta in evidence, reputation, safety, legal/family position, resources, romantic trust, risk, or available choice; compress repeated sadness, etiquette, beauty, or comfort without change.
 8. Save complete long prose as a one-shot package under `episodes/oneshots/<short-title>/` unless the user asks for chat-only output.
    - Required package folders/files: `正文/正文.md`, `正文/标题.md`, `角色提示词/角色提示词.md`, `封面/封面.md`, and `作品资料.md`.
    - Generate `封面/封面.png` only when image generation is requested or available; otherwise mark `封面/封面.md` as prompt-only.

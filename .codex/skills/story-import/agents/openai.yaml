@@ -1,0 +1,4 @@
+interface:
+  display_name: "Story Import"
+  short_description: "Convert an existing novel into a writable project"
+  default_prompt: "Use $story-import to turn my existing manuscript into a structured project I can continue writing."

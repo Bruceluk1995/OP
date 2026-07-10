@@ -1,6 +1,7 @@
 ---
 name: jp-isekai-write
 description: "Write and package Japanese male-audience isekai episodes. Use for drafting or rewriting なろう系/カクヨム風 Japanese first-person episodes, 1万-2万字 installments, male protagonist RPG fantasy, battle leveling, monster grinding, dungeon boss fights, overpowered protagonist, OP ruler fantasy, 龙傲天, demon-lord/kingdom domination, drops/rank/status growth, cheat-skill slow life, adventurer guild arcs, humorous inner monologue, Chinese-to-Japanese isekai localization without xianxia terms, and project-bound episode folders with title files, character prompts, and 16:9 YouTube thumbnail covers."
+metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # JP Isekai Write
@@ -63,6 +64,8 @@ Write Japanese web-novel episodes for male-audience isekai. Use this for final p
    - Update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
    - Add one record to `男频异世界知识库/generated-ledger.jsonl` with protagonist, cheat, pressure, payoff, venue, aftertaste, and saved path.
 9. Validate:
+   - Audit every major scene as `entry state -> pressure/choice -> exit state`. At least one of skill knowledge, combat position, inventory/drop, rank, reputation, territory, faction relationship, risk, or next objective must change. Travel, explanation, repeated awe, and status-panel restatement without a state delta must be compressed or removed.
+   - Verify the episode promise is paid or meaningfully advanced, the win has a concrete result/cost, and the ending threat grows from the new state rather than appearing as an unrelated cliffhanger.
    - Count Japanese characters with Python.
    - For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose, do not report completion below 14,500 Japanese characters unless the user explicitly approved a shorter length. If below target, continue expanding existing dense beats with more combat/problem tests, OP restraint/reveal, witness reaction, cost, reward, status movement, faction consequence, or next-threat setup.
    - Scan for banned Chinese leakage using `references/terminology.md`.

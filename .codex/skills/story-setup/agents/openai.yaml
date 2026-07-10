@@ -1,0 +1,4 @@
+interface:
+  display_name: "Story Project Setup"
+  short_description: "Deploy the writing toolkit into a project"
+  default_prompt: "Use $story-setup to prepare this project for the story-writing workflows."

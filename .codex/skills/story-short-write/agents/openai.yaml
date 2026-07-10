@@ -1,0 +1,4 @@
+interface:
+  display_name: "Short Story Writing"
+  short_description: "Plan and write emotionally driven short fiction"
+  default_prompt: "Use $story-short-write to plan and draft a complete emotionally driven short story."

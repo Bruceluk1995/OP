@@ -1,6 +1,7 @@
 ---
 name: silver-literature
 description: "Silver-literature writing, planning, dynamic benchmarking, and review for Japanese senior-life family drama, シニア向け朗読, 熟年離婚, 介護, 遺産相続, 老後資金, 退職金, 年金, 老人ホーム, 終活, late-life romance, remarriage, adult-child betrayal, hidden proof, quiet revenge, scolding comeuppance, and healing second-life stories. Use when the user asks for 银发文学, 熟年文学, 老後, 中高年主人公, Japanese family reversal YouTube narration, or wants to distill/write/review silver-generation web fiction."
+metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # Silver Literature
@@ -107,6 +108,8 @@ Write for mature Japanese family-drama viewers, not fantasy progression:
    - Compress generic background. Explain the long past through receipts, habits, scars, room details, medicine lists, bankbooks, and remembered lines.
    - Make the protagonist calm but not passive: they gather proof, set boundaries, call the right person, leave, sell, sign, refuse, testify, reveal, or transfer responsibility.
    - Preserve the selected lane's payoff loop. Do not flatten care labor, pension fraud, hospital proof, workplace reputation, or late-life romance into generic family revenge.
+   - Audit each major scene as `entry state -> pressure/choice -> exit state`. At least one of proof, responsibility, money, housing, care burden, health decision, public reputation, family boundary, legal position, or next action must change. Repeated endurance, memories, seasonal scenery, or family scolding without a state delta must be compressed.
+   - Track the episode promise through visible proof and consequence; the protagonist's final dignity must come from an exercised choice or right, not only from others regretting their behavior.
 7. Polish:
    - Remove stock AI narration, abstract moralizing, repeated "静かに", and uniform paragraph rhythm.
    - Check that every emotional line has an object, action, witness, or consequence attached.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Story Deslop"
+  short_description: "Detect and remove formulaic AI writing traces"
+  default_prompt: "Use $story-deslop to make this draft feel natural while preserving its plot and voice."

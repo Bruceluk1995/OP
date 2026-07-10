@@ -15,23 +15,36 @@ OpenClaw 会从项目 `skills/` 目录发现 `SKILL.md`。优先通过 OpenClaw 
 | `/skill story-long-scan`、长篇扫榜 | story-long-scan | 长篇小说榜单与市场趋势 |
 | `/skill story-short-scan`、短篇扫榜 | story-short-scan | 短篇小说榜单与情绪风口 |
 | `/skill story-deslop`、去 AI 味 | story-deslop | 去除 AI 写作痕迹 |
-| `/skill story-cover`、封面 | story-cover | 生成封面图；需要 `GPT_IMAGE_API_KEY` |
+| `/skill story-cover`、封面 | story-cover | 生成小说封面或视频缩略图；无原生图像工具时才需要 API fallback |
 | `/skill story-review`、审查 | story-review | 多视角审查；OpenClaw Phase 1 默认 solo/soft-fallback |
 | `/skill story-import`、导入 | story-import | 逆向导入已有小说到项目结构 |
 | `/skill story`、网文 | story | 工具箱路由 · 模糊意图自动分发 |
 | `/skill story-setup`、准备写书 | story-setup | 环境部署 · 多 CLI 配置入口 |
 | `/skill browser-cdp` | browser-cdp | 浏览器 CDP 工具 |
+| `/skill jp-isekai`、日式男频异世界 | jp-isekai | 日本男频 RPG 异世界路由 |
+| `/skill jp-isekai-plan`、男频异世界开书 | jp-isekai-plan | 设定、外挂、世界观和章节结构 |
+| `/skill jp-isekai-write`、男频异世界正文 | jp-isekai-write | 日式男频异世界正文写作 |
+| `/skill jp-isekai-oneshot`、男频异世界短篇 | jp-isekai-oneshot | 14,500-16,500 日文字符的一发完结短篇 |
+| `/skill jp-isekai-review`、男频异世界审查 | jp-isekai-review | 本土化、爽点和中文玄幻泄漏检查 |
+| `/skill jp-josei-fantasy`、日本女频幻想恋爱 | jp-josei-fantasy | 日本女性向幻想恋爱路由 |
+| `/skill jp-josei-fantasy-plan`、女频幻想恋爱开书 | jp-josei-fantasy-plan | 令嬢、婚約破棄、溺愛等题材设计 |
+| `/skill jp-josei-fantasy-write`、女频幻想恋爱正文 | jp-josei-fantasy-write | 日本女性向幻想恋爱正文写作 |
+| `/skill jp-josei-fantasy-oneshot`、女频幻想恋爱短篇 | jp-josei-fantasy-oneshot | 一发完结的女性向幻想恋爱短篇 |
+| `/skill jp-josei-fantasy-review`、女频幻想恋爱审查 | jp-josei-fantasy-review | 恋爱爽点、ざまぁ逻辑和本土化检查 |
+| `/skill silver-literature`、银发文学 | silver-literature | 日本熟年家庭逆转与晚年再生 |
+| `/skill shanhe-explainer`、山河式讲解 | shanhe-explainer | 历史、社会、制度与国际战略讲解 |
+| `/skill econ-finance-explainer`、财经讲解 | econ-finance-explainer | 财经与经济学机制讲解 |
 
 ## OpenClaw 兼容说明
 
 - Phase 1 只部署 skills：`skills/*/SKILL.md` 使用 OpenClaw 兼容 frontmatter（`name` / `description` 单行，`metadata` 单行 JSON）。
 - 暂不部署 OpenClaw agents/hooks：写正文前大纲守卫、commit 提醒、session/compact 自动注入在 OpenClaw 下不是硬拦截，只作为 skill 内软约束执行。
 - OpenClaw 会在 session 启动时 snapshot eligible skills；部署或更新后如未立即出现，请新开 OpenClaw session，或等待 skills watcher 刷新。
-- `story-cover` 依赖 `GPT_IMAGE_API_KEY`，未配置时 OpenClaw 会将该 skill 标记为不可用/缺少 env。
+- `story-cover` 优先使用运行时原生图像工具；OpenClaw 没有原生图像工具时再走 API fallback，并检查对应环境变量。
 
 ## 文件结构
 
-- `skills/` — OpenClaw workspace skills，包含 oh-story 的 13 个 skill
+- `skills/` — OpenClaw workspace skills，按部署时 managed manifest 包含当前全部兼容 skill
 - `拆文库/` — 拆文分析结果存放目录
 - `{书名}/正文/` — 长篇小说正文章节
 - `{书名}/正文.md` — 短篇小说正文

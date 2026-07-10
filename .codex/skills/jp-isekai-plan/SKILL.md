@@ -1,6 +1,7 @@
 ---
 name: jp-isekai-plan
 description: "Plan Japanese male-audience isekai novels and adaptations. Use for 日式RPG异世界开书, なろう系/カクヨム男性向け premise design, Chinese-to-Japanese isekai localization, male protagonist cheat design, battle leveling, monster grinding, dungeon/adventurer guild arcs, overpowered protagonist, OP ruler fantasy, 龙傲天, demon-lord/kingdom domination, boss/drop/rank progression, slow-life farming fantasy, first-volume/first-episode outlines, and avoiding Chinese xianxia terms in Japanese fantasy settings."
+metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # JP Isekai Plan
@@ -67,6 +68,7 @@ Benchmark priority:
 4. Design the first arc around a concrete ladder:
    - Bottom status -> first monster win -> first drop/reward -> first helper/party contact -> first guild rank or dungeon access -> first boss/public win -> first stable base.
    - OP route ladder: hidden arrival -> first local insult/misread -> first controlled demonstration -> first subordinate or local faction reacts -> first territory/resource secured -> first larger power notices.
+   - For every planned episode, record `promise -> pressure/test -> proof/payoff -> cost -> state delta -> next pressure`. The state delta must change at least one of power use, inventory/drop, rank, reputation, territory, faction alignment, knowledge, or immediate goal. If two adjacent episodes repeat the same delta, redesign one before drafting.
 5. Set the project scale before making outlines:
    - Default for YouTube/push/episode-like serials: short-season novel, fixed 6 episodes/chapters.
    - Keep short-season outlines at exactly 6 episodes/chapters.

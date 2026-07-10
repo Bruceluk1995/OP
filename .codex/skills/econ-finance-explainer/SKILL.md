@@ -1,6 +1,7 @@
 ---
 name: econ-finance-explainer
 description: Economics and finance explainer scripting suite distilled from the local 代数学家89 subtitle corpus, then expanded into longer Shanhe-length analytical videos. Use when the user asks for 经济学讲解, 财经科普, 金融市场/宏观经济/债务/房价/消费/就业/平台经济/行为经济学/投资风险/骗局拆解, YouTube/TikTok/Google Trends/新闻/数据/全源财经热点选题, "普通人为什么赚不到钱", "钱去哪了", "谁在承担成本", or Japanese/English/Chinese economics narration optimized for Japan, US, Europe, or international audiences.
+metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # Econ Finance Explainer
@@ -58,6 +59,8 @@ Do not copy recurring names, exact story shells, or source phrasing. Create fres
    - European audience or EU/UK-oriented English narration -> `references/audience-packs/europe.md`
    - Chinese-speaking audience -> use `references/localization.md` and keep examples domestic or generic unless the user says otherwise.
 6. If the topic involves current prices, interest rates, jobs, inflation, stocks, funds, crypto, real estate, regulation, tax, pensions, or public finance, verify with current reliable sources before writing. Do not invent figures, rankings, rates, dates, or policy details.
+   - Build a compact claim ledger before prose: `claim | fact/inference | source/date/market | confidence | strongest counterexample`. Separate nominal from real values, stock from flow, correlation from mechanism, and household examples from population claims.
+   - Stress-test the thesis against the strongest rival explanation and identify who would falsify the story: a different time window, country, income group, policy regime, or denominator. Do not hide material uncertainty for a cleaner ending.
 7. For trend-driven angle/title batches:
    - If the source is missing, ask the source menu from `references/hot-source-router.md`.
    - If the user chooses 全选, collect from multiple source types and score candidates together.

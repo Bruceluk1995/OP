@@ -1,0 +1,4 @@
+interface:
+  display_name: "Browser CDP"
+  short_description: "Control Chrome through CDP with existing login state"
+  default_prompt: "Use $browser-cdp to automate Chrome through CDP while reusing the current login session."
