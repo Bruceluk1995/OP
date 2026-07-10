@@ -31,6 +31,15 @@ When the user chooses `全选`, collect small batches from available sources:
 
 Score all candidates together. Do not output one title per source by default; output the best mixed shortlist.
 
+## Mandatory User Selection Gate
+
+1. Collect and score raw candidates from the chosen source mode.
+2. Present 3-5 viable numbered candidates. For each, include source/date, source seed, score, selected/backup route, heroine wound, proof or romance mechanism, title hook, payoff, and safety transform.
+3. Ask the user to choose a number or request another batch, then stop.
+4. A source choice such as `YouTube/TikTok`, `Google Trends JP`, `离谱新闻`, `ランキング`, or `全选` is not a concrete seed choice. A lane, emotion, or male-lead preference is not a seed choice either.
+5. Do not lock a title, create an outline, draft prose, save files, or mutate a ledger before the user confirms the seed.
+6. Bypass the pause only if the user gives an exact item/link/keyword or explicitly says `你选/自动选/直接选最好的`; state the selected candidate before continuing.
+
 ## Scoring
 
 Score each candidate from 1-5:

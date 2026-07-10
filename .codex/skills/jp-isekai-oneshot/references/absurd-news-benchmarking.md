@@ -41,6 +41,14 @@ Recommended pick:
 - If the real news involves harm, tragedy, minors, or private people, reject it or abstract only the mechanism with no identifying detail.
 - Prefer small absurdity with a clean payoff over huge tragedy with messy ethics.
 
+## Mandatory User Selection Gate
+
+- Collect 6-10 safe current news mechanisms, score them, and present 3-5 viable numbered candidates rather than silently choosing one.
+- Show source/date, abstracted absurdity, scores, fictional institution, primary/backup route, converted skill, one-shot promise, and safety transform.
+- Ask the user to choose a candidate number or request another batch, then stop before title lock, blueprint, drafting, package creation, or ledger mutation.
+- Selecting “离谱新闻/逆天新闻” only selects the source lane. It does not select the concrete news seed.
+- Bypass the pause only for an exact user-supplied item/link/keyword or explicit `你选/自动选` delegation; state the delegated selection before continuing.
+
 ## Conversion Matrix
 
 | Real absurdity | Isekai conversion | Best route |

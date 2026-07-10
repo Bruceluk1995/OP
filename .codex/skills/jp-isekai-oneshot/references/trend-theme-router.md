@@ -1,6 +1,6 @@
 # Trend To Theme-Pack Router
 
-Use after selecting a Google Trends JP seed, absurd-news seed, or social-video seed and before choosing the final title, cheat, or one-shot blueprint.
+Use only after the user has selected a specific Google Trends JP, absurd-news, or social-video seed, or explicitly delegated that selection, and before choosing the final title, cheat, or one-shot blueprint. Source/type/tone selection alone is not seed selection.
 
 This router maps a hot seed to a male-isekai theme engine. These routes mirror `../jp-isekai-plan/references/type-packs/`, but the output remains a standalone 14,500-16,500 Japanese-character one-shot. Do not use the six-episode structure from those type packs directly; compress the selected route into 12-18 meaningful one-shot beats.
 

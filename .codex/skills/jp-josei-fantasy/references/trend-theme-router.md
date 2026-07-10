@@ -1,6 +1,6 @@
 # Trend To Josei Fantasy Route
 
-Use after selecting a Google Trends JP seed, absurd-news seed, social-video seed, ranking/tag signal, or all-source shortlist and before choosing the final title, heroine wound, male lead, proof object, or outline.
+Use only after the user has selected a specific Google Trends JP seed, absurd-news seed, social-video seed, ranking/tag signal, or all-source candidate, or explicitly delegated that selection, and before choosing the final title, heroine wound, male lead, proof object, or outline. Source/lane/emotion selection alone is not seed selection.
 
 This router maps a hot seed to a Japanese female-audience fantasy romance engine. These routes mirror `../jp-josei-fantasy-plan/references/type-packs/`, but the output may be either a standalone one-shot or a serial concept. For one-shots, compress the selected route into 12-18 meaningful beats and keep closure.
 

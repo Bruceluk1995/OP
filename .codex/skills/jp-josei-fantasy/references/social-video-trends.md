@@ -67,6 +67,15 @@ Recommended pick:
 - Prefer family/relationship/proof/home/care/comedy/service hooks over celebrity or music-only hooks.
 - If the hook depends on an existing anime/game IP, extract only the broad mechanic and change the world, characters, powers, names, and scene.
 
+## Mandatory User Selection Gate
+
+1. Collect and score 6-10 raw current items.
+2. Present 3-5 viable numbered candidates with source/date or recency, direct link when available, video seed, scores, extracted hook, selected/backup route, heroine wound, proof/romance mechanism, one-shot or serial promise, and safety transform.
+3. Ask the user to choose a candidate number or request another batch, then stop.
+4. Do not treat `YouTube/TikTok`, a category, josei lane, emotion, or male-lead preference as selection of a concrete video seed.
+5. Do not lock the title, outline, draft prose, save files, or mutate a ledger until the user selects one.
+6. Bypass only for an exact user-supplied video/link/keyword or explicit `你选/自动选/直接选最好的` delegation; identify the selected candidate before continuing.
+
 ## Conversion Matrix
 
 | Video hook | Josei fantasy conversion | Best route |

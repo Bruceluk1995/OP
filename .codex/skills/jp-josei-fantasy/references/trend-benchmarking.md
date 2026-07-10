@@ -33,6 +33,14 @@ Recommended seed rule:
 - Prefer a lower-traffic lifestyle/emotion seed over a higher-traffic remote spectacle seed.
 - If the top trends are celebrity/science/sports names, collect more items before choosing.
 
+## Mandatory User Selection Gate
+
+- Collect raw current trends, score them, and present 3-5 viable numbered candidates instead of silently choosing a main pick.
+- Show source/date, seed, score, josei conversion, selected/backup route, heroine wound, proof/romance mechanism, one-shot or serial promise, and risk note.
+- Ask the user to choose a number or request another batch, then stop before title lock, outline, drafting, files, or ledger mutation.
+- Selecting `Google Trends JP`, a josei lane, emotion axis, or male-lead function only selects the search lane; it is not seed approval.
+- Continue without the pause only for an exact user-supplied seed/link/keyword or explicit delegated choice, and state the delegated selection before continuing.
+
 ## Trend Gate
 
 Accept a trend seed only if it can become at least two of:

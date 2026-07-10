@@ -36,9 +36,13 @@ Write complete standalone Japanese female-audience fantasy romance short stories
    - `../jp-josei-fantasy/references/trend-benchmarking.md` when the user asks for 热点, Google Trends, 蹭热点, current topic selection, or trend-to-romance conversion.
    - `../jp-josei-fantasy/references/absurd-news-benchmarking.md` when the user asks for 离谱新闻, 逆天新闻, 日本社会怪事, bizarre news, or stronger conflict than Google Trends.
    - `../jp-josei-fantasy/references/social-video-trends.md` when the user asks for TikTok, YouTube, Shorts, viral videos, 热门视频, or short-video hooks.
-   - `../jp-josei-fantasy/references/trend-theme-router.md` after selecting any hot seed, or whenever the user wants the seed auto-matched to a josei fantasy subtype/type-pack.
+   - `../jp-josei-fantasy/references/trend-theme-router.md` only after the user has selected a specific hot seed, or explicitly delegated selection with “你选/自动选”, and wants it matched to a josei fantasy subtype/type-pack.
    - `references/oneshot-delivery.md` before saving a full one-shot package, character prompts, cover prompt, or any project-bound output.
 3. If the user asks for current market, ranking, Google Trends, YouTube, TikTok, or "现在日本什么火", browse/fetch current sources before making market claims. For Japan hot-topic ideation, start with the user's chosen source; if no source is chosen, ask the source menu from `hot-source-router.md`.
+   - Treat source selection and seed selection as different decisions. Choosing a platform/source, josei lane, emotion axis, or male-lead function does **not** authorize Codex to choose the concrete hot seed.
+   - Collect raw items, filter them, then present 3-5 viable numbered candidates with source/date, scores, extracted mechanism, primary/backup josei route, heroine wound, proof/romance mechanism, one-shot promise, and safety transform.
+   - Stop after the shortlist and ask the user to choose a candidate number or request another batch. Do not lock the final title, run a candidate ledger check, build the blueprint, draft prose, save a package, or append the ledger before that choice.
+   - Skip this pause only when the user supplied the exact video/news/trend/ranking item/link/keyword, or explicitly said `你选`, `自动选`, `直接选最好的`, or equivalent. If choice was delegated, state which candidate was selected before continuing.
    - Do not pick the highest-traffic trend automatically. Score candidates by heroine empathy, romance/zamaa engine fit, female-audience payoff, safety, and title clickability.
    - Prefer女性向け可转译 seeds: public humiliation, reputation repair, unfair family/work/school rules, money or inheritance anxiety, beauty/health fatigue, food/home comfort, communication failure, weather/disaster shelter, pets/animals, weddings, contracts, etiquette, and "nobody believed me until proof appeared" hooks.
    - Downrank remote spectacle, celebrity gossip, crime/tragedy, politics rage bait, or pure sports results unless they can be converted into a fictional social rule, public proof, contract, ceremony, or relationship recognition scene.
@@ -79,6 +83,7 @@ Write complete standalone Japanese female-audience fantasy romance short stories
 ## Hard Rules
 
 - Do not turn a one-shot into a season outline.
+- Do not confuse “source/lane/emotion selected” with “hot seed selected.” For dynamic hot-source work, user confirmation of a numbered seed is mandatory unless the user explicitly delegates the choice or supplies the exact seed.
 - Do not paste real trending celebrities, scandals, crime, tragedies, sports trivia, or private-person details into the romance story. Convert only the underlying desire, anxiety, object, rule, ceremony, social pressure, proof mechanism, or relationship tension.
 - Do not copy TikTok/YouTube creators, scenes, jokes, clips, songs, anime/game IP, dialogue, or exact video order. Extract only the hook mechanic and rebuild an original romance-fantasy premise.
 - Do not leave the core injustice, romance recognition, or heroine's choice unresolved.

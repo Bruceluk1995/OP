@@ -66,6 +66,15 @@ Recommended pick:
 - Prefer gameplay/mechanic/comedy/tech/pet/sports hooks over celebrity or music-only hooks.
 - If the hook depends on an existing anime/game IP, extract only the broad mechanic and change the world, characters, powers, names, and scene.
 
+## Mandatory User Selection Gate
+
+1. Collect 6-10 raw current items and score them internally.
+2. Present 3-5 viable numbered candidates using the format below. Include source/date or recency and a direct source link when available.
+3. Ask the user to choose a candidate number or request another batch, then stop.
+4. Do not treat “YouTube/TikTok”, a video category, subtype, payoff, or tone as selection of a concrete video seed.
+5. Do not choose the highest-scoring candidate, build the final blueprint, draft prose, or save files until the user selects one.
+6. Bypass the pause only if the user supplied the exact video/link/keyword or explicitly delegated selection with `你选/自动选/直接选最好的`. When delegated, identify the chosen candidate before continuing.
+
 ## Conversion Matrix
 
 | Video hook | Isekai conversion | Best route |

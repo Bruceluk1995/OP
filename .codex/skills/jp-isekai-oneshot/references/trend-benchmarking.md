@@ -34,6 +34,14 @@ Recommended seed rule:
 - If the top 10 trends are celebrity/science/sports names, collect more items before choosing.
 - If the collected trends still lack conflict, ask or switch to absurd-news sourcing rather than forcing a weak trend.
 
+## Mandatory User Selection Gate
+
+- Collect 6-10 raw current trends, score them, and present 3-5 viable numbered candidates.
+- For each candidate, show the source/date, raw seed, score, fantasy conversion, primary/backup route, one-shot promise, and risk note.
+- Ask the user to choose a number or request another batch, then stop before final title, blueprint, prose, files, or ledger mutation.
+- Choosing `Google Trends JP`, a subtype, payoff, or tone only selects the search lane; it is not approval of a concrete seed.
+- Continue without the pause only when the user gives the exact seed/link/keyword or explicitly delegates the decision. State the selected candidate when using delegated choice.
+
 ## Trend Gate
 
 Accept a trend seed only if it can become at least two of:

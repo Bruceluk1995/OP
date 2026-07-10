@@ -34,9 +34,13 @@ Write complete standalone Japanese male-audience isekai short stories around 14,
    - `references/trend-benchmarking.md` when the user asks for 热点, Google Trends, 蹭热点, current topic selection, or trend-to-skill conversion.
    - `references/absurd-news-benchmarking.md` when the user asks for 逆天新闻, 离谱新闻, 奇葩新闻, 日本社会怪事, bizarre news, or story-hot topics with stronger conflict than Google Trends.
    - `references/social-video-trends.md` when the user asks for TikTok, YouTube, Shorts, viral videos, 热门视频, or short-video hooks.
-   - `references/trend-theme-router.md` after selecting any trend seed, or whenever the user wants the hot topic to auto-match a male-isekai subtype/theme-pack.
+   - `references/trend-theme-router.md` only after the user has selected a specific trend seed, or has explicitly delegated the choice with “你选/自动选”, and wants it matched to a male-isekai subtype/theme-pack.
    - `references/oneshot-delivery.md` before saving a full one-shot package, character prompts, cover prompt, or any project-bound output.
 3. If the user asks for current market, ranking, Google Trends, or "现在日本什么火", browse/fetch current source pages before making market claims. For Japan hot-topic ideation, use Google Trends JP first.
+   - Treat source selection and seed selection as different decisions. Choosing `YouTube/TikTok`, `Google Trends`, `离谱新闻`, a subtype, a payoff, or a tone does **not** authorize Codex to choose the concrete hot seed.
+   - Collect 6-10 raw items, filter them, then present 3-5 viable numbered candidates with source/date, seed, scores, extracted hook, primary/backup route, converted skill, one-shot promise, and safety transform.
+   - Stop after the shortlist and ask the user to choose a candidate number or request another batch. Do not create the final title, run a candidate ledger check, build the blueprint, draft prose, save a package, or append the ledger before that choice.
+   - Skip this pause only when the user supplied the exact video/news/trend/link/keyword to use, or explicitly said `你选`, `自动选`, `直接选最好的`, or equivalent. If choice was delegated, state which candidate was selected before continuing.
    - Do not pick the highest-traffic trend automatically. Score candidates by everyday resonance, fantasy-engine fit, male-audience payoff, safety, and title clickability.
    - Prefer生活贴近 seeds: prices, jobs, taxes, food, heat/cold people feel, sleep/health, commuting, exams, apps/tools, shopping, household costs, pets, local events, and sports-as-competition.
    - Downrank remote spectacle seeds like solar flares, space events, macro science, or celebrity names unless they can be converted into an everyday problem Japanese viewers immediately understand.
@@ -79,6 +83,7 @@ Write complete standalone Japanese male-audience isekai short stories around 14,
 ## Hard Rules
 
 - Do not turn a one-shot into a season outline.
+- Do not confuse “source/type/tone selected” with “hot seed selected.” For dynamic hot-source work, user confirmation of a numbered seed is mandatory unless the user explicitly delegates the choice or supplies the exact seed.
 - Do not paste real trending celebrities, scandals, crime, tragedies, or sports match trivia into the fantasy story. Convert only the underlying desire, anxiety, object, rule, competition, weather, tool, or social mechanism into a fantasy skill/quest engine.
 - Do not turn real absurd news into disguised defamation or tragedy exploitation. Fictionalize names, places, companies, victims, and legal facts; keep only the absurd mechanism.
 - Do not copy TikTok/YouTube creators, scenes, jokes, clips, songs, anime/game IP, dialogue, or exact video order. Extract only the hook mechanic.
