@@ -6,6 +6,13 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # Shanhe Explainer
 
+## 数字交互契约
+
+- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
+- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
+- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
+- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+
 Create sharp analytical explainer scripts for Japan-focused history/society, world history, geopolitics, strategy, science, economics, and social common-sense topics. The target is not textbook chronology; it is a short-video argument: a strong question, a vivid hook, layered causal reasoning, dry humor, and a clean final judgment.
 
 ## Source Signal
@@ -22,18 +29,18 @@ Use the corpus as a structural benchmark, not as a topic menu. The source channe
 ## Workflow
 
 1. Run audience-first intake when the audience is missing:
-   - Ask "观众主要在哪里？" before asking output type, topic lane, title, or length.
-   - Offer compact choices: Japan, United States, Europe, or Other/international.
+   - Before output type, topic lane, title, or length, display: `1. 日本`、`2. 美国`、`3. 欧洲`、`4. 其他/国际受众`; require a numeric reply. Option 4 may request the region in the next turn.
    - Treat language and audience as separate fields. "English" does not automatically mean United States; "Japanese" does not automatically mean Japan if the user says otherwise.
    - Skip this question only when the user has already stated the target audience clearly.
-2. Ask the new-user state in plain language, not internal workflow terms:
-   - **No topic yet**: find video-worthy angles from trends or evergreen topics.
-   - **Has keyword/hot event**: convert it into explainer titles.
-   - **Has a title/topic**: build a causal-chain outline.
-   - **Ready to write**: draft the complete narration in Chinese, Japanese, or English.
-   - **Has video/subtitle material**: distill reusable style and topic patterns.
+2. Present the new-user state as a numbered menu in plain language:
+   - `1. 还没有题目，帮我找选题`
+   - `2. 已有关键词/热点，帮我转成标题`
+   - `3. 已有标题/题目，帮我做大纲`
+   - `4. 已准备好，直接写完整讲解稿`
+   - `5. 有视频/字幕素材，先拆风格与选题模式`
+   Require a numeric reply.
 3. Identify the task from that answer:
-   - No topic yet -> angle/title batch; ask trend scouting vs evergreen topic design.
+   - No topic yet -> display `1. 热点扫描`、`2. 常青选题`、`3. 两者都要`; require a numeric reply.
    - Has keyword/hot event -> ask for seed keywords, then convert to title options.
    - Has a title/topic -> outline.
    - Ready to write -> full script.
@@ -68,7 +75,7 @@ Use the corpus as a structural benchmark, not as a topic menu. The source channe
    - Apply the selected topic pack as a hard filter before converting trends into titles.
    - If the user selected Japan-focused history/society/institutions, keep only trends that can directly become Japan-local history, society, economy, institutions, public systems, work/education, disaster governance, energy, demographics, local finance, or island-state questions.
    - Reject overseas sports, foreign celebrity, match schedule, and transfer-news trends unless the user selected a sports/media/social-common-sense lane or explicitly asks to broaden.
-   - If not enough trend seeds pass the selected-lane filter, report the shortage and ask whether to broaden the lane, switch to evergreen topics, or output fewer titles.
+   - If not enough trend seeds pass the selected-lane filter, report the shortage and display `1. 扩大题材范围`、`2. 改做常青选题`、`3. 减少标题数量`; require a numeric reply.
    - Convert search trends into durable explanatory questions. Do not simply restate celebrity, sports, or breaking-news queries.
    - Prefer trend seeds that can be reframed through Japan-focused society, world history, geopolitics, institutions/economy, science/technology, or social common sense.
 9. If the topic involves current politics, finance, public health, or fast-changing facts, verify with current reliable sources before writing. Do not invent numbers, dates, laws, quotes, or market claims.

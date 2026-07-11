@@ -6,6 +6,13 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Josei Fantasy
 
+## 数字交互契约
+
+- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
+- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
+- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
+- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+
 Use this as the router for Japanese female-audience fantasy romance work. Prefer the dedicated sub-skills:
 
 - `$jp-josei-fantasy-plan`: premise, tag cluster, hot-topic conversion, heroine wound, male lead, court/noble rules, revenge/romance arc, chapter beats.
@@ -51,7 +58,7 @@ Detailed protocol: `references/project-memory.md`.
 3. If the task references current ranking, latest trends, Google Trends, YouTube, TikTok, Shorts, viral videos, 热点, or "现在日本什么火", read `references/hot-source-router.md`, browse/fetch current source pages before making market claims, then route:
    - One-file story / 15000字 / 一发完结 -> `$jp-josei-fantasy-oneshot`.
    - Book concept, serialized project, tag strategy, or outline -> `$jp-josei-fantasy-plan`.
-4. If the task only says "女频" or "幻想恋爱", ask or infer a compact lane before planning: 婚約破棄ざまぁ, 悪役令嬢, 聖女, 契約結婚, 辺境伯/溺愛, 職人, 王宮/家族/相続, ループ, 異類婚姻, 強いヒロイン, or 手紙すれ違いラブコメ. If the user wants discovery, offer source first: YouTube/TikTok, Google Trends JP, ranking/tag pages, weird/social news, evergreen lane, or 全选.
+4. If the task only says "女频" or "幻想恋爱", display a numbered lane menu before planning: `1 婚約破棄ざまぁ`、`2 悪役令嬢`、`3 聖女`、`4 契約結婚`、`5 辺境伯/溺愛`、`6 職人`、`7 王宮/家族/相続`、`8 ループ`、`9 異類婚姻`、`10 強いヒロイン`、`11 手紙すれ違いラブコメ`、`12 热点发现`、`13 自定义`; require a numeric reply. If 12 is selected, display source menu: `1 YouTube/TikTok`、`2 Google Trends JP`、`3 小说榜/标签页`、`4 离谱/社会新闻`、`5 常青题材`、`6 全选`; require a numeric reply. Option 13 may request one keyword in the next turn.
 5. If adapting from Chinese fantasy or a real-world trend, first map institutions, ranks, magic, family roles, marriage customs, public proof, and antagonist functions into Japanese female-oriented fantasy equivalents.
 6. Keep meta notes in the user's language. Write Japanese prose in Japanese when the user asks for audience-facing text.
 

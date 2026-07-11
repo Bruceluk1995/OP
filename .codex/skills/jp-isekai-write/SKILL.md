@@ -6,6 +6,13 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Isekai Write
 
+## 数字交互契约
+
+- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
+- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
+- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
+- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+
 Write Japanese web-novel episodes for male-audience isekai. Use this for final prose.
 
 ## Required Reads

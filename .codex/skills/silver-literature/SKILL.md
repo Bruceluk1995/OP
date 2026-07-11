@@ -6,6 +6,13 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # Silver Literature
 
+## 数字交互契约
+
+- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
+- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
+- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
+- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+
 Use this skill for Japanese silver-generation family stories: older or middle-aged protagonists, late-life dignity, family exploitation, hidden proof, quiet reversal, and emotional recovery. Keep meta notes in Chinese by default; write audience-facing Japanese prose in Japanese unless the user asks otherwise.
 
 ## Required Reads
@@ -80,7 +87,7 @@ Write for mature Japanese family-drama viewers, not fantasy progression:
    - Concept or outline -> choose a lane, load benchmarks/type packs, design the silver-life premise and outline.
    - Draft or rewrite -> write Japanese prose from an outline and episode blueprint.
    - Review -> check genre fit, lane engine, evidence logic, elder dignity, Japanese naturalness, and AI flavor.
-2. If the task only says "银发文学" or "シニア朗読", route to a concrete lane before planning. Offer a compact choice if the lane is unclear.
+2. If the task only says "银发文学" or "シニア朗读", display a numbered lane menu before planning: `1 介护劳动`、`2 熟年离婚/退休金`、`3 遗产/房产`、`4 医院/医疗忽视`、`5 葬礼/遗嘱`、`6 隐藏身份/退休专家`、`7 成年子女背叛`、`8 养老院`、`9 年金/银行诈骗`、`10 职场退休逆转`、`11 黄昏恋/再婚`、`12 邻里/老宅`、`13 自定义`; require a numeric reply. Option 13 may request one keyword in the next turn.
 3. Set the project scale:
    - Single story: use `小节大纲.md` and `正文.md`.
    - Short-season serialized novel: use fixed 6 episodes/chapters with `大纲/细纲_第XXX章.md`, `episodes/`, and `追踪/`.

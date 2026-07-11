@@ -5,6 +5,13 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 ---
 # story-setup：网文写作工具集基础设施部署
 
+## 数字交互契约
+
+- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
+- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
+- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
+- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+
 你是写作基础设施部署器。将网文写作工具集的全套基础设施（hooks、rules、agents、CLAUDE.md、AGENTS.md、Codex/OpenClaw 配置）部署到用户项目目录。
 
 **执行铁律：不覆盖用户已有配置，合并而非替换。**
@@ -14,7 +21,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 ## Phase 1：检测项目状态
 
 1. 检查当前目录是否已部署过（存在 `.story-deployed`）
-   - 如果已存在 → 使用 AskUserQuestion 确认是否重新部署
+   - 如果已存在 → 显示 `1. 重新部署`、`2. 保持现状并退出`，要求只回复数字
 2. 检查是否有书名目录（包含 `追踪/` 子目录的目录，或用户自定义结构）
    - 有 → 识别为长篇项目，显示当前项目信息
    - 无 → 识别为新项目或短篇项目
@@ -33,8 +40,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 7. 检查 `openclaw.json`、`.openclaw/`、`.agents/skills/`、`AGENTS.md` 中的 OpenClaw 段，或 `skills/*/SKILL.md` 中的 `metadata.openclaw`
    - 存在 → 识别为 OpenClaw 项目，`target_cli = openclaw`
    - 不存在 → 跳过
-8. 如 `.claude/` 或 `CLAUDE.md`、opencode 标记、Codex 标记、OpenClaw 标记同时存在 → 使用 AskUserQuestion 让用户选择目标 CLI（选项：仅 Claude Code / 仅 OpenCode / 仅 Codex / 仅 OpenClaw / 任意组合）
-9. 如四者都不存在（全新项目）→ 使用 AskUserQuestion 让用户选择目标 CLI
+8. 如 `.claude/` 或 `CLAUDE.md`、opencode 标记、Codex 标记、OpenClaw 标记同时存在 → 显示目标 CLI 数字菜单：`1. Claude Code`、`2. OpenCode`、`3. Codex`、`4. OpenClaw`；允许用 `+` 多选，并要求只回复数字或数字组合
+9. 如四者都不存在（全新项目）→ 显示同一目标 CLI 数字菜单并要求只回复数字或数字组合
    - 用户选择 opencode → `target_cli = opencode`，部署时创建 `opencode.json` 和 `.opencode/`
    - 用户选择 claude-code → 按现有逻辑处理
    - 用户选择 codex → `target_cli = codex`，部署时创建 `.codex/`
@@ -43,7 +50,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 ## Phase 2：部署基础设施
 
-使用 AskUserQuestion 确认部署位置后，依次执行。
+显示部署位置数字菜单：`1. 当前目录`、`2. 其他目录`、`3. 取消`。要求只回复数字；选 2 后下一轮才索取路径。确认后依次执行。
 
 ### 2.0 部署清单（机械可检查）
 
@@ -163,43 +170,43 @@ OpenCode agents 部署是 `replace`，会覆盖上次写入的 `model:`。所以
 
 #### Step 3：逐级交互选择
 
-按 低端 → 中端 → 高端 顺序，每级用 AskUserQuestion 让用户选择。
+按 低端 → 中端 → 高端 顺序，每级在普通对话中展示数字菜单并要求只回复数字。
 
 **低端选项结构：**
 
 ```
-问题："为低成本 Agent（chapter-extractor, consistency-checker, story-explorer）选择模型："
+问题："为低成本 Agent（chapter-extractor, consistency-checker, story-explorer）选择模型，请只回复数字："
 选项：
-  - provider/model-id
-  - provider/model-id
-  - 自定义输入（手动输入完整模型 ID，ID 拼写错误要到运行时才会暴露）
-  - 跳过，使用主模型（成本可能较高）
+  1. provider/model-id
+  2. provider/model-id
+  3. 自定义输入（选中后下一轮手动输入完整模型 ID，ID 拼写错误要到运行时才会暴露）
+  4. 跳过，使用主模型（成本可能较高）
 ```
 
 **中端选项结构：**
 
 ```
-问题："为写作质量关键 Agent（narrative-writer, character-designer, story-researcher）选择模型："
+问题："为写作质量关键 Agent（narrative-writer, character-designer, story-researcher）选择模型，请只回复数字："
 选项：
-  - provider/model-id
-  - provider/model-id
-  - 自定义输入（请勿使用低端模型，会影响正文质量；ID 拼写错误要到运行时才会暴露）
-  - 跳过，使用主模型（主模型质量通常足够）
+  1. provider/model-id
+  2. provider/model-id
+  3. 自定义输入（选中后下一轮输入；请勿使用低端模型，会影响正文质量）
+  4. 跳过，使用主模型（主模型质量通常足够）
 ```
 
 **高端选项结构：**
 
 ```
-问题："为总指挥 Agent（story-architect）选择模型："
+问题："为总指挥 Agent（story-architect）选择模型，请只回复数字："
 选项：
-  - provider/model-id
-  - provider/model-id
-  - 自定义输入（手动输入完整模型 ID，ID 拼写错误要到运行时才会暴露）
-  - 跳过，使用主模型（成本可能较高）
+  1. provider/model-id
+  2. provider/model-id
+  3. 自定义输入（选中后下一轮手动输入完整模型 ID）
+  4. 跳过，使用主模型（成本可能较高）
 ```
 
 规则：
-- 候选最多显示 5 个，超过则截断并提示"更多模型请使用自定义输入"。**每一级无论候选数是否为 0 都用 AskUserQuestion 弹出**，选项至少含：候选模型（如有）、`自定义输入`、`保留现有模型`（Step 0 缓存到该 agent 的 model，无则不显示此项）、`跳过，用主模型`。候选为 0 时仍弹窗，并在问题说明里给出对应警告 + 列出未分级/未入档模型供参考——不再静默跳过交互（否则用户够不到自定义输入）。
+- 候选最多显示 5 个，超过则截断并提示"更多模型请选择自定义输入项"。**每一级无论候选数是否为 0 都必须展示数字菜单**，选项至少含：候选模型（如有）、`自定义输入`、`保留现有模型`（Step 0 缓存到该 agent 的 model，无则不显示此项）、`跳过，用主模型`。候选为 0 时仍展示菜单，并在问题说明里给出对应警告 + 列出未分级/未入档模型供参考——不再静默跳过交互。
 - `自定义输入`：用户输入 `provider/model-id` 完整 ID；写入前校验为单行、无控制字符、匹配 `^[A-Za-z0-9._-]+/[A-Za-z0-9._:+-]+$`，不符则提示重输或改选跳过。
 - `保留现有模型`：写回 Step 0 缓存的该 agent model（重新部署时保住用户上次配置），不算"跳过"。
 - `跳过，用主模型`：显式清除——不写该 agent 的 `model:`，agent 继承主模型。想保留上次配置请选 `保留现有模型`。
@@ -369,7 +376,7 @@ OpenClaw Phase 1 只部署 skills，不部署 OpenClaw agents/hooks/plugin。
 3. 读取模板 CLAUDE.md.tmpl，同样切分
 4. 模板中的标准 section（Skill 路由表、文件结构、协作规则、Context Recovery、语言）**覆盖**用户同名 section
 5. 用户独有的 section（自定义内容）**保留**不动
-6. 未知冲突用 AskUserQuestion 让用户选择保留哪个版本
+6. 未知冲突时把各版本编成数字菜单，并增加“取消合并”选项；要求用户只回复数字
 
 ## AGENTS.md 合并策略（OpenCode / Codex / OpenClaw）
 
@@ -394,7 +401,7 @@ hooks 注册合并按 command 字段去重：
 ## 重新部署
 
 - `.story-deployed` 不存在 → 全新安装，Phase 2 全部执行
-- `.story-deployed` 存在且 `agents_version: 16` → 提示已部署，AskUserQuestion 确认是否重新部署
+- `.story-deployed` 存在且 `agents_version: 16` → 提示已部署，并显示 `1. 重新部署`、`2. 保持现状并退出`，要求只回复数字
 - `.story-deployed` 存在但 `agents_version` < 16 → 提示需要更新，重新执行 Phase 2 覆盖 agents/hooks/rules/reference bundle，CLAUDE.md / AGENTS.md / settings.local.json / .codex/hooks.json 走合并策略
 
 ---

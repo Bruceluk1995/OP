@@ -5,6 +5,13 @@ metadata: {"openclaw":{"requires":{"bins":["agent-browser"]},"source":"https://g
 ---
 # Browser CDP 操作工具
 
+## 数字交互契约
+
+- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
+- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
+- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
+- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+
 通过 CDP 协议控制 Chrome，复用已有登录态，执行浏览器自动化操作。
 
 ## 能力选择守卫
@@ -59,7 +66,7 @@ CHROME_PID_COUNT=3
   ```bash
   node {SKILL_DIR}/scripts/setup-cdp-chrome.js 9222 --yes
   ```
-- `CDP_STATUS=needs-setup` 且 `CHROME_RUNNING=yes` → **先用 AskUserQuestion 工具向用户确认**：告知会杀掉 N 个 Chrome 进程、可能丢失未保存工作；用户同意后再带 `--yes` 启动；用户拒绝则放弃这次自动化。
+- `CDP_STATUS=needs-setup` 且 `CHROME_RUNNING=yes` → 先在普通对话中告知会杀掉 N 个 Chrome 进程、可能丢失未保存工作，并显示 `1. 同意并继续`、`2. 取消`；要求只回复数字。同意后再带 `--yes` 启动，取消则放弃这次自动化。
 
 **为什么不能直接 `--yes`：** 脚本在非 TTY（即 skill 模式 / Bash 工具）下，如果检测到 Chrome 在跑而没有 `--yes`，会以退出码 3 报 `NEEDS_CONSENT: ...` 并中止，**不会**静默杀进程。这是有意的兜底——但 skill 流程仍应先问用户，而不是看到 3 就盲传 `--yes`。
 
@@ -173,7 +180,7 @@ timeout 30 agent-browser --cdp 9222 eval "window.location.replace('https://www.q
 
 | 问题 | 解决方案 |
 |------|----------|
-| `NEEDS_CONSENT` + 退出码 3 | 用 AskUserQuestion 询问用户是否允许杀掉 Chrome，同意后加 `--yes` 重跑 |
+| `NEEDS_CONSENT` + 退出码 3 | 显示 `1. 允许关闭 Chrome 并重跑`、`2. 取消`，要求只回复数字；选 1 后加 `--yes` 重跑 |
 | CDP 端口未监听 | `--detect-only` 再确认；端口被占用则换端口 |
 | 页面跳转到登录页 | `snapshot -i` 找登录按钮并操作 |
 | `eval` 返回 `null` | 检查 localStorage key 名；含引号的 JS 用 `eval -b` 或 `--stdin` |

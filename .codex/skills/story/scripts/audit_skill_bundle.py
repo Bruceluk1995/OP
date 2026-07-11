@@ -14,6 +14,8 @@ from pathlib import Path
 FRONTMATTER_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*(?:\n|\Z)", re.DOTALL)
 FIELD_RE = re.compile(r"^([A-Za-z0-9_-]+):\s*(.*)$")
 LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+NUMERIC_INTERACTION_HEADING = "## 数字交互契约"
+LEGACY_CHOICE_TOOLS = ("AskUserQuestion", "request_user_input")
 
 
 @dataclass(frozen=True)
@@ -83,6 +85,23 @@ def audit_skill(skill_dir: Path) -> list[Finding]:
         add(findings, "ERROR", skill, "replacement_character", "SKILL.md contains Unicode replacement characters")
     if re.search(r"\b(?:TODO|FIXME)\b", text):
         add(findings, "WARN", skill, "unfinished_marker", "SKILL.md contains TODO/FIXME")
+    if NUMERIC_INTERACTION_HEADING not in text:
+        add(
+            findings,
+            "ERROR",
+            skill,
+            "numeric_interaction_contract_missing",
+            "SKILL.md must require numbered replies for finite user choices",
+        )
+    for line_number, line in enumerate(text.splitlines(), start=1):
+        if any(tool in line for tool in LEGACY_CHOICE_TOOLS) and "禁止依赖" not in line:
+            add(
+                findings,
+                "ERROR",
+                skill,
+                "legacy_choice_tool",
+                f"SKILL.md:{line_number} must use a numbered chat menu instead of a choice UI tool",
+            )
 
     for markdown in sorted(skill_dir.rglob("*.md")):
         if markdown == skill_md:

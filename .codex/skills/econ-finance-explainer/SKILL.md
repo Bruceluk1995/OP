@@ -6,6 +6,13 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # Econ Finance Explainer
 
+## 数字交互契约
+
+- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
+- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
+- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
+- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+
 Create long-form economics and finance explainers that make abstract mechanisms feel concrete. The voice can borrow the source corpus's strength: everyday scenes, fictionalized markets, sharp analogies, and "ordinary people pay the bill" framing. The output length and reasoning depth should follow the Shanhe-style explainer workflow, not the short source subtitles.
 
 ## Source Signal
@@ -29,15 +36,15 @@ Do not copy recurring names, exact story shells, or source phrasing. Create fres
 ## Workflow
 
 1. Run audience-first intake when the audience is missing:
-   - Ask "观众主要在哪里？" before asking topic, language, or length.
-   - Offer compact choices: Japan, United States, Europe, China/Chinese-speaking, or Other/international.
+   - Before topic, language, or length, display: `1. 日本`、`2. 美国`、`3. 欧洲`、`4. 中国/中文受众`、`5. 其他/国际受众`; require a numeric reply. Option 5 may request the region in the next turn.
    - Treat language and audience as separate fields. English does not automatically mean United States; Japanese does not automatically mean Japan if the user says otherwise.
-2. Ask the new-user state in plain language:
-   - No topic yet: find video-worthy economics/finance angles.
-   - Has keyword/hot event: convert it into explainable titles.
-   - Has a title/topic: build a causal-chain outline.
-   - Ready to write: draft the complete narration.
-   - Has video/subtitle material: distill style and topic patterns.
+2. Present the new-user state as a numbered menu:
+   - `1. 还没有题目，帮我找财经选题`
+   - `2. 已有关键词/热点，帮我转成标题`
+   - `3. 已有标题/题目，帮我做因果链大纲`
+   - `4. 已准备好，直接写完整讲解稿`
+   - `5. 有视频/字幕素材，先拆风格与选题模式`
+   Require a numeric reply.
 3. For any writing task, read:
    - `references/style-patterns.md`
    - `references/structure-template.md`

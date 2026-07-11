@@ -6,6 +6,13 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Isekai
 
+## 数字交互契约
+
+- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
+- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
+- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
+- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+
 Use this as the router for Japanese male-audience isekai work. Prefer the dedicated sub-skills:
 
 - `$jp-isekai-plan`: premise, world rules, protagonist, cheat design, first arc, episode outline.
@@ -44,16 +51,17 @@ Detailed protocol: `references/project-memory.md`.
 
 ## Workflow
 
-1. Determine the task:
+1. If the user only says "男频异世界" or "なろう系" without a concrete lane, display: `1 开局无敌/势力经营`、`2 打怪升级/地下城`、`3 追放ざまぁ/辅助职业逆袭`、`4 学园/游戏知识`、`5 日本往返/现代物资`、`6 驯兽/従魔`、`7 地下城主/领地经营`、`8 秘密组织/部下脑补`、`9 生产经营/慢生活`、`10 热点选题`、`11 自定义`; require a numeric reply. Option 11 may request one keyword in the next turn.
+2. Determine the task:
    - Standalone short story, one-shot, 一发完结, 15000字短篇, or "不是连续剧" -> use `$jp-isekai-oneshot`.
    - Explicit one-shot/一发完结 wins even when the prompt also mentions YouTube, thumbnail, 15,000 characters, or a hot topic. Explicit 6-episode/serial/第N話 wins over one-shot and routes through plan/write.
    - New concept or Chinese-to-Japanese adaptation -> use `$jp-isekai-plan`.
    - Write a full episode or rewrite draft in Japanese -> use `$jp-isekai-write`.
    - Check an existing draft -> use `$jp-isekai-review`.
-2. If the task references an existing project, continuing episode, saved output, or anti-homogenization need, load the project memory protocol before planning or drafting.
-3. If the task references current market/ranking trends, browse current source pages before making market claims.
-4. If adapting from Chinese fantasy, first create a localization map: names, power system, institutions, creatures, currency, places, and plot functions.
-5. Keep the output in the user-requested language. For Japanese prose, write the prose in Japanese and keep meta notes in Chinese unless the user requests all-Japanese delivery.
+3. If the task references an existing project, continuing episode, saved output, or anti-homogenization need, load the project memory protocol before planning or drafting.
+4. If the task references current market/ranking trends, browse current source pages before making market claims.
+5. If adapting from Chinese fantasy, first create a localization map: names, power system, institutions, creatures, currency, places, and plot functions.
+6. Keep the output in the user-requested language. For Japanese prose, write the prose in Japanese and keep meta notes in Chinese unless the user requests all-Japanese delivery.
 
 ## Resources
 

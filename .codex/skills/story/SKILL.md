@@ -5,6 +5,13 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 ---
 # story：内容创作工具箱路由
 
+## 数字交互契约
+
+- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
+- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
+- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
+- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+
 你是整个内容创作工具箱的路由入口。用户的请求模糊时由你分发到具体 skill。不要在用户选择前预设他要写男频异世界、女频、银发、讲解稿或传统网文。
 
 ## 新用户总入口
@@ -25,10 +32,10 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 用户选择后再进入二级路由：
 
-- 选 `1 小说/网文创作`：继续问题材方向：`1 日式男频异世界`、`2 日本女频幻想恋爱`、`3 银发文学/熟年逆转`、`4 通用网文`、`5 还不确定，帮我推荐`。
-- 选 `2 视频讲解稿/知识科普`：继续问讲解方向：`1 山河式历史/社会/制度/国际杂谈`、`2 财经/经济学/金融/普通人钱的问题`。
-- 选 `3 拆文/对标/扫榜/热点选题`：继续问长篇、短篇、男频异世界、女频幻想恋爱、银发文学、讲解稿热点，或 Google Trends JP。
-- 选 `4 已有作品处理`：根据用户动作路由到导入、续写、审查、去AI味、封面。
+- 选 `1 小说/网文创作`：展示题材数字菜单：`1 日式男频异世界`、`2 日本女频幻想恋爱`、`3 银发文学/熟年逆转`、`4 通用网文`、`5 还不确定，帮我推荐`。
+- 选 `2 视频讲解稿/知识科普`：展示讲解方向数字菜单：`1 山河式历史/社会/制度/国际杂谈`、`2 财经/经济学/金融/普通人钱的问题`。
+- 选 `3 拆文/对标/扫榜/热点选题`：把长篇、短篇、男频异世界、女频幻想恋爱、银发文学、讲解稿热点、Google Trends JP 编成数字菜单。
+- 选 `4 已有作品处理`：把导入、续写、审查、去 AI 味、封面编成数字菜单。
 - 选 `5 环境/更新`：路由到 `$story-setup` 或版本更新检查。
 
 只在用户明确选择或语义已经足够明确后，才进入 `$jp-isekai`、`$jp-isekai-oneshot`、`$jp-josei-fantasy`、`$silver-literature`、`$shanhe-explainer`、`$econ-finance-explainer` 等具体 skill。
@@ -70,8 +77,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 1. 分析用户请求，提取意图关键词
 2. 按优先级匹配：用户显式点名 skill > 一发完结/非连续剧 > 专门题材路由 > 通用长短篇 > 总入口。不能因为出现“短篇/15000字”就盖掉“男频异世界/女性向幻想恋爱”等更具体题材。
 3. 如果能明确匹配，直接调用对应 skill（Claude/OpenCode 可用 `Skill("skill-name")` 或 slash command；Codex 用 `$skill-name` / `/skills`；OpenClaw 用 `/skill skill-name` 或自然语言点名）
-4. 如果无法匹配，询问用户想做什么（从上表中选择）
-5. 如果用户说"我想写小说"但未指定形态，先走「新用户总入口」的小说二级路由，再询问篇幅/工程类型：长篇连载、短篇单篇、短季分集小说（固定首季 6 集，仍按小说章节文件写，不做几百章规划）、日式男频异世界、女频幻想恋爱、银发文学、通用网文。
+4. 如果无法匹配，把当前层级的有效路线整理成数字菜单，要求用户只回复数字。
+5. 如果用户说"我想写小说"但未指定形态，先走「新用户总入口」的小说二级数字菜单，再把篇幅/工程类型编成数字菜单：长篇连载、短篇单篇、短季分集小说（固定首季 6 集，仍按小说章节文件写，不做几百章规划）、日式男频异世界、女频幻想恋爱、银发文学、通用网文。
 6. 如果用户只说"模拟新用户"或"刚装好怎么用"，只展示一级大类，不要直接进入任何具体题材 skill。
 
 ### 长正文长度路由
@@ -100,7 +107,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 1. 在项目根查找所有书目录：包含 `追踪/` 或 `设定/` 子目录的目录（含 `长篇/`、`短篇/` 下的子目录）。
 2. 列出书名，并标出当前 `.active-book` 指向的那本。
-3. 让用户选择，把所选书的相对路径写入项目根 `.active-book`（覆盖原内容）。
+3. 按发现顺序给每本书编号，要求用户只回复数字，再把所选书的相对路径写入项目根 `.active-book`（覆盖原内容）。
 4. 只发现一本时直接确认为活跃书，无需询问。
 
 ## 版本更新检查
@@ -112,7 +119,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 3. **比较**：去掉 `v` 前缀按语义版本比（major.minor.patch）。`gh release` 默认取 latest 稳定版，不含 pre-release。
 4. **告知**：
    - 已最新 → 「已是最新版 vX.Y.Z」。
-   - 有新版 → 列出 当前 vA → 最新 vB + [Releases](https://github.com/worldwonderer/oh-story-claudecode/releases)/[CHANGELOG](https://github.com/worldwonderer/oh-story-claudecode/blob/main/CHANGELOG.md)（能拿到 release notes 就附本次要点），再用 AskUserQuestion 问「现在更新吗？」：
+   - 有新版 → 列出 当前 vA → 最新 vB + [Releases](https://github.com/worldwonderer/oh-story-claudecode/releases)/[CHANGELOG](https://github.com/worldwonderer/oh-story-claudecode/blob/main/CHANGELOG.md)（能拿到 release notes 就附本次要点），再显示 `1. 现在更新`、`2. 暂不更新`，要求只回复数字：
      - 选更新 → 跑 `npx skills add worldwonderer/oh-story-claudecode -y -g`（`-g` 全局，去掉则只更当前目录）；完成后提示：已部署过的项目在项目根重跑 `/story-setup`（Codex 中用 `$story-setup`）同步 hooks/agents/references，并**新开一个会话**让 agents 重新注册。
      - 选先不 → 不动，告知随时可再来。
 
