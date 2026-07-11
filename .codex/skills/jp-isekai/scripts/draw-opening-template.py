@@ -2,11 +2,19 @@ import argparse
 import json
 import re
 import secrets
+import sys
 from pathlib import Path
 
 from opening_cards import CARDS, REQUIRED_CHAINS
 
 DEFAULT_LEDGER = Path("男频异世界短篇知识库") / "generated-ledger.jsonl"
+
+
+def configure_stdio() -> None:
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if reconfigure:
+            reconfigure(encoding="utf-8")
 
 
 def recent_cards(path: Path, limit: int) -> list[str]:
@@ -28,6 +36,7 @@ def recent_cards(path: Path, limit: int) -> list[str]:
 
 
 def main():
+    configure_stdio()
     parser = argparse.ArgumentParser(description="Draw a compatible male-isekai push-opening template.")
     parser.add_argument("--lane", default="any")
     parser.add_argument("--recent", default="")
