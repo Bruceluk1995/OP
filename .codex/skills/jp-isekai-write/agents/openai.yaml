@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Isekai Write"
-  short_description: "Draft push-ready Japanese male isekai episodes"
-  default_prompt: "Use $jp-isekai-write to draft a first-person Japanese isekai episode from a full episode blueprint: plot-bomb opening, previous-episode bridge, dense/sparse payoff beats, cost/reward hook, JP anti-AI gates, Codex AI saved-file reread, and package files when needed."
+  short_description: "Draft novel or push-style Japanese male isekai"
+  default_prompt: "Use $jp-isekai-write to confirm format, randomly draw and fill one screenshot-derived push-opening card, then write the Japanese male-isekai version with quality gates."

@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Josei Fantasy Oneshot"
   short_description: "Packaged 15k josei romance from trend or premise"
-  default_prompt: "Use $jp-josei-fantasy-oneshot to find or convert a Google Trends/YouTube/TikTok/news/premise seed, then plan and write a complete standalone Japanese female-audience fantasy romance package with body, character prompts, cover prompt, localization, and Codex AI self-check."
+  default_prompt: "Use $jp-josei-fantasy-oneshot to confirm format, randomly draw a compatible fixed female-fantasy push-opening card when selected, then write and package a complete localized one-shot."

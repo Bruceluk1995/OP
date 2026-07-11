@@ -1,6 +1,6 @@
 ---
 name: jp-isekai-plan
-description: "Plan Japanese male-audience isekai novels and adaptations. Use for 日式RPG异世界开书, なろう系/カクヨム男性向け premise design, Chinese-to-Japanese isekai localization, male protagonist cheat design, battle leveling, monster grinding, dungeon/adventurer guild arcs, overpowered protagonist, OP ruler fantasy, 龙傲天, demon-lord/kingdom domination, boss/drop/rank progression, slow-life farming fantasy, first-volume/first-episode outlines, and avoiding Chinese xianxia terms in Japanese fantasy settings."
+description: "Plan Japanese male-audience isekai as traditional web-novel prose or anime-recap/push narration copy, with either first-person or third-person narration. Use for 日式RPG异世界开书, 男频异世界推文/动漫解说文案, なろう系/カクヨム男性向け premise design, localization, cheat design, battle leveling, dungeon arcs, OP/龙傲天, exile reversal, slow life, and long or short story structure."
 metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
@@ -12,6 +12,9 @@ When planning prose beats, design colloquial, direct scene movement: action, dia
 
 ## Required Reads
 
+- Read `../jp-isekai/references/presentation-modes.md` before planning any long or short male-isekai project. Present the numbered 1-4 menu and allow multiple selections unless the user already chose a combination explicitly.
+- Read `../jp-isekai/references/topic-menu.md` when the user has not supplied a concrete premise. Do not replace the full grouped topic menu with a tiny handful of examples.
+- Read `../jp-isekai/references/opening-innovation-engine.md` before finalizing any first-episode or one-shot push opening. Filter by subtype lane, randomly draw one compatible card, plan its chain, and record the card ID; do not invent a new structure.
 - Read `references/terminology.md` whenever adapting from Chinese fantasy or when the user says "不要中式".
 - Read `references/market-patterns.md` when the user asks for market fit, popular formulas, or gives なろう/Kakuyomu as reference.
 - Read `references/planning-template.md` before producing a full concept package.
@@ -40,7 +43,12 @@ Benchmark priority:
 
 ## Planning Workflow
 
-1. Identify the target subtype:
+1. Resolve the numbered format gate first:
+   - Offer options 1-4 exactly as defined in `presentation-modes.md` and say `可多选`.
+   - Record every selected combination in the concept package and outline. Do not silently switch later.
+   - For multiple selections, plan separate presentation/viewpoint variants from the same premise unless the user requests different premises.
+   - For push mode, plan information/shot beats, causal gaps, oral transitions, proof moments, and retention turns. Do not force every story into a result-first opening; let the opening innovation engine select the strongest premise-specific information order. First-person push uses the protagonist's oral account; third-person push may use role labels and external reactions.
+2. Identify the target subtype:
    - OP dominance / ruler fantasy: protagonist starts overwhelmingly strong; tension comes from information gaps, restraint, subordinates, territory, politics, public myth, and enemies choosing the wrong fight.
    - Battle leveling / monster grind: protagonist turns a weak-looking skill into combat value, kills stronger monsters, earns drops, rank-ups, and boss access.
    - Isekai return / Earth commute cheat: protagonist can go back to Japan or bring modern goods/knowledge across worlds; the engine is supply, secrecy, rescue, and culture mismatch.
@@ -57,29 +65,29 @@ Benchmark priority:
    - Harem-adjacent: admiration and romantic tension without derailing the main progression unless requested.
    - For ambiguous male-audience爽文, offer OP dominance, battle leveling, exile reversal, dungeon/adventurer, tamer, academy/game-knowledge, and Earth-commute routes before slow-life. Slow life is a chosen flavor, not the default.
    - After choosing a subtype, follow the benchmark priority above. Use the bundled type pack only to fill gaps after dynamic/project benchmarks are loaded.
-2. Create a localization map:
+3. Create a localization map:
    - Chinese source concept -> Japanese isekai equivalent.
    - Institutions, creatures, rank names, currencies, food, clothes, and place names.
-3. Design the cheat as a repeatable engine:
+4. Design the cheat as a repeatable engine:
    - Input, output, limitation, growth path, misunderstanding surface, and public-facing explanation.
    - Ensure every episode can generate one discovery, one problem, and one payoff.
    - For battle leveling, ensure every episode can generate one monster/combat problem, one tactical skill use, one visible drop/rank/level/status result, and one stronger next threat.
    - For OP dominance, the cheat/power may already be maxed. Design limits around unknown world rules, collateral damage, political cost, maintaining a public persona, protecting subordinates, resources, moral line, or incomplete information. Ensure every episode can generate one enemy misread, one restrained choice, one overwhelming reveal/command, and one reputation/territory/faction consequence.
-4. Design the first arc around a concrete ladder:
+5. Design the first arc around a concrete ladder:
    - Bottom status -> first monster win -> first drop/reward -> first helper/party contact -> first guild rank or dungeon access -> first boss/public win -> first stable base.
    - OP route ladder: hidden arrival -> first local insult/misread -> first controlled demonstration -> first subordinate or local faction reacts -> first territory/resource secured -> first larger power notices.
    - For every planned episode, record `promise -> pressure/test -> proof/payoff -> cost -> state delta -> next pressure`. The state delta must change at least one of power use, inventory/drop, rank, reputation, territory, faction alignment, knowledge, or immediate goal. If two adjacent episodes repeat the same delta, redesign one before drafting.
-5. Set the project scale before making outlines:
+6. Set the project scale before making outlines:
    - Default for YouTube/push/episode-like serials: short-season novel, fixed 6 episodes/chapters.
    - Keep short-season outlines at exactly 6 episodes/chapters.
    - Keep the prose and files novel-style (`细纲_第XXX章.md`, episode folders, tracking files); do not switch to screenplay format.
    - Do not plan a hundred-chapter roadmap unless the user explicitly asks for a long webnovel.
-6. If the task is project-bound, materialize the plan into the common project files:
+7. If the task is project-bound, materialize the plan into the common project files:
    - Create or update `设定/题材定位.md`, reusable `设定/角色/`, `设定/势力/`, and `设定/世界观/` files.
    - Create `大纲/大纲.md`, `大纲/卷纲_第X卷.md`, and the first rolling batch of `大纲/细纲_第XXX章.md`.
    - Create or update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
    - Run the `男频异世界知识库` ledger check before finalizing a premise or outline engine, then add a compact record after generation.
-7. Output a usable package:
+8. Output a usable package:
    - Japanese title candidates, premise, protagonist, cheat, world rules, first arc, episode 1 beats, terminology map, banned Chinese leakage list.
 
 ## Output Rules
