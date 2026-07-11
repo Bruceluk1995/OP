@@ -5,11 +5,38 @@ Use this for male-isekai push narration openings. Randomly draw one proven scree
 ## Draw Procedure
 
 1. Determine a primary lane such as `exile`, `battle`, `op`, `territory`, `academy`, `earth`, `tamer`, `craft`, `survival`, `rebirth`, `system`, or `mystery`.
-2. Collect the last three used card IDs from the project opening ledger when available.
-3. Run `scripts/draw-opening-template.py --lane <lane> --recent <comma-separated-card-ids>` from the `jp-isekai` skill directory.
+2. Run `scripts/draw-opening-template.py --lane <lane> --root <project-root>` from the `jp-isekai` skill directory. The script automatically reads the last three `opening_card` values from `男频异世界短篇知识库/generated-ledger.jsonl`; use `--recent` only to add unsaved/current-session exclusions.
+3. Preserve the returned `required_chain`; it is the exact evidence schema for the saved opening.
 4. Use the returned card exactly once. If the card cannot truthfully fit the story, redraw once; do not keep drawing until a preferred card appears.
-5. Record the selected card ID with the finished work.
-6. When there is no ledger, omit `--recent`. Never let the model choose the first or "best" card by habit.
+5. Record `opening_card`, a story-specific filled `opening_chain`, and the story-level `structure_fingerprint` with the finished work. `opening_chain` must contain the actual functional values (for example `bulk-buy > merchant-block > contract-loophole > winter-3-days > first-convoy`), not merely repeat the card's slot names.
+6. Never let the model choose the first or "best" card by habit. A missing ledger is allowed, but a project-bound draw must still pass `--root` so future records are discovered automatically.
+
+## Card Evidence Gate
+
+For every saved push opening, create `开头抽卡证据.json` beside `作品资料.md` (or inside the episode folder) using exact quotes from the body:
+
+```json
+{
+  "card_id": "F1",
+  "evidence": {
+    "three_preparations": "exact quote from the opening",
+    "ridicule_or_obstruction": "exact quote from the opening",
+    "hidden_knowledge_or_loophole": "exact quote from the opening",
+    "countdown": "exact quote from the opening",
+    "first_action_bridge": "exact quote from the opening"
+  }
+}
+```
+
+Use the slot names returned by the draw script; do not copy the F1 keys for another card. Then run:
+
+```powershell
+python .codex/skills/jp-isekai/scripts/validate-opening-evidence.py `
+  --body episodes/oneshots/<slug>/正文/正文.md `
+  --evidence episodes/oneshots/<slug>/开头抽卡证据.json
+```
+
+Validation must pass before delivery. Missing, duplicated, invented, out-of-order, or post-opening evidence is a hard failure. Rewrite within the drawn card; do not relabel a generic opening as the card after drafting.
 
 ## Template Deck
 

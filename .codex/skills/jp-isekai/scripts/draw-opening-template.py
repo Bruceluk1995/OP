@@ -1,37 +1,45 @@
 import argparse
 import json
+import re
 import secrets
+from pathlib import Path
+
+from opening_cards import CARDS, REQUIRED_CHAINS
+
+DEFAULT_LEDGER = Path("男频异世界短篇知识库") / "generated-ledger.jsonl"
 
 
-CARDS = {
-    "R1": ("反转・身份受辱型", {"exile", "academy", "craft"}),
-    "R2": ("反转・世界常识错误型", {"battle", "op", "system", "academy", "craft"}),
-    "R3": ("反转・转生结果型", {"rebirth"}),
-    "N1": ("无脑・证明离谱设定型", {"battle", "op", "system", "craft", "tamer"}),
-    "N2": ("无脑・第一次就失控型", {"battle", "system", "academy", "craft", "tamer"}),
-    "N3": ("无脑・全民错误认知型", {"system", "op", "mystery", "academy"}),
-    "C1": ("对比・被嫌弃与被争抢型", {"exile", "craft", "academy"}),
-    "C2": ("对比・离开前后型", {"exile", "craft"}),
-    "P1": ("铺垫・异常行为合理借口型", {"battle", "op", "craft", "survival", "earth"}),
-    "P2": ("铺垫・小目标滚成大灾难型", {"craft", "survival", "territory", "earth"}),
-    "D1": ("直接上・世界规则清单型", {"system", "academy", "op", "tamer"}),
-    "D2": ("直接上・主角设定连爆型", {"battle", "op", "rebirth", "system"}),
-    "E1": ("经验共识・偏偏反着做型", {"battle", "craft", "academy", "earth", "survival"}),
-    "A1": ("意外・误操作滚大型", {"system", "academy", "earth", "mystery"}),
-    "B1": ("吹牛／谎话字面成真型", {"system", "op", "mystery"}),
-    "C3": ("对比・明明有功却受罚型", {"exile", "battle", "craft", "academy"}),
-    "F1": ("反常备灾／囤积型", {"survival", "territory", "rebirth", "earth"}),
-    "D3": ("单一规则连续兑现型", {"system", "craft", "op", "battle"}),
-}
+def recent_cards(path: Path, limit: int) -> list[str]:
+    if not path.exists():
+        return []
+    cards: list[str] = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        try:
+            record = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        card = str(record.get("opening_card", "")).strip().upper()
+        if not card:
+            legacy = re.search(r"(?:opening card|开场模板卡|开场卡)\s*[:：]?\s*([A-Z]\d)", str(record.get("notes", "")), re.IGNORECASE)
+            card = legacy.group(1).upper() if legacy else ""
+        if card in CARDS:
+            cards.append(card)
+    return cards[-limit:] if limit > 0 else []
 
 
 def main():
     parser = argparse.ArgumentParser(description="Draw a compatible male-isekai push-opening template.")
     parser.add_argument("--lane", default="any")
     parser.add_argument("--recent", default="")
+    parser.add_argument("--root", default=".")
+    parser.add_argument("--ledger", default="")
+    parser.add_argument("--recent-limit", type=int, default=3)
     args = parser.parse_args()
 
-    recent = {x.strip().upper() for x in args.recent.split(",") if x.strip()}
+    ledger_path = Path(args.ledger).resolve() if args.ledger else Path(args.root).resolve() / DEFAULT_LEDGER
+    ledger_recent = recent_cards(ledger_path, max(args.recent_limit, 0))
+    explicit_recent = [x.strip().upper() for x in args.recent.split(",") if x.strip()]
+    recent = set(ledger_recent + explicit_recent)
     compatible = [cid for cid, (_, lanes) in CARDS.items() if args.lane == "any" or args.lane in lanes]
     if args.lane != "any" and not compatible:
         raise SystemExit(f"Unknown or unsupported lane: {args.lane}")
@@ -41,7 +49,19 @@ def main():
 
     card_id = secrets.choice(eligible)
     name, lanes = CARDS[card_id]
-    print(json.dumps({"card_id": card_id, "name": name, "lanes": sorted(lanes)}, ensure_ascii=False))
+    print(
+        json.dumps(
+            {
+                "card_id": card_id,
+                "name": name,
+                "lanes": sorted(lanes),
+                "required_chain": REQUIRED_CHAINS[card_id],
+                "excluded_recent": sorted(recent),
+                "ledger_path": str(ledger_path),
+            },
+            ensure_ascii=False,
+        )
+    )
 
 
 if __name__ == "__main__":

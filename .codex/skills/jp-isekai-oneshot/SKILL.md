@@ -61,22 +61,25 @@ Write complete standalone Japanese male-audience isekai short stories around 14,
 7. Check anti-homogenization if a ledger exists:
    - `python .codex/skills/jp-isekai-oneshot/scripts/ledger.py --root . summary`
    - `python .codex/skills/jp-isekai-oneshot/scripts/ledger.py --root . check ...`
+   - Include `opening_card`, a story-specific filled `opening_chain`, and a canonical `structure_fingerprint` in the candidate check. Do not store only the generic card slot names. A different opening card does not excuse a repeated macro structure.
 8. Build a brief one-shot blueprint before prose. Do not require project `大纲/细纲` files for one-shot work.
-   - Run the template draw before locking the `opening promise`. Fit the selected card truthfully to the story; one redraw is allowed only when the card cannot fit without fabricating facts.
+   - Run `draw-opening-template.py --lane <lane> --root <project-root>` before locking the `opening promise`. Let the script exclude the last three ledger cards automatically. Fit the selected card truthfully to the story; one redraw is allowed only when the card cannot fit without fabricating facts.
+   - Preserve the returned `required_chain`. Plan one exact opening fact for every slot; do not approve the blueprint while any slot is vague or borrowed from a different card.
    - Include a closure ledger: opening promise, midpoint irreversible change, public/observable proof, climax result, reward/cost, and final social/emotional state. Every item must resolve inside this file.
    - Audit major scenes for a state delta in skill knowledge, combat position, drop/resource, rank/reputation, relationship, risk, or objective; compress scenes that only repeat awe, travel, explanation, or inner commentary.
 9. Save complete long prose as a one-shot package under `episodes/oneshots/<short-title>/` unless the user asks for chat-only output.
-   - Required package folders/files: `正文/正文.md`, `正文/标题.md`, `角色提示词/角色提示词.md`, `封面/封面.md`, and `作品资料.md`.
+   - Required package folders/files: `正文/正文.md`, `正文/标题.md`, `角色提示词/角色提示词.md`, `封面/封面.md`, `作品资料.md`, and `开头抽卡证据.json`.
    - Generate `封面/封面.png` only when image generation is requested or available; otherwise mark `封面/封面.md` as prompt-only.
    - Do not deliver only a single mixed markdown file.
 10. After saving, count only `正文/正文.md`. Do not report completion below 14,500 Japanese characters unless the user explicitly approved a shorter story.
 11. After saving, run a Codex AI one-shot self-check by rereading the saved body, title file, character prompts, cover brief, and `作品资料.md`:
+   - Run `validate-opening-evidence.py` against the saved body and `开头抽卡证据.json`. Any missing, duplicate, invented, out-of-order, or late evidence is blocking; rewrite the opening within the drawn card and rerun.
    - Verify the body is Japanese audience-facing prose only, with no Chinese planning notes, source-language leftovers, or meta/production leakage.
    - Verify one-shot closure: hook, cheat/skill proof, escalation, public consequence, reward, zamaa/status change, and emotional/social closure all resolve in this file.
    - Verify localization: if the source came from Chinese xianxia, court drama, or webnovel power fantasy, its functions have been rebuilt as Japanese RPG/light-novel mechanisms such as スキル, ギルド, ランク, ダンジョン, 王国, 貴族派閥, 領地, 商会, 魔法学院, 魔物, and 魔力, not literal sect/cultivation/palace terms.
    - Verify prose freshness with Codex judgment: cut repeated scenery, generic awe, destiny talk, travel padding, duplicated inner monologue, and dry status-panel dumping; rewrite the saved body if the check finds real issues.
    - Treat this quality gate as a reasoning pass over the actual saved artifacts.
-12. Append a ledger record unless the user says not to.
+12. Append a ledger record unless the user says not to. Store `opening_card`, a compact `opening_chain`, and the canonical `structure_fingerprint` as structured fields, not only inside `notes`.
 
 ## One-Shot Defaults
 

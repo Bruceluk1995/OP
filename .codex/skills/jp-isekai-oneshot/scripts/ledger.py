@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from collections import Counter
 from datetime import date
@@ -23,6 +24,9 @@ FIELDS = (
     "video_hook_score",
     "everyday_resonance",
     "hotness_angle",
+    "opening_card",
+    "opening_chain",
+    "structure_fingerprint",
     "theme_route",
     "subtype",
     "protagonist_engine",
@@ -34,6 +38,12 @@ FIELDS = (
     "ending_type",
     "target_language",
 )
+
+FIELD_WEIGHTS = {
+    "opening_card": 1,
+    "opening_chain": 2,
+    "structure_fingerprint": 3,
+}
 
 
 def configure_stdio() -> None:
@@ -61,6 +71,14 @@ def load_records(path: Path) -> list[dict]:
     return records
 
 
+def opening_card(record: dict) -> str:
+    card = str(record.get("opening_card", "")).strip().upper()
+    if card:
+        return card
+    legacy = re.search(r"(?:opening card|开场模板卡|开场卡)\s*[:：]?\s*([A-Z]\d)", str(record.get("notes", "")), re.IGNORECASE)
+    return legacy.group(1).upper() if legacy else ""
+
+
 def summarize(records: list[dict], limit: int) -> None:
     recent = records[-limit:]
     print(f"ledger_records={len(records)} recent={len(recent)}")
@@ -68,7 +86,8 @@ def summarize(records: list[dict], limit: int) -> None:
         print("No prior isekai one-shot records found.")
         return
     for field in FIELDS:
-        counts = Counter(str(r.get(field, "")).strip() for r in recent if r.get(field))
+        values = [opening_card(record) for record in recent] if field == "opening_card" else [str(record.get(field, "")).strip() for record in recent]
+        counts = Counter(value for value in values if value)
         print(f"{field}: " + (", ".join(f"{k}:{v}" for k, v in counts.most_common(5)) or "-"))
     print("recent_titles:")
     for record in recent[-8:]:
@@ -81,22 +100,30 @@ def summarize(records: list[dict], limit: int) -> None:
         )
 
 
-def similarity(record: dict, candidate: dict) -> int:
-    return sum(1 for field in FIELDS if candidate.get(field) and candidate.get(field) == record.get(field))
+def similarity(record: dict, candidate: dict) -> tuple[int, list[str]]:
+    matched: list[str] = []
+    for field in FIELDS:
+        candidate_value = candidate.get(field)
+        record_value = opening_card(record) if field == "opening_card" else record.get(field)
+        if candidate_value and candidate_value == record_value:
+            matched.append(field)
+    score = sum(FIELD_WEIGHTS.get(field, 1) for field in matched)
+    return score, matched
 
 
 def check(records: list[dict], candidate: dict, limit: int) -> int:
-    matches = [(similarity(record, candidate), record) for record in records[-limit:]]
-    matches = [(score, record) for score, record in matches if score > 0]
+    matches = [(*similarity(record, candidate), record) for record in records[-limit:]]
+    matches = [(score, fields, record) for score, fields, record in matches if score > 0]
     matches.sort(key=lambda item: item[0], reverse=True)
     if not matches:
         print("OK: no overlap with recent records.")
         return 0
-    score, top = matches[0]
-    print(f"top_overlap={score}")
+    score, matched_fields, top = matches[0]
+    print(f"top_overlap_score={score}")
+    print("matched_fields=" + ",".join(matched_fields))
     print(json.dumps(top, ensure_ascii=False))
     if score >= 4:
-        print("BLOCK: vary subtype/cheat/opening/payoff/progression/pressure/ending.")
+        print("BLOCK: vary the opening chain or macro structure, then change at least two story-engine fields.")
         return 2
     print("OK: overlap acceptable.")
     return 0
@@ -123,6 +150,9 @@ def main() -> int:
     p_summary = sub.add_parser("summary")
     p_summary.add_argument("--limit", type=int, default=20)
 
+    p_cards = sub.add_parser("recent-cards")
+    p_cards.add_argument("--limit", type=int, default=3)
+
     p_check = sub.add_parser("check")
     p_check.add_argument("--limit", type=int, default=20)
     for field in ("title", *FIELDS):
@@ -139,6 +169,11 @@ def main() -> int:
 
     if args.command == "summary":
         summarize(records, args.limit)
+        return 0
+    if args.command == "recent-cards":
+        cards = [opening_card(record) for record in records]
+        cards = [card for card in cards if card]
+        print(json.dumps({"recent_cards": cards[-args.limit :] if args.limit > 0 else []}, ensure_ascii=False))
         return 0
     if args.command == "check":
         return check(records, {field: getattr(args, field) for field in FIELDS}, args.limit)

@@ -12,6 +12,9 @@ Plan for colloquial, direct prose. Every beat should move through action, dialog
 - Chinese title:
 - Japanese title:
 - Target length: 14,500-16,500 Japanese characters
+- Opening card:
+- Opening required chain: slot1 > slot2 > slot3 > ...
+- Structure fingerprint: origin > pressure > first-proof > midpoint-change > climax-mechanism > authority/status-result > closure
 - Subtype: battle leveling / OP dominance / exile zamaa / dungeon boss / academy-game knowledge / tamer / earth-commute / dungeon-master / slow-life reward
 - Selected theme route: battle-leveling / op-dominance / exile-support-reversal / academy-game-knowledge / earth-commute / tamer-familiar / dungeon-master-territory / secret-society-subordinates / craft-commerce-slowlife
 - Backup route:
@@ -56,6 +59,8 @@ Plan for colloquial, direct prose. Every beat should move through action, dialog
 ...
 Budget total:
 ```
+
+`Structure fingerprint` uses short functional tags, not plot prose. Reuse the same tag vocabulary across projects so the ledger can detect macro-structure repetition even when the title, skill, and opening card differ. Example: `modern-worker > exploitative-contract > recruit-outcasts > external-assault > public-audit > legal-recognition > comic-title`.
 
 ## One-Shot Rhythm
 

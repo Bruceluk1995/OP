@@ -26,7 +26,7 @@ That produces pretty but empty prose. For push-video episodes, the opening must 
 
 ## Opening Selection
 
-Before writing, run the random template draw in `../../jp-isekai/references/opening-innovation-engine.md`. Follow the selected card. The fixed order below is only a repair scaffold when the selected card requires a result-first plot-bomb chain.
+Before writing, run the random template draw in `../../jp-isekai/references/opening-innovation-engine.md` with `--root` so recent cards are excluded automatically. Follow the selected card and preserve its returned `required_chain`. After saving, create `开头抽卡证据.json` with exact quotes for every slot and run `validate-opening-evidence.py`. The fixed order below is only a repair scaffold when the selected card requires a result-first plot-bomb chain.
 
 ## Result-First Repair Order
 
@@ -106,3 +106,4 @@ Before delivering, answer internally:
 - Did I remove decorative AI water before expanding length?
 - Did I remove subtitle/ASR debris and vary repetitive connectors?
 - If the prose is saved to a file, did Codex AI reread the saved file and fix real issues?
+- Did `validate-opening-evidence.py` pass every slot in the drawn card rather than merely confirming that the card ID was recorded?
