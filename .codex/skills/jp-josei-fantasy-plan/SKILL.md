@@ -1,6 +1,6 @@
 ---
 name: jp-josei-fantasy-plan
-description: "Plan Japanese female-audience fantasy romance novels and adaptations. Use for 女性向け異世界恋愛 premise design, 悪役令嬢 openings, 婚約破棄 and ざまぁ structures, 溺愛 male leads, 聖女 replacement plots, 契約婚, 令嬢 noble-house conflict, time-loop revenge, court romance, chapter outlines, YouTube/TikTok/Google Trends JP hot-topic conversion, and Chinese-to-Japanese localization away from xianxia or Chinese webnovel defaults."
+description: "Plan Japanese female-audience fantasy romance in traditional web-novel or anime-recap/push narration form, with first-person or third-person. Use for 女性向け異世界恋愛, 女频推文, 悪役令嬢, 婚約破棄, ざまぁ, 溺愛, 聖女, 契約婚, family inheritance, loops, court romance, hot-topic conversion, and localization."
 metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
@@ -19,6 +19,9 @@ When planning prose beats, design colloquial, direct scene movement: action, dia
 
 ## Required Reads
 
+- Read `../jp-josei-fantasy/references/presentation-modes.md` before planning any long or short project. Present its numbered 1-4 menu unless already explicit.
+- Read `../story/references/flan-push-strict-mode.md` for either push option and plan short narrated evidence/romance beats rather than scene prose, regardless of person.
+- Read `../jp-josei-fantasy/references/push-opening-template-deck.md` when push narration is selected. Filter by lane, randomly draw one compatible card, and record the card ID in the plan.
 - Read `references/market-patterns.md` when the user asks for hot themes, Syosetu/Kakuyomu fit, or tag combinations.
 - Read `references/planning-template.md` before producing a full concept package.
 - Read `references/terminology.md` whenever adapting from Chinese fantasy or when the user says not to use Chinese elements.
@@ -54,7 +57,8 @@ Benchmark priority:
 
 ## Planning Workflow
 
-1. Choose the central promise:
+1. Resolve the numbered format choice and, for push mode, draw the compatible opening card before locking opening beats.
+2. Choose the central promise:
    - `婚約破棄 -> ざまぁ -> higher-status love`
    - `悪役令嬢 -> fate avoidance -> sincere romance`
    - `family coldness -> public proof -> rescue and self-worth`
@@ -68,29 +72,29 @@ Benchmark priority:
    - `strong heroine/status gap -> action proof -> honored love`
    - `hot trend / video / news seed -> emotion or social rule -> josei fantasy proof and romance route`
    - After choosing a subtype, follow the benchmark priority above. Use the bundled type pack only to fill gaps after dynamic/project benchmarks are loaded.
-2. Design the heroine's wound and agency:
+3. Design the heroine's wound and agency:
    - What was taken from her: reputation, fiance, inheritance, magic credit, family love, public trust.
    - What she can do: knowledge, etiquette, healing, territory work, magic, negotiation, cooking, record keeping, courage.
    - What she refuses to lose again.
-3. Design the male lead as a romance engine:
+4. Design the male lead as a romance engine:
    - Rank or social force: prince, duke, frontier count, knight captain, cursed emperor, mage, black knight.
    - First value to the heroine: safety, fair evaluation, legal shelter, practical partnership, emotional respect.
    - Private vulnerability and public choosing scene.
-4. Build a clean antagonist system:
+5. Build a clean antagonist system:
    - Antagonists should expose themselves through greed, lies, abuse, class arrogance, stolen credit, or political overreach.
    - Ensure the punishment follows social/legal logic, not author fiat.
    - For every planned episode, record `romance/social promise -> pressure -> heroine choice -> proof/recognition -> cost -> state delta -> next pressure`. The state delta must change evidence, reputation, safety, legal/family position, resources, relationship trust, or the heroine's available choices. Do not let two adjacent episodes repeat the same humiliation without a new consequence or counter-move.
-5. Set the project scale before making outlines:
+6. Set the project scale before making outlines:
    - Default for YouTube/push/episode-like serials: short-season novel, fixed 6 episodes/chapters.
    - Keep short-season outlines at exactly 6 episodes/chapters.
    - Keep the prose and files novel-style (`细纲_第XXX章.md`, episode folders, tracking files); do not switch to screenplay format.
    - Do not plan a hundred-chapter roadmap unless the user explicitly asks for a long webnovel.
-6. If the task is project-bound, materialize the plan into the common project files:
+7. If the task is project-bound, materialize the plan into the common project files:
    - Create or update `设定/题材定位.md`, heroine/male-lead/antagonist `设定/角色/` files, faction/house files, and reusable court/church/world files.
    - Create `大纲/大纲.md`, `大纲/卷纲_第X卷.md`, and the first rolling batch of `大纲/细纲_第XXX章.md`.
    - Create or update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
    - Run the `女频幻想恋爱知识库` ledger check before finalizing a wound-romance-reversal engine, then add a compact record after generation.
-7. Output a usable package:
+8. Output a usable package:
    - Japanese title candidates, tag cluster, one-line hook, heroine, male lead, antagonists, world rules, romance progression, zamaa progression, first 5-10 chapter beats, terminology map, banned leakage list.
 
 ## Output Rules

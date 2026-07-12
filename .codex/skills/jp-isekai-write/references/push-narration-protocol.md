@@ -1,8 +1,20 @@
 # Push Narration Protocol
 
-Use this when writing serial Japanese male-audience isekai for video recap, push narration, or project episodes that must connect across installments.
+Use this when writing Japanese male-audience isekai as video recap or push narration copy, whether short, long, standalone, or serialized.
 
-This protocol governs the opening and retention surface. Use it together with `episode-blueprint.md`, which governs the whole episode's emotion target, dense/sparse beats, payoff, cost, and ending hook, and `anti-ai-gates.md`, which governs Codex AI final prose cleanup.
+Push narration is a presentation mode, not a viewpoint. It may use first person or third person. Confirm and lock the narrative person before drafting.
+
+Read `../../story/references/flan-push-strict-mode.md` and treat it as the hard surface contract. This protocol controls content flow; the strict profile controls line length, quote ratio, clause density, and delivery validation.
+
+This protocol governs oral delivery, information density, and retention. Use it with `episode-blueprint.md` for serial structure, `../../jp-isekai/references/presentation-modes.md` for the two-axis format gate, and `anti-ai-gates.md` for final cleanup.
+
+## Narrative Person Lock
+
+- First person: the protagonist tells the causal chain through `我/俺`. Keep the selected high-clarity hook and dense information turns. Do not reveal hidden facts the narrator cannot know unless marked as later-learned information.
+- Third person: use `男主`, a stable role label, or a name once the listener can track it. The narrator may show external misunderstandings and witness reactions directly.
+- Do not alternate first and third person for convenience. A quoted line does not change the narration person.
+- Neither person changes push-copy structure: hook, causal gap, minimum setup, escalation, proof, aftershock, and ending pressure/closure. Viewpoint does not determine the opening mechanism.
+- Neither person changes the Flan-style surface metrics. First-person push is not an intimate web-novel scene with shorter paragraphs.
 
 ## Why The Old Output Feels AI
 
@@ -15,17 +27,32 @@ The bad pattern is:
 
 That produces pretty but empty prose. For push-video episodes, the opening must behave like retention copy.
 
-## Mandatory Opening Order
+## Opening Selection
+
+Before writing, run the random template draw in `../../jp-isekai/references/opening-innovation-engine.md` with `--root` so recent cards are excluded automatically. Follow the selected card and preserve its returned `required_chain`. After saving, create `开头抽卡证据.json` with exact quotes for every slot and run `validate-opening-evidence.py`. The fixed order below is only a repair scaffold when the selected card requires a result-first plot-bomb chain.
+
+## Result-First Repair Order
 
 Write the first 250-500 Japanese characters in this order:
 
 1. **Plot-bomb first sentence.** Put the whole episode pressure in sentence one: accusation, betrayal, monster, debt, impossible result, guild ruling, public humiliation, or a choice with cost.
 2. **Previous-episode bridge.** In 1-3 sentences, state what happened last episode and what remains unresolved. Use proper nouns, objects, money, wounds, contracts, guild ranks, monster names, or skill effects.
 3. **Now-problem.** Name the immediate obstacle that forces today's scene to begin.
-4. **Protagonist reaction.** Add one short male-protagonist inner comment or practical complaint.
+4. **Protagonist reaction.** Add one short practical reaction: direct self-comment in first person, or observable/brief reported reaction in third person.
 5. **Scene entry.** Move into action, dialogue, or a visible object. Do not stay in explanation.
 
 Do not label these parts as recap or summary inside the prose unless the user explicitly asks for narration labels.
+
+## Oral Line and Shot Logic
+
+- Write one action, reaction, reveal, or causal link per short line when the delivery format supports line breaks.
+- Make the first 3-6 lines establish the protagonist, abnormal event, and contradiction/curiosity gap.
+- Prefer chronological cause-effect movement after the selected hook unless another order is explicitly justified by the chosen structure card.
+- Use concrete outcomes instead of labels such as `很强`, `很惨`, or `很震惊`.
+- Keep each important setup tied to a later proof. Compression must not become a list of disconnected highlights.
+- Vary connectors. `没想到`, `不料`, `殊不知`, `竟然`, and `就在这时` are functions, not a template to repeat mechanically.
+- For original fiction, borrow only these presentation mechanics. Do not copy source-IP titles, scene order, dialogue, characters, or plot turns.
+- If adapting subtitles, remove timestamps, repeated lines, source-dialogue debris, mistranscribed names, ASR fragments, and any sentence that cannot stand without the original audio.
 
 ## Continuity Inputs
 
@@ -47,6 +74,8 @@ Every 800-1200 Japanese characters should contain at least one of:
 - a comic reversal
 - a new object or monster behavior
 - a choice that changes the next scene
+
+For shorter copy, scale this proportionally: do not allow a long stretch without a new problem, rule, tactic, reaction, proof, reward, status change, or danger.
 
 If two consecutive paragraphs only describe mood, scenery, resolve, fate, warmth, sadness, beauty, or "the beginning of a new life", rewrite them into action.
 
@@ -73,8 +102,11 @@ Prefer:
 Before delivering, answer internally:
 
 - Does sentence one contain a concrete bomb?
+- Is the chosen first/third person consistent?
 - Could a new viewer understand the last episode's hook by line five?
 - Does the first scene begin from the previous ending rather than a reset?
 - Are there at least three concrete nouns in the first 250 Japanese characters?
 - Did I remove decorative AI water before expanding length?
+- Did I remove subtitle/ASR debris and vary repetitive connectors?
 - If the prose is saved to a file, did Codex AI reread the saved file and fix real issues?
+- Did `validate-opening-evidence.py` pass every slot in the drawn card rather than merely confirming that the card ID was recorded?

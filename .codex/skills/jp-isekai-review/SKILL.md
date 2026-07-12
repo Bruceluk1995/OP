@@ -20,6 +20,8 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
 - Read `references/review-checklist.md` before a full review.
 - Read `references/terminology.md` whenever checking Chinese-to-Japanese adaptation leakage.
 - Read `../jp-isekai-write/references/self-check.md` when reviewing saved episodes, project-bound output, per-episode folders, continuity, plot bugs, package completeness, RPG-rule consistency, or Chinese leakage.
+- Read `../story/references/flan-push-strict-mode.md` for every push review and run its validator. Treat first-person novelization as blocking, not a viewpoint preference.
+- Treat metric-passing but personality-free flowchart narration as blocking; require a hook/reversal/reaction in every 6-10-line block.
 - If the draft or outline declares a subtype lane, read the loaded project benchmark card or `对标/{lane}/` report first when available, then the matching `../jp-isekai-plan/references/type-packs/{lane}.md` as fallback, and review against that lane's required payoff loop.
 
 ## Review Workflow
