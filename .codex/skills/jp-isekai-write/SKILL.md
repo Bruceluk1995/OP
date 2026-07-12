@@ -73,6 +73,7 @@ Write Japanese web-novel episodes for male-audience isekai. Use this for final p
    - Add one record to `男频异世界知识库/generated-ledger.jsonl` with protagonist, cheat, pressure, payoff, venue, aftertaste, and saved path.
 9. Validate:
    - In push mode, run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`; any failure blocks delivery.
+   - After the script passes, run the strict profile's manual entertainment audit. Flowchart narration split into short lines still blocks delivery.
    - Audit every major scene as `entry state -> pressure/choice -> exit state`. At least one of skill knowledge, combat position, inventory/drop, rank, reputation, territory, faction relationship, risk, or next objective must change. Travel, explanation, repeated awe, and status-panel restatement without a state delta must be compressed or removed.
    - Verify the episode promise is paid or meaningfully advanced, the win has a concrete result/cost, and the ending threat grows from the new state rather than appearing as an unrelated cliffhanger.
    - Count Japanese characters with Python.

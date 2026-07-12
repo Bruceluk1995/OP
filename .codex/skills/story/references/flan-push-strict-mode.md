@@ -46,6 +46,21 @@ Third person:
 - Female: prioritize accusation, evidence, heroine choice, status/reputation movement, male-lead recognition, romance action, zamaa consequence, and dignity recovery.
 - Female push remains recap narration. Romance does not authorize long psychology, decorative beauty, or dialogue-heavy scenes.
 
+## Entertainment Contract
+
+Passing the surface metrics is necessary but insufficient. Block delivery when the result is only a plot outline split into subtitle lines.
+
+- Build each major module as fact -> expectation -> reversal -> narrator/character reaction.
+- Add at least one contrast, roast, misread, exaggerated reaction, or satisfying surprise every 6-10 lines.
+- Do not narrate procedures, staffing, rules, inventories, or chronology for more than four consecutive lines without a consequence or entertaining reaction.
+- Rotate humor/payoff mechanisms. Do not repeat the same misunderstanding or correction more than twice in a row.
+- Give the narrator a viewpoint: select, judge, compress, and punch. Do not report every action at equal weight.
+- Keep only numbers and rules that change danger, comedy, proof, romance, reward, or status.
+- Male entertainment may rotate practical complaints, skill absurdity, enemy misread, witness shock, system loopholes, loot, and status inflation.
+- Female entertainment may rotate etiquette contradiction, evidence reversal, social embarrassment, heroine competence, male-lead recognition, rival self-exposure, and romantic misunderstanding.
+
+Before delivery, perform a manual entertainment audit. Mark every 6-10-line block with its hook/reversal/reaction. Any unmarked block must be compressed or rewritten. Mechanical validation cannot replace this audit.
+
 ## Hard Validation
 
 For every saved push body, run:
