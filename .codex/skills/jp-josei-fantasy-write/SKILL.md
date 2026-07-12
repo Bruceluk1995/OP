@@ -64,7 +64,7 @@ Write Japanese web-novel prose for female-audience fantasy romance. Use this for
    - Add one record to `女频幻想恋爱知识库/generated-ledger.jsonl` with heroine, wound, romance, pressure, proof, venue, aftertaste, and saved path.
 8. Validate:
    - In push mode, run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`; any failure blocks delivery.
-   - After the script passes, run the strict profile's manual entertainment audit. Short-line plot summary without social/romance reactions still blocks delivery.
+   - After the script passes, run the strict profile's manual retention/payoff audit. Short-line plot summary without evidence, choice, emotional, social, status, or romance movement still blocks delivery. Jokes and comedy are optional, not a female-push requirement.
    - Audit every major scene as `entry state -> pressure/choice -> exit state`. At least one of evidence, public reputation, safety, legal/family position, resources, romantic trust, social status, risk, or next choice must change. Repeated sadness, etiquette, beauty, misunderstanding, or consolation without a state delta must be compressed or rewritten.
    - Verify the episode's advertised romance/zamaa/tag promise is paid or materially advanced, and that the ending threat follows from the heroine's new state rather than resetting her progress.
    - Count Japanese characters with Python.

@@ -46,20 +46,20 @@ Third person:
 - Female: prioritize accusation, evidence, heroine choice, status/reputation movement, male-lead recognition, romance action, zamaa consequence, and dignity recovery.
 - Female push remains recap narration. Romance does not authorize long psychology, decorative beauty, or dialogue-heavy scenes.
 
-## Entertainment Contract
+## Retention and Payoff Contract
 
 Passing the surface metrics is necessary but insufficient. Block delivery when the result is only a plot outline split into subtitle lines.
 
 - Build each major module as fact -> expectation -> reversal -> narrator/character reaction.
-- Add at least one contrast, roast, misread, exaggerated reaction, or satisfying surprise every 6-10 lines.
-- Do not narrate procedures, staffing, rules, inventories, or chronology for more than four consecutive lines without a consequence or entertaining reaction.
-- Rotate humor/payoff mechanisms. Do not repeat the same misunderstanding or correction more than twice in a row.
+- Add at least one hook, reversal, meaningful reaction, proof move, relationship move, status change, or satisfying payoff every 6-10 lines.
+- Do not narrate procedures, staffing, rules, inventories, or chronology for more than four consecutive lines without a consequence, character reaction, evidence change, relationship change, or status change.
 - Give the narrator a viewpoint: select, judge, compress, and punch. Do not report every action at equal weight.
-- Keep only numbers and rules that change danger, comedy, proof, romance, reward, or status.
-- Male entertainment may rotate practical complaints, skill absurdity, enemy misread, witness shock, system loopholes, loot, and status inflation.
-- Female entertainment may rotate etiquette contradiction, evidence reversal, social embarrassment, heroine competence, male-lead recognition, rival self-exposure, and romantic misunderstanding.
+- Keep only numbers and rules that change danger, proof, romance, reward, reputation, choice, or status.
+- Male push should rotate practical complaints, contrast, roast, skill absurdity, enemy misread, witness shock, system loopholes, loot, status inflation, and other humor/payoff mechanisms. Do not repeat the same misunderstanding or correction more than twice in a row.
+- Female push does not require jokes, roasts, comedy, or exaggerated reactions. It may be serious, painful, tender, healing, suspenseful, or cathartic as long as each block advances accusation, evidence, heroine choice, dignity, social pressure, male-lead recognition, romance, zamaa consequence, safety, reputation, or status.
+- When female humor fits the selected lane, use it as an optional flavor through etiquette contradiction, social embarrassment, rival self-exposure, or romantic misunderstanding; never force it into abuse, grief, healing, or solemn romantic beats.
 
-Before delivery, perform a manual entertainment audit. Mark every 6-10-line block with its hook/reversal/reaction. Any unmarked block must be compressed or rewritten. Mechanical validation cannot replace this audit.
+Before delivery, perform a manual retention/payoff audit. Mark every 6-10-line block with its hook, reversal, reaction, proof move, relationship move, choice, or state change. Any unmarked block must be compressed or rewritten. Mechanical validation cannot replace this audit.
 
 ## Hard Validation
 

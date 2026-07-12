@@ -17,6 +17,7 @@ Use this as the router for Japanese female-audience fantasy romance work. Prefer
 
 - Before long or short female-fantasy planning or drafting, read `references/presentation-modes.md` and present its numbered 1-4 menu unless already explicit. Allow multiple selections as separate versions.
 - For either push option, read `../story/references/flan-push-strict-mode.md`; first/third person share the same recap surface and saved bodies must pass its validator.
+- Female push requires retention, emotional movement, proof, relationship movement, and payoff; it does not require jokes or comedy unless the chosen lane benefits from them.
 - When push narration is selected, read `references/push-opening-template-deck.md`, filter by the chosen female lane, run its random draw script, fill only the selected card, and record the ID.
 - Reject literary prose in drafted or rewritten fiction: avoid long environment description and long psychology description; use colloquial, direct everyday language to advance plot through action, dialogue, choices, proof, and consequences.
 

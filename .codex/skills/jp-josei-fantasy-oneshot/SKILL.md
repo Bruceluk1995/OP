@@ -16,6 +16,7 @@ Write complete standalone Japanese female-audience fantasy romance short stories
 - Write audience-facing prose in Japanese unless the user asks otherwise. Keep planning notes in Chinese by default.
 - Reject literary prose: avoid long environment description and long psychology description; use colloquial, direct everyday language to move the story through action, dialogue, choices, evidence, romance movement, and social consequence.
 - Center the heroine's dignity, agency, emotional recovery, romance recognition, and happy ending.
+- Do not force jokes or comedy. Serious, painful, healing, suspenseful, and cathartic female push are valid when evidence, choice, relationship, reputation, safety, or status keeps moving.
 - `ざまぁ` must be emotionally and logically earned through evidence, witness, etiquette, contract, law, church record, family ledger, or public social consequence.
 - `溺愛` must be protective, respectful, and specific; avoid flattening the heroine into a reward object.
 - A one-shot must resolve the core wound and relationship promise in one file.
