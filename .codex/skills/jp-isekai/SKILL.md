@@ -16,6 +16,7 @@ Use this as the router for Japanese male-audience isekai work. Prefer the dedica
 ## Core Contract
 
 - Before any long or short male-isekai planning or drafting, read `references/presentation-modes.md` and present its numbered 1-4 format menu unless the combination is already explicit. Allow multiple selections; treat them as separate comparison versions by default. Length, YouTube use, or `一口气看完` decides neither mode nor person.
+- For either push option, read `../story/references/flan-push-strict-mode.md`; first/third person must share the same recap surface and saved bodies must pass its validator.
 - Reject literary prose in drafted or rewritten fiction: avoid long environment description and long psychology description; use colloquial, direct everyday language to advance plot through action, dialogue, choices, and consequences.
 
 Always localize toward Japanese web novel / light-novel expectations:

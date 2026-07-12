@@ -11,6 +11,7 @@ Write complete standalone Japanese male-audience isekai short stories around 14,
 ## Core Contract
 
 - Before building a one-shot, read `../jp-isekai/references/presentation-modes.md` and present its numbered 1-4 menu with multiple selection allowed, unless the combination is already explicit.
+- For either push option, read `../story/references/flan-push-strict-mode.md` and require the saved body to pass its validator before delivery.
 - Write audience-facing prose in Japanese unless the user asks otherwise. Keep planning notes in Chinese by default.
 - Reject literary prose: avoid long environment description and long psychology description; use colloquial, direct everyday language to move the plot through action, dialogue, choices, proof, cost, and consequence.
 - Use Japanese RPG/light-novel isekai vocabulary: `スキル`, `ステータス`, `冒険者ギルド`, `ランク`, `魔物`, `ダンジョン`, `商会`, `貴族`, `魔力`.

@@ -10,4 +10,6 @@ Before planning or drafting any female-audience fantasy romance, present this me
 
 Allow multiple selections. Produce separate versions by default; never mix viewpoints merely because multiple options were chosen. Traditional mode stays scene-based. Push mode uses the fixed-template random draw in `push-opening-template-deck.md`.
 
+For options 3 and 4, read `../../story/references/flan-push-strict-mode.md`. First-person female push keeps the same short-line recap surface as third person; intimacy changes pronouns and knowledge only, not scene depth, dialogue volume, or sentence length.
+
 Do not infer mode or viewpoint from length, YouTube, one-shot, romance subtype, or packaging request.

@@ -14,6 +14,8 @@ Before choosing structure, length, or package shape, present this fixed numbered
 
 Allow one or multiple selections. Presentation mode and narrative person remain separate axes, but the menu makes the four valid combinations easy to choose. These are blocking creative choices. Do not infer them from `长篇`, `短篇`, `15,000字`, `YouTube`, `朗读`, `一口气看完`, or the existence of an outline.
 
+For options 3 and 4, read `../../story/references/flan-push-strict-mode.md`. The same Flan-style recap surface is mandatory in both persons. First person changes only pronouns and knowledge boundaries; it must not become web-novel prose.
+
 When multiple options are selected, default to producing separate versions from the same premise so the user can compare them. Do not mix first and third person or novel and push presentation inside one body unless the user explicitly requests an intentional hybrid. Before drafting multiple full-length versions, state the expected output scope and follow any requested total/per-version length.
 
 If the user says only `推文`, treat it as push narration presentation but still ask them to choose first person or third person through options 3 and 4. If they mean a different kind of promotional copy, adapt after they correct the label.

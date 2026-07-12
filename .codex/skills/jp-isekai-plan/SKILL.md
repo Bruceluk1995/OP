@@ -13,6 +13,7 @@ When planning prose beats, design colloquial, direct scene movement: action, dia
 ## Required Reads
 
 - Read `../jp-isekai/references/presentation-modes.md` before planning any long or short male-isekai project. Present the numbered 1-4 menu and allow multiple selections unless the user already chose a combination explicitly.
+- Read `../story/references/flan-push-strict-mode.md` for either push option and plan information/shot lines, narrated reactions, and sparse direct dialogue regardless of person.
 - Read `../jp-isekai/references/topic-menu.md` when the user has not supplied a concrete premise. Do not replace the full grouped topic menu with a tiny handful of examples.
 - Read `../jp-isekai/references/opening-innovation-engine.md` before finalizing any first-episode or one-shot push opening. Filter by subtype lane, randomly draw one compatible card, plan its chain, and record the card ID; do not invent a new structure.
 - Read `references/terminology.md` whenever adapting from Chinese fantasy or when the user says "不要中式".

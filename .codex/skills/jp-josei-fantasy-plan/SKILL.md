@@ -13,6 +13,7 @@ When planning prose beats, design colloquial, direct scene movement: action, dia
 ## Required Reads
 
 - Read `../jp-josei-fantasy/references/presentation-modes.md` before planning any long or short project. Present its numbered 1-4 menu unless already explicit.
+- Read `../story/references/flan-push-strict-mode.md` for either push option and plan short narrated evidence/romance beats rather than scene prose, regardless of person.
 - Read `../jp-josei-fantasy/references/push-opening-template-deck.md` when push narration is selected. Filter by lane, randomly draw one compatible card, and record the card ID in the plan.
 - Read `references/market-patterns.md` when the user asks for hot themes, Syosetu/Kakuyomu fit, or tag combinations.
 - Read `references/planning-template.md` before producing a full concept package.

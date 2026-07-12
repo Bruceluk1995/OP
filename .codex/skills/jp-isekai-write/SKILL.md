@@ -11,6 +11,7 @@ Write Japanese web-novel episodes for male-audience isekai. Use this for final p
 ## Required Reads
 
 - Read `../jp-isekai/references/presentation-modes.md` before all drafting. Present its numbered 1-4 menu and allow multiple selections unless the current request already chooses a combination.
+- Read `../story/references/flan-push-strict-mode.md` whenever push narration is selected. Its surface metrics are blocking and identical for first and third person.
 - Read `../jp-isekai/references/opening-innovation-engine.md` before drafting or materially rewriting a push opening. Pass the selected subtype lane to its random draw, use the compatible card's chain, and keep the same card while repairing wording. Do not self-select or merge templates.
 - Read `references/style-guide.md` before writing prose.
 - Read `references/terminology.md` before writing if the source material contains Chinese fantasy terms or the user asks to avoid Chinese elements.
@@ -71,6 +72,7 @@ Write Japanese web-novel episodes for male-audience isekai. Use this for final p
    - Update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
    - Add one record to `男频异世界知识库/generated-ledger.jsonl` with protagonist, cheat, pressure, payoff, venue, aftertaste, and saved path.
 9. Validate:
+   - In push mode, run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`; any failure blocks delivery.
    - Audit every major scene as `entry state -> pressure/choice -> exit state`. At least one of skill knowledge, combat position, inventory/drop, rank, reputation, territory, faction relationship, risk, or next objective must change. Travel, explanation, repeated awe, and status-panel restatement without a state delta must be compressed or removed.
    - Verify the episode promise is paid or meaningfully advanced, the win has a concrete result/cost, and the ending threat grows from the new state rather than appearing as an unrelated cliffhanger.
    - Count Japanese characters with Python.

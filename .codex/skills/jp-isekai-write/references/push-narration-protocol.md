@@ -4,6 +4,8 @@ Use this when writing Japanese male-audience isekai as video recap or push narra
 
 Push narration is a presentation mode, not a viewpoint. It may use first person or third person. Confirm and lock the narrative person before drafting.
 
+Read `../../story/references/flan-push-strict-mode.md` and treat it as the hard surface contract. This protocol controls content flow; the strict profile controls line length, quote ratio, clause density, and delivery validation.
+
 This protocol governs oral delivery, information density, and retention. Use it with `episode-blueprint.md` for serial structure, `../../jp-isekai/references/presentation-modes.md` for the two-axis format gate, and `anti-ai-gates.md` for final cleanup.
 
 ## Narrative Person Lock
@@ -12,6 +14,7 @@ This protocol governs oral delivery, information density, and retention. Use it 
 - Third person: use `男主`, a stable role label, or a name once the listener can track it. The narrator may show external misunderstandings and witness reactions directly.
 - Do not alternate first and third person for convenience. A quoted line does not change the narration person.
 - Neither person changes push-copy structure: hook, causal gap, minimum setup, escalation, proof, aftershock, and ending pressure/closure. Viewpoint does not determine the opening mechanism.
+- Neither person changes the Flan-style surface metrics. First-person push is not an intimate web-novel scene with shorter paragraphs.
 
 ## Why The Old Output Feels AI
 

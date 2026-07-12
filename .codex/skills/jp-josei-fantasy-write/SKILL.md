@@ -11,6 +11,7 @@ Write Japanese web-novel prose for female-audience fantasy romance. Use this for
 ## Required Reads
 
 - Read `../jp-josei-fantasy/references/presentation-modes.md` before drafting. Present its numbered 1-4 menu unless already explicit.
+- Read `../story/references/flan-push-strict-mode.md` whenever push narration is selected. Its surface metrics are blocking and identical for first and third person.
 - Read `../jp-josei-fantasy/references/push-opening-template-deck.md` whenever push narration is selected. Run its compatible random draw and use only the returned card.
 - Read `references/style-guide.md` before writing prose.
 - Read `references/terminology.md` before writing if the source material contains Chinese fantasy terms or the user asks to avoid Chinese elements.
@@ -62,6 +63,7 @@ Write Japanese web-novel prose for female-audience fantasy romance. Use this for
    - Update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
    - Add one record to `女频幻想恋爱知识库/generated-ledger.jsonl` with heroine, wound, romance, pressure, proof, venue, aftertaste, and saved path.
 8. Validate:
+   - In push mode, run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`; any failure blocks delivery.
    - Audit every major scene as `entry state -> pressure/choice -> exit state`. At least one of evidence, public reputation, safety, legal/family position, resources, romantic trust, social status, risk, or next choice must change. Repeated sadness, etiquette, beauty, misunderstanding, or consolation without a state delta must be compressed or rewritten.
    - Verify the episode's advertised romance/zamaa/tag promise is paid or materially advanced, and that the ending threat follows from the heroine's new state rather than resetting her progress.
    - Count Japanese characters with Python.

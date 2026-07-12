@@ -11,6 +11,7 @@ Write complete standalone Japanese female-audience fantasy romance short stories
 ## Core Contract
 
 - Before building a one-shot, read `../jp-josei-fantasy/references/presentation-modes.md` and present its numbered 1-4 menu unless already explicit.
+- For either push option, read `../story/references/flan-push-strict-mode.md` and require the saved body to pass its validator before delivery.
 - When push narration is selected, read `../jp-josei-fantasy/references/push-opening-template-deck.md`, filter by lane, randomly draw one compatible card, and use only that card.
 - Write audience-facing prose in Japanese unless the user asks otherwise. Keep planning notes in Chinese by default.
 - Reject literary prose: avoid long environment description and long psychology description; use colloquial, direct everyday language to move the story through action, dialogue, choices, evidence, romance movement, and social consequence.
