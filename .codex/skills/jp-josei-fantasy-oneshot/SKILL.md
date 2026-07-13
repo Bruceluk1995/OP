@@ -8,6 +8,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 Write complete standalone Japanese female-audience fantasy romance short stories around 14,500-16,500 Japanese characters. This skill is for one-shot stories, not serial episodes, not 6-episode short seasons, and not long webnovel chapter planning.
 
+Before premise or title work, read `../story/references/global-topic-history.md`, check the shared project ledger, and record every displayed candidate before output. Cross-domain re-skins of burned topics are blocked by default.
+
 ## Core Contract
 
 - Write audience-facing prose in Japanese unless the user asks otherwise. Keep planning notes in Chinese by default.

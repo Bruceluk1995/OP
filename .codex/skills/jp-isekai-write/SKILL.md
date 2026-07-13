@@ -6,6 +6,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Isekai Write
 
+Before accepting or inventing a new premise/title outside an existing saved project, read `../story/references/global-topic-history.md` and check the shared project ledger. Record the final generated topic globally; do not revive burned topics unless the user explicitly requests reuse.
+
 Write Japanese web-novel episodes for male-audience isekai. Use this for final prose.
 
 ## Required Reads

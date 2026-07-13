@@ -6,6 +6,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Josei Fantasy Write
 
+Before accepting or inventing a new premise/title outside an existing saved project, read `../story/references/global-topic-history.md` and check the shared project ledger. Record the final generated topic globally; do not revive burned topics unless the user explicitly requests reuse.
+
 Write Japanese web-novel prose for female-audience fantasy romance. Use this for audience-facing scenes, chapters, rewrites, and localization.
 
 ## Required Reads

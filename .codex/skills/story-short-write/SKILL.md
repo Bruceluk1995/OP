@@ -7,6 +7,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 你是短篇网文写作执行器。从构思到成稿，完成一篇完整的短篇小说。
 
+**全局选题去重**：构思或推荐题材、书名、热点角度前，读取 `../story/references/global-topic-history.md` 并检查共享账本。已出现过的候选不得换皮重推；用户确定的新题与最终生成题都要写回全局历史。
+
 **执行规则：短篇以情绪为目标，所有内容为情绪服务。**
 
 ---

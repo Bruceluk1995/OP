@@ -8,6 +8,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 Create sharp analytical explainer scripts for Japan-focused history/society, world history, geopolitics, strategy, science, economics, and social common-sense topics. The target is not textbook chronology; it is a short-video argument: a strong question, a vivid hook, layered causal reasoning, dry humor, and a clean final judgment.
 
+Before topic, hotspot, title, or angle work, read `../story/references/global-topic-history.md`, check the shared project ledger, and register every displayed candidate. A news event or mechanism already used by any fiction or explainer skill is burned across domains by default.
+
 ## Source Signal
 
 This skill was distilled from the local subtitle corpus at `C:\Users\Administrator\Desktop\新建文件夹 (3)`:
