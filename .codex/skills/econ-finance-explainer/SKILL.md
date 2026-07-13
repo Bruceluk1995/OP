@@ -15,6 +15,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 Create long-form economics and finance explainers that make abstract mechanisms feel concrete. The voice can borrow the source corpus's strength: everyday scenes, fictionalized markets, sharp analogies, and "ordinary people pay the bill" framing. The output length and reasoning depth should follow the Shanhe-style explainer workflow, not the short source subtitles.
 
+Before topic, hotspot, title, or angle work, read `../story/references/global-topic-history.md`, check the shared project ledger, and register every displayed candidate. A news event or mechanism already used by any fiction or explainer skill is burned across domains by default.
+
 ## Source Signal
 
 This skill was distilled from the local subtitle corpus at `C:\Users\Administrator\Desktop\36116130_代数学家89`:

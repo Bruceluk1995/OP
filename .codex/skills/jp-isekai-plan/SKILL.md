@@ -15,6 +15,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 Build Japanese-style male-audience isekai plans. This skill is for concept and structure, not final prose.
 
+Before premise or title work, read `../story/references/global-topic-history.md`, check the shared project ledger, and record every displayed candidate before output. Cross-domain re-skins of burned topics are blocked by default.
+
 When planning prose beats, design colloquial, direct scene movement: action, dialogue, choices, proof, cost, and consequence. Do not plan long scenery passages, long psychology passages, or literary mood filler as a way to carry the story.
 
 ## Required Reads

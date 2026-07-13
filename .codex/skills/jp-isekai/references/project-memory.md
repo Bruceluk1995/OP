@@ -25,6 +25,7 @@ episodes/
   第XXX話_<short-title>/
 男频异世界知识库/
   generated-ledger.jsonl
+  topic-history.jsonl
   type-packs/{lane}.md
 对标/
   {lane}/{work}/拆文报告.md
@@ -89,6 +90,13 @@ After saving prose or a packaged episode:
 5. Add one compact record to `男频异世界知识库/generated-ledger.jsonl`.
 
 ## Anti-Homogenization Ledger
+
+Use the project-wide `选题历史/global-topic-history.jsonl` as the first gate;
+it tracks every dynamic seed shown by any story or explainer skill, including
+rejected or unselected candidates. Use the male-isekai generated ledger as the
+second, genre-specific engine check. Once a candidate is displayed, append it
+to global topic history immediately. Prior topics remain burned by default
+across sessions and domains.
 
 Before generating a new concept, outline, title batch, or full episode, inspect the recent ledger:
 

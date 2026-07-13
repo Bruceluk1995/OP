@@ -13,6 +13,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 - “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
 - 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
 
+Before premise or title work, read `../story/references/global-topic-history.md`, check the shared project ledger, and record every displayed candidate before output. Cross-domain re-skins of burned topics are blocked by default.
+
 Write complete standalone Japanese male-audience isekai short stories around 14,500-16,500 Japanese characters. This skill is for one-shot stories, not serial episodes, not 6-episode short seasons, and not long webnovel chapter planning.
 
 ## Core Contract

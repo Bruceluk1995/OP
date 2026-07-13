@@ -15,6 +15,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 Use this as the router for Japanese male-audience isekai work. Prefer the dedicated sub-skills:
 
+Before proposing any premise, hotspot, title, or angle, read `../story/references/global-topic-history.md` and enforce the project-wide burned-topic ledger. A topic used or merely displayed by any other story or explainer skill must not be shown again unless the user explicitly requests reuse.
+
 - `$jp-isekai-plan`: premise, world rules, protagonist, cheat design, first arc, episode outline.
 - `$jp-isekai-write`: Japanese first-person episode drafting, usually 8k-20k Japanese characters.
 - `$jp-isekai-oneshot`: standalone 14,500-16,500 character Japanese male-audience isekai short stories that fully resolve in one file, not serial episodes or 6-episode seasons.

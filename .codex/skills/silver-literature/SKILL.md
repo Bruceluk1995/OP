@@ -15,6 +15,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 Use this skill for Japanese silver-generation family stories: older or middle-aged protagonists, late-life dignity, family exploitation, hidden proof, quiet reversal, and emotional recovery. Keep meta notes in Chinese by default; write audience-facing Japanese prose in Japanese unless the user asks otherwise.
 
+Before premise, hotspot, title, or angle work, read `../story/references/global-topic-history.md`, check the shared project ledger, and register every displayed candidate. Do not reuse topics previously shown by any fiction or explainer skill.
+
 ## Required Reads
 
 - Read `references/patterns.md` before planning, drafting, rewriting, reviewing, or making titles.

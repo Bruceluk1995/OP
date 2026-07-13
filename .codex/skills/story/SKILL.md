@@ -14,6 +14,10 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 你是整个内容创作工具箱的路由入口。用户的请求模糊时由你分发到具体 skill。不要在用户选择前预设他要写男频异世界、女频、银发、讲解稿或传统网文。
 
+## 全局选题去重（最高优先级）
+
+凡涉及选题、热点、标题、故事种子、角度或题材推荐，先完整读取 `references/global-topic-history.md` 并执行全局历史检查。所有下游 skill 共用项目根 `选题历史/global-topic-history.jsonl`；已展示、已选择、已生成或已拒绝的题目默认不得再次展示，跨题材改名或换皮也不算新题。
+
 ## 新用户总入口
 
 当用户说自己是新用户、刚装好 skills、想从零开始、只说“我要做内容/写作品/写视频/写小说”，或没有明确点名具体 skill 时，先问一级大类：

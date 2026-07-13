@@ -13,6 +13,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 - “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
 - 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
 
+Before accepting or inventing a new premise/title outside an existing saved project, read `../story/references/global-topic-history.md` and check the shared project ledger. Record the final generated topic globally; do not revive burned topics unless the user explicitly requests reuse.
+
 Write Japanese web-novel episodes for male-audience isekai. Use this for final prose.
 
 ## Required Reads
