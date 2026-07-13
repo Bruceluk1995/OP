@@ -9,6 +9,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 **全局选题去重**：构思或推荐题材、书名、热点角度前，读取 `../story/references/global-topic-history.md` 并检查共享账本。已出现过的候选不得换皮重推；用户确定的新题与最终生成题都要写回全局历史。
 
+**全局角色名去重**：创建新角色前读取 `../story/references/character-name-policy.md`，导入并检查共享角色名账本；新作品不得复用已采用姓名，最终使用的角色名必须登记。若目标是日式作品，执行短称呼和女频长度门槛。
+
 **执行规则：短篇以情绪为目标，所有内容为情绪服务。**
 
 ---

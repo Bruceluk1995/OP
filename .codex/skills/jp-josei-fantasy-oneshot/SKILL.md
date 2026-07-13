@@ -13,6 +13,7 @@ Before premise or title work, read `../story/references/global-topic-history.md`
 ## Core Contract
 
 - Write audience-facing prose in Japanese unless the user asks otherwise. Keep planning notes in Chinese by default.
+- Before locking the cast, read `../story/references/character-name-policy.md`, import existing names, check every final name, and record used names after saving. Heroines and core women use 2-6 character daily names; full fantasy names may have at most two segments and 10 characters excluding `・`.
 - Reject literary prose: avoid long environment description and long psychology description; use colloquial, direct everyday language to move the story through action, dialogue, choices, evidence, romance movement, and social consequence.
 - Center the heroine's dignity, agency, emotional recovery, romance recognition, and happy ending.
 - `ざまぁ` must be emotionally and logically earned through evidence, witness, etiquette, contract, law, church record, family ledger, or public social consequence.
@@ -69,6 +70,7 @@ Before premise or title work, read `../story/references/global-topic-history.md`
    - Verify prose freshness with Codex judgment: cut repeated decorative adjectives, atmosphere padding, stacked tears, vague pain, and uniform short-sentence stutter; rewrite the saved body if the check finds real issues.
    - Treat this quality gate as a reasoning pass over the actual saved artifacts.
 11. Append a ledger record unless the user says not to.
+12. Append every actually used character name to the shared character-name ledger. Unused brainstorm names remain available.
 
 ## One-Shot Defaults
 

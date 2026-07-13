@@ -10,6 +10,8 @@ Use this as the router for Japanese female-audience fantasy romance work. Prefer
 
 Before proposing any premise, hotspot, title, or angle, read `../story/references/global-topic-history.md` and enforce the project-wide burned-topic ledger. A topic used or merely displayed by any other story or explainer skill must not be shown again unless the user explicitly requests reuse.
 
+Before character naming, read `../story/references/character-name-policy.md`, import and check the shared name ledger, and record every selected name. New works may not recycle a prior heroine or male-lead given name. Heroines and core women use short daily names: 2-6 characters; two-part fantasy full names max 10 characters; no three-part aristocratic names by default.
+
 - `$jp-josei-fantasy-plan`: premise, tag cluster, hot-topic conversion, heroine wound, male lead, court/noble rules, revenge/romance arc, chapter beats.
 - `$jp-josei-fantasy-write`: Japanese prose drafting or rewriting for 女性向け異世界恋愛 / 令嬢 / 溺愛 / ざまぁ stories.
 - `$jp-josei-fantasy-oneshot`: standalone 14,500-16,500 character Japanese female-audience fantasy romance short stories, including Google Trends JP / YouTube / TikTok / weird-news seeds converted into one-file romance payoffs.

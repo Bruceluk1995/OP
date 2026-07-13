@@ -24,6 +24,7 @@ When planning prose beats, design colloquial, direct scene movement: action, dia
 - Read `../jp-josei-fantasy/references/absurd-news-benchmarking.md` when the user wants 离谱新闻, 逆天新闻, or Japanese social-news hooks.
 - Read `../jp-josei-fantasy/references/trend-theme-router.md` after selecting any hot seed, before choosing the final tag cluster, heroine wound, proof object, male-lead recognition mode, or outline.
 - Read `../jp-josei-fantasy/references/project-memory.md` before opening a project, continuing a serial, creating chapter outlines, or trying to avoid repeated premises.
+- Read `../story/references/character-name-policy.md` before naming the cast. Run `import-existing`, check heroine/male-lead/supporting-cast names, enforce `jp-female-fantasy`, and record the selected names after saving.
 - Before planning any subtype, resolve its benchmark priority: project拆文 or live website benchmark first, project subtype notes second, bundled type pack only as fallback. Do not rely on the generic josei fantasy rules alone.
 
 Type pack routing:
@@ -64,6 +65,7 @@ Benchmark priority:
    - `hot trend / video / news seed -> emotion or social rule -> josei fantasy proof and romance route`
    - After choosing a subtype, follow the benchmark priority above. Use the bundled type pack only to fill gaps after dynamic/project benchmarks are loaded.
 2. Design the heroine's wound and agency:
+   - Give her a 2-6 character everyday name. If rank requires a house name, keep the two-part full name at 10 characters or fewer and use the short given name in narration.
    - What was taken from her: reputation, fiance, inheritance, magic credit, family love, public trust.
    - What she can do: knowledge, etiquette, healing, territory work, magic, negotiation, cooking, record keeping, courage.
    - What she refuses to lose again.

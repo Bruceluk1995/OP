@@ -13,6 +13,7 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
 - Read `references/review-checklist.md` before a full review.
 - Read `references/terminology.md` whenever checking Chinese-to-Japanese adaptation leakage.
 - Read `../jp-isekai-write/references/self-check.md` when reviewing saved episodes, project-bound output, per-episode folders, continuity, plot bugs, package completeness, RPG-rule consistency, or Chinese leakage.
+- Read `../story/references/character-name-policy.md` when reviewing names, repeated casts, localization, or package completeness.
 - If the draft or outline declares a subtype lane, read the loaded project benchmark card or `对标/{lane}/` report first when available, then the matching `../jp-isekai-plan/references/type-packs/{lane}.md` as fallback, and review against that lane's required payoff loop.
 
 ## Review Workflow
@@ -27,6 +28,8 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
    - Project-bound draft has no matching `大纲/细纲_第XXX章.md`, or the prose clearly ignores the available outline.
    - Project-bound continuation did not read/update `追踪/上下文.md`, `追踪/伏笔.md`, `追踪/时间线.md`, or relevant `追踪/角色状态.md`.
    - New concept/episode repeats a recent `男频异世界知识库/generated-ledger.jsonl` combination without changing at least two key fields.
+   - A new work reuses a full name or fantasy given name from `角色名历史/character-name-history.jsonl`, or bypasses the name ledger.
+   - An important female character uses a default display name longer than 6 characters, a fantasy full name longer than 10 characters, or more than two name segments without plot necessity.
    - Chinese fantasy terms or institutions leaking into a Japanese RPG fantasy setting.
    - Chinese court-drama institutions or social logic leaking through literal translation: emperor/harem/cold-palace/concubine/嫡庶/夺嫡 logic remains instead of Japanese RPG/fantasy royal, guild, noble, territory, or faction systems.
    - Japanese prose that reads like machine translation or Chinese sentence order.

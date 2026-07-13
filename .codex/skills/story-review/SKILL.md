@@ -9,6 +9,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 **执行铁律：审查是找问题，不是验证正确性。**
 
+**角色名审查**：涉及角色命名或项目完整性时，读取 `../story/references/character-name-policy.md`；检查新作品是否复用共享账本中的全名/幻想 given name，并标记日式女频超过 6 字符的日常名、超过 10 字符或三段式的幻想全名。
+
 ---
 
 ## Review Mode 选择

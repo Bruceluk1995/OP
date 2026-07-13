@@ -11,6 +11,10 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 凡涉及选题、热点、标题、故事种子、角度或题材推荐，先完整读取 `references/global-topic-history.md` 并执行全局历史检查。所有下游 skill 共用项目根 `选题历史/global-topic-history.jsonl`；已展示、已选择、已生成或已拒绝的题目默认不得再次展示，跨题材改名或换皮也不算新题。
 
+## 全局角色名去重（写作最高优先级）
+
+凡涉及小说角色命名，先完整读取 `references/character-name-policy.md`，导入项目内既有角色名并逐名检查。所有下游 fiction skill 共用项目根 `角色名历史/character-name-history.jsonl`；不同作品不得复用已实际采用的全名或幻想 given name，续写同一作品除外。日本女频幻想角色默认使用 2-6 字符短称呼，两段式全名不超过 10 字符，正式长名不得在叙述中反复使用。
+
 ## 新用户总入口
 
 当用户说自己是新用户、刚装好 skills、想从零开始、只说“我要做内容/写作品/写视频/写小说”，或没有明确点名具体 skill 时，先问一级大类：

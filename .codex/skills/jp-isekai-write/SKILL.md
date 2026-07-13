@@ -20,6 +20,7 @@ Write Japanese web-novel episodes for male-audience isekai. Use this for final p
 - Read `references/push-narration-protocol.md` when writing episode 2 or later, adapting for YouTube/recap narration, continuing from previous files, or when the user complains about AI flavor, weak hooks, wateriness, or failure to connect the last episode.
 - Read `references/self-check.md` before final delivery of any saved episode, project-bound output, or per-episode folder.
 - Read `../jp-isekai/references/project-memory.md` before writing any saved/project-bound episode, continuing a serial, or checking anti-homogenization.
+- Read `../story/references/character-name-policy.md` before introducing any new named character. Existing cast names are allowed only for the same work; check and record every new name after saving.
 - If the outline or user request names a subtype lane, read the loaded project benchmark card or `对标/{lane}/` report first when available, then project subtype notes, then the matching `../jp-isekai-plan/references/type-packs/{lane}.md` only as fallback. The episode must follow the selected lane's benchmark/payoff engine instead of generic isekai.
 
 ## Drafting Workflow
