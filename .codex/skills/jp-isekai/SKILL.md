@@ -1,6 +1,6 @@
 ---
 name: jp-isekai
-description: "Japanese male-audience isekai writing suite router. Use when the user wants 日式RPG异世界, なろう系, カクヨム男性向け, male-protagonist Japanese fantasy, battle leveling, monster grinding, dungeon boss fights, overpowered protagonist, OP ruler fantasy, 龙傲天, demon-lord/kingdom domination, drops, status/rank growth, cheat skill, adventurer guild, slow life, harem-adjacent,ざまぁ, or when adapting Chinese webnovel settings into Japanese-style isekai without Chinese xianxia/wuxia terms."
+description: "Japanese male-audience isekai writing suite router for traditional web-novel prose or anime-recap/push narration copy, each supporting first-person or third-person narration. Use when the user wants 日式RPG异世界, 男频异世界推文/动漫解说文案, なろう系, カクヨム男性向け, battle leveling, dungeon bosses, OP/龙傲天, exile reversal, status/rank growth, slow life, or Chinese-to-Japanese isekai adaptation."
 metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
@@ -15,6 +15,8 @@ Use this as the router for Japanese male-audience isekai work. Prefer the dedica
 
 ## Core Contract
 
+- Before any long or short male-isekai planning or drafting, read `references/presentation-modes.md` and present its numbered 1-4 format menu unless the combination is already explicit. Allow multiple selections; treat them as separate comparison versions by default. Length, YouTube use, or `一口气看完` decides neither mode nor person.
+- For either push option, read `../story/references/flan-push-strict-mode.md`; first/third person must share the same recap surface and saved bodies must pass its validator.
 - Reject literary prose in drafted or rewritten fiction: avoid long environment description and long psychology description; use colloquial, direct everyday language to advance plot through action, dialogue, choices, and consequences.
 
 Always localize toward Japanese web novel / light-novel expectations:
@@ -44,18 +46,22 @@ Detailed protocol: `references/project-memory.md`.
 
 ## Workflow
 
-1. Determine the task:
+1. Resolve the presentation-mode gate from `references/presentation-modes.md`.
+2. Determine the task:
    - Standalone short story, one-shot, 一发完结, 15000字短篇, or "不是连续剧" -> use `$jp-isekai-oneshot`.
    - Explicit one-shot/一发完结 wins even when the prompt also mentions YouTube, thumbnail, 15,000 characters, or a hot topic. Explicit 6-episode/serial/第N話 wins over one-shot and routes through plan/write.
    - New concept or Chinese-to-Japanese adaptation -> use `$jp-isekai-plan`.
    - Write a full episode or rewrite draft in Japanese -> use `$jp-isekai-write`.
    - Check an existing draft -> use `$jp-isekai-review`.
-2. If the task references an existing project, continuing episode, saved output, or anti-homogenization need, load the project memory protocol before planning or drafting.
-3. If the task references current market/ranking trends, browse current source pages before making market claims.
-4. If adapting from Chinese fantasy, first create a localization map: names, power system, institutions, creatures, currency, places, and plot functions.
-5. Keep the output in the user-requested language. For Japanese prose, write the prose in Japanese and keep meta notes in Chinese unless the user requests all-Japanese delivery.
+3. If the task references an existing project, continuing episode, saved output, or anti-homogenization need, load the project memory protocol before planning or drafting.
+4. If the task references current market/ranking trends, browse current source pages before making market claims.
+5. If adapting from Chinese fantasy, first create a localization map: names, power system, institutions, creatures, currency, places, and plot functions.
+6. Keep the output in the user-requested language. For Japanese prose, write the prose in Japanese and keep meta notes in Chinese unless the user requests all-Japanese delivery.
 
 ## Resources
 
 Read `references/market-snapshot.md` when the task needs current-ish genre signals from 小説家になろう / カクヨム. Refresh by browsing if the user asks for "latest", "现在热门", ranking, or market direction.
 Read `references/project-memory.md` when routing project-bound work or explaining the suite's engineering model.
+Read `references/presentation-modes.md` before all male-isekai planning or drafting.
+Read `references/topic-menu.md` after the format choice when the user has not supplied a concrete premise; present the full grouped menu with multi-select, auto-pick, custom, and refresh controls.
+Read `references/opening-innovation-engine.md` after the premise and mode are locked and before drafting a push opening. Filter by the selected male-isekai lane, run its random draw script, fill only the compatible screenshot-derived card, and record the card ID. Exclude recent IDs when project history exists.

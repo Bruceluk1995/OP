@@ -1,6 +1,6 @@
 ---
 name: jp-isekai-oneshot
-description: Standalone Japanese male-audience isekai short-story writing skill. Use when the user wants 日式男频异世界短篇, 15000字单篇, one-shot, 一发完结, 非连续剧, not a 6-episode season, battle leveling short story, OP/龙傲天 standalone, dungeon/adventurer guild one-shot, exile zamaa one-shot, cheat-skill proof story, YouTube/TikTok/Shorts 热门视频转异世界爽点, Google Trends JP 热点蹭选题, 日本离谱新闻/逆天新闻转异世界爽点, 热点转外挂/技能, 热点自动匹配男频异世界子类型/theme-pack, or a complete Japanese male-audience fantasy short that ends in one file.
+description: Standalone Japanese male-audience isekai writing skill for traditional web-novel prose or anime-recap/push narration copy, each supporting first-person or third-person narration. Use for 日式男频异世界短篇, 男频异世界推文/动漫解说文案, 15000字单篇, one-shot, 一发完结, battle leveling, OP/龙傲天, dungeon, exile zamaa, YouTube/TikTok/Shorts hooks, Google Trends JP, absurd-news conversion, or any complete short that resolves in one file.
 metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
@@ -10,6 +10,8 @@ Write complete standalone Japanese male-audience isekai short stories around 14,
 
 ## Core Contract
 
+- Before building a one-shot, read `../jp-isekai/references/presentation-modes.md` and present its numbered 1-4 menu with multiple selection allowed, unless the combination is already explicit.
+- For either push option, read `../story/references/flan-push-strict-mode.md` and require the saved body to pass its validator before delivery.
 - Write audience-facing prose in Japanese unless the user asks otherwise. Keep planning notes in Chinese by default.
 - Reject literary prose: avoid long environment description and long psychology description; use colloquial, direct everyday language to move the plot through action, dialogue, choices, proof, cost, and consequence.
 - Use Japanese RPG/light-novel isekai vocabulary: `スキル`, `ステータス`, `冒険者ギルド`, `ランク`, `魔物`, `ダンジョン`, `商会`, `貴族`, `魔力`.
@@ -21,12 +23,21 @@ Write complete standalone Japanese male-audience isekai short stories around 14,
 
 ## Workflow
 
-1. If the user has no premise, ask a compact intake:
+1. Resolve the numbered format gate before premise intake:
+   - Offer options 1-4 exactly as defined in `presentation-modes.md` and say `可多选`.
+   - For multiple selections, produce separate versions from the same premise unless the user requests different premises. Confirm whether the requested length is total or per version when that distinction materially changes scope.
+   - Traditional mode stays scene-based in either person. Push mode keeps result-first hooks, oral information lines, causal compression, visible proof, and complete payoff in either person.
+   - `短篇`, `15,000字`, `YouTube`, `Shorts`, or `一口气看完` decides neither choice.
+2. If the user has no premise, ask a compact intake:
+   - Present the grouped choices from `../jp-isekai/references/topic-menu.md`; allow multiple selections, auto-pick, custom keywords, or another batch. Do not limit the user to 4-6 generic topics.
    - 选题来源: YouTube/TikTok 热门视频 / 日本离谱新闻/逆天新闻 / Google Trends JP 热点 / 生活痛点关键词 / 常青类型 / 用户给关键词.
    - 题材类型: battle leveling / OP dominance / exile zamaa / dungeon boss / academy-game knowledge / tamer / earth-commute / dungeon-master / slow-life reward.
    - 爽点: 升级掉落 / 开局无敌 / 被低估后打脸 / 经营领地 / 魔物伙伴 / 现代知识碾压.
    - Tone: fast爽 / comedic practical / dark revenge / warm reward.
-2. Before writing, read:
+3. Before writing, read:
+   - `../jp-isekai/references/presentation-modes.md`
+   - `../jp-isekai/references/opening-innovation-engine.md` before selecting or writing a push opening. Filter by subtype lane, randomly draw one compatible card, fill its chain, and store the selected card ID with the package.
+   - `../jp-isekai-write/references/push-narration-protocol.md` when push mode is selected.
    - `references/oneshot-blueprint.md`
    - `references/anti-water.md`
    - `../jp-isekai-write/references/terminology.md` when adapting from Chinese material, checking RPG localization, or avoiding xianxia/court-drama leakage.
@@ -36,7 +47,7 @@ Write complete standalone Japanese male-audience isekai short stories around 14,
    - `references/social-video-trends.md` when the user asks for TikTok, YouTube, Shorts, viral videos, 热门视频, or short-video hooks.
    - `references/trend-theme-router.md` only after the user has selected a specific trend seed, or has explicitly delegated the choice with “你选/自动选”, and wants it matched to a male-isekai subtype/theme-pack.
    - `references/oneshot-delivery.md` before saving a full one-shot package, character prompts, cover prompt, or any project-bound output.
-3. If the user asks for current market, ranking, Google Trends, or "现在日本什么火", browse/fetch current source pages before making market claims. For Japan hot-topic ideation, use Google Trends JP first.
+4. If the user asks for current market, ranking, Google Trends, or "现在日本什么火", browse/fetch current source pages before making market claims. For Japan hot-topic ideation, use Google Trends JP first.
    - Treat source selection and seed selection as different decisions. Choosing `YouTube/TikTok`, `Google Trends`, `离谱新闻`, a subtype, a payoff, or a tone does **not** authorize Codex to choose the concrete hot seed.
    - Collect 6-10 raw items, filter them, then present 3-5 viable numbered candidates with source/date, seed, scores, extracted hook, primary/backup route, converted skill, one-shot promise, and safety transform.
    - Stop after the shortlist and ask the user to choose a candidate number or request another batch. Do not create the final title, run a candidate ledger check, build the blueprint, draft prose, save a package, or append the ledger before that choice.
@@ -46,26 +57,30 @@ Write complete standalone Japanese male-audience isekai short stories around 14,
    - Downrank remote spectacle seeds like solar flares, space events, macro science, or celebrity names unless they can be converted into an everyday problem Japanese viewers immediately understand.
    - After selecting a hot seed, route it to the best theme-pack route before choosing the final cheat, title, or outline.
    - Treat `jp-isekai-plan/references/type-packs/*` as theme engines only. Do not inherit their six-episode structure inside one-shot work.
-4. If the user asks for 离谱新闻/逆天新闻 or rejects Google Trends as boring, browse current Japanese weird-news/social-news sources and use absurdity scoring first. The best seed is usually a fictionalizable unfair rule, broken service, hidden cost, workplace/school absurdity, AI/tool failure, product/price oddity, or public-institution mistake.
-5. If the user asks for TikTok/YouTube or rejects news/Trends as boring, browse current social-video trend sources and use video-hook scoring first. Prefer YouTube Japan category trends when TikTok public pages are blocked; use TikTok Creative Center or `$browser-cdp` with logged-in browser only when available.
-6. Check anti-homogenization if a ledger exists:
+5. If the user asks for 离谱新闻/逆天新闻 or rejects Google Trends as boring, browse current Japanese weird-news/social-news sources and use absurdity scoring first. The best seed is usually a fictionalizable unfair rule, broken service, hidden cost, workplace/school absurdity, AI/tool failure, product/price oddity, or public-institution mistake.
+6. If the user asks for TikTok/YouTube or rejects news/Trends as boring, browse current social-video trend sources and use video-hook scoring first. Prefer YouTube Japan category trends when TikTok public pages are blocked; use TikTok Creative Center or `$browser-cdp` with logged-in browser only when available.
+7. Check anti-homogenization if a ledger exists:
    - `python .codex/skills/jp-isekai-oneshot/scripts/ledger.py --root . summary`
    - `python .codex/skills/jp-isekai-oneshot/scripts/ledger.py --root . check ...`
-7. Build a brief one-shot blueprint before prose. Do not require project `大纲/细纲` files for one-shot work.
+   - Include `opening_card`, a story-specific filled `opening_chain`, and a canonical `structure_fingerprint` in the candidate check. Do not store only the generic card slot names. A different opening card does not excuse a repeated macro structure.
+8. Build a brief one-shot blueprint before prose. Do not require project `大纲/细纲` files for one-shot work.
+   - Run `draw-opening-template.py --lane <lane> --root <project-root>` before locking the `opening promise`. Let the script exclude the last three ledger cards automatically. Fit the selected card truthfully to the story; one redraw is allowed only when the card cannot fit without fabricating facts.
+   - Preserve the returned `required_chain`. Plan one exact opening fact for every slot; do not approve the blueprint while any slot is vague or borrowed from a different card.
    - Include a closure ledger: opening promise, midpoint irreversible change, public/observable proof, climax result, reward/cost, and final social/emotional state. Every item must resolve inside this file.
    - Audit major scenes for a state delta in skill knowledge, combat position, drop/resource, rank/reputation, relationship, risk, or objective; compress scenes that only repeat awe, travel, explanation, or inner commentary.
-8. Save complete long prose as a one-shot package under `episodes/oneshots/<short-title>/` unless the user asks for chat-only output.
-   - Required package folders/files: `正文/正文.md`, `正文/标题.md`, `角色提示词/角色提示词.md`, `封面/封面.md`, and `作品资料.md`.
+9. Save complete long prose as a one-shot package under `episodes/oneshots/<short-title>/` unless the user asks for chat-only output.
+   - Required package folders/files: `正文/正文.md`, `正文/标题.md`, `角色提示词/角色提示词.md`, `封面/封面.md`, `作品资料.md`, and `开头抽卡证据.json`.
    - Generate `封面/封面.png` only when image generation is requested or available; otherwise mark `封面/封面.md` as prompt-only.
    - Do not deliver only a single mixed markdown file.
-9. After saving, count only `正文/正文.md`. Do not report completion below 14,500 Japanese characters unless the user explicitly approved a shorter story.
-10. After saving, run a Codex AI one-shot self-check by rereading the saved body, title file, character prompts, cover brief, and `作品资料.md`:
+10. After saving, count only `正文/正文.md`. Do not report completion below 14,500 Japanese characters unless the user explicitly approved a shorter story.
+11. After saving, run a Codex AI one-shot self-check by rereading the saved body, title file, character prompts, cover brief, and `作品资料.md`:
+   - Run `validate-opening-evidence.py` against the saved body and `开头抽卡证据.json`. Any missing, duplicate, invented, out-of-order, or late evidence is blocking; rewrite the opening within the drawn card and rerun.
    - Verify the body is Japanese audience-facing prose only, with no Chinese planning notes, source-language leftovers, or meta/production leakage.
    - Verify one-shot closure: hook, cheat/skill proof, escalation, public consequence, reward, zamaa/status change, and emotional/social closure all resolve in this file.
    - Verify localization: if the source came from Chinese xianxia, court drama, or webnovel power fantasy, its functions have been rebuilt as Japanese RPG/light-novel mechanisms such as スキル, ギルド, ランク, ダンジョン, 王国, 貴族派閥, 領地, 商会, 魔法学院, 魔物, and 魔力, not literal sect/cultivation/palace terms.
    - Verify prose freshness with Codex judgment: cut repeated scenery, generic awe, destiny talk, travel padding, duplicated inner monologue, and dry status-panel dumping; rewrite the saved body if the check finds real issues.
    - Treat this quality gate as a reasoning pass over the actual saved artifacts.
-11. Append a ledger record unless the user says not to.
+12. Append a ledger record unless the user says not to. Store `opening_card`, a compact `opening_chain`, and the canonical `structure_fingerprint` as structured fields, not only inside `notes`.
 
 ## One-Shot Defaults
 

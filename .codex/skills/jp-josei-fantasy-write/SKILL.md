@@ -1,6 +1,6 @@
 ---
 name: jp-josei-fantasy-write
-description: "Write Japanese female-audience fantasy romance prose. Use for drafting or rewriting 女性向け異世界恋愛, 悪役令嬢, 婚約破棄, ざまぁ, 溺愛, 聖女, 契約婚, 令嬢, 宮廷ロマンス, frontier slow life, cursed prince/duke romance, time-loop villainess, and Japanese prose localized away from Chinese fantasy or male-audience RPG defaults."
+description: "Write Japanese female-audience fantasy romance as traditional web-novel prose or anime-recap/push narration, with first-person or third-person. Use for 女性向け異世界恋愛, 女频推文, 悪役令嬢, 婚約破棄, ざまぁ, 溺愛, 聖女, 契約婚, 令嬢, 宮廷ロマンス, frontier romance, cursed leads, loops, and localization."
 metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
@@ -10,6 +10,9 @@ Write Japanese web-novel prose for female-audience fantasy romance. Use this for
 
 ## Required Reads
 
+- Read `../jp-josei-fantasy/references/presentation-modes.md` before drafting. Present its numbered 1-4 menu unless already explicit.
+- Read `../story/references/flan-push-strict-mode.md` whenever push narration is selected. Its surface metrics are blocking and identical for first and third person.
+- Read `../jp-josei-fantasy/references/push-opening-template-deck.md` whenever push narration is selected. Run its compatible random draw and use only the returned card.
 - Read `references/style-guide.md` before writing prose.
 - Read `references/terminology.md` before writing if the source material contains Chinese fantasy terms or the user asks to avoid Chinese elements.
 - Read `references/episode-blueprint.md` before drafting any episode/chapter prose, especially serial episodes that must hold viewer retention.
@@ -21,9 +24,10 @@ Write Japanese web-novel prose for female-audience fantasy romance. Use this for
 
 ## Drafting Workflow
 
-1. Confirm or infer the target:
+1. Resolve the numbered presentation/viewpoint choice before inferring the target:
    - Default: Japanese prose, heroine-centered, emotionally legible, romance-forward, happy-ending direction.
-   - Use first person `私` or close third person. Pick the viewpoint that best supports the heroine's dignity and romantic tension.
+   - Use first person `私` or close third person exactly as selected. Do not switch for convenience.
+   - In push mode, determine the lane, draw one compatible fixed opening card, and keep that card while repairing wording. Do not self-select or merge cards.
    - If the user asks for a finished/full episode, YouTube/朗读/推文 narration, a 6-episode short-season installment, or "完整正文" without another target, use 14,500-16,500 Japanese characters as the default delivery range.
    - If the user gives an episode length, target that character count; otherwise keep chat drafts concise or save long chapters to a file.
    - For a 15,000-character episode, treat length as a functional-density target, not padding permission: the episode needs enough concrete evidence, choices, social consequences, romance movement, hooks, and purposeful breathing beats to justify the length.
@@ -32,7 +36,7 @@ Write Japanese web-novel prose for female-audience fantasy romance. Use this for
    - Read the previous episode/chapter, `追踪/上下文.md`, `追踪/伏笔.md`, `追踪/时间线.md`, relevant `追踪/角色状态.md`, and relevant `设定/` files.
    - Run the `女频幻想恋爱知识库` ledger summary/check and change the candidate if it repeats too many fields.
 3. Build the full episode blueprint from `references/episode-blueprint.md` before prose:
-   - Start with the episode's biggest social/emotional bomb in sentence one: humiliation, accusation, broken engagement, witness testimony, contract reveal, curse symptom, public choice, or betrayal.
+   - In push mode, start with the chain required by the randomly selected card. In traditional mode, use the strongest scene entry appropriate to the chapter.
    - For episode 2 or later, bridge from the exact previous ending before moving into new action.
    - Set target emotion, episode position, episode promise, core payoff, cost/risk, and ending hook.
    - Use a five-part shape: cause, development, turn, climax, ending state.
@@ -59,6 +63,8 @@ Write Japanese web-novel prose for female-audience fantasy romance. Use this for
    - Update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
    - Add one record to `女频幻想恋爱知识库/generated-ledger.jsonl` with heroine, wound, romance, pressure, proof, venue, aftertaste, and saved path.
 8. Validate:
+   - In push mode, run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`; any failure blocks delivery.
+   - After the script passes, run the strict profile's manual retention/payoff audit. Short-line plot summary without evidence, choice, emotional, social, status, or romance movement still blocks delivery. Jokes and comedy are optional, not a female-push requirement.
    - Audit every major scene as `entry state -> pressure/choice -> exit state`. At least one of evidence, public reputation, safety, legal/family position, resources, romantic trust, social status, risk, or next choice must change. Repeated sadness, etiquette, beauty, misunderstanding, or consolation without a state delta must be compressed or rewritten.
    - Verify the episode's advertised romance/zamaa/tag promise is paid or materially advanced, and that the ending threat follows from the heroine's new state rather than resetting her progress.
    - Count Japanese characters with Python.
@@ -68,7 +74,7 @@ Write Japanese web-novel prose for female-audience fantasy romance. Use this for
    - Run the Codex AI story/package audit in `references/self-check.md`; fix story bugs, Chinese leakage, package omissions, unused character prompts, and cover-image problems before reporting completion.
    - Check that the heroine acts, the romance advances, and the scene promise matches the chosen tags.
    - Check the draft against `references/episode-blueprint.md`: target emotion delivered, dense beats expanded, sparse beats compressed, evidence/romance/status consequence present, and ending hook specific.
-   - Scan the first 600 Japanese characters against `references/push-episode-delivery.md`: plot-bomb sentence, previous-episode recap bridge, concrete social pressure, and no generic AI-flavored filler.
+   - In push mode, scan the first 600 Japanese characters against the selected card and `references/push-episode-delivery.md`: heroine identity, immediate event, required escalation, proof/romance promise, body handoff, and no generic AI-flavored filler.
    - Scan the whole draft against `references/anti-ai-gates.md`: no generic texture, stock summary lines, author explanation, uniform paragraph rhythm, or model/meta leakage.
    - Confirm the prose stays colloquial and direct, with no long literary scenery or psychology passages.
    - For project-bound output, verify the outline was read, tracking files were updated, and the ledger record was appended.

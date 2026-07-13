@@ -14,9 +14,9 @@ For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-s
 
 ## Episode Shape
 
-- Treat each episode as a first-person viewing/narration experience, not a standard chapter summary.
-- Default viewpoint for 推文 episodes: `私`, close to the heroine's fear, calculation, shame, relief, and attraction.
-- Open with the whole episode's biggest social/emotional bomb in sentence one. Use accusation, annulment, witness testimony, betrayal, contract reveal, curse symptom, public choice, debt, trial, inheritance theft, or male-lead intervention. Do not open with scenery, weather, abstract mood, or a soft "I never imagined..." line unless the same sentence contains the concrete bomb.
+- Treat each episode as push narration in the selected first-person or third-person viewpoint, not a standard chapter summary.
+- Before the opening, run the compatible random draw in `../../jp-josei-fantasy/references/push-opening-template-deck.md`; use only the selected card.
+- Open with the selected card's required information chain. Do not replace it with a self-selected generic social bomb.
 - Immediately after sentence one, give a previous-episode bridge in prose: what happened last episode, what evidence/object/person remains unresolved, and why the heroine must act now. New viewers should understand the last hook by line five.
 - Keep that bridge fully inside the story world. Do not write production markers such as `第4話で`, `第3話の時`, `前回`, `次回`, `本話`, `読者`, or `視聴者` inside the body prose. Use in-world anchors instead: `地下広間で`, `夜明け前の森で`, `リリに初めて触れた時`, `あの婚姻契約書を読んだ夜`.
 - Keep the episode moving through scenes: pressure -> heroine choice -> male lead action -> social consequence -> emotional aftertaste -> next hook.
@@ -25,14 +25,14 @@ For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-s
 - Do not pad with generic adjectives, repeated sighing, decorative scenery, or abstract declarations. Use documents, doors, witnesses, names, hands, contracts, etiquette, injuries, rumors, and concrete gestures.
 - Before handoff, run the `anti-ai-gates.md` final self-check. If the prose is saved to a file, Codex must reread the saved file and fix real issues before delivery.
 
-## Mandatory Opening Order
+## Serial Continuity After The Drawn Opening
 
-For episode 2 or later, write the first 250-500 Japanese characters in this order:
+For episode 2 or later, incorporate these functions without breaking the selected card:
 
-1. **Plot-bomb first sentence.** Put the full pressure in sentence one: public accusation, broken engagement, false saint claim, cursed prince collapse, contract term, family betrayal, or witness reveal.
+1. **Drawn-card chain.** Establish the heroine, event, escalation, and promised proof/romance movement required by the selected card.
 2. **Previous-episode bridge.** In 1-3 sentences, name what happened last episode and what remains unresolved. Use names, documents, witnesses, titles, injuries, contracts, rumors, or exact promises.
 3. **Now-problem.** Name the immediate social or emotional obstacle forcing the current scene.
-4. **Heroine reaction.** Give one close first-person reaction tied to a concrete body action or decision, not vague sadness.
+4. **Heroine reaction.** Give one concrete action or decision in the selected viewpoint, not vague sadness.
 5. **Scene entry.** Move into dialogue, a document, a door opening, a witness stepping forward, or the male lead taking action.
 
 Do not label these parts as "recap" or "summary" in the prose unless the user explicitly asks for narration labels. Episode numbers belong only in `title.md` / title headings, never in first-person body narration.

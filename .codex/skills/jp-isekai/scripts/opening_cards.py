@@ -1,0 +1,43 @@
+"""Shared male-isekai push-opening card definitions."""
+
+CARDS = {
+    "R1": ("反转・身份受辱型", {"exile", "academy", "craft"}),
+    "R2": ("反转・世界常识错误型", {"battle", "op", "system", "academy", "craft"}),
+    "R3": ("反转・转生结果型", {"rebirth"}),
+    "N1": ("无脑・证明离谱设定型", {"battle", "op", "system", "craft", "tamer"}),
+    "N2": ("无脑・第一次就失控型", {"battle", "system", "academy", "craft", "tamer"}),
+    "N3": ("无脑・全民错误认知型", {"system", "op", "mystery", "academy"}),
+    "C1": ("对比・被嫌弃与被争抢型", {"exile", "craft", "academy"}),
+    "C2": ("对比・离开前后型", {"exile", "craft"}),
+    "P1": ("铺垫・异常行为合理借口型", {"battle", "op", "craft", "survival", "earth"}),
+    "P2": ("铺垫・小目标滚成大灾难型", {"craft", "survival", "territory", "earth"}),
+    "D1": ("直接上・世界规则清单型", {"system", "academy", "op", "tamer"}),
+    "D2": ("直接上・主角设定连爆型", {"battle", "op", "rebirth", "system"}),
+    "E1": ("经验共识・偏偏反着做型", {"battle", "craft", "academy", "earth", "survival"}),
+    "A1": ("意外・误操作滚大型", {"system", "academy", "earth", "mystery"}),
+    "B1": ("吹牛／谎话字面成真型", {"system", "op", "mystery"}),
+    "C3": ("对比・明明有功却受罚型", {"exile", "battle", "craft", "academy"}),
+    "F1": ("反常备灾／囤积型", {"survival", "territory", "rebirth", "earth"}),
+    "D3": ("单一规则连续兑现型", {"system", "craft", "op", "battle"}),
+}
+
+REQUIRED_CHAINS = {
+    "R1": ["identity", "humiliation_or_misjudgment", "escalation", "hidden_advantage", "body_origin_bridge"],
+    "R2": ["world_rule", "protagonist_classification", "contradictory_test", "larger_escalation", "cause_gap"],
+    "R3": ["bad_rebirth", "worse_condition", "external_contempt", "hidden_mechanism", "first_payoff"],
+    "N1": ["proof_goal", "concrete_test", "unexpected_result", "second_escalation", "consequence"],
+    "N2": ["first_attempt", "impossible_result", "public_or_system_reaction", "mundane_motive", "body_bridge"],
+    "N3": ["mass_belief", "first_correction", "deeper_correction", "protagonist_trigger"],
+    "C1": ["obvious_value", "local_rejection", "high_level_demand", "information_gap", "irreversible_choice"],
+    "C2": ["before_stability", "departure", "three_failures", "realization", "new_opportunity"],
+    "P1": ["abnormal_behavior", "practical_excuse", "unexpected_gain", "hidden_rule", "current_action_bridge"],
+    "P2": ["tiny_motive", "accidental_gain", "rule_escalation", "large_consequence", "origin_return"],
+    "D1": ["abnormal_world", "three_examples", "protagonist_exception", "immediate_test"],
+    "D2": ["new_identity", "first_advantage", "second_escalation", "cost_or_limit", "live_crisis"],
+    "E1": ["shared_experience", "normal_avoidance", "protagonist_violation", "concrete_reason", "live_proof"],
+    "A1": ["mistaken_action", "expected_punishment", "successful_anomaly", "second_escalation", "hidden_rule"],
+    "B1": ["casual_claim", "literal_fulfillment", "disbelief", "stronger_fulfillment", "rule_reveal"],
+    "C3": ["concrete_merit", "opposite_treatment", "institutional_misjudgment", "proof_or_reversal", "origin_bridge"],
+    "F1": ["three_preparations", "ridicule_or_obstruction", "hidden_knowledge_or_loophole", "countdown", "first_action_bridge"],
+    "D3": ["rule_statement", "small_proof", "larger_proof", "current_major_proof", "limitation_or_cost"],
+}

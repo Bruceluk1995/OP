@@ -13,6 +13,8 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
 - Read `references/review-checklist.md` before a full review.
 - Read `references/terminology.md` whenever checking Chinese-to-Japanese adaptation leakage.
 - Read `../jp-josei-fantasy-write/references/self-check.md` when reviewing saved episodes, project-bound output, per-episode folders, continuity, plot bugs, package completeness, or Chinese leakage.
+- Read `../story/references/flan-push-strict-mode.md` for every push review and run its validator. First-person romance push that expands into scene prose or inner-monologue paragraphs is blocking.
+- Treat metric-passing but personality-free flowchart narration as blocking; require a hook/reversal/reaction in every 6-10-line block.
 - If the draft or outline names a lane, read the best available benchmark/type-pack material before judging genre fit: project拆文, live benchmark card, project-local `女频幻想恋爱知识库/type-packs/{lane}.md`, then bundled `../jp-josei-fantasy-plan/references/type-packs/{lane}.md` as fallback.
 
 ## Review Workflow
