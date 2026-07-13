@@ -17,6 +17,8 @@ Use this as the router for Japanese male-audience isekai work. Prefer the dedica
 
 Before proposing any premise, hotspot, title, or angle, read `../story/references/global-topic-history.md` and enforce the project-wide burned-topic ledger. A topic used or merely displayed by any other story or explainer skill must not be shown again unless the user explicitly requests reuse.
 
+Before proposing or finalizing character names, read `../story/references/character-name-policy.md`, import the shared name ledger, check every new name, and record names actually used. A continuing work may reuse its own cast; a new work may not reuse an existing fantasy given name by changing only the surname or kana form.
+
 - `$jp-isekai-plan`: premise, world rules, protagonist, cheat design, first arc, episode outline.
 - `$jp-isekai-write`: Japanese first-person episode drafting, usually 8k-20k Japanese characters.
 - `$jp-isekai-oneshot`: standalone 14,500-16,500 character Japanese male-audience isekai short stories that fully resolve in one file, not serial episodes or 6-episode seasons.
@@ -27,6 +29,7 @@ Before proposing any premise, hotspot, title, or angle, read `../story/reference
 - Before any long or short male-isekai planning or drafting, read `references/presentation-modes.md` and present its numbered 1-4 format menu unless the combination is already explicit. Allow multiple selections; treat them as separate comparison versions by default. Length, YouTube use, or `一口气看完` decides neither mode nor person.
 - For either push option, read `../story/references/flan-push-strict-mode.md`; first/third person must share the same recap surface and saved bodies must pass its validator.
 - Reject literary prose in drafted or rewritten fiction: avoid long environment description and long psychology description; use colloquial, direct everyday language to advance plot through action, dialogue, choices, and consequences.
+- Keep important women easy to hear in narration: prefer 2-6 character everyday names and use `--style jp-female-fantasy`; do not default to long aristocratic names.
 
 Always localize toward Japanese web novel / light-novel expectations:
 

@@ -30,6 +30,7 @@ When planning prose beats, design colloquial, direct scene movement: action, dia
 - Read `references/planning-template.md` before producing a full concept package.
 - Read `references/dynamic-benchmarking.md` when the user wants current market fit, website-based拆书, hottest works, or when no strong project benchmark exists for the chosen subtype.
 - Read `../jp-isekai/references/project-memory.md` before opening a project, continuing a serial, creating chapter outlines, or trying to avoid repeated premises.
+- Read `../story/references/character-name-policy.md` before naming the cast. Run `import-existing`, check every final name, apply `jp-female-fantasy` to important women, and add all selected names after saving the plan.
 - Before planning any subtype, resolve its benchmark priority: project拆文 or live website benchmark first, project subtype notes second, bundled type pack only as fallback. Do not rely on the generic isekai rules alone.
 
 Type pack routing:
@@ -78,6 +79,7 @@ Benchmark priority:
 3. Create a localization map:
    - Chinese source concept -> Japanese isekai equivalent.
    - Institutions, creatures, rank names, currencies, food, clothes, and place names.
+   - Name-ledger result for every named character. Use short daily call names; a formal noble name is plot metadata, not the repeated narration label.
 4. Design the cheat as a repeatable engine:
    - Input, output, limitation, growth path, misunderstanding surface, and public-facing explanation.
    - Ensure every episode can generate one discovery, one problem, and one payoff.

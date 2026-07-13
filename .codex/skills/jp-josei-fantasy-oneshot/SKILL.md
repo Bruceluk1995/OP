@@ -23,6 +23,7 @@ Before premise or title work, read `../story/references/global-topic-history.md`
 - For either push option, read `../story/references/flan-push-strict-mode.md` and require the saved body to pass its validator before delivery.
 - When push narration is selected, read `../jp-josei-fantasy/references/push-opening-template-deck.md`, filter by lane, randomly draw one compatible card, and use only that card.
 - Write audience-facing prose in Japanese unless the user asks otherwise. Keep planning notes in Chinese by default.
+- Before locking the cast, read `../story/references/character-name-policy.md`, import existing names, check every final name, and record used names after saving. Heroines and core women use 2-6 character daily names; full fantasy names may have at most two segments and 10 characters excluding `・`.
 - Reject literary prose: avoid long environment description and long psychology description; use colloquial, direct everyday language to move the story through action, dialogue, choices, evidence, romance movement, and social consequence.
 - Center the heroine's dignity, agency, emotional recovery, romance recognition, and happy ending.
 - Do not force jokes or comedy. Serious, painful, healing, suspenseful, and cathartic female push are valid when evidence, choice, relationship, reputation, safety, or status keeps moving.
@@ -84,6 +85,7 @@ Before premise or title work, read `../story/references/global-topic-history.md`
    - Verify prose freshness with Codex judgment: cut repeated decorative adjectives, atmosphere padding, stacked tears, vague pain, and uniform short-sentence stutter; rewrite the saved body if the check finds real issues.
    - Treat this quality gate as a reasoning pass over the actual saved artifacts.
 12. Append a ledger record unless the user says not to.
+13. Append every actually used character name to the shared character-name ledger. Unused brainstorm names remain available.
 
 ## One-Shot Defaults
 

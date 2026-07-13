@@ -27,6 +27,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 - 不把短篇误建成长篇目录，不把长篇压成单文件短篇工程。
 - 不编造拆文证据中没有的关系、副线、钩子或状态；无法确定的字段标 `[待补充]`。
 - 检查专业 agent 时按 `.claude/agents/` → `.opencode/agents/` → `.codex/agents/` 查找；运行时不可用就降级为主线程直接执行并报告 fallback。
+- 导入角色文件后读取 `../story/references/character-name-policy.md` 并运行 `character_names.py import-existing`，把原作已用角色名登记到共享台账；这是续写同作的允许名单，也是其他新作的禁用名单。
 
 ## Phase 1：确认来源与分流
 

@@ -17,6 +17,8 @@ Use this skill for Japanese silver-generation family stories: older or middle-ag
 
 Before premise, hotspot, title, or angle work, read `../story/references/global-topic-history.md`, check the shared project ledger, and register every displayed candidate. Do not reuse topics previously shown by any fiction or explainer skill.
 
+Before naming a new cast, read `../story/references/character-name-policy.md`, import and check the shared name ledger, then record every name actually used. Apply `jp-modern` to Japanese family names; continuing the same family story may reuse its own cast.
+
 ## Required Reads
 
 - Read `references/patterns.md` before planning, drafting, rewriting, reviewing, or making titles.

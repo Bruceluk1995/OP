@@ -22,6 +22,7 @@ Write complete standalone Japanese male-audience isekai short stories around 14,
 - Before building a one-shot, read `../jp-isekai/references/presentation-modes.md` and present its numbered 1-4 menu with multiple selection allowed, unless the combination is already explicit.
 - For either push option, read `../story/references/flan-push-strict-mode.md` and require the saved body to pass its validator before delivery.
 - Write audience-facing prose in Japanese unless the user asks otherwise. Keep planning notes in Chinese by default.
+- Before locking the cast, read `../story/references/character-name-policy.md`, import existing names, check every final name, and record the used cast after saving. Important women use `--style jp-female-fantasy`; default daily names are 2-6 characters and long noble names are disallowed as repeated labels.
 - Reject literary prose: avoid long environment description and long psychology description; use colloquial, direct everyday language to move the plot through action, dialogue, choices, proof, cost, and consequence.
 - Use Japanese RPG/light-novel isekai vocabulary: `スキル`, `ステータス`, `冒険者ギルド`, `ランク`, `魔物`, `ダンジョン`, `商会`, `貴族`, `魔力`.
 - Avoid Chinese xianxia/wuxia terms and Chinese webnovel institutions unless the user explicitly requests them.
@@ -90,6 +91,7 @@ Write complete standalone Japanese male-audience isekai short stories around 14,
    - Verify prose freshness with Codex judgment: cut repeated scenery, generic awe, destiny talk, travel padding, duplicated inner monologue, and dry status-panel dumping; rewrite the saved body if the check finds real issues.
    - Treat this quality gate as a reasoning pass over the actual saved artifacts.
 12. Append a ledger record unless the user says not to. Store `opening_card`, a compact `opening_chain`, and the canonical `structure_fingerprint` as structured fields, not only inside `notes`.
+13. Append every actually used character name to the shared character-name ledger. Do not burn unused brainstorm candidates.
 
 ## One-Shot Defaults
 

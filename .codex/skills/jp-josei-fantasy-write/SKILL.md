@@ -29,6 +29,7 @@ Write Japanese web-novel prose for female-audience fantasy romance. Use this for
 - Read `references/push-episode-delivery.md` when writing episode 2 or later, YouTube/recap/push narration, per-episode folders, character prompts, covers, or when the user complains about AI flavor, weak hooks, wateriness, or failure to connect the previous episode.
 - Read `references/self-check.md` before final delivery of any saved episode, project-bound output, or per-episode folder.
 - Read `../jp-josei-fantasy/references/project-memory.md` before writing any saved/project-bound episode, continuing a serial, or checking anti-homogenization.
+- Read `../story/references/character-name-policy.md` before introducing a new named character. Reuse existing names only within the same work; check and record every new name, with `jp-female-fantasy` mandatory for women.
 - If the outline or user names a lane, read the best available benchmark/type-pack material before prose: project拆文, live benchmark card, project-local `女频幻想恋爱知识库/type-packs/{lane}.md`, then bundled `../jp-josei-fantasy-plan/references/type-packs/{lane}.md` as fallback.
 
 ## Drafting Workflow

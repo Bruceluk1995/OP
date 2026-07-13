@@ -22,6 +22,7 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
 - Read `../jp-josei-fantasy-write/references/self-check.md` when reviewing saved episodes, project-bound output, per-episode folders, continuity, plot bugs, package completeness, or Chinese leakage.
 - Read `../story/references/flan-push-strict-mode.md` for every push review and run its validator. First-person romance push that expands into scene prose or inner-monologue paragraphs is blocking.
 - Treat metric-passing but personality-free flowchart narration as blocking; require a hook/reversal/reaction in every 6-10-line block.
+- Read `../story/references/character-name-policy.md` when reviewing character names, localization, or package completeness.
 - If the draft or outline names a lane, read the best available benchmark/type-pack material before judging genre fit: project拆文, live benchmark card, project-local `女频幻想恋爱知识库/type-packs/{lane}.md`, then bundled `../jp-josei-fantasy-plan/references/type-packs/{lane}.md` as fallback.
 
 ## Review Workflow
@@ -36,6 +37,8 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
    - Project-bound draft has no matching `大纲/细纲_第XXX章.md`, or the prose clearly ignores the available outline.
    - Project-bound continuation did not read/update `追踪/上下文.md`, `追踪/伏笔.md`, `追踪/时间线.md`, or relevant `追踪/角色状态.md`.
    - New concept/episode repeats a recent `女频幻想恋爱知识库/generated-ledger.jsonl` combination without changing at least two key fields.
+   - A new work reuses a heroine, male lead, or fantasy given name from the shared character-name ledger, or never checked the ledger.
+   - A heroine/core woman's everyday name exceeds 6 characters, her fantasy full name exceeds 10 characters, or it has more than two segments without a plot-critical legal reason.
    - Project-bound outline names a subtype lane but the plan/prose used only generic josei fantasy rules and did not load the benchmark/type-pack priority chain.
    - Chinese fantasy institutions, xianxia terms, or Chinese sentence logic leaking into a Japanese fantasy-romance setting.
    - Chinese court-drama institutions or social logic leaking through literal translation: emperor/harem/cold-palace/concubine/嫡庶/夺嫡 logic remains instead of Japanese noble, church, court, or social-season mechanisms.
