@@ -29,6 +29,8 @@ Use this before drafting audience-facing Japanese prose.
 ## Japanese Prose Rules
 
 - Use Japanese quotation marks and punctuation for Japanese prose.
+- Apply `../../story/references/character-name-policy.md`: use anime/light-novel-like 2-6 character everyday names, avoid three-part aristocratic names, and reserve a compact two-part legal name for the one formal document or hearing that needs it.
+- In narration, dialogue, prompt headings, cast lists, and outline labels, use the everyday short name after the character is established.
 - Prefer natural `私` first person or close third person. Avoid mixing Chinese sentence order into Japanese.
 - Do not explain the tag labels inside the prose.
 - Do not write synopsis-like paragraphs when the task asks for fiction. Convert summary into scene, action, dialogue, and internal response.

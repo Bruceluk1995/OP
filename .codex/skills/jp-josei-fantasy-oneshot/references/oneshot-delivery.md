@@ -36,6 +36,8 @@ Write `角色提示词/角色提示词.md` as direct, single-paragraph visual pr
 
 Include the heroine, male lead, antagonist, important family/church/court figures, and any supporting character that needs visual continuity. Keep one heading per character, then one complete paragraph that can be pasted into an image/character generation tool.
 
+Use only the established everyday short name in each heading, such as `## リゼット` or `## ユリウス`. Put a compact house name or legal two-part full name inside the paragraph only when rank or family identity matters. Never use a three-part aristocratic name as a prompt heading.
+
 Default order inside each paragraph: age and social role; height and body type; hair color, hairstyle, and texture; eye color, facial features, expression, and temperament; dress, accessories, house/church/court emblem, stable proof item or curse mark if it is part of visual continuity, and cleanliness/wear.
 
 Character prompts are stable visual identity only. Do not add cover composition, camera framing, scene action, one-off plot movement, or lines such as `适合封面姿态：`, `本集重点姿态：`, `封面构图：`, or `画面中：`. Put those instructions only in `封面/封面.md`.

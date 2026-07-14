@@ -44,6 +44,8 @@ For Japanese female-audience fantasy and important women in male-isekai:
 - Maximum two-part fantasy full name: 10 characters excluding `・` and spaces.
 - Maximum segments: 2. Do not use three-part aristocratic names by default.
 - A legal/formal full name may appear once when plot-relevant; narration and dialogue must return to the short given name.
+- Character-prompt headings, cast lists, outline labels, and routine scene references must use the everyday short name, not the legal full name.
+- Apply the same short-display-name rule to male leads and supporting cast; rank and house identity belong in the prompt body or story context, not in every name label.
 - Reject names like `リーゼロッテ・ハルベルク` as a default display name. Shorten the call name and, if necessary, use a compact house name such as `リゼ・ベルク`.
 
 Use `--style jp-female-fantasy` for this hard gate. For male fantasy names use `--style jp-male-fantasy`; for modern Japanese names use `--style jp-modern`.

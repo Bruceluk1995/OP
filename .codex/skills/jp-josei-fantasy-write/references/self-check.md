@@ -33,6 +33,7 @@ Do not use a mechanical scan as the self-check system. The default self-check is
 ## Localization Audit
 
 - No Chinese/xianxia terms from `references/terminology.md`.
+- Character names pass `../../story/references/character-name-policy.md`: core everyday names are short and anime-readable, fantasy full names have at most two segments, and long legal names do not repeat in narration or prompt headings.
 - No Chinese webnovel role labels such as `女主`, `男主`, `反派`, `男二`, `人设`, `爽点`, `剧情`, `大纲`, `细纲`, or `伏笔` in body prose.
 - If the source is Chinese 古言/宫斗/朝堂, Codex AI must confirm the social engine was rebuilt for Japanese female fantasy. Do not leave literal `皇帝/后妃/嫡庶/冷宫/赐婚/夺嫡/太监宫女/抄家灭族` logic in the prose unless the user explicitly requested a Chinese setting.
 - For every Chinese court-drama object or institution, identify its story function first: marriage order, inheritance pressure, palace faction, public punishment, exile, hidden birth, or reputation attack. Then express that function through `王命`, `王太子`, `公爵家`, `王妃教育`, `側妃`, `異母妹`, `貴族院`, `神殿`, `社交界`, `修道院送り`, `爵位剥奪`, or another target-genre mechanism.

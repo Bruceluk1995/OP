@@ -9,6 +9,7 @@ Use this for Japanese female-audience fantasy romance reviews.
 - The romance is generic: the male lead loves her because the plot says so, not because he observes specific value.
 - `ざまぁ` lacks evidence, public consequence, or social/legal logic.
 - The opening does not show the tag promise early enough.
+- Core characters use long European-style display names, three-part aristocratic names, or repeated legal full names instead of short anime/light-novel-like everyday names; prompt headings must also use the short name.
 - The prose drifts into literary style: long scenery, long psychology, decorative atmosphere, vague beauty, or essay-like inner monologue instead of direct action, dialogue, evidence, and consequence.
 - Abuse scenes linger without dignity recovery or happy-ending direction.
 - The prose reads like synopsis, tag explanation, or game log instead of fiction.
