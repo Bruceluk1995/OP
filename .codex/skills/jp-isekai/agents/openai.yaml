@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Isekai Suite"
   short_description: "Router for Japanese male isekai workflows"
-  default_prompt: "Use $jp-isekai to first present the numbered 1-4 format menu with multi-select allowed, then route the Japanese male-audience isekai task."
+  default_prompt: "Use $jp-isekai to present the numbered 1-4 format menu, then use the progressive topic gate when no premise is supplied; for live hotspot discovery, prioritize ordinary-life pressures before routing the Japanese male-audience isekai task."
