@@ -10,22 +10,35 @@ One fast production chain owns concept, structure, drafting, and rejection. Genr
 
 ## Minimal Read Set
 
-The studio workflow below is self-contained. Read exactly one lane file:
+Read exactly one lane file:
 
 - male isekai: `references/male-isekai.md`
 - female fantasy romance: `references/female-romance.md`
 
-Do not load opening decks, trend routers, ledgers, packaging guides, surface metrics, or old blueprint files unless the user specifically asks for that function.
+Read `references/dynamic-market-learning.md` for push production or current Japanese-market premise discovery.
+
+When push narration is selected, also read `../jp-isekai-write/references/push-narration-protocol.md` and `../story/references/flan-push-strict-mode.md`. For first-person push, read `../story-first-person-script/SKILL.md` and `../story-first-person-script/references/push-first-person-benchmark.md`. Do not load unrelated opening decks, ledgers, packaging guides, or old blueprint files unless the task needs them.
+
+## Market-Basis Gate — Lao Liu Dynamic Learning
+
+Before the Producer pass, choose exactly one evidence mode from `references/dynamic-market-learning.md`:
+
+- `current evidence`: browse and validate current signals when the user asks what is hot, requests live sources, or delegates commercial premise discovery;
+- `provided evidence`: use a fresh user/project benchmark or decision card and record its scope;
+- `hypothesis only`: when the user gives a fixed premise or explicitly skips research, proceed without pretending it is market-validated and attach a small-test plan.
+
+For this Japanese push workflow, the target market and presentation are fixed. Lao Liu evidence selects topic, promise, story engine, emotional payoff, and saturation risk; the Flan contract selects opening delivery, oral cadence, quote density, narrator role, and subtitle shape. Do not reopen platform selection.
 
 ## Fast Path — Default
 
-If the user already gave lane, premise, viewpoint, and presentation, do not ask a menu. Run five passes:
+If the user already gave lane, premise, viewpoint, and presentation, do not ask a menu. Run six passes:
 
-1. **Producer**: lock reader promise, emotion, protagonist desire, and the concrete event the audience is waiting for.
-2. **Story-core editor**: choose a causal core where the protagonist makes an unusual choice, gets a visible result, and that result creates a new kind of trouble.
-3. **Structure editor**: plan 6-10 flexible change modules; one decisive proof per conclusion; switch the middle mechanism.
-4. **Japanese scene writer**: write the complete audience-facing Japanese body from character desire and scene change.
-5. **Blind editor**: read the saved body without metrics, identify the earliest boring point, then rewrite from the earliest failed stage.
+1. **Market-basis editor**: record evidence mode, validated Japanese-market story functions, unvalidated assumptions, saturation/negative signal, and the smallest next test.
+2. **Producer**: lock reader promise, emotion, protagonist desire, and the concrete event the audience is waiting for.
+3. **Story-core editor**: choose a causal core where the protagonist makes an unusual choice, gets a visible result, and that result creates a new kind of trouble.
+4. **Structure editor**: plan 6-10 flexible change modules; one decisive proof per conclusion; switch the middle mechanism.
+5. **Japanese writer**: select exactly one branch: Traditional Scene Writer or Flan-Style Push Narrator.
+6. **Blind editor**: read the saved body without metrics, identify the earliest boring point or presentation drift, then rewrite from the earliest failed stage.
 
 Planning remains compact and in memory. For chat-only work, output only the requested artifact. For project work, save the body plus one compact `作品决策卡.md`; do not create evidence, ledger, cover, character prompt, and audit files unless requested.
 
@@ -67,9 +80,25 @@ For each module record only:
 
 Every module changes fact, problem, tactic, choice, relationship, status, resource, cost, danger, reversal, or payoff. Two consecutive preparation/explanation/travel/test/audit/sadness modules are forbidden.
 
-### Scene Writer
+### Traditional Scene Writer
 
 Enter scenes near pressure, give the viewpoint character a current want, let action/dialogue force a choice or new interpretation, select character-specific details, and exit on the strongest changed fact or decision. Do not explain a punch after it lands.
+
+Use this branch only for traditional prose. Do not reuse it for push narration by inserting extra line breaks.
+
+### Flan-Style Push Narrator
+
+Use this branch whenever presentation is anime recap/push narration:
+
+- open result-first: abnormal outcome -> ordinary cause/choice -> immediate cost or live question;
+- compress around cause and consequence rather than acting out every beat in real time;
+- keep direct quotation sparse and retain only the line whose wording changes conflict, status, or emotion;
+- make each non-empty line carry one action, reveal, reaction, consequence, or causal turn;
+- preserve the narrator's practical judgment, misunderstanding, complaint, or contrast so first person never becomes a neutral camera;
+- end each major module on a changed fact and a live pressure, not explanation or atmosphere;
+- never treat short lines, `俺`, or a metric pass as proof that the body is push narration.
+
+After editorial rewriting, run `../story/scripts/validate-flan-push.py` on every saved push body. `surface_fail` blocks push-format delivery and sends the body back to this branch; `surface_pass` remains surface-only.
 
 ### Blind Editor
 
@@ -81,7 +110,7 @@ Read before checking length or lint. Use one verdict:
 - `line edit`
 - `ready for user read`
 
-State the earliest loss of interest, what the reader was waiting for, what the text supplied instead, and which earlier role must redo its work. Never use numeric quality scores or `PASS`.
+State the earliest loss of interest, what the reader was waiting for, what the text supplied instead, and which earlier role must redo its work. For push, also mark the earliest line where the narrator becomes a scene camera, dialogue transcript, diary voice, or novel broken into subtitles. Never use numeric quality scores or `PASS`.
 
 ## First-Person Contract
 
@@ -109,13 +138,13 @@ One decisive proof per conclusion. A later demonstration survives only when mech
 
 - Browse only for current/ranking/trend claims or a requested live seed.
 - Opening cards are optional ideation; no random draw or quote evidence is required.
-- Push surface lint is optional format checking after editorial work; it cannot approve quality.
+- Push surface lint is mandatory for saved push delivery and optional for unsaved snippets. It cannot approve story quality.
 - Ledger/package/cover generation runs only for project memory or explicit delivery requests.
 - Anti-AI cleanup runs after story and scene failures are fixed.
 
 ## Delivery
 
-Report the lane, operation, actual character count, central promise/closure, blind-editor verdict, and any requested tool result labeled by scope (`surface only`, `rewrite integrity only`, or `package only`).
+Report the lane, evidence mode, presentation branch, operation, actual character count, central promise/closure, blind-editor verdict, and any requested tool result labeled by scope (`surface only`, `rewrite integrity only`, or `package only`).
 
 ## Hard Rules
 
@@ -125,3 +154,4 @@ Report the lane, operation, actual character count, central promise/closure, bli
 - No repeated public-proof ladder as the default climax.
 - No copied old body plus appended ending called a rewrite.
 - No Chinese genre machinery translated word for word into Japanese.
+- No `surface_fail` body delivered under a push-narration label.

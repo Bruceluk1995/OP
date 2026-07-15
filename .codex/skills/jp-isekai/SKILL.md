@@ -21,6 +21,8 @@ Explicit one-shot beats a generic “12,000字” or “YouTube” keyword. Expl
 
 If presentation, viewpoint, premise, and length are already clear, route immediately. Do not show a format or topic menu. Ask one compact question only when an essential choice would materially change the product.
 
+If the user or project has fixed the house format as Japanese-market anime-recap/push narration, propagate `presentation=push` to every downstream plan, write, one-shot, and review route. Do not ask the presentation question again and do not let first person imply traditional web-novel prose.
+
 For one-shots, the only required creative chain is:
 
 `jp-short-fiction-studio + male-isekai lane`

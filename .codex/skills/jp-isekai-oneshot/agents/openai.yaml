@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Isekai Oneshot"
-  short_description: "Packaged viral-hook 15k isekai with AI self-check"
-  default_prompt: "Use $jp-isekai-oneshot to build a causal protagonist-driven core, write a complete localized Japanese male-isekai one-shot, and blind-edit it before optional packaging."
+  short_description: "Write Japanese isekai one-shots with hard gates"
+  default_prompt: "Use $jp-isekai-oneshot to produce a Japanese-market one-shot with Lao Liu story evidence, the selected prose or push branch, and blocking delivery checks."

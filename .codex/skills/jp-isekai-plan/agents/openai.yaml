@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Isekai Plan"
-  short_description: "Plan Japanese male isekai novels and arcs"
-  default_prompt: "Use $jp-isekai-plan in the fast profile to build a causal Japanese male-isekai concept and change outline; use full project or opening-card capabilities only when requested."
+  short_description: "Plan Japanese male-isekai stories and push scripts"
+  default_prompt: "Use $jp-isekai-plan to plan a Japanese male-isekai story, applying Lao Liu market learning when the project uses Japanese push narration."

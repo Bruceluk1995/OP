@@ -8,11 +8,11 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 Required global read: `../story/references/audience-comprehension-floor.md`. Apply its plain-core and five-line gates before opening selection, drafting, rewriting, and packaging.
 
-Write Japanese web-novel episodes for male-audience isekai. Use this for final prose.
+Write Japanese-market male-audience isekai in the selected presentation mode. Traditional prose and anime-recap/push narration are separate branches; use this for final audience-facing copy.
 
 ## Execution Profiles
 
-- **Fast draft (default):** read the current outline/context and matching lane material; draft through protagonist choice and state change, blind-edit, and save the requested body. Do not run unrelated menus, cards, package generation, ledger checks, or surface lint.
+- **Fast draft (default):** read the current outline/context and matching lane material; draft through protagonist choice and state change, blind-edit, and save the requested body. Do not run unrelated menus, cards, package generation, or ledger checks. Saved push bodies still require their push contracts and surface gate.
 - **Full project:** retain all project memory, tracking, ledger, delivery package, character prompt, cover, and self-check capabilities below.
 - **Research/variation:** retain market browsing, dynamic benchmarks, type packs, and optional opening-card experiments when requested.
 
@@ -21,7 +21,9 @@ Choose one profile from the request. Full capabilities remain available; they ar
 ## Conditional Capability Reads
 
 - Read `../jp-isekai/references/presentation-modes.md` only when presentation/viewpoint is unclear or the user asks to compare versions.
-- Read `../story/references/flan-push-strict-mode.md` only for push formatting; its script is optional surface lint and never a quality verdict.
+- Read `../story/references/flan-push-strict-mode.md` whenever push narration is selected. Its script is a mandatory saved-body format gate and never a quality verdict.
+- Read `../story-first-person-script/SKILL.md` and `../story-first-person-script/references/push-first-person-benchmark.md` whenever first-person push is selected.
+- Read `../jp-short-fiction-studio/references/dynamic-market-learning.md` for push production or current Japanese-market premise discovery. Lao Liu evidence owns topic and story functions; the Flan contract owns presentation.
 - Read `../jp-isekai/references/opening-innovation-engine.md` only when the user requests an opening-card experiment or the current opening needs variation. Cards are optional prompts.
 - Read `references/style-guide.md` for full-project work or when style repair is needed; the fast profile uses the studio editorial core.
 - Read `references/terminology.md` before writing if the source material contains Chinese fantasy terms or the user asks to avoid Chinese elements.
@@ -40,6 +42,7 @@ Choose one profile from the request. Full capabilities remain available; they ar
    - For multiple selections, draft separate labeled versions from the same premise unless the user requests another arrangement. Never blend viewpoints merely because multiple options were chosen.
    - Traditional first person commonly uses `俺`; traditional third person keeps scene depth and must not collapse into summary.
    - Push first person keeps the result-first hook, oral lines, causal compression, and dense turns through the protagonist's account; push third person may use `男主`, role labels, and external reactions.
+   - If the user or project has fixed Japanese-market push narration as the house format, set push without asking for presentation again.
    - Do not use `YouTube`, `朗读`, `推送`, `一口气看完`, length, or an existing outline as a substitute for either choice.
    - If no target is given, use approximately 12,000 Japanese characters for a complete episode in either presentation mode.
    - Treat 12,000 as a functional-density target, not a minimum gate or padding permission.
@@ -81,7 +84,7 @@ Choose one profile from the request. Full capabilities remain available; they ar
    - Update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
    - Add one record to `男频异世界知识库/generated-ledger.jsonl` with protagonist, cheat, pressure, payoff, venue, aftertaste, and saved path.
 9. Validate:
-   - In strict push-surface work, optionally run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`. A `surface_fail` blocks only the requested surface format; `surface_pass` never approves story quality.
+   - For every saved push body, run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`. A `surface_fail` blocks delivery under the push label and returns the draft to the push narrator; `surface_pass` never approves story quality.
    - Run the studio blind-editor pass regardless of surface lint. Flowchart narration split into short lines is still a story failure.
    - Audit every major scene as `entry state -> pressure/choice -> exit state`. At least one of skill knowledge, combat position, inventory/drop, rank, reputation, territory, faction relationship, risk, or next objective must change. Travel, explanation, repeated awe, and status-panel restatement without a state delta must be compressed or removed.
    - Verify the episode promise is paid or meaningfully advanced, the win has a concrete result/cost, and the ending threat grows from the new state rather than appearing as an unrelated cliffhanger.

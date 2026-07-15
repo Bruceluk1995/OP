@@ -24,6 +24,7 @@ When planning prose beats, design colloquial, direct scene movement: action, dia
 
 - Read `../jp-isekai/references/presentation-modes.md` only when presentation/viewpoint is unclear or comparison is requested.
 - Read `../story/references/flan-push-strict-mode.md` for either push option and plan information/shot lines, narrated reactions, and sparse direct dialogue regardless of person.
+- Read `../jp-short-fiction-studio/references/dynamic-market-learning.md` for push production or current Japanese-market premise discovery. Use it to select topic, packaging, story engine, emotional payoff, and saturation risk; do not reopen platform selection.
 - Read `../jp-isekai/references/topic-menu.md` when the user has not supplied a concrete premise. Do not replace the full grouped topic menu with a tiny handful of examples.
 - Read `../jp-isekai/references/opening-innovation-engine.md` only for an explicit variation/card request or when a weak opening needs optional ideation.
 - Read `references/terminology.md` whenever adapting from Chinese fantasy or when the user says "不要中式".
@@ -59,6 +60,7 @@ Benchmark priority:
    - Record every selected combination in the concept package and outline. Do not silently switch later.
    - For multiple selections, plan separate presentation/viewpoint variants from the same premise unless the user requests different premises.
    - For push mode, plan information/shot beats, causal gaps, oral transitions, and retention turns. Use the optional opening deck only when requested; first-person push uses the protagonist's oral account, while third-person may use role labels and external reactions.
+   - If the user or project has fixed Japanese-market push narration as the house format, set push without asking for presentation again.
 2. Identify the target subtype:
    - OP dominance / ruler fantasy: protagonist starts overwhelmingly strong; tension comes from information gaps, restraint, subordinates, territory, politics, public myth, and enemies choosing the wrong fight.
    - Battle leveling / monster grind: protagonist turns a weak-looking skill into combat value, kills stronger monsters, earns drops, rank-ups, and boss access.
