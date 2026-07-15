@@ -14,8 +14,16 @@ Read:
 
 1. `../jp-short-fiction-studio/SKILL.md`
 2. `../jp-short-fiction-studio/references/male-isekai.md`
+3. `../jp-short-fiction-studio/references/dynamic-market-learning.md` for push production or current Japanese-market premise discovery
+4. `../jp-isekai/references/topic-menu.md` when the user has not supplied a concrete premise
 
-Do not also load the old blueprint, anti-water, opening deck, delivery, ledger, or push-validator documents unless the user specifically requests that function.
+When push narration is selected, also read:
+
+5. `../jp-isekai-write/references/push-narration-protocol.md`
+6. `../story/references/flan-push-strict-mode.md`
+7. `../story-first-person-script/SKILL.md` and `../story-first-person-script/references/push-first-person-benchmark.md` for first person
+
+Do not load unrelated old blueprints, opening decks, package guides, or ledgers unless the task needs them. Push contracts are not optional when push presentation is selected.
 
 ## Fast Intake
 
@@ -26,7 +34,11 @@ Infer from the prompt whenever possible:
 - subtype and main male-audience payoff;
 - user/platform length requirement.
 
+If the user or project has already fixed the house format as Japanese-market push narration, set presentation to push without asking again.
+
 Do not present a menu when these are already clear. If only one essential choice is missing, ask one compact question or make a safe stated assumption.
+
+When the premise is missing, resolve or infer presentation and viewpoint, then present the Level 1 creation-entry menu from `../jp-isekai/references/topic-menu.md`. This gate is required: do not jump directly to a free-form synopsis request, auto-invent the premise, or start the studio fast path. Browse only after the user selects the live-hot-topic route; classic, fresh, keyword, and automatic-recommendation routes do not require live browsing.
 
 ## Defaults
 
@@ -37,9 +49,13 @@ Do not present a menu when these are already clear. If only one essential choice
 
 ## Execution
 
-Run the studio fast path once: Producer -> Story Core -> Change Structure -> Japanese Scene Writer -> Blind Editor. Restart from the earliest failed stage. First person must use the studio knowledge/voice contract.
+Complete the progressive topic gate and obtain a concrete user-selected or explicitly delegated premise before production.
 
-Browse only for current market, ranking, trend, news, or live-source requests. Opening cards, surface lint, package files, cover prompts, character prompts, and ledgers are optional.
+Run the studio path once: Market Basis -> Producer -> Story Core -> Change Structure -> Japanese Traditional Scene Writer **or** Japanese Push Narrator -> Blind Editor. Restart from the earliest failed stage. First person must use the studio knowledge/voice contract.
+
+Browse for current Japanese-market rankings, trends, news, or live-source requests and follow the dynamic-market contract. Story-market evidence selects the premise and modules; the Flan contract always owns push delivery. Opening cards, package files, cover prompts, character prompts, and ledgers remain optional.
+
+For a saved push body, run `../story/scripts/validate-flan-push.py`. A `surface_fail` blocks delivery under the label “anime recap/push narration”; it does not reject the story core. A `surface_pass` is format evidence only and never quality approval.
 
 For project-bound work, save the Japanese body and one compact decision card. Create a full package only when requested.
 
@@ -57,3 +73,5 @@ For project-bound work, save the Japanese body and one compact decision card. Cr
 - Do not translate Chinese xianxia, sect, court, or son-in-law systems literally.
 - Do not weaken an OP protagonist randomly; use information, restraint, identity, collateral cost, or faction consequence.
 - Do not call length, opening-card, or surface-lint results quality approval.
+- Do not deliver first-person web-novel scenes broken into short lines as push narration.
+- Do not call a premise market-validated when it has only one work or one list snapshot as evidence.

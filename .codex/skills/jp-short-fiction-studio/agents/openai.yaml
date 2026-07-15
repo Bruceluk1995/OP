@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Short Fiction Studio"
-  short_description: "Fast Japanese male and female commercial fiction studio"
-  default_prompt: "Use $jp-short-fiction-studio to produce or genuinely rewrite a high-retention Japanese commercial short story."
+  short_description: "Produce Japanese commercial one-shots with hard gates"
+  default_prompt: "Use $jp-short-fiction-studio to produce a Japanese commercial short through Lao Liu story learning and the correct traditional or Flan-style push branch."

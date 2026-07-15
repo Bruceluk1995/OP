@@ -1,8 +1,8 @@
-# Push Narration Surface Profile
+# Flan-Style Push Narration Contract
 
-Use this for male- or female-audience output selected as 动漫解说／推文口播. This file governs subtitle readability and oral surface only. It does not judge story quality, retention, originality, entertainment, or first-person authenticity.
+Use this for every male- or female-audience output selected as 动漫解说／推文口播. It distills reusable presentation mechanics rather than source wording. This file governs subtitle readability and oral surface only. It does not judge story quality, retention, originality, entertainment, or first-person authenticity.
 
-For first-person work, read `../../story-first-person-script/SKILL.md` and its benchmark. That editorial gate outranks every metric in this file.
+For first-person work, read `../../story-first-person-script/SKILL.md` and `../../story-first-person-script/references/push-first-person-benchmark.md`. That editorial gate outranks every metric in this file.
 
 ## Person and Presentation
 
@@ -44,7 +44,7 @@ Before delivery, answer the editorial questions in `../../story-first-person-scr
 
 ## Surface Lint
 
-For a saved push body, optionally run:
+For every saved push body before delivery, run:
 
     python .codex/skills/story/scripts/validate-flan-push.py --body <正文.md> --person first
 
@@ -56,4 +56,4 @@ Interpret results literally:
 - `surface_fail`: review oral readability and format; rewrite only where the warning identifies a real problem.
 - `quality_verdict: not_evaluated`: mandatory reminder that this tool cannot approve a script.
 
-A surface failure may block a strict platform-format delivery. A surface pass can never certify quality and must never be reported as “弗兰验证 PASS” or “剧本通过”.
+A surface failure blocks delivery under a push-narration label until the identified format problem is editorially reviewed and rewritten. A surface pass can never certify quality and must never be reported as “弗兰验证 PASS” or “剧本通过”.

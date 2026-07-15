@@ -1,4 +1,4 @@
 interface:
   display_name: "第一人称短篇剧本"
-  short_description: "创作、真重写与审查高留存第一人称短篇剧本和推文口播文案"
-  default_prompt: "Use $story-first-person-script to write or genuinely rewrite a high-retention first-person short script."
+  short_description: "创作、真重写与严格审查高留存第一人称小说和推文口播文案"
+  default_prompt: "Use $story-first-person-script to write or truly rewrite a first-person short script, loading the push benchmark whenever the target is anime recap or push narration."

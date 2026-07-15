@@ -8,6 +8,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 This skill owns viewpoint craft, not genre routing. Use the selected genre skill for market promise and localization, then apply this first-person workflow directly.
 
+For anime recap/push narration, read `references/push-first-person-benchmark.md` before outlining or rewriting. The benchmark distinguishes a narrator-led oral account from first-person web-novel scenes with short line breaks.
+
 ## Narrator Engine
 
 Before outlining, lock:
@@ -32,6 +34,8 @@ First person changes information selection, judgment, misunderstanding, reaction
 5. Keep narration and dialogue compatible with one person's social position and priorities. A practical judgment is stronger than a generic joke.
 6. Blind-read for the earliest point where the narrator becomes a neutral reporter, diary writer, or author explainer; rewrite the whole affected scene, not only pronouns.
 
+For push work, also require result-first opening, causal compression, sparse decisive quotation, narrator-specific practical judgment, and a changed fact/live question at each major module ending.
+
 ## True Rewrite
 
 Extract user-approved facts and anchors, create a fresh causal/change outline, and draft from it. Run `scripts/verify-rewrite.py --old <old> --new <new>` when files exist. Copying the old body and appending an ending is a blocking failure; script success does not certify story quality.
@@ -42,3 +46,4 @@ Extract user-approved facts and anchors, create a fresh causal/change outline, a
 - No three paragraphs explaining an emotion already shown by one specific action or object.
 - No repeated proof or procedure used to keep the narrator talking.
 - No length, pronoun count, short-line ratio, or rewrite-similarity pass used as a quality verdict.
+- No first-person scene transcript delivered as push narration merely because lines are short.

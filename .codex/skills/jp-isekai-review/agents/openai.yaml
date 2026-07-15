@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Isekai Review"
-  short_description: "Review Japanese isekai genre fit and wording"
-  default_prompt: "Use $jp-isekai-review to check a Japanese isekai draft for genre fit and localization issues."
+  short_description: "Review Japanese isekai and push-format compliance"
+  default_prompt: "Use $jp-isekai-review to review Japanese isekai content, localization, and whether a declared push script has drifted into web-novel prose."
