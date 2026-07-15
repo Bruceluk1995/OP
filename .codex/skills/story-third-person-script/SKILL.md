@@ -1,6 +1,7 @@
 ---
 name: story-third-person-script
 description: Create, audit, and truly rewrite third-person commercial short scripts and anime-recap/push narration. Use for Japanese or Chinese third-person 推文口播、动漫解说、短视频故事, especially when a draft repeats character names, head-hops, reads like omniscient web-novel scenes broken into lines, becomes a neutral plot summary, overuses crowd reactions, or leaves the protagonist and companions without causal agency. Genre promises remain owned by the matching jp-* or story skill.
+metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # Third-Person Short Script
