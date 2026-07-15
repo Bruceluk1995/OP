@@ -73,7 +73,7 @@ Stronger:
 - Sparse beats get one or two sentences.
 - Do not make every paragraph the same length.
 - Do not let etiquette, scenery, or sadness receive the same weight as accusation, proof, or romantic recognition.
-- In a 15,000-character episode, do not use long quiet stretches as filler. Any long stretch must change, prepare, or pay off social/emotional story state: evidence, reputation, relationship, legal/family pressure, public position, heroine choice, male-lead recognition, antagonist risk, or next decision.
+- In a 12,000-character episode, do not use long quiet stretches as filler. Any long stretch must change, prepare, or pay off social/emotional story state: evidence, reputation, relationship, legal/family pressure, public position, heroine choice, male-lead recognition, antagonist risk, or next decision.
 - Delete paragraphs that only describe atmosphere, scenery, beauty, sadness, silence, light, destiny, or vague tenderness without changing the state above.
 - If the Codex AI reread notices short-sentence stutter, merge short fragments into a fuller action chain.
 - If it reports `long-paragraph`, split by new action, object, line of dialogue, or social turn.

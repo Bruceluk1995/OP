@@ -1,19 +1,51 @@
 # Push Opening Template Deck
 
-Use this for male-isekai push narration openings. Randomly draw one proven screenshot-derived template card, fill it with the current story, and connect directly into the body. Do not invent a new opening structure unless the user explicitly asks.
+Optional ideation deck for male-isekai push openings. Use only when the writer lacks a strong event-based opening or the user asks for variation. The authoritative workflow is `../../jp-short-fiction-studio/SKILL.md`; a card may inspire an entrance but never becomes a delivery gate.
 
-## Draw Procedure
+## Optional Draw Procedure
 
+0. First build a **visual story core**: one ordinary action or loss, one visible physical change, and one human consequence. If that already produces a strong opening, skip the deck.
 1. Determine a primary lane such as `exile`, `battle`, `op`, `territory`, `academy`, `earth`, `tamer`, `craft`, `survival`, `rebirth`, `system`, or `mystery`.
 2. Run `scripts/draw-opening-template.py --lane <lane> --root <project-root>` from the `jp-isekai` skill directory. The script automatically reads the last three `opening_card` values from `男频异世界短篇知识库/generated-ledger.jsonl`; use `--recent` only to add unsaved/current-session exclusions.
-3. Preserve the returned `required_chain`; it is the exact evidence schema for the saved opening.
-4. Use the returned card exactly once. If the card cannot truthfully fit the story, redraw once; do not keep drawing until a preferred card appears.
-5. Record `opening_card`, a story-specific filled `opening_chain`, and the story-level `structure_fingerprint` with the finished work. `opening_chain` must contain the actual functional values (for example `bulk-buy > merchant-block > contract-loophole > winter-3-days > first-convoy`), not merely repeat the card's slot names.
-6. Never let the model choose the first or "best" card by habit. A missing ledger is allowed, but a project-bound draw must still pass `--root` so future records are discovered automatically.
+3. Treat `required_chain` and `surface_beats` as prompts, not obligations. Abandon the card when it weakens clarity, voice, or retention.
+4. Record a card ID only when project anti-homogenization is explicitly in use.
 
-## Card Evidence Gate
+## Card-Specific First-Shot Suggestions
 
-For every saved push opening, create `开头抽卡证据.json` beside `作品资料.md` (or inside the episode folder) using exact quotes from the body:
+The draw script returns `surface_beats`. Use whichever beats create the strongest truthful event; fixed order and first-1,000-character coverage are not required.
+
+- `N1` begins with a ridiculous proof action; `A1` begins with a mistake; `E1` begins with a forbidden-but-practical move.
+- `R1` begins while humiliation is happening; `C1` begins while the rejecter destroys or discards something valuable.
+- `P2` begins with a tiny need; `F1` begins with the first suspicious preparation; `B1` begins with a boast coming back to bite.
+
+For first-person narration, each card still needs one short, practical judgment that fits its own scene. For example, C1 may use: `九銅貨の石ころを朝食と呼ぶ勇気は、俺にはない。` Do not force the same quip position or the same four-step rhythm onto every card.
+
+Keep the first-person knowledge boundary honest: do not claim that unseen nobles, hospitals, or officials are searching for something unless the protagonist has learned it on page.
+
+## Audience Orientation Floor
+
+Fast is not the same as cryptic. But do **not** solve confusion by stopping the story to define the setting. A new listener should understand through a familiar action, loss, want, or visible result—not through a glossary sentence.
+
+- Start with a person doing something ordinary and legible: spending their last coins, feeding a creature, being thrown out, failing to buy breakfast, a worker joining a queue. Let the strange noun appear inside that action.
+- Do not introduce three hard nouns in one breath. If a card needs three preparations, first show one comprehensible umbrella action such as `我把最后三铜换成了牲口都不吃的残渣`; reveal `甜菜渣、裂口陶罐、粗麦粉` only when each changes the outcome.
+- A result-first price can lead if the price immediately causes a familiar reaction: `九铜一块的面包，搬一天货的人已经买不起了`. Do not pause to define what the bread, guild, rank, or institution is.
+- Institutions exist only when they obstruct, buy, punish, or lose. Introduce `面包师公会` by having it burn a starter, seize a stall, or refuse flour—not by explaining its administrative jurisdiction.
+- Ban empty near-miss and inflation words such as `差点`, `险些`, `直接`, `瞬间`, and `当场` unless the exact missed outcome, action, or time pressure is stated in the same sentence.
+- The test is simple: if the line could be replaced by a glossary entry without changing the story, cut it.
+
+## Visual Story Core Gate
+
+Do not draw a card to rescue a weak premise. The card only chooses the entrance; it cannot make a list of materials, an undefined magical product, or an accounting rule feel like a story.
+
+- Before drafting, write `ordinary action/loss -> visible change -> human consequence` in one line. If it cannot be understood without terms such as `金色发酵种`, `稀有材料`, `魔力回路`, `F级`, or institution names, rebuild the cheat first.
+- The first proof of a craft/food cheat must be a change the listener can picture: dead dough rises, a cracked bowl overflows, a hard loaf becomes soft, one sack feeds more people, a queue forms, a hungry child can eat. Do not lead with a named magical ingredient, a glowing color, or an inventory list.
+- A magic item may appear after it changes a current action. `面团把木盆顶裂了` can later be called a special starter; `它吐出金色发酵种` cannot carry the opening by itself.
+- If the protagonist's action exists only to display preparation items, replace it with a real choice, cost, embarrassment, hunger, refusal, or rescue.
+- No exact-quote evidence is required for normal delivery. Project teams may record examples for research, never as quality proof.
+
+## Optional Card Diagnostics
+
+When debugging the deck itself, a project may create `开头抽卡证据.json` beside `作品资料.md` using exact quotes from the body:
 
 ```json
 {
@@ -24,11 +56,22 @@ For every saved push opening, create `开头抽卡证据.json` beside `作品资
     "hidden_knowledge_or_loophole": "exact quote from the opening",
     "countdown": "exact quote from the opening",
     "first_action_bridge": "exact quote from the opening"
+  },
+  "surface_evidence": {
+    "<first beat returned by draw>": "exact quote from the opening",
+    "<second beat returned by draw>": "exact quote from the opening",
+    "<third beat returned by draw>": "exact quote from the opening",
+    "<fourth beat returned by draw>": "exact quote from the opening"
+  },
+  "visual_core_evidence": {
+    "ordinary_action_or_loss": "exact quote from the opening",
+    "visible_change": "exact quote from the opening",
+    "human_consequence": "exact quote from the opening"
   }
 }
 ```
 
-Use the slot names returned by the draw script; do not copy the F1 keys for another card. Then run:
+Use the slot names returned by the draw script; do not copy the F1 keys for another card. `surface_evidence` uses that card's `surface_beats`; `visual_core_evidence` always uses the three keys above. Then run:
 
 ```powershell
 python .codex/skills/jp-isekai/scripts/validate-opening-evidence.py `
@@ -36,11 +79,11 @@ python .codex/skills/jp-isekai/scripts/validate-opening-evidence.py `
   --evidence episodes/oneshots/<slug>/开头抽卡证据.json
 ```
 
-Validation must pass before delivery. Missing, duplicated, invented, out-of-order, or post-opening evidence is a hard failure. Rewrite within the drawn card; do not relabel a generic opening as the card after drafting.
+This diagnostic checks whether a chosen card was represented; it does not approve an opening and never blocks normal delivery. If the card conflicts with the better story opening, discard the card rather than rewriting to satisfy it.
 
 ## Template Deck
 
-Fixed slots describe information functions. Fill them naturally; do not leave placeholders or translate Chinese connectors word for word into Japanese.
+Fixed slots describe escalation functions. Fill them naturally through the selected card's first-shot pattern; do not leave placeholders or translate Chinese connectors word for word into Japanese. No card may open with a static explanation when its `surface_beats` calls for an active scene.
 
 ### R1 反转・身份受辱型
 
@@ -80,9 +123,9 @@ Required chain: mass belief -> correction -> deeper correction -> protagonist tr
 
 ### C1 对比・被嫌弃与被争抢型
 
-`主角明明具备某种人人都想要的价值，却被眼前的小队／家族／机构嫌弃；与此同时，多个更高层人物或势力正在寻找同一种能力；主角暂时不知道双方信息差；对方做出最后一次错误选择；接正文。`
+`主角正在被眼前的小队／家族／机构毁掉、扔掉或低价处理一个看似没用的东西；主角用一件不合常理但很实际的方式接住残余价值；价值立刻通过顾客、怪物、货物或现场效果自己证明；刚才拒绝他的人回头阻拦、收购或强夺；主角做出让旧机构失去选择权的决定；接正文。`
 
-Required chain: obvious value -> local rejection -> high-level demand -> information gap -> irreversible choice.
+Required chain: rejection/destruction -> improper countermove -> visible value -> return pressure -> irreversible choice.
 
 ### C2 对比・离开前后型
 
@@ -140,9 +183,9 @@ Required chain: concrete merit -> opposite treatment -> institutional misjudgmen
 
 ### F1 反常备灾／囤积型
 
-`主角突然花钱、囤货、锻造、训练或布置三项反常准备；旁人嘲笑或阻止；主角掌握未来灾变／重生信息／规则漏洞；倒计时出现；接第一项准备。`
+`先让观众看见一个普通人能读懂的生活动作或马上要发生的损失；主角才突然花钱、囤货、锻造、训练或布置三项反常准备；旁人嘲笑或阻止；主角掌握未来灾变／重生信息／规则漏洞；倒计时出现；接第一项准备。`
 
-Required chain: three preparations -> ridicule -> hidden future knowledge -> countdown -> first action.
+Required chain: ordinary stake -> three preparations -> ridicule -> hidden future knowledge -> countdown -> first action.
 
 ### D3 单一规则连续兑现型
 
@@ -155,7 +198,7 @@ Required chain: rule -> small proof -> larger proof -> current major proof -> li
 ```text
 你是小说推文口播作者。系统已经随机抽中模板卡：{card_id}。
 
-请严格按照该卡的信息链，为以下故事写开头：
+请严格按照该卡的信息链和该卡专属的 `surface_beats`，为以下故事写开头：
 - 故事：{premise}
 - 题材：{lane}
 - 视角：{first_or_third_person}
@@ -165,20 +208,23 @@ Required chain: rule -> small proof -> larger proof -> current major proof -> li
 
 要求：
 1. 使用抽中的模板，不得自行换模板或发明结构；
-2. 写成一段连续、好懂、有信息升级的推文口播；
-3. 前2句内交代主角身份和异常事件；
-4. 完成卡片要求的信息链；至少一次明确升级，卡片要求多级递进时必须全部完成；
-5. 最后一句自然接入正文起点；
-6. 不写诗化断句、电影预告腔、纯谜语、复杂分析或结构说明；
-7. 不照抄截图案例，只填充当前故事的事实；
-8. 日文必须本地化成自然动漫解说口吻，不能逐字翻译中文连接词；
-9. 输出模板编号和最终开头，不输出思维链。
-10. 中文建议150—260字，日文建议250—450字，保持3—5句连续口播；每句必须增加新事实。
+2. 先依次完成该卡的 `surface_beats`；每个 beat 必须是一句能被镜头拍到的动作、物件变化、明确后果或正在发生的处境，不能替换成背景说明；
+3. 再完成卡片要求的信息链；至少一次明确升级，卡片要求多级递进时必须全部完成；
+4. 第一人称必须有一句短促的实用吐槽／判断／反击，且位置与内容服从所抽卡片的现场，不得写成口号；
+5. 开写前先锁定“普通动作／损失 -> 可见变化 -> 人的后果”。陌生材料、稀有配方、金色光效和杂物清单不得充当可见变化；
+6. 在第二次升级前完成观众定位，但只能通过人物动作、花钱、丢失、排队、挨饿、阻拦或可见结果完成；不得用定义句解释黑面包、公会、等级、怪物或制度；
+7. 用8—12行短口播推进，每行只给一个画面或因果变化；不要把背景事实均匀排成清单；
+8. 最后一句自然接入正文起点；
+9. 不写诗化断句、电影预告腔、纯谜语、复杂分析或结构说明；禁用没有精确后果的“差点／险些／直接／瞬间／当场”；
+10. 不照抄截图案例，只填充当前故事的事实；日文必须本地化成自然动漫解说口吻，不能逐字翻译中文连接词；
+11. 输出模板编号和最终开头，不输出思维链。
 ```
 
 ## Quality Floor
 
 - If the result is weaker or less understandable than a straightforward fixed-form push opening, rewrite within the same card.
+- If the opening ignores the selected card's `surface_beats` and can be reduced to a premise summary, it fails even when every chain slot is present.
+- A practical joke must sharpen the conflict or reveal the narrator's judgment. Do not bolt on a quip that changes nothing.
 - Do not redraw merely because the wording is difficult; repair the wording first.
 - Never merge two cards in one opening unless the user explicitly selects multiple cards.
 - Randomness chooses the card, not story facts. All claims must be paid off by the outline.

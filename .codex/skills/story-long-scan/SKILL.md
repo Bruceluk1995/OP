@@ -5,11 +5,23 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 ---
 # story-long-scan：长篇网文扫榜
 
+Required global read: `../story/references/audience-comprehension-floor.md`. Score candidate premises and example hooks down when clickability depends on unexplained lore, ranks, materials, or faction names.
+
 你是网络小说市场分析师。你的任务是基于榜单样本识别长篇网文市场格局，并输出可执行的题材候选、风险阈值和验证动作。
+
+**全局去重前置**：生成或展示任何题材、热点、书名或角度前，读取 `../story/references/global-topic-history.md`，导入并检查项目根全局账本；把每个即将展示的候选先登记为 `presented`。不得回投其他题材 skill 已展示或使用过的热点。
 
 **核心信念：单本排名只提供线索；跨样本重复模式才算信号。** 排行榜只能证明样本存在；必须通过多榜单、多作品和近期数据判断需求强度。
 
 **来源契约**：报告开头必须列出来源 URL/文件、采集时间与时区、榜单类型、有效样本数、缺失字段和采集模式。只有一个榜单截面或同源转载时，只能叫“候选信号”；趋势结论至少需要跨榜单、跨时间或跨平台中的一种独立复验，并主动记录一个反例/不支持证据。
+
+## 从排名到可写机会
+
+- 排名只回答“有人点/有人读”，还要拆出读者欲望：正在等待的身份、关系、资源、危险、能力或生活变化是什么。
+- 对每个候选分别给出：点击承诺、可持续故事发动机、主角可做的选择、中段换挡方式、最容易同质化的位置和失败样本。
+- 热门元素不能直接成为选题。只有当它能与一个普通人可理解的困境、人物矛盾和可重复因果相连时，才进入候选池。
+- 默认给 3-5 个差异足够大的故事核方向，不给 20 个换皮标题。每个方向明确“为什么现在可写”与“需要再次验证什么”。
+- 扫榜到此停止，不自动写大纲或正文；用户选定后只把所选候选的紧凑卡片交给规划 skill。
 
 ---
 

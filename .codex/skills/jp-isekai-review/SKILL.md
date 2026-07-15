@@ -6,15 +6,25 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Isekai Review
 
+Required global read: `../story/references/audience-comprehension-floor.md`. Treat RPG-jargon-first openings and abstract skill proof as structural failures, not localization polish.
+
 Review drafts for Japanese male-audience isekai fit and localization quality.
+
+## Native Blind-Reader Gate
+
+- Read the body once before validator, package, blueprint, and intended explanation. Mark the earliest point where the promised battle, OP, exile, dungeon, identity, or slow-life desire stops pulling forward.
+- Require a protagonist-caused chain and a middle mechanism change. Repeated skill tests, guild witnesses, contracts, audits, inventory, travel, and larger public proof cannot substitute for escalation.
+- For first person, review knowledge boundary, selected details, practical judgment, and narrator mouth; pronoun correctness alone has no value.
+- Return the draft to `core / structure / scene / Japanese line` rather than compensating a structural failure with localization quality.
+- Surface lint is optional evidence about subtitle shape only. Never require hooks at fixed 6-10-line intervals or call a metric pass quality approval.
 
 ## Required Reads
 
 - Read `references/review-checklist.md` before a full review.
 - Read `references/terminology.md` whenever checking Chinese-to-Japanese adaptation leakage.
 - Read `../jp-isekai-write/references/self-check.md` when reviewing saved episodes, project-bound output, per-episode folders, continuity, plot bugs, package completeness, RPG-rule consistency, or Chinese leakage.
-- Read `../story/references/flan-push-strict-mode.md` for every push review and run its validator. Treat first-person novelization as blocking, not a viewpoint preference.
-- Treat metric-passing but personality-free flowchart narration as blocking; require a hook/reversal/reaction in every 6-10-line block.
+- Read `../story/references/flan-push-strict-mode.md` only when push-surface compliance is part of the review; its result is surface-only.
+- Treat personality-free flowchart narration as blocking through the blind-reader/state-change audit, not a fixed line interval.
 - If the draft or outline declares a subtype lane, read the loaded project benchmark card or `对标/{lane}/` report first when available, then the matching `../jp-isekai-plan/references/type-packs/{lane}.md` as fallback, and review against that lane's required payoff loop.
 
 ## Review Workflow
@@ -41,8 +51,8 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
    - Episode has no full episode blueprint logic: unclear target emotion, episode position, core payoff, cost/risk, dense/sparse beat split, or ending hook.
    - Episode 2+ opens as a reset instead of continuing the previous episode's unresolved hook.
    - First sentence is atmosphere, abstract emotion, destiny, scenery, or generic inner monologue instead of a concrete plot bomb.
-   - Mid-episode has two or more 800-1200 character stretches without concrete problem, skill experiment, public reaction, cost/reward/status consequence, comic reversal, object/monster behavior, or meaningful choice.
-   - A 15,000-character episode uses length to pad mood, scenery, travel, explanation, or adjectives; long stretches can be deleted without changing plot, pressure, relationship, cost, reward, setup, aftershock, or next choice.
+   - Consecutive major modules lack a new problem, choice, tactic, consequence, relationship/status change, or audience question.
+- A 12,000-character episode uses length to pad mood, scenery, travel, explanation, or adjectives; long stretches can be deleted without changing plot, pressure, relationship, cost, reward, setup, aftershock, or next choice.
    - Dense beats are not denser than transitions; the prose spends similar weight on travel/mood and payoff.
    - Prose is padded with vague AI-flavored adjectives or summary paragraphs instead of scene-level objects, choices, witnesses, and consequences.
    - Draft fails JP anti-AI gates: generic destiny/light/silence texture, author explanation, stock summary ending, uniform rhythm, over-polished dialogue, or emotional lines without object/action/consequence.

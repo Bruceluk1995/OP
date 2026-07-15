@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Josei Fantasy Oneshot"
   short_description: "Packaged 15k josei romance from trend or premise"
-  default_prompt: "Use $jp-josei-fantasy-oneshot to confirm format, randomly draw a compatible fixed female-fantasy push-opening card when selected, then write and package a complete localized one-shot."
+  default_prompt: "Use $jp-josei-fantasy-oneshot to build a heroine-driven causal core, write a complete localized Japanese romance-fantasy one-shot, and blind-edit it before optional packaging."

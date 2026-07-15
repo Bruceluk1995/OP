@@ -14,7 +14,7 @@ Create this working blueprint before prose:
 ## Episode Blueprint
 
 - Episode number/title:
-- Target length: default 14,500-16,500 Japanese characters for finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose unless the user says otherwise.
+- Target length: approximately 12,000 Japanese characters for a finished/full episode unless the user says otherwise; this is a budget, not a pass range.
 - Target emotion:
 - Episode position: high-pressure / OP dominance / battle-upgrade / dungeon / progression / experiment / relationship recovery / low-pressure slow life / info整理
 - First-sentence bomb:
@@ -55,14 +55,14 @@ Budget total:
 
 ## 15k Long-Episode Density Contract
 
-For an episode around 15,000 Japanese characters, do not scale by adding scenery, adjectives, or vague mood. Scale by adding more state changes inside the planned engine.
+For an episode around 12,000 Japanese characters, do not scale by adding scenery, adjectives, or vague mood. Scale only through necessary state changes inside the planned engine.
 
 Functional working shape:
 
 - Do not add a fixed beat quota. Let the beat count follow the episode's outline, rhythm, and emotional target.
 - Use enough dense beats to justify the length; sparse beats may bridge, settle, or prepare later payoff.
 - Any long stretch must have a function: change information, resource, risk, status, relationship, skill understanding, enemy pressure, location objective, or next decision; or prepare/pay off one of these through a concrete object, cost, witness, or choice.
-- Every 2,500-3,000 Japanese characters should contain a visible payoff, proof, cost, reversal, or new complication.
+- Every major module must change fact, problem, tactic, choice, relationship, status, resource, cost, danger, reversal, or payoff; do not schedule these at fixed character intervals.
 - No scene may exist only to describe weather, room mood, beauty, silence, loneliness, destiny, or generic awe.
 
 Beat test:
@@ -86,7 +86,7 @@ Each episode needs at least one clear reason to continue watching:
 - Earth-commute episodes: use modern supply, medicine, food, tools, or safe retreat as the engine; add secrecy cost or cross-world consequence.
 - Tamer/familiar episodes: give the companion a behavior problem, growth trigger, evolution, named skill, or public reaction.
 - Dungeon-master/territory episodes: make traps, floor rules, resource placement, subordinate commands, or town economics change the battle/social situation.
-- High-pressure/progression episodes: include one visible payoff every 3000-5000 Japanese characters, with smaller hooks every 800-1200 characters.
+- High-pressure/progression episodes: vary dense and sparse passages naturally, but do not allow consecutive modules with no new pressure, choice, consequence, or audience question.
 - Low-pressure slow-life or info episodes: a big face-slap is not required, but include a concrete comfort/reward, relationship shift, new practical tool, rule reveal, or quiet danger hook.
 - Never deliver only atmosphere. If the episode has no public payoff, it must have a stronger object payoff, relationship payoff, or next-problem hook.
 
@@ -129,4 +129,4 @@ Before delivering:
 - Battle-upgrade routes do not drift into only commerce, herbs, shopkeeping, travel, or comfort scenes.
 - At least one cost/reward/status consequence lands on the page.
 - The final paragraph points to the next episode through a specific object, danger, reward, or choice.
-- Count the saved prose. For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose, 14,500-16,500 Japanese characters is the default pass range. If it is below 14,500, expand only dense beats with new problem tests, skill/OP consequences, witness reactions, cost/reward/status changes, faction movement, or next-threat setup. Do not pad with atmosphere, travel, or repeated emotion.
+- Count and report the saved prose against the approximately 12,000-character target. If short, add only a genuinely new problem, choice, mechanism, cost, or consequence; otherwise disclose the shortfall. Do not treat length as a pass range.

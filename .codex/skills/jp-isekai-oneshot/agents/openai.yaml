@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Isekai Oneshot"
   short_description: "Packaged viral-hook 15k isekai with AI self-check"
-  default_prompt: "Use $jp-isekai-oneshot to confirm format, randomly draw one screenshot-derived push-opening card, then write a complete localized Japanese male-isekai one-shot."
+  default_prompt: "Use $jp-isekai-oneshot to build a causal protagonist-driven core, write a complete localized Japanese male-isekai one-shot, and blind-edit it before optional packaging."

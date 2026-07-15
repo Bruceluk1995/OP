@@ -1,67 +1,51 @@
 ---
 name: jp-isekai
-description: "Japanese male-audience isekai writing suite router for traditional web-novel prose or anime-recap/push narration copy, each supporting first-person or third-person narration. Use when the user wants 日式RPG异世界, 男频异世界推文/动漫解说文案, なろう系, カクヨム男性向け, battle leveling, dungeon bosses, OP/龙傲天, exile reversal, status/rank growth, slow life, or Chinese-to-Japanese isekai adaptation."
+description: Router for Japanese male-audience isekai in traditional prose or anime-recap/push narration, first or third person. Use for 日式RPG异世界、なろう系、カクヨム男性向け、battle leveling、dungeon、OP、追放ざまぁ、slow life, Japanese-market one-shots or serial work, localization, trends, writing, and review.
 metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
-# JP Isekai
+# JP Isekai Router
 
-Use this as the router for Japanese male-audience isekai work. Prefer the dedicated sub-skills:
+Route quickly. Do not stack every male-isekai skill and reference on one request.
 
-- `$jp-isekai-plan`: premise, world rules, protagonist, cheat design, first arc, episode outline.
-- `$jp-isekai-write`: Japanese first-person episode drafting, usually 8k-20k Japanese characters.
-- `$jp-isekai-oneshot`: standalone 14,500-16,500 character Japanese male-audience isekai short stories that fully resolve in one file, not serial episodes or 6-episode seasons.
-- `$jp-isekai-review`: localization, Japanese readability, genre-fit, and Chinese-term leakage checks.
+## Routes
 
-## Core Contract
+- Standalone short / one-shot / 一发完结 / 不是连续剧 -> `$jp-isekai-oneshot`, which uses `$jp-short-fiction-studio` plus the male lane.
+- New serial concept, world, cheat, arc, or outline -> `$jp-isekai-plan`.
+- Write or genuinely rewrite a serial episode/chapter -> `$jp-isekai-write`.
+- Review an existing Japanese draft -> `$jp-isekai-review`.
 
-- Before any long or short male-isekai planning or drafting, read `references/presentation-modes.md` and present its numbered 1-4 format menu unless the combination is already explicit. Allow multiple selections; treat them as separate comparison versions by default. Length, YouTube use, or `一口气看完` decides neither mode nor person.
-- For either push option, read `../story/references/flan-push-strict-mode.md`; first/third person must share the same recap surface and saved bodies must pass its validator.
-- Reject literary prose in drafted or rewritten fiction: avoid long environment description and long psychology description; use colloquial, direct everyday language to advance plot through action, dialogue, choices, and consequences.
+Explicit one-shot beats a generic “12,000字” or “YouTube” keyword. Explicit episode/serial beats one-shot.
 
-Always localize toward Japanese web novel / light-novel expectations:
+## Fast Routing
 
-- Use `魔力`, `スキル`, `ステータス`, `ランク`, `冒険者ギルド`, `貴族`, `商会`, `ダンジョン`, `魔物`, `使い魔`, `従魔`, `装備枠`.
-- Avoid Chinese xianxia/wuxia and Chinese webnovel defaults unless the user explicitly asks for Chinese style.
-- Keep the protagonist readable for male-audience isekai: practical self-interest, survival pressure, comic inner commentary, visible growth, and a cheat that creates repeatable plot engines.
-- Favor familiar low-cost fantasy objects and domestic animals when adapting a grassroots slow-life setup: chicken, goat, donkey, sheep, dog, cow, cart, tools, feed, old gear, herb, guild scraps.
-- Do not default male-audience爽文 to slow life. If the user chooses cheat survival, zamaa, dungeon, battle, leveling, monster, or "爽", offer a battle-progression route before shopkeeping, farming, or quiet base-building.
-- For battle-progression routes, each episode should usually contain: monster/problem -> skill test -> tactical adjustment -> visible win/drop/rank/level result -> stronger next threat.
-- Also support OP dominance / ruler fantasy. When the user wants 龙傲天, 开局无敌, 魔王/统治者 fantasy, or references works like "骨王" as a vibe, treat the protagonist as already overwhelming. The progression becomes reputation, territory, subordinates, information control, enemy misread, and larger-stage consequences, not stat growth.
-- For OP routes, each episode should usually contain: enemy/world misread -> pressure or insult -> restrained decision -> overwhelming reveal or strategic command -> witness/subordinate reaction -> reputation/territory/faction consequence -> stronger stage hook.
-- Use famous works only as functional references. Do not copy named characters, guilds, kingdoms, scenes, dialogue, or plot turns.
-- Do not copy prose or long summaries from ranking works. Extract market patterns only.
+If presentation, viewpoint, premise, and length are already clear, route immediately. Do not show a format or topic menu. Ask one compact question only when an essential choice would materially change the product.
 
-## Project Memory Contract
+For one-shots, the only required creative chain is:
 
-When the task is project-bound, treat this suite as a genre layer on top of the common story project architecture:
+`jp-short-fiction-studio + male-isekai lane`
 
-- Use `设定/`, `大纲/`, `追踪/`, `episodes/`, `对标/`, and `拆文库/` as long-term memory.
-- Use `男频异世界知识库/generated-ledger.jsonl` to remember generated concepts, outlines, titles, and episodes so future work does not repeat the same engine.
-- `$jp-isekai-plan` owns settings, outlines, first rolling chapter blueprints, and initial tracking files.
-- `$jp-isekai-write` must read the current outline and tracking files before prose, then update tracking and ledger after saving.
-- `$jp-isekai-review` should flag project-bound drafts that bypass the outline/tracking/ledger loop.
+Opening decks, random draws, trend routers, ledgers, delivery packages, surface lint, and cover generation are optional functions. Do not load or run them by default.
 
-Detailed protocol: `references/project-memory.md`.
+## Japanese Male-Isekai Contract
 
-## Workflow
+- Audience-facing prose is natural Japanese; planning notes may be Chinese.
+- Use Japanese RPG/light-novel mechanisms and social institutions, not translated xianxia/sect/court defaults.
+- Match the promised lane: battle and OP stories need tactical/identity/faction consequences; slow-life stories need tangible comfort/relationship/safety change.
+- The protagonist's choices cause the plot. Enemies learn; allies are not applause devices.
+- A one-shot changes problem after first proof and closes in one file.
 
-1. Resolve the presentation-mode gate from `references/presentation-modes.md`.
-2. Determine the task:
-   - Standalone short story, one-shot, 一发完结, 15000字短篇, or "不是连续剧" -> use `$jp-isekai-oneshot`.
-   - Explicit one-shot/一发完结 wins even when the prompt also mentions YouTube, thumbnail, 15,000 characters, or a hot topic. Explicit 6-episode/serial/第N話 wins over one-shot and routes through plan/write.
-   - New concept or Chinese-to-Japanese adaptation -> use `$jp-isekai-plan`.
-   - Write a full episode or rewrite draft in Japanese -> use `$jp-isekai-write`.
-   - Check an existing draft -> use `$jp-isekai-review`.
-3. If the task references an existing project, continuing episode, saved output, or anti-homogenization need, load the project memory protocol before planning or drafting.
-4. If the task references current market/ranking trends, browse current source pages before making market claims.
-5. If adapting from Chinese fantasy, first create a localization map: names, power system, institutions, creatures, currency, places, and plot functions.
-6. Keep the output in the user-requested language. For Japanese prose, write the prose in Japanese and keep meta notes in Chinese unless the user requests all-Japanese delivery.
+## Current-Market Work
 
-## Resources
+Browse only when the user asks for current rankings, trends, news, YouTube/TikTok signals, or a live seed. Present dated candidates when the concrete seed is not delegated. Do not browse merely because the story targets Japan.
 
-Read `references/market-snapshot.md` when the task needs current-ish genre signals from 小説家になろう / カクヨム. Refresh by browsing if the user asks for "latest", "现在热门", ranking, or market direction.
-Read `references/project-memory.md` when routing project-bound work or explaining the suite's engineering model.
-Read `references/presentation-modes.md` before all male-isekai planning or drafting.
-Read `references/topic-menu.md` after the format choice when the user has not supplied a concrete premise; present the full grouped menu with multi-select, auto-pick, custom, and refresh controls.
-Read `references/opening-innovation-engine.md` after the premise and mode are locked and before drafting a push opening. Filter by the selected male-isekai lane, run its random draw script, fill only the compatible screenshot-derived card, and record the card ID. Exclude recent IDs when project history exists.
+## Project Work
+
+Load project memory only for an existing project, serial continuity, or explicit anti-homogenization request. Normal chat generation does not require a ledger, package tree, or deployment setup.
+
+## Hard Rules
+
+- One router selects one downstream route; do not run plan, write, one-shot, and review as simultaneous authorities.
+- Do not use a random opening card or fixed character count as a quality gate.
+- Do not copy ranking works, source IP, dialogue, scene order, or named plots.
+- Do not call a copied body plus appended ending a rewrite.

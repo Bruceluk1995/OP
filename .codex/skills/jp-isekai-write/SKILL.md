@@ -6,16 +6,26 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Isekai Write
 
+Required global read: `../story/references/audience-comprehension-floor.md`. Apply its plain-core and five-line gates before opening selection, drafting, rewriting, and packaging.
+
 Write Japanese web-novel episodes for male-audience isekai. Use this for final prose.
 
-## Required Reads
+## Execution Profiles
 
-- Read `../jp-isekai/references/presentation-modes.md` before all drafting. Present its numbered 1-4 menu and allow multiple selections unless the current request already chooses a combination.
-- Read `../story/references/flan-push-strict-mode.md` whenever push narration is selected. Its surface metrics are blocking and identical for first and third person.
-- Read `../jp-isekai/references/opening-innovation-engine.md` before drafting or materially rewriting a push opening. Pass the selected subtype lane to its random draw, use the compatible card's chain, and keep the same card while repairing wording. Do not self-select or merge templates.
-- Read `references/style-guide.md` before writing prose.
+- **Fast draft (default):** read the current outline/context and matching lane material; draft through protagonist choice and state change, blind-edit, and save the requested body. Do not run unrelated menus, cards, package generation, ledger checks, or surface lint.
+- **Full project:** retain all project memory, tracking, ledger, delivery package, character prompt, cover, and self-check capabilities below.
+- **Research/variation:** retain market browsing, dynamic benchmarks, type packs, and optional opening-card experiments when requested.
+
+Choose one profile from the request. Full capabilities remain available; they are not simultaneous mandatory reads.
+
+## Conditional Capability Reads
+
+- Read `../jp-isekai/references/presentation-modes.md` only when presentation/viewpoint is unclear or the user asks to compare versions.
+- Read `../story/references/flan-push-strict-mode.md` only for push formatting; its script is optional surface lint and never a quality verdict.
+- Read `../jp-isekai/references/opening-innovation-engine.md` only when the user requests an opening-card experiment or the current opening needs variation. Cards are optional prompts.
+- Read `references/style-guide.md` for full-project work or when style repair is needed; the fast profile uses the studio editorial core.
 - Read `references/terminology.md` before writing if the source material contains Chinese fantasy terms or the user asks to avoid Chinese elements.
-- Read `references/episode-blueprint.md` before drafting any episode/chapter prose, especially serial episodes that must hold viewer retention.
+- Read `references/episode-blueprint.md` for serial continuity or a requested saved blueprint; the fast profile uses a compact change outline.
 - Read `references/anti-ai-gates.md` before drafting and again before final delivery when the user mentions AI flavor, wateriness, weak prose, or when producing a saved episode file.
 - Read `references/episode-delivery.md` when the user wants a finished episode, long-form serialization, per-episode files, character prompts, covers/thumbnails, YouTube, or project-bound output.
 - Read `references/push-narration-protocol.md` whenever push narration mode is selected, and for serial continuity in that mode.
@@ -25,28 +35,27 @@ Write Japanese web-novel episodes for male-audience isekai. Use this for final p
 
 ## Drafting Workflow
 
-1. Resolve the numbered format gate before inferring any prose target:
-   - Offer options 1-4 exactly as defined in `presentation-modes.md` and say `可多选`.
+1. Resolve format/viewpoint only when missing; otherwise begin from the user's explicit choice:
+   - Offer options 1-4 only when the choice is genuinely unclear; do not delay a clear request.
    - For multiple selections, draft separate labeled versions from the same premise unless the user requests another arrangement. Never blend viewpoints merely because multiple options were chosen.
    - Traditional first person commonly uses `俺`; traditional third person keeps scene depth and must not collapse into summary.
    - Push first person keeps the result-first hook, oral lines, causal compression, and dense turns through the protagonist's account; push third person may use `男主`, role labels, and external reactions.
    - Do not use `YouTube`, `朗读`, `推送`, `一口气看完`, length, or an existing outline as a substitute for either choice.
-   - If the user asks for a finished/full episode, YouTube/朗读/推文 narration, a 6-episode short-season installment, or "完整正文" without another target, use 14,500-16,500 Japanese characters as the default delivery range.
-   - If the user gives "每集1.5万字", target 14,500-16,500 Japanese characters including punctuation and line breaks.
-   - For a 15,000-character episode, treat length as a functional-density target, not padding permission: the episode needs enough concrete events, experiments, choices, consequences, hooks, and purposeful breathing beats to justify the length.
+   - If no target is given, use approximately 12,000 Japanese characters for a complete episode in either presentation mode.
+   - Treat 12,000 as a functional-density target, not a minimum gate or padding permission.
 2. For project-bound output, load project memory before prose:
    - Read `大纲/细纲_第XXX章.md`; if it is missing, create the outline before writing.
    - Read the previous episode/chapter, `追踪/上下文.md`, `追踪/伏笔.md`, `追踪/时间线.md`, relevant `追踪/角色状态.md`, and relevant `设定/` files.
    - Run the `男频异世界知识库` ledger summary/check and change the candidate if it repeats too many fields.
 3. Build the full episode blueprint from `references/episode-blueprint.md` before prose:
-   - Start with the opening structure selected by `opening-innovation-engine.md`. It may lead with a result, evidence, cost, decision, rule collision, witness reaction, abnormal object, or another derived mechanism; never begin with empty scenery, weather, mood, or abstract reflection.
+   - Start with the strongest concrete event. Use `opening-innovation-engine.md` only in the optional variation profile.
    - For episode 2 or later, bridge from the exact previous ending before moving into new action.
    - Set target emotion, episode position, episode promise, core payoff, cost/risk, and ending hook.
    - Use a five-part shape: cause, development, turn, climax, ending state.
-   - Break the episode into dense/sparse beats with target character budgets.
+   - Break the episode into change modules; character budgets are optional production aids.
    - Make dense beats carry skill experiments, monster combat, tactical adjustment, OP restraint/reveal, subordinate reaction, public proof, comic reaction, zamaa, practical reward/drop/rank-up, or new danger.
    - Compress sparse transitions; do not let travel, explanation, or mood become filler.
-   - For 15,000 characters, do not force a fixed beat quota. Plan enough concrete beats for this episode's rhythm, and make any long stretch serve a problem, test, proof, witness, cost, reward, relationship shift, setup, aftershock, or next danger.
+   - For a long target, add new conflict, choice, mechanism, cost, or consequence. Do not extend one proof through more tests or witnesses.
    - If the chosen route is battle leveling, do not replace the combat/progression payoff with shopkeeping or slow-life comfort. Each episode needs a monster/conflict, a skill use under pressure, a visible win or loss, and a drop/rank/skill/status consequence.
    - If the chosen route is OP dominance, do not fake tension by weakening the protagonist at random. Build tension through enemy misread, restraint, information gaps, collateral risk, subordinate/faction pressure, public identity, and the consequences of revealing power.
    - For any other subtype lane, preserve that type pack's required payoff loop. Do not flatten all lanes into generic guild errands, herbs, shopkeeping, or slow-life comfort.
@@ -72,12 +81,12 @@ Write Japanese web-novel episodes for male-audience isekai. Use this for final p
    - Update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
    - Add one record to `男频异世界知识库/generated-ledger.jsonl` with protagonist, cheat, pressure, payoff, venue, aftertaste, and saved path.
 9. Validate:
-   - In push mode, run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`; any failure blocks delivery.
-   - After the script passes, run the strict profile's manual entertainment audit. Flowchart narration split into short lines still blocks delivery.
+   - In strict push-surface work, optionally run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`. A `surface_fail` blocks only the requested surface format; `surface_pass` never approves story quality.
+   - Run the studio blind-editor pass regardless of surface lint. Flowchart narration split into short lines is still a story failure.
    - Audit every major scene as `entry state -> pressure/choice -> exit state`. At least one of skill knowledge, combat position, inventory/drop, rank, reputation, territory, faction relationship, risk, or next objective must change. Travel, explanation, repeated awe, and status-panel restatement without a state delta must be compressed or removed.
    - Verify the episode promise is paid or meaningfully advanced, the win has a concrete result/cost, and the ending threat grows from the new state rather than appearing as an unrelated cliffhanger.
    - Count Japanese characters with Python.
-   - For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose, do not report completion below 14,500 Japanese characters unless the user explicitly approved a shorter length. If below target, continue expanding existing dense beats with more combat/problem tests, OP restraint/reveal, witness reaction, cost, reward, status movement, faction consequence, or next-threat setup.
+   - Report the actual character count. If below a requested target, return to structure for a genuinely new turn or disclose the shortfall; never add repeated tests, witnesses, or procedure.
    - Scan for banned Chinese leakage using `references/terminology.md`.
    - If the source was Chinese 古言/朝堂/宫斗, verify the power structure was rebuilt for Japanese RPG/fantasy readers instead of directly carrying over emperor, harem, cold-palace, concubine, or legitimate/concubine-born systems.
    - Run the Codex AI story/package audit in `references/self-check.md`; fix story bugs, Chinese leakage, package omissions, unused character prompts, and cover-image problems before reporting completion.

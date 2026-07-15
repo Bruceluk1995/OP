@@ -12,7 +12,7 @@ Before choosing structure, length, or package shape, present this fixed numbered
 > 3. 动漫解说／推文口播・第一人称
 > 4. 动漫解说／推文口播・第三人称
 
-Allow one or multiple selections. Presentation mode and narrative person remain separate axes, but the menu makes the four valid combinations easy to choose. These are blocking creative choices. Do not infer them from `长篇`, `短篇`, `15,000字`, `YouTube`, `朗读`, `一口气看完`, or the existence of an outline.
+Allow one or multiple selections. Presentation mode and narrative person remain separate axes, but the menu makes the four valid combinations easy to choose. Do not infer them from `长篇`, `短篇`, `12,000字`, `YouTube`, `朗读`, `一口气看完`, or the existence of an outline.
 
 For options 3 and 4, read `../../story/references/flan-push-strict-mode.md`. The same Flan-style recap surface is mandatory in both persons. First person changes only pronouns and knowledge boundaries; it must not become web-novel prose.
 

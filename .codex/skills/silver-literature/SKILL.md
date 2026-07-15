@@ -6,12 +6,29 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # Silver Literature
 
+Required global read: `../story/references/audience-comprehension-floor.md`. Ground every opening and premise in a familiar object, payment, visit, refusal, changed lock, signature, meal, or relationship action before family history or legal terminology.
+
 Use this skill for Japanese silver-generation family stories: older or middle-aged protagonists, late-life dignity, family exploitation, hidden proof, quiet reversal, and emotional recovery. Keep meta notes in Chinese by default; write audience-facing Japanese prose in Japanese unless the user asks otherwise.
 
-## Required Reads
+Before premise, hotspot, title, or angle work, read `../story/references/global-topic-history.md`, check the shared project ledger, and register every displayed candidate. Do not reuse topics previously shown by any fiction or explainer skill.
 
-- Read `references/patterns.md` before planning, drafting, rewriting, reviewing, or making titles.
-- Read `references/anti-homogenization.md` before generating any new premise, outline, title batch, or full story.
+Before naming a new cast, read `../story/references/character-name-policy.md`, import and check the shared name ledger, then record every name actually used. Apply `jp-modern` to Japanese family names; continuing the same family story may reuse its own cast.
+
+## 银发故事原生生产线
+
+- **制片人**先锁定老年主人公仍想守住的尊严、钱、房、关系、工作价值或重新生活的权利。
+- **故事核编辑**要求主人公主动选择，而不是忍到文件/律师/富豪替其翻盘；证据只能帮助选择产生后果。
+- **结构编辑**用 `进入状态 -> 选择 -> 退出状态 -> 新问题` 规划场景。家庭会议、医院、银行、遗嘱和葬礼只能各承担不同功能，不能轮流证明同一事实。
+- **关系编辑**让子女、配偶、照护者和新伴侣根据利益与羞耻改变策略；不是统一恶人或统一感动群众。
+- **日文写手**从钥匙、转账、饭桌、病历、门锁、签名和没被接起的电话进入，不先讲完几十年家史。
+- **盲读编辑**先找最早变成苦难罗列、法律流程或证据流水账的位置，再退回故事核/结构；去 AI 味放在最后。
+
+执行档：快速故事只读 `patterns.md` 与一个 type pack；完整工程再加载项目记忆、episode blueprint、ledger 和包装；实时频道研究单独按需启用。
+
+## Conditional Reads
+
+- Read `references/patterns.md` for the selected task and exactly one matching type pack when available.
+- Read `references/anti-homogenization.md` only for project variation, batch generation, or repeated-engine checks.
 - Read `references/project-memory.md` before opening a project, continuing a serial, creating saved files, or checking anti-homogenization.
 - Read `references/episode-blueprint.md` before drafting any long narration, saved story, or 6-episode season.
 - Read `references/dynamic-benchmarking.md` when the user wants current channel/site fit, website-based拆书, hottest works, or when no strong project benchmark exists for the chosen subtype.
@@ -85,8 +102,7 @@ Write for mature Japanese family-drama viewers, not fantasy progression:
    - Single story: use `小节大纲.md` and `正文.md`.
    - Short-season serialized novel: use fixed 6 episodes/chapters with `大纲/细纲_第XXX章.md`, `episodes/`, and `追踪/`.
    - Do not plan a hundred-chapter roadmap unless the user explicitly asks for a long webnovel.
-   - For a long narration episode around 15,000 characters, treat length as a functional-density target, not padding permission.
-   - If the user asks for "完整正文" after choosing YouTube/朗读/推文 narration, default to 14,500-16,500 Japanese characters unless the user gives another target.
+   - For a complete long narration, use approximately 12,000 Japanese characters when no target is given; length is a budget, not a minimum gate.
 4. Check the ledger and choose a combination that has not been overused recently:
    - lane
    - protagonist role/age band
@@ -114,7 +130,7 @@ Write for mature Japanese family-drama viewers, not fantasy progression:
    - Remove stock AI narration, abstract moralizing, repeated "静かに", and uniform paragraph rhythm.
    - Check that every emotional line has an object, action, witness, or consequence attached.
    - Delete or rewrite atmosphere, seasonal scenery, old memories, loneliness, kindness, beauty, silence, or sadness if it does not change proof, responsibility, money, housing, care, public reputation, relationship, or next action.
-   - Count saved Japanese prose before delivery. If a YouTube/朗读完整正文 is below 14,500 characters, continue expanding dense beats instead of delivering: add proof movement, witness pressure, legal/financial/care state change, protagonist choice, public consequence, or recovery action.
+   - Count and report saved Japanese prose. A complete narration targets approximately 12,000 characters; if the story is tighter, do not add another proof venue or family procedure merely to cross a minimum.
    - If saved to a project file, run any available story deslop or punctuation checks already used by the project.
 8. Record the generated work in the ledger with enough metadata to avoid repeating the same engine next time.
 

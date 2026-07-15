@@ -15,7 +15,7 @@ Include:
 - `角色提示词/角色提示词.md`: visual prompts for all major characters appearing in the story.
 - `封面/封面.md`: YouTube thumbnail or novel-cover brief, final image prompt, text layers, dimensions, and production status.
 - `作品资料.md`: one-shot blueprint, source/seed notes, character count, checks, ledger fields, and package status.
-- `开头抽卡证据.json`: selected card ID plus one exact opening quote for every required chain slot; must pass `validate-opening-evidence.py`.
+- `开头抽卡证据.json`: selected card ID plus one exact opening quote for every required chain slot, every card-specific `surface_beat`, and the visual story core (`ordinary_action_or_loss`, `visible_change`, `human_consequence`); must pass `validate-opening-evidence.py`.
 - `封面/封面.png`: actual generated cover/thumbnail image when image generation is requested or available.
 
 Do not deliver only a mixed markdown file containing title, blueprint, body, cover notes, and ledger notes together.

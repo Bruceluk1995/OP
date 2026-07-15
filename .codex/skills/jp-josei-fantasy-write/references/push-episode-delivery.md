@@ -4,7 +4,7 @@ Use this when the user wants Japanese female-audience fantasy romance as anime-s
 
 This reference governs push-format delivery, opening retention, folders, covers, and handoff. Use it together with `episode-blueprint.md`, which governs the whole episode's emotion target, dense/sparse beats, payoff, cost, and ending hook, and `anti-ai-gates.md`, which governs Codex AI final prose cleanup.
 
-For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose, the default body target is 14,500-16,500 Japanese characters unless the user sets another length. Count the saved body before handoff and keep expanding dense evidence/romance/zamaa beats if it is below 14,500.
+For a finished/full episode, the default body target is approximately 12,000 Japanese characters unless the user sets another length. Count and report the saved body; do not expand merely to cross a minimum.
 
 ## Language Contract
 
@@ -15,21 +15,21 @@ For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-s
 ## Episode Shape
 
 - Treat each episode as push narration in the selected first-person or third-person viewpoint, not a standard chapter summary.
-- Before the opening, run the compatible random draw in `../../jp-josei-fantasy/references/push-opening-template-deck.md`; use only the selected card.
-- Open with the selected card's required information chain. Do not replace it with a self-selected generic social bomb.
-- Immediately after sentence one, give a previous-episode bridge in prose: what happened last episode, what evidence/object/person remains unresolved, and why the heroine must act now. New viewers should understand the last hook by line five.
+- Use the optional deck in `../../jp-josei-fantasy/references/push-opening-template-deck.md` only for a requested card experiment or when the opening needs variation; discard a card that weakens the story.
+- Open with the strongest concrete social/relationship event and a live audience question.
+- For episode 2 or later, give a brief in-world bridge to the unresolved previous event. For a one-shot or episode 1, never invent a previous-episode bridge.
 - Keep that bridge fully inside the story world. Do not write production markers such as `第4話で`, `第3話の時`, `前回`, `次回`, `本話`, `読者`, or `視聴者` inside the body prose. Use in-world anchors instead: `地下広間で`, `夜明け前の森で`, `リリに初めて触れた時`, `あの婚姻契約書を読んだ夜`.
 - Keep the episode moving through scenes: pressure -> heroine choice -> male lead action -> social consequence -> emotional aftertaste -> next hook.
-- Build the full `episode-blueprint.md` before prose so the episode has a clear position, dense/sparse beat budget, concrete payoff, cost, and ending hook.
+- Use a compact change outline by default. Build the full `episode-blueprint.md` only for full-project delivery or complicated serial continuity.
 - If the user sets a target such as 2万字 per episode, preserve that as the active project target until changed.
 - Do not pad with generic adjectives, repeated sighing, decorative scenery, or abstract declarations. Use documents, doors, witnesses, names, hands, contracts, etiquette, injuries, rumors, and concrete gestures.
 - Before handoff, run the `anti-ai-gates.md` final self-check. If the prose is saved to a file, Codex must reread the saved file and fix real issues before delivery.
 
-## Serial Continuity After The Drawn Opening
+## Serial Continuity After The Opening
 
-For episode 2 or later, incorporate these functions without breaking the selected card:
+For episode 2 or later, incorporate these functions without turning the bridge into a recap block:
 
-1. **Drawn-card chain.** Establish the heroine, event, escalation, and promised proof/romance movement required by the selected card.
+1. **Current event.** Establish the heroine, immediate event, and promised relationship/social movement.
 2. **Previous-episode bridge.** In 1-3 sentences, name what happened last episode and what remains unresolved. Use names, documents, witnesses, titles, injuries, contracts, rumors, or exact promises.
 3. **Now-problem.** Name the immediate social or emotional obstacle forcing the current scene.
 4. **Heroine reaction.** Give one concrete action or decision in the selected viewpoint, not vague sadness.
@@ -58,7 +58,7 @@ Prefer:
 
 ## Beat Density
 
-Every 800-1200 Japanese characters should contain at least one of:
+Across each major story module, include at least one meaningful change without enforcing a fixed character interval:
 
 - new evidence
 - public pressure

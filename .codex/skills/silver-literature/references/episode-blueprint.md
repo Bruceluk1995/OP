@@ -8,7 +8,7 @@ Use this before drafting any long narration, saved story, or 6-episode silver-li
 ## Episode / Story Blueprint
 
 - Story or episode title:
-- Target length: default 14,500-16,500 Japanese characters for YouTube/朗读完整正文 unless the user says otherwise.
+- Target length: approximately 12,000 Japanese characters for YouTube/朗读完整正文 unless the user says otherwise; this is a budget, not a pass range.
 - Selected lane:
 - Benchmark source:
 - Target emotion:
@@ -84,4 +84,4 @@ Before delivering:
 - Dense beats are visibly denser than transitions.
 - At least one proof/status/care/money/reputation consequence lands on the page.
 - The final paragraph points to recovery or next episode through a concrete object, witness, document, choice, or quiet life image.
-- Count the saved prose. For YouTube/朗读完整正文, 14,500-16,500 Japanese characters is the default pass range. If it is below 14,500, expand only dense beats with new proof, witness, legal/financial/care movement, protagonist choice, public consequence, or recovery action. Do not pad with atmosphere or repeated emotion.
+- Count and report the saved prose against the approximately 12,000-character budget. Add only a new protagonist choice, family response, legal/financial/care consequence, or recovery action that belongs; otherwise keep the tighter story.

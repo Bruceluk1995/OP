@@ -21,6 +21,29 @@ CARDS = {
     "D3": ("单一规则连续兑现型", {"system", "craft", "op", "battle"}),
 }
 
+# A card is not a five-item premise checklist. These are its first-shot patterns.
+# Keep them card-specific so randomization creates genuinely different openings.
+CARD_SURFACES = {
+    "R1": ["public_humiliation_in_progress", "improper_countermove", "visible_counterproof", "practical_retort"],
+    "R2": ["crowd_confident_in_wrong_rule", "protagonist_breaks_rule", "impossible_visible_test", "witness_panic"],
+    "R3": ["worst_identity_hits_current_problem", "outsider_contempt", "hidden_mechanism_triggered", "first_visible_payoff"],
+    "N1": ["absurd_proof_action", "object_or_monster_reacts", "result_exceeds_goal", "live_consequence"],
+    "N2": ["mundane_first_attempt", "impossible_result_on_screen", "institution_or_crowd_reacts", "practical_explanation"],
+    "N3": ["mass_misread_happening_now", "protagonist_makes_one_move", "surface_identity_breaks", "deeper_truth_bites_back"],
+    "C1": ["rejection_or_destruction_in_progress", "protagonist_uses_discarded_thing_wrongly", "market_value_proves_itself", "rejecter_returns_to_stop_or_buy"],
+    "C2": ["team_fails_without_protagonist", "three_failures_land_fast", "they_chase_the_departed_protagonist", "new_place_refuses_old_terms"],
+    "P1": ["odd_action_in_progress", "ridiculous_practical_excuse", "object_replies_with_gain", "witness_forces_next_problem"],
+    "P2": ["tiny_need_forces_action", "small_gain_appears", "gain_attracts_big_problem", "protagonist_regrets_the_cheap_solution"],
+    "D1": ["abnormal_rule_hits_someone_now", "three_fast_consequences", "protagonist_exception_appears", "immediate_test_breaks_the_pattern"],
+    "D2": ["new_identity_causes_live_crisis", "first_advantage_solves_part", "second_upgrade_overkills_it", "cost_or_limit_interrupts_win"],
+    "E1": ["everyone_avoids_one_thing", "protagonist_does_it_anyway", "practical_reason_is_shown", "live_proof_embarrasses_the_experts"],
+    "A1": ["mistake_happens_on_screen", "punishment_arrives_first", "mistake_works_visibly", "second_problem_explodes"],
+    "B1": ["casual_boast_is_repeated", "literal_result_appears", "listeners_try_to_disprove_it", "stronger_fulfillment_interrupts_them"],
+    "C3": ["earned_reward_is_taken_away", "institution_signs_the_wrong_ruling", "protagonist_uses_a_concrete_proof", "ruling_backfires_in_public"],
+    "F1": ["ordinary_life_problem", "first_weird_preparation_in_progress", "people_mock_or_stop_it", "later_disaster_signal_arrives_early", "protagonist_commits_to_the_next_preparation"],
+    "D3": ["rule_is_triggered_in_front_of_us", "small_proof_happens", "larger_proof_hits_current_trouble", "cost_turns_the_win_sideways"],
+}
+
 REQUIRED_CHAINS = {
     "R1": ["identity", "humiliation_or_misjudgment", "escalation", "hidden_advantage", "body_origin_bridge"],
     "R2": ["world_rule", "protagonist_classification", "contradictory_test", "larger_escalation", "cause_gap"],
@@ -28,7 +51,7 @@ REQUIRED_CHAINS = {
     "N1": ["proof_goal", "concrete_test", "unexpected_result", "second_escalation", "consequence"],
     "N2": ["first_attempt", "impossible_result", "public_or_system_reaction", "mundane_motive", "body_bridge"],
     "N3": ["mass_belief", "first_correction", "deeper_correction", "protagonist_trigger"],
-    "C1": ["obvious_value", "local_rejection", "high_level_demand", "information_gap", "irreversible_choice"],
+    "C1": ["rejection_or_destruction", "improper_countermove", "visible_value", "return_pressure", "irreversible_choice"],
     "C2": ["before_stability", "departure", "three_failures", "realization", "new_opportunity"],
     "P1": ["abnormal_behavior", "practical_excuse", "unexpected_gain", "hidden_rule", "current_action_bridge"],
     "P2": ["tiny_motive", "accidental_gain", "rule_escalation", "large_consequence", "origin_return"],
@@ -38,6 +61,6 @@ REQUIRED_CHAINS = {
     "A1": ["mistaken_action", "expected_punishment", "successful_anomaly", "second_escalation", "hidden_rule"],
     "B1": ["casual_claim", "literal_fulfillment", "disbelief", "stronger_fulfillment", "rule_reveal"],
     "C3": ["concrete_merit", "opposite_treatment", "institutional_misjudgment", "proof_or_reversal", "origin_bridge"],
-    "F1": ["three_preparations", "ridicule_or_obstruction", "hidden_knowledge_or_loophole", "countdown", "first_action_bridge"],
+    "F1": ["ordinary_stake", "three_preparations", "ridicule_or_obstruction", "hidden_knowledge_or_loophole", "countdown", "first_action_bridge"],
     "D3": ["rule_statement", "small_proof", "larger_proof", "current_major_proof", "limitation_or_cost"],
 }
