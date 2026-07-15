@@ -11,6 +11,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+import company_dedup
+
 
 LEDGER = Path("选题历史") / "global-topic-history.jsonl"
 STATUSES = ("presented", "selected", "generated", "rejected")
@@ -77,6 +79,11 @@ def derived_tags(record: dict) -> list[str]:
     return sorted(tags)
 
 
+def topic_fingerprint(seed: str, tags: object) -> str:
+    normalized_tags = sorted(split_tags(tags))
+    return "topic|" + seed.strip() + "|" + "|".join(normalized_tags)
+
+
 def import_existing(root: Path, path: Path) -> None:
     records = load(path)
     known = {r.get("record_id") for r in records if r.get("record_id")}
@@ -121,7 +128,7 @@ def summary(records: list[dict], limit: int) -> None:
         print(f"- {record.get('date', '?')} [{record.get('status', '?')}] {record.get('domain', '?')} | {record.get('seed', '(untitled)')} | {tags}")
 
 
-def check(records: list[dict], seed: str, tags: str, limit: int) -> int:
+def check(records: list[dict], seed: str, tags: str, limit: int, root: Path) -> int:
     candidate_seed = re.sub(r"\s+", "", seed).casefold()
     candidate_tags = split_tags(tags)
     hits = []
@@ -134,6 +141,23 @@ def check(records: list[dict], seed: str, tags: str, limit: int) -> int:
         if same_seed or common:
             hits.append((len(common) + (2 if same_seed else 0), common, record))
     if not hits:
+        result = company_dedup.reserve(
+            kind="topic",
+            fingerprint=topic_fingerprint(seed, tags),
+            work_id=company_dedup.work_id_for(root),
+            label=seed,
+            tags=sorted(split_tags(tags)),
+            source="story-topic-history",
+            status="presented",
+        )
+        if not result.get("reserved"):
+            print(
+                "BLOCK: company-wide topic already used; "
+                f"work={result.get('existing_work_id', '?')} status={result.get('existing_status', '?')}"
+            )
+            return 2
+        if result.get("provisional"):
+            print("WARN: company server unavailable; topic is provisionally reserved in the offline queue.")
         print("OK: globally new topic.")
         return 0
     score, common, record = sorted(hits, key=lambda item: item[0], reverse=True)[0]
@@ -142,7 +166,7 @@ def check(records: list[dict], seed: str, tags: str, limit: int) -> int:
     return 2
 
 
-def add(path: Path, args: argparse.Namespace) -> None:
+def add(path: Path, args: argparse.Namespace, root: Path) -> None:
     append(path, {
         "date": args.date or date.today().isoformat(),
         "domain": args.domain,
@@ -152,13 +176,48 @@ def add(path: Path, args: argparse.Namespace) -> None:
         "status": args.status,
         "notes": args.notes,
     })
+    sync_result = company_dedup.commit(
+        kind="topic",
+        fingerprint=topic_fingerprint(args.seed, args.tags),
+        work_id=company_dedup.work_id_for(root),
+        status=args.status,
+    )
     print(f"added: {path}")
+    if not sync_result.get("synced"):
+        print("WARN: company status update queued for later sync.")
+
+
+def sync_company(records: list[dict], root: Path) -> int:
+    synced = 0
+    blocked = 0
+    for record in records:
+        if record.get("_invalid"):
+            continue
+        seed = str(record.get("seed", "")).strip()
+        if not seed:
+            continue
+        result = company_dedup.reserve(
+            kind="topic",
+            fingerprint=topic_fingerprint(seed, record.get("tags", [])),
+            work_id=company_dedup.work_id_for(root, str(record.get("origin", ""))),
+            label=seed,
+            tags=sorted(split_tags(record.get("tags", []))),
+            source=str(record.get("source", "history-import")),
+            status=str(record.get("status", "generated")),
+        )
+        if result.get("reserved"):
+            synced += 1
+        else:
+            blocked += 1
+    print(f"company_sync={synced} conflicts={blocked}")
+    return 2 if blocked else 0
 
 
 def parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="Manage project-wide creative topic history.")
     sub = p.add_subparsers(dest="command", required=True)
     sub.add_parser("import-existing")
+    sub.add_parser("sync-company")
     s = sub.add_parser("summary"); s.add_argument("--limit", type=int, default=100)
     c = sub.add_parser("check"); c.add_argument("--limit", type=int, default=500); c.add_argument("--seed", default=""); c.add_argument("--tags", default="")
     a = sub.add_parser("add"); a.add_argument("--date", default=""); a.add_argument("--domain", required=True); a.add_argument("--source", default=""); a.add_argument("--seed", required=True); a.add_argument("--tags", required=True); a.add_argument("--status", choices=STATUSES, default="presented"); a.add_argument("--notes", default="")
@@ -172,8 +231,9 @@ def main(argv: list[str] | None = None) -> int:
     records = load(path)
     if args.command == "import-existing": import_existing(root, path); return 0
     if args.command == "summary": summary(records, args.limit); return 0
-    if args.command == "check": return check(records, args.seed, args.tags, args.limit)
-    if args.command == "add": add(path, args); return 0
+    if args.command == "check": return check(records, args.seed, args.tags, args.limit, root)
+    if args.command == "add": add(path, args, root); return 0
+    if args.command == "sync-company": return sync_company(records, root)
     raise AssertionError(args.command)
 
 

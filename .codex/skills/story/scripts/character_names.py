@@ -11,6 +11,8 @@ import unicodedata
 from datetime import date
 from pathlib import Path
 
+import company_dedup
+
 
 LEDGER = Path("角色名历史") / "character-name-history.jsonl"
 SEPARATORS_RE = re.compile(r"[・･·\s]+")
@@ -178,7 +180,7 @@ def distance(a: str, b: str) -> int:
     return previous[-1]
 
 
-def check_name(records: list[dict], name: str, work: str, style: str) -> int:
+def check_name(records: list[dict], name: str, work: str, style: str, root: Path) -> int:
     cleaned = clean_name(name)
     full_key, given_key = name_keys(cleaned)
     same_work = [
@@ -216,6 +218,24 @@ def check_name(records: list[dict], name: str, work: str, style: str) -> int:
         )
     if blocked or any(level == "BLOCK" for level, _ in style_items):
         return 2
+    company = company_dedup.reserve(
+        kind="character",
+        fingerprint="character|" + given_key,
+        work_id=company_dedup.work_id_for(root, work),
+        label=cleaned,
+        tags=[style] if style else [],
+        source="story-character-names",
+        metadata={"full_key": full_key, "given_key": given_key},
+        status="presented",
+    )
+    if not company.get("reserved"):
+        print(
+            "BLOCK: reused by another company work: "
+            f"{company.get('existing_work_id', '?')} | {company.get('existing_status', '?')}"
+        )
+        return 2
+    if company.get("provisional"):
+        print("WARN: company server unavailable; name is provisionally reserved in the offline queue.")
     print("OK: name is available.")
     return 0
 
@@ -318,6 +338,32 @@ def import_existing(root: Path, path: Path, records: list[dict], rebuild: bool) 
     print(f"imported={imported} ledger={path}")
 
 
+def sync_company(records: list[dict], root: Path) -> int:
+    synced = 0
+    conflicts = 0
+    for record in records:
+        name = str(record.get("name", "")).strip()
+        work = str(record.get("work", "")).strip()
+        if not name or not work:
+            continue
+        _, given_key = name_keys(name)
+        result = company_dedup.reserve(
+            kind="character",
+            fingerprint="character|" + given_key,
+            work_id=company_dedup.work_id_for(root, work),
+            label=name,
+            source=str(record.get("source", "history-import")),
+            metadata={"role": record.get("role", ""), "domain": record.get("domain", "")},
+            status="generated",
+        )
+        if result.get("reserved"):
+            synced += 1
+        else:
+            conflicts += 1
+    print(f"company_sync={synced} conflicts={conflicts}")
+    return 2 if conflicts else 0
+
+
 def main() -> int:
     configure_stdio()
     parser = argparse.ArgumentParser(description="Manage the project-wide character-name ledger")
@@ -328,6 +374,7 @@ def main() -> int:
     p_import.add_argument("--rebuild", action="store_true")
     p_summary = sub.add_parser("summary")
     p_summary.add_argument("--limit", type=int, default=30)
+    sub.add_parser("sync-company")
 
     p_check = sub.add_parser("check")
     p_check.add_argument("--work", required=True)
@@ -356,11 +403,13 @@ def main() -> int:
         for item in recent:
             print(f"- {item.get('name')} | {item.get('work')} | {item.get('role')} | {item.get('domain')}")
         return 0
+    if args.command == "sync-company":
+        return sync_company(records, root)
     if args.command == "check":
-        return check_name(records, args.name, args.work, args.style)
+        return check_name(records, args.name, args.work, args.style, root)
     if args.command == "add":
         if not args.force:
-            result = check_name(records, args.name, args.work, "")
+            result = check_name(records, args.name, args.work, "", root)
             if result:
                 return result
         full_key, given_key = name_keys(args.name)
@@ -380,7 +429,15 @@ def main() -> int:
                 "source": args.source,
             },
         )
+        sync_result = company_dedup.commit(
+            kind="character",
+            fingerprint="character|" + given_key,
+            work_id=company_dedup.work_id_for(root, args.work),
+            status="selected",
+        )
         print(f"added: {path}")
+        if not sync_result.get("synced"):
+            print("WARN: company status update queued for later sync.")
         return 0
     raise AssertionError(args.command)
 

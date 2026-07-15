@@ -6,6 +6,12 @@ Use this before finalizing names in any fiction skill. The project-wide ledger i
 角色名历史/character-name-history.jsonl
 ```
 
+When SGGOI Studio is running and logged in, every available-name check also
+reserves the normalized fantasy given-name key in the company database. The
+local ledger still handles near-duplicate warnings and cast readability. When
+offline, the reservation is provisional and is queued in local SQLite; do not
+present it as globally confirmed until synchronization succeeds.
+
 ## Mandatory Deduplication
 
 1. Import existing names before naming a new cast.
@@ -19,6 +25,7 @@ python "$HOME/.codex/skills/story/scripts/character_names.py" --root . import-ex
 python "$HOME/.codex/skills/story/scripts/character_names.py" --root . summary
 python "$HOME/.codex/skills/story/scripts/character_names.py" --root . check --work "{work}" --name "{name}" --style jp-female-fantasy
 python "$HOME/.codex/skills/story/scripts/character_names.py" --root . add --domain "{domain}" --work "{work}" --role "{role}" --name "{name}" --source "{source}"
+python "$HOME/.codex/skills/story/scripts/character_names.py" --root . sync-company
 ```
 
 The script blocks an exact reused full name or reused fantasy given name from another work. It warns on near-duplicates. Do not bypass a block by changing only `・`, spacing, kana form, or the family name.
