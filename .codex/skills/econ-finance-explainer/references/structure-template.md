@@ -123,4 +123,4 @@ Before delivery:
 - The ending gives a reusable rule, not only emotion.
 - Current facts have source links or are marked as requiring verification.
 - The length is not copied from the short corpus unless the user explicitly asked for a short clip.
-- A complete Japanese or Chinese episode should normally reach at least 15,000 characters. If it is shorter, add real economic state changes: another cash-flow layer, a contract/incentive detail, a household decision scene, a comparison, a policy tradeoff, or a consequence. Do not add filler scenery.
+- A complete Japanese or Chinese episode normally targets approximately 12,000 characters. If shorter, add a new mechanism, counterargument, household decision, policy tradeoff, or consequence only when needed; do not expand merely to cross a minimum.

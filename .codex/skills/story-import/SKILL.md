@@ -5,12 +5,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 ---
 # story-import：逆向导入已有小说
 
-## 数字交互契约
-
-- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
-- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
-- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
-- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+Required global read: `../story/references/audience-comprehension-floor.md`. Preserve source facts, but mark imported openings or story engines that require glossary knowledge before a human conflict is visible.
 
 把用户已有小说重建为可续写的写作工程。交付物不是一份孤立分析报告，而是：
 
@@ -19,6 +14,14 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 - 从拆文库同步到项目 `对标/` 的写作侧引用视图。
 
 不要重新实现拆文方法论。长篇调用 `story-long-analyze`，短篇调用 `story-short-analyze`；本 skill 只负责输入确认、完整管道契约、结构迁移、验收和激活。
+
+## 可续写性重建合同
+
+- 导入不是把原文搬进目录。必须提取：读者承诺、主角欲望与误区、人物声线、当前关系状态、每条未偿还问题、最近一次不可逆变化和下一步压力。
+- 原文事实与措辞分开保存：事实/设定/伏笔可继承，旧句不自动成为续写模板。
+- 发现同一结论重复证明、流程段、解释腔或失效故事核时，在迁移报告标注“保留事实 / 重建结构 / 建议删除”，不要默默固化进新工程。
+- 短篇真重写必须从新的故事核与变化大纲起稿，并运行重写相似度检查；长篇续写则保护历史正文，不重写用户未授权章节。
+- 下游交接只给当前写作需要的摘要和正文尾部，不把整本拆文报告塞进每次写作上下文。
 
 ## 执行边界
 
@@ -53,16 +56,14 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 2. 章节与工程结构信号；
 3. 字数兜底。
 
-把检测结果和分流结论复述给用户，并显示 `1. 确认分流并继续`、`2. 修改分流`。残章另显示 `1. 基于残章续写`、`2. 先补完再导入`，要求用户只回复数字，不代替用户决定。
+把检测结果和分流结论复述给用户确认。残章要记录“基于残章续写”或“先补完再导入”的用户选择，不代替用户决定。
 
 ### 1.4 环境检查
 
-检查 `.story-deployed` 与对应 agent 文件。未部署时显示数字菜单：
+检查 `.story-deployed` 与对应 agent 文件。未部署时让用户选择：
 
-1. 先运行 `story-setup`，再回来导入；
-2. 继续导入并接受串行/solo 降级。
-
-要求只回复数字。
+- 先运行 `story-setup`，再回来导入；
+- 继续导入并接受串行/solo 降级。
 
 环境缺失只影响速度和并行能力，不得降低交付物完整性。
 

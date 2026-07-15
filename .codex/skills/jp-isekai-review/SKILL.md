@@ -6,23 +6,25 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Isekai Review
 
-## 数字交互契约
-
-- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
-- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
-- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
-- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+Required global read: `../story/references/audience-comprehension-floor.md`. Treat RPG-jargon-first openings and abstract skill proof as structural failures, not localization polish.
 
 Review drafts for Japanese male-audience isekai fit and localization quality.
+
+## Native Blind-Reader Gate
+
+- Read the body once before validator, package, blueprint, and intended explanation. Mark the earliest point where the promised battle, OP, exile, dungeon, identity, or slow-life desire stops pulling forward.
+- Require a protagonist-caused chain and a middle mechanism change. Repeated skill tests, guild witnesses, contracts, audits, inventory, travel, and larger public proof cannot substitute for escalation.
+- For first person, review knowledge boundary, selected details, practical judgment, and narrator mouth; pronoun correctness alone has no value.
+- Return the draft to `core / structure / scene / Japanese line` rather than compensating a structural failure with localization quality.
+- Surface lint is optional evidence about subtitle shape only. Never require hooks at fixed 6-10-line intervals or call a metric pass quality approval.
 
 ## Required Reads
 
 - Read `references/review-checklist.md` before a full review.
 - Read `references/terminology.md` whenever checking Chinese-to-Japanese adaptation leakage.
 - Read `../jp-isekai-write/references/self-check.md` when reviewing saved episodes, project-bound output, per-episode folders, continuity, plot bugs, package completeness, RPG-rule consistency, or Chinese leakage.
-- Read `../story/references/flan-push-strict-mode.md` for every push review and run its validator. Treat first-person novelization as blocking, not a viewpoint preference.
-- Treat metric-passing but personality-free flowchart narration as blocking; require a hook/reversal/reaction in every 6-10-line block.
-- Read `../story/references/character-name-policy.md` when reviewing names, repeated casts, localization, or package completeness.
+- Read `../story/references/flan-push-strict-mode.md` only when push-surface compliance is part of the review; its result is surface-only.
+- Treat personality-free flowchart narration as blocking through the blind-reader/state-change audit, not a fixed line interval.
 - If the draft or outline declares a subtype lane, read the loaded project benchmark card or `对标/{lane}/` report first when available, then the matching `../jp-isekai-plan/references/type-packs/{lane}.md` as fallback, and review against that lane's required payoff loop.
 
 ## Review Workflow
@@ -37,8 +39,6 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
    - Project-bound draft has no matching `大纲/细纲_第XXX章.md`, or the prose clearly ignores the available outline.
    - Project-bound continuation did not read/update `追踪/上下文.md`, `追踪/伏笔.md`, `追踪/时间线.md`, or relevant `追踪/角色状态.md`.
    - New concept/episode repeats a recent `男频异世界知识库/generated-ledger.jsonl` combination without changing at least two key fields.
-   - A new work reuses a full name or fantasy given name from `角色名历史/character-name-history.jsonl`, or bypasses the name ledger.
-   - An important female character uses a default display name longer than 6 characters, a fantasy full name longer than 10 characters, or more than two name segments without plot necessity.
    - Chinese fantasy terms or institutions leaking into a Japanese RPG fantasy setting.
    - Chinese court-drama institutions or social logic leaking through literal translation: emperor/harem/cold-palace/concubine/嫡庶/夺嫡 logic remains instead of Japanese RPG/fantasy royal, guild, noble, territory, or faction systems.
    - Japanese prose that reads like machine translation or Chinese sentence order.
@@ -51,8 +51,8 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
    - Episode has no full episode blueprint logic: unclear target emotion, episode position, core payoff, cost/risk, dense/sparse beat split, or ending hook.
    - Episode 2+ opens as a reset instead of continuing the previous episode's unresolved hook.
    - First sentence is atmosphere, abstract emotion, destiny, scenery, or generic inner monologue instead of a concrete plot bomb.
-   - Mid-episode has two or more 800-1200 character stretches without concrete problem, skill experiment, public reaction, cost/reward/status consequence, comic reversal, object/monster behavior, or meaningful choice.
-   - A 15,000-character episode uses length to pad mood, scenery, travel, explanation, or adjectives; long stretches can be deleted without changing plot, pressure, relationship, cost, reward, setup, aftershock, or next choice.
+   - Consecutive major modules lack a new problem, choice, tactic, consequence, relationship/status change, or audience question.
+- A 12,000-character episode uses length to pad mood, scenery, travel, explanation, or adjectives; long stretches can be deleted without changing plot, pressure, relationship, cost, reward, setup, aftershock, or next choice.
    - Dense beats are not denser than transitions; the prose spends similar weight on travel/mood and payoff.
    - Prose is padded with vague AI-flavored adjectives or summary paragraphs instead of scene-level objects, choices, witnesses, and consequences.
    - Draft fails JP anti-AI gates: generic destiny/light/silence texture, author explanation, stock summary ending, uniform rhythm, over-polished dialogue, or emotional lines without object/action/consequence.

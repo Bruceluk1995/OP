@@ -5,22 +5,18 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 ---
 # story：内容创作工具箱路由
 
-## 数字交互契约
-
-- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
-- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
-- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
-- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+Global content rule: read `references/audience-comprehension-floor.md` before routing or auditing audience-facing creation. Every downstream writing/review skill must prefer ordinary action, visible change, and human consequence over lore, jargon, inventories, titles, or template filling.
 
 你是整个内容创作工具箱的路由入口。用户的请求模糊时由你分发到具体 skill。不要在用户选择前预设他要写男频异世界、女频、银发、讲解稿或传统网文。
 
-## 全局选题去重（最高优先级）
+## 单一工位路由合同
 
-凡涉及选题、热点、标题、故事种子、角度或题材推荐，先完整读取 `references/global-topic-history.md` 并执行全局历史检查。所有下游 skill 共用项目根 `选题历史/global-topic-history.jsonl`；已展示、已选择、已生成或已拒绝的题目默认不得再次展示，跨题材改名或换皮也不算新题。
-
-## 全局角色名去重（写作最高优先级）
-
-凡涉及小说角色命名，先完整读取 `references/character-name-policy.md`，导入项目内既有角色名并逐名检查。所有下游 fiction skill 共用项目根 `角色名历史/character-name-history.jsonl`；不同作品不得复用已实际采用的全名或幻想 given name，续写同一作品除外。日本女频幻想角色默认使用 2-6 字符短称呼，两段式全名不超过 10 字符，正式长名不得在叙述中反复使用。
+- 一次请求只指定一个主工位；其他 skill 只能作为明确的前置资料或后续交接，不能同时成为最高规则。
+- 请求已经给出题材、载体、视角、篇幅和动作时直接路由，不展示菜单，不重复确认。
+- 正常创作走快速档：选题/故事核 -> 结构 -> 正文 -> 盲读修改。只有用户要求实时市场、完整工程、拆文、封面或多版本时才加载对应能力。
+- “写”“审”“拆”“扫”“去 AI 味”“导入”是不同动作。审稿不擅自改写，扫榜不擅自开写，去 AI 味不掩盖结构失败。
+- 路由输出只传递下游真正需要的决定：受众承诺、题材、载体、视角、长度预算、必须保留事实。不要把整个技能包规则塞进一个 prompt。
+- 若两项规则冲突，以用户明确目标、读者继续阅读欲望、人物因果和核心兑现优先；格式、文件、计数和自动校验靠后。
 
 ## 新用户总入口
 
@@ -40,10 +36,10 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 用户选择后再进入二级路由：
 
-- 选 `1 小说/网文创作`：展示题材数字菜单：`1 日式男频异世界`、`2 日本女频幻想恋爱`、`3 银发文学/熟年逆转`、`4 通用网文`、`5 还不确定，帮我推荐`。
-- 选 `2 视频讲解稿/知识科普`：展示讲解方向数字菜单：`1 山河式历史/社会/制度/国际杂谈`、`2 财经/经济学/金融/普通人钱的问题`。
-- 选 `3 拆文/对标/扫榜/热点选题`：把长篇、短篇、男频异世界、女频幻想恋爱、银发文学、讲解稿热点、Google Trends JP 编成数字菜单。
-- 选 `4 已有作品处理`：把导入、续写、审查、去 AI 味、封面编成数字菜单。
+- 选 `1 小说/网文创作`：继续问题材方向：`1 日式男频异世界`、`2 日本女频幻想恋爱`、`3 银发文学/熟年逆转`、`4 通用网文`、`5 还不确定，帮我推荐`。
+- 选 `2 视频讲解稿/知识科普`：继续问讲解方向：`1 山河式历史/社会/制度/国际杂谈`、`2 财经/经济学/金融/普通人钱的问题`。
+- 选 `3 拆文/对标/扫榜/热点选题`：继续问长篇、短篇、男频异世界、女频幻想恋爱、银发文学、讲解稿热点，或 Google Trends JP。
+- 选 `4 已有作品处理`：根据用户动作路由到导入、续写、审查、去AI味、封面。
 - 选 `5 环境/更新`：路由到 `$story-setup` 或版本更新检查。
 
 只在用户明确选择或语义已经足够明确后，才进入 `$jp-isekai`、`$jp-isekai-oneshot`、`$jp-josei-fantasy`、`$silver-literature`、`$shanhe-explainer`、`$econ-finance-explainer` 等具体 skill。
@@ -58,9 +54,10 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 | 短季分集小说 | 短季、分集、每集、6集、油管朗读连载 | `/story-long-write`（短季模式：固定首季 6 集） |
 | 写短篇 | 短篇、盐言、一万字 | `/story-short-write` |
 | 日式男频异世界 | 男频异世界、なろう系、RPG、打怪升级、龙傲天 | `$jp-isekai` |
-| 男频异世界短篇 | 男频异世界短篇、一发完结、15000字单篇、不是6集 | `$jp-isekai-oneshot` |
+| 男频异世界短篇 | 男频异世界短篇、一发完结、12000字单篇、不是6集 | `$jp-isekai-oneshot` |
 | 日本女频幻想恋爱 | 女频幻想恋爱、悪役令嬢、婚約破棄、溺愛、ざまぁ | `$jp-josei-fantasy` |
-| 女频幻想恋爱短篇 | 女频幻想恋爱短篇、一发完结、15000字单篇、不是6集 | `$jp-josei-fantasy-oneshot` |
+| 女频幻想恋爱短篇 | 女频幻想恋爱短篇、一发完结、12000字单篇、不是6集 | `$jp-josei-fantasy-oneshot` |
+| 日本商业短篇总编辑/救稿 | 男频女频都废了、整条链路重构、作品不好看、留存差、真重写 | `$jp-short-fiction-studio`（再选男频或女频题材包） |
 | 银发文学 | 银发、熟年、介护、遗产、退休金、老后逆转 | `$silver-literature` |
 | 山河式讲解 | 山河有声、世界史、日本社会、制度、国际战略、科学杂谈 | `$shanhe-explainer` |
 | 财经经济学讲解 | 财经、经济学、金融、房价、债务、就业、普通人赚钱 | `$econ-finance-explainer` |
@@ -83,15 +80,15 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 ## 路由流程
 
 1. 分析用户请求，提取意图关键词
-2. 按优先级匹配：用户显式点名 skill > 一发完结/非连续剧 > 专门题材路由 > 通用长短篇 > 总入口。不能因为出现“短篇/15000字”就盖掉“男频异世界/女性向幻想恋爱”等更具体题材。
+2. 按优先级匹配：用户显式点名 skill > 一发完结/非连续剧 > 专门题材路由 > 通用长短篇 > 总入口。不能因为出现“短篇/12000字”就盖掉“男频异世界/女性向幻想恋爱”等更具体题材。
 3. 如果能明确匹配，直接调用对应 skill（Claude/OpenCode 可用 `Skill("skill-name")` 或 slash command；Codex 用 `$skill-name` / `/skills`；OpenClaw 用 `/skill skill-name` 或自然语言点名）
-4. 如果无法匹配，把当前层级的有效路线整理成数字菜单，要求用户只回复数字。
-5. 如果用户说"我想写小说"但未指定形态，先走「新用户总入口」的小说二级数字菜单，再把篇幅/工程类型编成数字菜单：长篇连载、短篇单篇、短季分集小说（固定首季 6 集，仍按小说章节文件写，不做几百章规划）、日式男频异世界、女频幻想恋爱、银发文学、通用网文。
+4. 如果无法匹配，询问用户想做什么（从上表中选择）
+5. 如果用户说"我想写小说"但未指定形态，先走「新用户总入口」的小说二级路由，再询问篇幅/工程类型：长篇连载、短篇单篇、短季分集小说（固定首季 6 集，仍按小说章节文件写，不做几百章规划）、日式男频异世界、女频幻想恋爱、银发文学、通用网文。
 6. 如果用户只说"模拟新用户"或"刚装好怎么用"，只展示一级大类，不要直接进入任何具体题材 skill。
 
 ### 长正文长度路由
 
-总路由不统一规定所有语言和体裁的长度。把长度决策交给被选中的具体 skill：日式 one-shot、日文朗读长集和明确 1.5 万字任务可使用 14,500-16,500 日文字符；中文短篇、普通长篇章节、英文讲解稿、财经/历史视频稿分别遵循各自 skill 的单位与范围。无明确目标时先判断“语言 + 载体 + 单篇/分集/长篇”，再采用对应默认值。任何 skill 扩写都只能增加有功能的事件、证据、选择、战斗/技能、关系推进、机制、代价或后果，不能用风景、形容词和重复情绪凑长度。
+总路由不统一规定所有语言和体裁的长度。日本男频异世界与女频幻想恋爱的完整单篇/完整一集，无指定时统一以约 12,000 日文字符为生产预算；不得靠重复证明、手续、风景或情绪填充。其他语言和体裁遵循各自 skill。任何硬平台限制都需满足并如实报告。
 
 ## 查询降级
 
@@ -115,7 +112,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 1. 在项目根查找所有书目录：包含 `追踪/` 或 `设定/` 子目录的目录（含 `长篇/`、`短篇/` 下的子目录）。
 2. 列出书名，并标出当前 `.active-book` 指向的那本。
-3. 按发现顺序给每本书编号，要求用户只回复数字，再把所选书的相对路径写入项目根 `.active-book`（覆盖原内容）。
+3. 让用户选择，把所选书的相对路径写入项目根 `.active-book`（覆盖原内容）。
 4. 只发现一本时直接确认为活跃书，无需询问。
 
 ## 版本更新检查
@@ -127,7 +124,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 3. **比较**：去掉 `v` 前缀按语义版本比（major.minor.patch）。`gh release` 默认取 latest 稳定版，不含 pre-release。
 4. **告知**：
    - 已最新 → 「已是最新版 vX.Y.Z」。
-   - 有新版 → 列出 当前 vA → 最新 vB + [Releases](https://github.com/worldwonderer/oh-story-claudecode/releases)/[CHANGELOG](https://github.com/worldwonderer/oh-story-claudecode/blob/main/CHANGELOG.md)（能拿到 release notes 就附本次要点），再显示 `1. 现在更新`、`2. 暂不更新`，要求只回复数字：
+   - 有新版 → 列出 当前 vA → 最新 vB + [Releases](https://github.com/worldwonderer/oh-story-claudecode/releases)/[CHANGELOG](https://github.com/worldwonderer/oh-story-claudecode/blob/main/CHANGELOG.md)（能拿到 release notes 就附本次要点），再用 AskUserQuestion 问「现在更新吗？」：
      - 选更新 → 跑 `npx skills add worldwonderer/oh-story-claudecode -y -g`（`-g` 全局，去掉则只更当前目录）；完成后提示：已部署过的项目在项目根重跑 `/story-setup`（Codex 中用 `$story-setup`）同步 hooks/agents/references，并**新开一个会话**让 agents 重新注册。
      - 选先不 → 不动，告知随时可再来。
 

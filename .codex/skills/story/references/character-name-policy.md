@@ -1,4 +1,3 @@
-
 # Global Character Name Policy
 
 Use this before finalizing names in any fiction skill. The project-wide ledger is:

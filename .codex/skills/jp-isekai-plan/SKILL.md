@@ -6,31 +6,31 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Isekai Plan
 
-## 数字交互契约
-
-- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
-- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
-- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
-- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+Required global read: `../story/references/audience-comprehension-floor.md`. Reject premises whose cheat or opening cannot be understood as ordinary action/loss -> visible change -> human consequence without RPG terminology.
 
 Build Japanese-style male-audience isekai plans. This skill is for concept and structure, not final prose.
 
-Before premise or title work, read `../story/references/global-topic-history.md`, check the shared project ledger, and record every displayed candidate before output. Cross-domain re-skins of burned topics are blocked by default.
+## Execution Profiles
+
+- **Fast concept (default):** use this skill's causal-core workflow and one matching type pack only when needed. Return a compact change outline.
+- **Full project:** retain settings, rolling outlines, tracking, project memory, ledger, and benchmark files.
+- **Research/variation:** retain live market browsing, dynamic benchmarking, topic menus, and optional opening-card draws.
+
+Keep all capabilities, but never load every reference for a normal clear request.
 
 When planning prose beats, design colloquial, direct scene movement: action, dialogue, choices, proof, cost, and consequence. Do not plan long scenery passages, long psychology passages, or literary mood filler as a way to carry the story.
 
-## Required Reads
+## Conditional Capability Reads
 
-- Read `../jp-isekai/references/presentation-modes.md` before planning any long or short male-isekai project. Present the numbered 1-4 menu and allow multiple selections unless the user already chose a combination explicitly.
+- Read `../jp-isekai/references/presentation-modes.md` only when presentation/viewpoint is unclear or comparison is requested.
 - Read `../story/references/flan-push-strict-mode.md` for either push option and plan information/shot lines, narrated reactions, and sparse direct dialogue regardless of person.
 - Read `../jp-isekai/references/topic-menu.md` when the user has not supplied a concrete premise. Do not replace the full grouped topic menu with a tiny handful of examples.
-- Read `../jp-isekai/references/opening-innovation-engine.md` before finalizing any first-episode or one-shot push opening. Filter by subtype lane, randomly draw one compatible card, plan its chain, and record the card ID; do not invent a new structure.
+- Read `../jp-isekai/references/opening-innovation-engine.md` only for an explicit variation/card request or when a weak opening needs optional ideation.
 - Read `references/terminology.md` whenever adapting from Chinese fantasy or when the user says "不要中式".
 - Read `references/market-patterns.md` when the user asks for market fit, popular formulas, or gives なろう/Kakuyomu as reference.
 - Read `references/planning-template.md` before producing a full concept package.
 - Read `references/dynamic-benchmarking.md` when the user wants current market fit, website-based拆书, hottest works, or when no strong project benchmark exists for the chosen subtype.
 - Read `../jp-isekai/references/project-memory.md` before opening a project, continuing a serial, creating chapter outlines, or trying to avoid repeated premises.
-- Read `../story/references/character-name-policy.md` before naming the cast. Run `import-existing`, check every final name, apply `jp-female-fantasy` to important women, and add all selected names after saving the plan.
 - Before planning any subtype, resolve its benchmark priority: project拆文 or live website benchmark first, project subtype notes second, bundled type pack only as fallback. Do not rely on the generic isekai rules alone.
 
 Type pack routing:
@@ -54,11 +54,11 @@ Benchmark priority:
 
 ## Planning Workflow
 
-1. Resolve the numbered format gate first:
-   - Offer options 1-4 exactly as defined in `presentation-modes.md` and say `可多选`.
+1. Resolve format/viewpoint only when missing:
+   - Offer options 1-4 only when the user has not already chosen.
    - Record every selected combination in the concept package and outline. Do not silently switch later.
    - For multiple selections, plan separate presentation/viewpoint variants from the same premise unless the user requests different premises.
-   - For push mode, plan information/shot beats, causal gaps, oral transitions, proof moments, and retention turns. Do not force every story into a result-first opening; let the opening innovation engine select the strongest premise-specific information order. First-person push uses the protagonist's oral account; third-person push may use role labels and external reactions.
+   - For push mode, plan information/shot beats, causal gaps, oral transitions, and retention turns. Use the optional opening deck only when requested; first-person push uses the protagonist's oral account, while third-person may use role labels and external reactions.
 2. Identify the target subtype:
    - OP dominance / ruler fantasy: protagonist starts overwhelmingly strong; tension comes from information gaps, restraint, subordinates, territory, politics, public myth, and enemies choosing the wrong fight.
    - Battle leveling / monster grind: protagonist turns a weak-looking skill into combat value, kills stronger monsters, earns drops, rank-ups, and boss access.
@@ -79,7 +79,6 @@ Benchmark priority:
 3. Create a localization map:
    - Chinese source concept -> Japanese isekai equivalent.
    - Institutions, creatures, rank names, currencies, food, clothes, and place names.
-   - Name-ledger result for every named character. Use short daily call names; a formal noble name is plot metadata, not the repeated narration label.
 4. Design the cheat as a repeatable engine:
    - Input, output, limitation, growth path, misunderstanding surface, and public-facing explanation.
    - Ensure every episode can generate one discovery, one problem, and one payoff.

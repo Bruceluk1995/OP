@@ -5,14 +5,17 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 ---
 # story-cover：小说封面与视频缩略图
 
-## 数字交互契约
-
-- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
-- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
-- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
-- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+Required global read: `../story/references/audience-comprehension-floor.md`. Make titles and visual concepts readable through a person, conflict, loss, gain, or result; do not depend on unexplained lore words.
 
 把封面当作信息设计，而不是单纯插画。交付必须同时解决：题材识别、视觉焦点、标题可读、平台比例和缩小后的点击表现。
+
+## 点击承诺先行
+
+- 封面不替弱故事核兜底。先从已确定作品中提取“读者正在等什么”：危险、翻盘、关系、身份、损失或结果。
+- 主标题、核心人物表情/动作和主视觉必须承诺同一件事；封面不能卖婚约破弃，正文却主打经营，也不能卖战斗，正文却只有料理。
+- 先产出一句点击承诺和一个主视觉冲突，再决定风格、颜色、光效和装饰。无法一句说清时退回标题/故事定位，不靠堆字解决。
+- 多版本必须改变点击角度，而不是只换颜色。默认只生成一个最强方向，用户要求 A/B 测试时再扩展。
+- 缩略图盲测先于精修：缩到平台实际尺寸，三秒内看不出人物、冲突和关键词就重构构图。
 
 ## 路由守卫
 

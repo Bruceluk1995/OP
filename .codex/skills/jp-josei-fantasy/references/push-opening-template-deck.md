@@ -1,14 +1,15 @@
 # Josei Push Opening Template Deck
 
-Use only for female-audience fantasy-romance push narration. Filter by lane, randomly draw one compatible card, fill it truthfully, and record its ID. Do not merge cards or invent a nineteenth structure unless the user explicitly asks.
+Optional ideation deck for female-audience fantasy-romance push openings. Use only when the writer needs variation or the user requests a card. The authoritative workflow is `../../jp-short-fiction-studio/SKILL.md`; cards never become quality or delivery gates.
 
-## Draw Procedure
+## Optional Draw Procedure
 
+0. Lock a plain social core before drawing: `a familiar accusation/loss/choice -> visible evidence or relationship action -> human/social consequence`. If it already supplies a strong opening, skip the deck.
 1. Determine one primary lane: `engagement`, `saint`, `villainess`, `contract`, `family`, `beloved`, `loop`, `proof`, `craft`, or `mystery`.
 2. Collect the last three card IDs from the project ledger when available.
 3. Run `scripts/draw-opening-template.py --lane <lane> --recent <ids>` from the `jp-josei-fantasy` skill directory.
-4. Fill the returned card. Redraw once only if required story facts are absent.
-5. Record card ID, lane, proof object, public venue, heroine decision, and opening first sentence.
+4. Use only beats that strengthen the truthful event. Discard the card when it forces public proof, weakens heroine agency, or creates checklist prose.
+5. Record the card only for explicit project anti-homogenization work.
 
 ## Cards
 
@@ -136,14 +137,15 @@ Lanes: contract, beloved, mystery.
 
 要求：
 1. 不换卡、不混卡、不发明新结构；
-2. 前2句讲清女主身份和当下爆点；
+2. 前2句先让观众看见女主正在被拿走什么、被指控什么、拒绝什么或主动选择什么；不得用爵位、家谱、神殿制度、婚约条款或身份说明代替事件；
 3. 完成卡片要求的信息链，至少一次明确递进；
 4. 女主必须有主动选择，不能只等高位男主救场；
 5. 先恢复尊严／证据，再推进恋爱；
 6. 写成连续推文口播，不写文学氛围、诗化断句或预告片碎句；
 7. 日文要自然本地化为女性向动漫解说口吻；
 8. 最后一句直接接正文；
-9. 只输出模板编号和最终开头。
+9. 前五行必须让普通观众说清“谁受压、发生了什么、为什么值得关心”，不需要词典或后文简介；
+10. 只输出模板编号和最终开头。
 ```
 
 ## Safety and Quality
@@ -151,4 +153,6 @@ Lanes: contract, beloved, mystery.
 - Do not import incest, sexual violence, crude sexual jokes, misogyny, IP characters, fabricated extreme numbers, or humiliation that objectifies the heroine.
 - Do not use male lead status as the only proof. Evidence and heroine action must matter.
 - Do not make zamaa coincidence-based. Use records, witnesses, law, contracts, church rules, work results, or antagonist actions.
+- Do not use records, laws, contracts, ranks, titles, or church rules as the opening itself. First show a signature refused, money missing, a seat taken, a promise broken, evidence seized, a public accusation, or another visible social action.
+- Do not repair confusion by explaining noble or church systems. Remove unnecessary terms and make the current choice/evidence/consequence legible.
 - If wording is weak, repair within the same card. Redraw only for factual incompatibility.

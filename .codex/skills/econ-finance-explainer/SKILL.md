@@ -6,16 +6,21 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # Econ Finance Explainer
 
-## 数字交互契约
-
-- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
-- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
-- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
-- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+Required global read: `../story/references/audience-comprehension-floor.md`. Begin with a recognizable bill, wage, price, debt payment, job choice, or household consequence; introduce one technical term at a time and translate it into who pays, gains, loses, or waits.
 
 Create long-form economics and finance explainers that make abstract mechanisms feel concrete. The voice can borrow the source corpus's strength: everyday scenes, fictionalized markets, sharp analogies, and "ordinary people pay the bill" framing. The output length and reasoning depth should follow the Shanhe-style explainer workflow, not the short source subtitles.
 
 Before topic, hotspot, title, or angle work, read `../story/references/global-topic-history.md`, check the shared project ledger, and register every displayed candidate. A news event or mechanism already used by any fiction or explainer skill is burned across domains by default.
+
+## 原生制片与盲读流程
+
+- **选题制片**先锁定观众正在付出的具体成本和想弄明白的问题，不从术语或宏大结论开场。
+- **机制编辑**把主题写成因果链：谁做决定 -> 激励如何改变 -> 谁获益 -> 谁承担成本 -> 哪个反例会推翻结论。
+- **开头导演**先给账单、工资、房租、利率、排队、工作选择或骗局动作，再提出一个必须继续听才能回答的问题。
+- **结构编辑**让中段至少换一次机制或视角，例如从个人选择转到平台/银行/政府激励；不能用三个相似案例重复证明同一结论。
+- **脚本写手**只解释当前选择需要的概念，一旦观众知道“谁付钱、为何发生、接下来会怎样”就停止定义。
+- **盲读编辑**先判断哪一段开始像课本或流水账，再看字数、引用和格式；事实核验通过不能代替可看性。
+- 快速档只加载结构、受众、本题 topic pack 和必要事实；实时研究、全源热点、ledger 与多版本标题按需启用。
 
 ## Source Signal
 
@@ -38,22 +43,20 @@ Do not copy recurring names, exact story shells, or source phrasing. Create fres
 ## Workflow
 
 1. Run audience-first intake when the audience is missing:
-   - Before topic, language, or length, display: `1. 日本`、`2. 美国`、`3. 欧洲`、`4. 中国/中文受众`、`5. 其他/国际受众`; require a numeric reply. Option 5 may request the region in the next turn.
+   - Ask "观众主要在哪里？" before asking topic, language, or length.
+   - Offer compact choices: Japan, United States, Europe, China/Chinese-speaking, or Other/international.
    - Treat language and audience as separate fields. English does not automatically mean United States; Japanese does not automatically mean Japan if the user says otherwise.
-2. Present the new-user state as a numbered menu:
-   - `1. 还没有题目，帮我找财经选题`
-   - `2. 已有关键词/热点，帮我转成标题`
-   - `3. 已有标题/题目，帮我做因果链大纲`
-   - `4. 已准备好，直接写完整讲解稿`
-   - `5. 有视频/字幕素材，先拆风格与选题模式`
-   Require a numeric reply.
-3. For any writing task, read:
-   - `references/style-patterns.md`
-   - `references/structure-template.md`
-   - `references/localization.md`
-   - `references/fact-checking.md`
-   - `references/anti-homogenization.md`
-   - `references/hot-source-router.md` when the user has no topic, wants 热点选题, asks for YouTube/TikTok/Google Trends/news/data/all-source selection, or rejects the current source as boring.
+2. Ask the new-user state in plain language:
+   - No topic yet: find video-worthy economics/finance angles.
+   - Has keyword/hot event: convert it into explainable titles.
+   - Has a title/topic: build a causal-chain outline.
+   - Ready to write: draft the complete narration.
+   - Has video/subtitle material: distill style and topic patterns.
+3. For writing, load only what this task needs:
+   - Fast script: `references/style-patterns.md`, `references/structure-template.md`, the selected audience pack, and one topic pack.
+   - Current/high-stakes claims: also load `references/fact-checking.md` and verify live sources.
+   - Project variation/history: load `references/anti-homogenization.md` and the ledger only when relevant.
+   - `references/hot-source-router.md` only when the user has no topic, wants 热点选题, asks for YouTube/TikTok/Google Trends/news/data/all-source selection, or rejects the current source as boring.
    - `references/trend-benchmarking.md` when the user wants hot/current/platform-fit topics or title generation from trends.
 4. Select one topic pack:
    - Household money, consumption, debt traps, education, career choice, sunk cost -> `references/topic-packs/household-money.md`
@@ -83,11 +86,11 @@ Do not copy recurring names, exact story shells, or source phrasing. Create fres
 
 - Default language: follow the user's request. If not specified in this project, ask once; if the user says "你决定", use Japanese for Japan, English for US/Europe, and Chinese for Chinese-speaking audiences.
 - Default full-script length:
-  - Japanese: target at least 15,000 characters for a complete episode; 12,000-16,000 is acceptable only when the user explicitly asks for a tighter version.
+  - Japanese: target approximately 12,000 characters for a complete episode unless the user specifies otherwise.
   - English: target 3,500-5,000 words for a complete episode; 1,800-2,800 words only when the user asks for a short version.
-  - Chinese: target at least 15,000 Chinese characters for a complete episode; 5,000-9,000 characters only when the user asks for a short version.
+  - Chinese: target approximately 12,000 Chinese characters for a complete episode unless the user specifies otherwise.
 - The 代数学家89 corpus is short; do not let it shrink the output. Expand by adding real mechanisms, comparisons, scenes, counterarguments, and verified evidence, not filler.
-- Treat the 15,000-character target as functional density, not padding permission. Add cash-flow turns, contract details, household choices, institutional tradeoffs, comparisons, and consequences; do not add empty adjectives or repeated moral commentary.
+- Treat length as a budget, not a minimum gate. Add a mechanism, comparison, household choice, counterargument, or consequence only when it changes understanding; otherwise report the tighter actual length.
 - Keep line breaks TTS-friendly: one idea, beat, or punchline per line.
 - For Japanese-audience title batches, default to Chinese + Japanese bilingual titles. The operator is usually Chinese and needs a Chinese working title to judge direction.
 - For finance topics, include a short note distinguishing educational explanation from investment advice when the output could be read as advice.

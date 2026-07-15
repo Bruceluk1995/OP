@@ -8,7 +8,13 @@ import json
 import re
 from pathlib import Path
 
-from opening_cards import REQUIRED_CHAINS
+from opening_cards import CARD_SURFACES, REQUIRED_CHAINS
+
+VISUAL_CORE = [
+    "ordinary_action_or_loss",
+    "visible_change",
+    "human_consequence",
+]
 
 
 def compact(text: str) -> str:
@@ -44,6 +50,12 @@ def main() -> int:
     evidence = payload.get("evidence")
     if not isinstance(evidence, dict):
         return fail(["evidence must be an object keyed by required-chain slot"])
+    surface_evidence = payload.get("surface_evidence")
+    if not isinstance(surface_evidence, dict):
+        return fail(["surface_evidence must be an object keyed by the drawn card's surface beats"])
+    visual_core_evidence = payload.get("visual_core_evidence")
+    if not isinstance(visual_core_evidence, dict):
+        return fail(["visual_core_evidence must be an object keyed by ordinary_action_or_loss, visible_change, and human_consequence"])
 
     opening = compact(args.body.read_text(encoding="utf-8"))[: max(args.opening_chars, 1)]
     required = REQUIRED_CHAINS[card_id]
@@ -74,6 +86,53 @@ def main() -> int:
     if len(ordered_positions) == len(required) and ordered_positions != sorted(ordered_positions):
         errors.append("evidence slots do not appear in the card's required order")
 
+    surface = CARD_SURFACES[card_id]
+    surface_positions: dict[str, int] = {}
+    surface_quotes: set[str] = set()
+    for slot in surface:
+        quote = surface_evidence.get(slot)
+        if not isinstance(quote, str) or not compact(quote):
+            errors.append(f"missing surface evidence slot: {slot}")
+            continue
+        normalized = compact(quote)
+        if len(normalized) < 4:
+            errors.append(f"surface evidence too short for {slot}: use an exact quote of at least 4 characters")
+            continue
+        if normalized in surface_quotes:
+            errors.append(f"duplicate surface evidence reused for slot: {slot}")
+            continue
+        surface_quotes.add(normalized)
+        position = opening.find(normalized)
+        if position < 0:
+            errors.append(f"surface evidence for {slot} is not present in the first {args.opening_chars} non-whitespace characters")
+            continue
+        surface_positions[slot] = position
+
+    ordered_surface_positions = [surface_positions[slot] for slot in surface if slot in surface_positions]
+    if len(ordered_surface_positions) == len(surface) and ordered_surface_positions != sorted(ordered_surface_positions):
+        errors.append("card-specific surface beats do not appear in the required order")
+
+    visual_positions: dict[str, int] = {}
+    visual_quotes: set[str] = set()
+    for slot in VISUAL_CORE:
+        quote = visual_core_evidence.get(slot)
+        if not isinstance(quote, str) or not compact(quote):
+            errors.append(f"missing visual-core evidence slot: {slot}")
+            continue
+        normalized = compact(quote)
+        if len(normalized) < 4:
+            errors.append(f"visual-core evidence too short for {slot}: use an exact quote of at least 4 characters")
+            continue
+        if normalized in visual_quotes:
+            errors.append(f"duplicate visual-core evidence reused for slot: {slot}")
+            continue
+        visual_quotes.add(normalized)
+        position = opening.find(normalized)
+        if position < 0:
+            errors.append(f"visual-core evidence for {slot} is not present in the first {args.opening_chars} non-whitespace characters")
+            continue
+        visual_positions[slot] = position
+
     if errors:
         return fail(errors)
 
@@ -85,6 +144,10 @@ def main() -> int:
                 "opening_chars_checked": args.opening_chars,
                 "required_chain": required,
                 "evidence_positions": positions,
+                "surface_beats": surface,
+                "surface_evidence_positions": surface_positions,
+                "visual_core": VISUAL_CORE,
+                "visual_core_evidence_positions": visual_positions,
             },
             ensure_ascii=False,
             indent=2,

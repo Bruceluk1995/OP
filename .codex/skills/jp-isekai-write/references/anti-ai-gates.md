@@ -66,7 +66,7 @@ Use body/object behavior:
 - Sparse beats get one or two sentences.
 - Do not make every paragraph the same length.
 - Do not create a chain of tiny one-sentence paragraphs unless the scene is a pressure beat.
-- In a 15,000-character episode, do not use long quiet stretches as filler. Any long stretch must change, prepare, or pay off information, resource, risk, status, relationship, skill understanding, enemy pressure, objective, or next decision.
+- In a 12,000-character episode, do not use long quiet stretches as filler. Any long stretch must change, prepare, or pay off information, resource, risk, status, relationship, skill understanding, enemy pressure, objective, or next decision.
 - Delete paragraphs that only describe atmosphere, scenery, awe, loneliness, silence, light, destiny, or vague feelings without changing the state above.
 - If the Codex AI reread notices short-sentence stutter, merge short fragments into a fuller action chain.
 - If it reports `long-paragraph`, split by new action, object, line of dialogue, or information turn.

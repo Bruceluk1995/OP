@@ -19,6 +19,7 @@ Do not use a mechanical scan as the self-check system. The default self-check is
 
 ## AI Story Bug Audit
 
+- Audience comprehension: in the first five lines, a casual viewer can identify who is pressured, what visibly changed, and why it matters without a glossary. Fix failures by changing the event, evidence, choice, or consequence—not by adding title, family-tree, church, or contract definitions.
 - Continuity: the first scene follows the previous episode's exact unresolved item, location, promise, witness, injury, contract, or public pressure.
 - Cause and effect: every big reveal, rescue, testimony, punishment, or romantic concession has setup on the page or in prior tracking.
 - Character state: names, titles, injuries, curse marks, relationship status, contract status, and public reputation match the tracking files.

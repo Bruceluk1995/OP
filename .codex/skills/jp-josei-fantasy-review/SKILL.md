@@ -6,23 +6,25 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Josei Fantasy Review
 
-## 数字交互契约
-
-- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
-- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
-- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
-- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+Required global read: `../story/references/audience-comprehension-floor.md`. Treat title/genealogy/church/contract exposition without a visible accusation, choice, evidence move, or relationship consequence as structural failure.
 
 Review drafts for Japanese female-audience fantasy romance fit, localization quality, and emotional payoff.
+
+## Native Blind-Reader Gate
+
+- Read the body before validator, package, blueprint, and author intention. Mark the earliest point where dignity, relationship recognition, heroine choice, zamaa, safety, or second-life desire stops pulling forward.
+- Require heroine-caused consequences and a middle mechanism change. Repeated humiliation venues, documents, witnesses, public proof, etiquette and male-lead declarations cannot substitute for escalation.
+- For first person, review knowledge boundary, selected details, self-protective judgment and narrator mouth; pronoun correctness alone has no value.
+- Return the draft to `core / structure / scene / Japanese line`; romance prose, localization, or happy-ending labels cannot compensate for passive heroine structure.
+- Surface lint is optional subtitle-shape evidence only. Never require a turn at a fixed 6-10-line interval or call metric pass quality approval.
 
 ## Required Reads
 
 - Read `references/review-checklist.md` before a full review.
 - Read `references/terminology.md` whenever checking Chinese-to-Japanese adaptation leakage.
 - Read `../jp-josei-fantasy-write/references/self-check.md` when reviewing saved episodes, project-bound output, per-episode folders, continuity, plot bugs, package completeness, or Chinese leakage.
-- Read `../story/references/flan-push-strict-mode.md` for every push review and run its validator. First-person romance push that expands into scene prose or inner-monologue paragraphs is blocking.
-- Treat metric-passing but personality-free flowchart narration as blocking; require a hook/reversal/reaction in every 6-10-line block.
-- Read `../story/references/character-name-policy.md` when reviewing character names, localization, or package completeness.
+- Read `../story/references/flan-push-strict-mode.md` only when push-surface compliance is part of the review; its result is surface-only.
+- Treat personality-free flowchart narration as blocking through the blind-reader/state-change audit, not a fixed line interval.
 - If the draft or outline names a lane, read the best available benchmark/type-pack material before judging genre fit: project拆文, live benchmark card, project-local `女频幻想恋爱知识库/type-packs/{lane}.md`, then bundled `../jp-josei-fantasy-plan/references/type-packs/{lane}.md` as fallback.
 
 ## Review Workflow
@@ -37,8 +39,6 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
    - Project-bound draft has no matching `大纲/细纲_第XXX章.md`, or the prose clearly ignores the available outline.
    - Project-bound continuation did not read/update `追踪/上下文.md`, `追踪/伏笔.md`, `追踪/时间线.md`, or relevant `追踪/角色状态.md`.
    - New concept/episode repeats a recent `女频幻想恋爱知识库/generated-ledger.jsonl` combination without changing at least two key fields.
-   - A new work reuses a heroine, male lead, or fantasy given name from the shared character-name ledger, or never checked the ledger.
-   - A heroine/core woman's everyday name exceeds 6 characters, her fantasy full name exceeds 10 characters, or it has more than two segments without a plot-critical legal reason.
    - Project-bound outline names a subtype lane but the plan/prose used only generic josei fantasy rules and did not load the benchmark/type-pack priority chain.
    - Chinese fantasy institutions, xianxia terms, or Chinese sentence logic leaking into a Japanese fantasy-romance setting.
    - Chinese court-drama institutions or social logic leaking through literal translation: emperor/harem/cold-palace/concubine/嫡庶/夺嫡 logic remains instead of Japanese noble, church, court, or social-season mechanisms.
@@ -50,8 +50,8 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
    - Episode has no full episode blueprint logic: unclear target emotion, episode position, core payoff, cost/risk, dense/sparse beat split, or ending hook.
    - Episode 2+ opens as a reset instead of continuing the previous episode's unresolved hook.
    - First sentence is scenery, abstract emotion, destiny, quiet morning, or generic pain instead of a concrete social/emotional bomb.
-   - Mid-episode has two or more 800-1200 character stretches without evidence, public pressure, heroine choice, male-lead action, zamaa setup/payoff, romantic recognition, legal/family/church consequence, or next-hook escalation.
-   - A 15,000-character episode uses length to pad mood, scenery, beauty, sadness, etiquette, or adjectives; long stretches can be deleted without changing evidence, social pressure, relationship, romance, cost, setup, aftershock, or next choice.
+   - Consecutive major modules lack a new heroine choice, consequence, relationship movement, social pressure, reversal, or audience question.
+- A 12,000-character episode uses length to pad mood, scenery, beauty, sadness, etiquette, or adjectives; long stretches can be deleted without changing evidence, social pressure, relationship, romance, cost, setup, aftershock, or next choice.
    - Dense beats are not denser than transitions; the prose spends similar weight on etiquette/scenery/sadness and payoff.
    - Prose is padded with vague AI-flavored adjectives or summary paragraphs instead of documents, witnesses, choices, etiquette, contracts, and consequences.
    - Draft fails JP anti-AI gates: generic destiny/light/silence texture, author explanation, stock summary ending, uniform rhythm, over-polished dialogue, or emotional lines without document/action/social consequence.

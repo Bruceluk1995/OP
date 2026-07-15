@@ -1,42 +1,50 @@
-# Anti-Water Gates
+# Anti-Water Editorial Gates
 
-Use before delivery and whenever the draft is under target length.
+Use during outlining, expansion, and final rereading. The goal is not to reach a number; it is to make every retained passage change the audience's experience or the story state.
 
-## Expand Only Functional Beats
+## Functional Expansion
 
-Allowed expansion:
+When a draft needs more substance, add one genuinely new turn:
 
-- split a skill test into attempt -> failure -> adjustment -> visible result -> witness reaction -> cost;
-- split OP dominance into enemy misread -> restrained choice -> controlled reveal -> witness reaction -> faction consequence;
-- add exact prices, ranks, guild rules, monster parts, equipment condition, quest terms, or reward details;
-- add a public witness who changes reputation or pressure;
-- add a practical protagonist aside that sharpens cost, food, rent, tools, or risk;
-- add a closed zamaa/status payoff if the premise promised it.
+- an obstacle that forces a different tactic;
+- a choice that sacrifices one benefit for another;
+- a relationship or status change;
+- a new cost, limitation, danger, or collateral consequence;
+- an enemy who learns and changes strategy;
+- a result that creates a more difficult problem;
+- a promised emotional or social consequence that has not yet landed.
 
-Forbidden expansion:
+Do not expand a resolved claim into attempt -> second attempt -> container change -> public test -> official audit. One decisive proof is enough. A later proof is allowed only when its mechanism or stakes are new.
 
-- weather, moonlight, silence, destiny, vague awe;
-- long environment description, long psychology description, literary mood, or decorative atmosphere;
-- repeated "I changed", "my new life began", "the world moved";
-- long travel between places without a state change;
-- generic skill explanation before the scene proves the rule;
-- next-episode bait in a one-shot ending.
+## Forbidden Expansion
 
-## Paragraph Test
+- weather, moonlight, generic silence, destiny, vague awe;
+- repeated experiments proving the same skill rule;
+- procurement, contract review, inventory, training, travel, or public demonstration with no new conflict;
+- extra witnesses who all express the same surprise;
+- generic skill explanation before or after the scene already proves it;
+- repeated emotion labels or “my new life began” summaries;
+- next-episode bait used to avoid closing a one-shot.
 
-For every long paragraph, ask:
+## State-Change Test
+
+For every scene or long paragraph, ask:
 
 ```text
-What changed because this paragraph exists?
+What is different when this ends?
 ```
 
-Keep it only if the answer names a concrete change: money, rank, item, wound, monster behavior, guild rule, witness reaction, skill understanding, enemy pressure, relationship, territory, or protagonist choice.
+Keep it when the answer names a concrete change in fact, goal, danger, choice, money, rank, item, wound, ability understanding, enemy tactic, relationship, reputation, or consequence. Compress or cut when the answer is only “the audience understands the same thing again.”
+
+## Length Rule
+
+Treat requested length as a production budget unless the user or platform states a real hard limit. Count and report the actual body. If the draft is short, re-outline for a new functional turn; if no honest turn exists, disclose the shortfall instead of padding.
 
 ## Final Gate
 
-- First sentence has a concrete bomb.
-- The one-shot premise is clear within 500 Japanese characters.
-- At least three visible payoff turns occur before the climax.
-- Main promise is fully paid off.
-- Ending is closed.
-- Body count is 14,500-16,500 Japanese characters unless the user approved shorter.
+- The opening presents a concrete event with human meaning and live pressure.
+- The central mechanism has one clear decisive proof.
+- The middle changes the problem rather than repeating proof.
+- The climax resolves the opening promise through action or choice.
+- The ending is closed and concrete.
+- No scene exists only to satisfy a beat count, proof count, or character-count target.

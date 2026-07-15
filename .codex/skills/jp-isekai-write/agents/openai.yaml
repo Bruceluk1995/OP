@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Isekai Write"
   short_description: "Draft novel or push-style Japanese male isekai"
-  default_prompt: "Use $jp-isekai-write to confirm format, randomly draw and fill one screenshot-derived push-opening card, then write the Japanese male-isekai version with quality gates."
+  default_prompt: "Use $jp-isekai-write in the fast profile to write and blind-edit the Japanese male-isekai episode; keep project packaging, research, and opening cards available only when requested."

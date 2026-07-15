@@ -5,7 +5,7 @@ import secrets
 import sys
 from pathlib import Path
 
-from opening_cards import CARDS, REQUIRED_CHAINS
+from opening_cards import CARDS, CARD_SURFACES, REQUIRED_CHAINS
 
 DEFAULT_LEDGER = Path("男频异世界短篇知识库") / "generated-ledger.jsonl"
 
@@ -65,6 +65,7 @@ def main():
                 "name": name,
                 "lanes": sorted(lanes),
                 "required_chain": REQUIRED_CHAINS[card_id],
+                "surface_beats": CARD_SURFACES[card_id],
                 "excluded_recent": sorted(recent),
                 "ledger_path": str(ledger_path),
             },

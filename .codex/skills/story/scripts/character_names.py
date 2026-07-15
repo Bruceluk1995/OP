@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """Project-wide character-name ledger and Japanese name-style validator."""
 

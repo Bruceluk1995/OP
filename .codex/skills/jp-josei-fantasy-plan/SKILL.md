@@ -6,24 +6,25 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Josei Fantasy Plan
 
-## 数字交互契约
-
-- 凡需用户在有限选项中决定，必须在普通对话中列出数字编号，并以“请只回复数字；可多选时用 +，如 1+3”收尾。
-- 禁止用开放式问题代替可枚举选项；禁止依赖 AskUserQuestion、request_user_input 或自由文本选项完成有限选择。
-- “自定义 / 其他 / 提供素材”也必须编为数字选项。用户选中后，下一轮只索取一个必要内容（如关键词、书名、路径、链接或正文）；这类实际内容不强行数字化。
-- 是非确认统一写成 1. 是 / 2. 否，并要求只回复数字。
+Required global read: `../story/references/audience-comprehension-floor.md`. Reject premises whose pressure is only titles, noble genealogy, engagement law, or church terminology without a visible accusation, loss, choice, or relationship action.
 
 Build Japanese-style female-audience fantasy romance plans. This skill is for concept, market fit, emotional structure, and chapter beats, not final prose.
 
-Before premise or title work, read `../story/references/global-topic-history.md`, check the shared project ledger, and record every displayed candidate before output. Cross-domain re-skins of burned topics are blocked by default.
+## Execution Profiles
+
+- **Fast concept (default):** use this skill's heroine-choice workflow and one matching type pack only when needed. Return a compact change outline.
+- **Full project:** retain settings, rolling outlines, tracking, project memory, ledger, and benchmark files.
+- **Research/variation:** retain live market sources, trend conversion, dynamic benchmarks, and optional opening-card draws.
+
+Keep all capabilities, but never load every reference for a normal clear request.
 
 When planning prose beats, design colloquial, direct scene movement: action, dialogue, choices, evidence, romance movement, and social consequence. Do not plan long scenery passages, long psychology passages, or literary mood filler as a way to carry the story.
 
-## Required Reads
+## Conditional Capability Reads
 
-- Read `../jp-josei-fantasy/references/presentation-modes.md` before planning any long or short project. Present its numbered 1-4 menu unless already explicit.
+- Read `../jp-josei-fantasy/references/presentation-modes.md` only when presentation/viewpoint is unclear or comparison is requested.
 - Read `../story/references/flan-push-strict-mode.md` for either push option and plan short narrated evidence/romance beats rather than scene prose, regardless of person.
-- Read `../jp-josei-fantasy/references/push-opening-template-deck.md` when push narration is selected. Filter by lane, randomly draw one compatible card, and record the card ID in the plan.
+- Read `../jp-josei-fantasy/references/push-opening-template-deck.md` only for an explicit variation/card request or when a weak opening needs optional ideation.
 - Read `references/market-patterns.md` when the user asks for hot themes, Syosetu/Kakuyomu fit, or tag combinations.
 - Read `references/planning-template.md` before producing a full concept package.
 - Read `references/terminology.md` whenever adapting from Chinese fantasy or when the user says not to use Chinese elements.
@@ -34,7 +35,6 @@ When planning prose beats, design colloquial, direct scene movement: action, dia
 - Read `../jp-josei-fantasy/references/absurd-news-benchmarking.md` when the user wants 离谱新闻, 逆天新闻, or Japanese social-news hooks.
 - Read `../jp-josei-fantasy/references/trend-theme-router.md` after selecting any hot seed, before choosing the final tag cluster, heroine wound, proof object, male-lead recognition mode, or outline.
 - Read `../jp-josei-fantasy/references/project-memory.md` before opening a project, continuing a serial, creating chapter outlines, or trying to avoid repeated premises.
-- Read `../story/references/character-name-policy.md` before naming the cast. Run `import-existing`, check heroine/male-lead/supporting-cast names, enforce `jp-female-fantasy`, and record the selected names after saving.
 - Before planning any subtype, resolve its benchmark priority: project拆文 or live website benchmark first, project subtype notes second, bundled type pack only as fallback. Do not rely on the generic josei fantasy rules alone.
 
 Type pack routing:
@@ -60,7 +60,7 @@ Benchmark priority:
 
 ## Planning Workflow
 
-1. Resolve the numbered format choice and, for push mode, draw the compatible opening card before locking opening beats.
+1. Resolve presentation/viewpoint only when missing. For push mode, use an opening card only in the optional variation profile.
 2. Choose the central promise:
    - `婚約破棄 -> ざまぁ -> higher-status love`
    - `悪役令嬢 -> fate avoidance -> sincere romance`
@@ -76,7 +76,6 @@ Benchmark priority:
    - `hot trend / video / news seed -> emotion or social rule -> josei fantasy proof and romance route`
    - After choosing a subtype, follow the benchmark priority above. Use the bundled type pack only to fill gaps after dynamic/project benchmarks are loaded.
 3. Design the heroine's wound and agency:
-   - Give her a 2-6 character everyday name. If rank requires a house name, keep the two-part full name at 10 characters or fewer and use the short given name in narration.
    - What was taken from her: reputation, fiance, inheritance, magic credit, family love, public trust.
    - What she can do: knowledge, etiquette, healing, territory work, magic, negotiation, cooking, record keeping, courage.
    - What she refuses to lose again.
