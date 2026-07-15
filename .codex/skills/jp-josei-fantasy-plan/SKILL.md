@@ -24,6 +24,7 @@ When planning prose beats, design colloquial, direct scene movement: action, dia
 
 - Read `../jp-josei-fantasy/references/presentation-modes.md` only when presentation/viewpoint is unclear or comparison is requested.
 - Read `../story/references/flan-push-strict-mode.md` for either push option and plan short narrated evidence/romance beats rather than scene prose, regardless of person.
+- For first-person push planning, read `../story-first-person-script/SKILL.md` and its push-quality gate. For third-person push planning, read `../story-third-person-script/SKILL.md` and its push-quality gate.
 - Read `../jp-josei-fantasy/references/push-opening-template-deck.md` only for an explicit variation/card request or when a weak opening needs optional ideation.
 - Read `references/market-patterns.md` when the user asks for hot themes, Syosetu/Kakuyomu fit, or tag combinations.
 - Read `references/planning-template.md` before producing a full concept package.
@@ -60,7 +61,7 @@ Benchmark priority:
 
 ## Planning Workflow
 
-1. Resolve presentation/viewpoint only when missing. For push mode, use an opening card only in the optional variation profile.
+1. Resolve presentation/viewpoint only when missing. For push mode, plan the matching narrator contract: first-person mouth and knowledge boundary, or third-person narrator stance, stable labels, selective reactions, knowledge boundary, and heroine-caused choices. Use an opening card only in the optional variation profile.
 2. Choose the central promise:
    - `婚約破棄 -> ざまぁ -> higher-status love`
    - `悪役令嬢 -> fate avoidance -> sincere romance`

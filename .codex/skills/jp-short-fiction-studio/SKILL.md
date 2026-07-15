@@ -17,7 +17,7 @@ Read exactly one lane file:
 
 Read `references/dynamic-market-learning.md` for push production or current Japanese-market premise discovery.
 
-When push narration is selected, also read `../jp-isekai-write/references/push-narration-protocol.md` and `../story/references/flan-push-strict-mode.md`. For first-person push, read `../story-first-person-script/SKILL.md`, `../story-first-person-script/references/push-first-person-benchmark.md`, and `../story-first-person-script/references/push-quality-gate.md`. Do not load unrelated opening decks, ledgers, packaging guides, or old blueprint files unless the task needs them.
+When push narration is selected, also read `../jp-isekai-write/references/push-narration-protocol.md` and `../story/references/flan-push-strict-mode.md`. For first-person push, read `../story-first-person-script/SKILL.md` and its two push references. For third-person push, read `../story-third-person-script/SKILL.md` and its two push references. Do not load unrelated opening decks, ledgers, packaging guides, or old blueprint files unless the task needs them.
 
 ## Market-Basis Gate — Lao Liu Dynamic Learning
 
@@ -98,7 +98,7 @@ Use this branch whenever presentation is anime recap/push narration:
 - end each major module on a changed fact and a live pressure, not explanation or atmosphere;
 - never treat short lines, `俺`, or a metric pass as proof that the body is push narration.
 
-For first person, draft in four passes from `push-quality-gate.md`: consequence-led report, narrator mouth, state change, and payoff. The opening must expose the abnormal result and causal gap; the middle must change mechanism after first proof; the climax must recycle an earlier choice/tool/relationship; the ending must prove change with an action.
+For first person, draft in four passes from the first-person gate: consequence-led report, narrator mouth, state change, and payoff. For third person, use the third-person gate: consequence-led report, narrator stance/stable labels, state change, and payoff. In both, the opening exposes the abnormal result and causal gap; the middle changes mechanism after first proof; the climax recycles earlier story debt; the ending proves change with an action.
 
 Only after the blind editor reaches `ready for user read`, run `../story/scripts/validate-flan-push.py` on every saved push body. `surface_fail` blocks push-format delivery and sends the body back to this branch; `surface_pass` remains surface-only.
 
@@ -116,7 +116,7 @@ State the earliest loss of interest, what the reader was waiting for, what the t
 
 ### Push Editorial Release Gate
 
-For first person, every blocking test in `../story-first-person-script/references/push-quality-gate.md` must clear. For third person, apply the same opening-gap, camera, middle-change, climax-debt, companion-agency, ending-action, and hook-honesty tests, omitting only the pronoun-swap test. A failed gate blocks delivery even when surface lint passes.
+For first person, clear `../story-first-person-script/references/push-quality-gate.md`. For third person, clear `../story-third-person-script/references/push-quality-gate.md`, including narrator stance, stable labels, knowledge boundary, and protagonist agency. A failed gate blocks delivery even when surface lint passes.
 
 ## First-Person Contract
 

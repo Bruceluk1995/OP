@@ -22,6 +22,7 @@ Choose one profile. Capabilities remain available without becoming simultaneous 
 
 - Read `../jp-josei-fantasy/references/presentation-modes.md` only when presentation/viewpoint is unclear or comparison is requested.
 - Read `../story/references/flan-push-strict-mode.md` only for push formatting; its script is optional surface lint, never a quality verdict.
+- For first-person push, read `../story-first-person-script/SKILL.md` and both push references. For third-person push, read `../story-third-person-script/SKILL.md` and both push references. The selected viewpoint gate decides release before surface lint.
 - Read `../jp-josei-fantasy/references/push-opening-template-deck.md` only for an explicit card experiment or when the opening needs variation.
 - Read `references/style-guide.md` for full-project work or style repair; the fast profile uses the studio editorial core.
 - Read `references/terminology.md` before writing if the source material contains Chinese fantasy terms or the user asks to avoid Chinese elements.
@@ -37,7 +38,7 @@ Choose one profile. Capabilities remain available without becoming simultaneous 
 1. Resolve presentation/viewpoint only when missing; otherwise begin from the user's explicit choice:
    - Default: Japanese prose, heroine-centered, emotionally legible, romance-forward, happy-ending direction.
    - Use first person `私` or close third person exactly as selected. Do not switch for convenience.
-   - In push mode, use an opening card only in the optional variation profile.
+   - In push mode, use the selected viewpoint's narrator contract and quality gate. Use an opening card only in the optional variation profile.
    - If no target is given, use approximately 12,000 Japanese characters for a complete episode in either presentation mode.
    - If the user gives an episode length, target that character count; otherwise keep chat drafts concise or save long chapters to a file.
    - Treat 12,000 as a functional-density target, not a minimum gate or padding permission.
@@ -62,6 +63,7 @@ Choose one profile. Capabilities remain available without becoming simultaneous 
    - Let status, rank, magic, and setting emerge through action and social behavior.
    - Make `溺愛` visible through concrete choices: protection, listening, resources, public acknowledgement, remembering details.
    - Keep `ざまぁ` dramatic but coherent. The heroine can be kind without being passive.
+   - In third-person push mode, write through a deliberate narrator stance, sparse stable labels, selective external reactions, a consistent knowledge boundary, and heroine-caused choices. Do not submit neutral chronology or ordinary third-person scenes broken into short lines.
 5. Run the JP anti-AI pass from `references/anti-ai-gates.md`:
    - Remove generic abstract texture without deleting evidence, romance, or zamaa function.
    - Convert mood/summary lines into documents, hands, doors, witnesses, contracts, titles, injuries, choices, or social consequences.
@@ -73,6 +75,7 @@ Choose one profile. Capabilities remain available without becoming simultaneous 
    - Update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
    - Add one record to `女频幻想恋爱知识库/generated-ledger.jsonl` with heroine, wound, romance, pressure, proof, venue, aftertaste, and saved path.
 8. Validate:
+   - In push mode, clear the selected first- or third-person quality gate before surface lint. A failed editorial gate blocks delivery even if the surface validator passes.
    - In strict push-surface work, optionally run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`. A `surface_fail` blocks only the requested surface format; `surface_pass` never approves story quality.
    - After the script passes, run the strict profile's manual retention/payoff audit. Short-line plot summary without evidence, choice, emotional, social, status, or romance movement still blocks delivery. Jokes and comedy are optional, not a female-push requirement.
    - Audit every major scene as `entry state -> pressure/choice -> exit state`. At least one of evidence, public reputation, safety, legal/family position, resources, romantic trust, social status, risk, or next choice must change. Repeated sadness, etiquette, beauty, misunderstanding, or consolation without a state delta must be compressed or rewritten.

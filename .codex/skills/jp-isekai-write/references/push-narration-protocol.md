@@ -2,18 +2,18 @@
 
 Use for Japanese male-audience isekai video recap or push narration, standalone or serialized. Push narration is a presentation mode, not a viewpoint.
 
-Read `../../story/references/flan-push-strict-mode.md` for surface lint. For first-person output, also use `../../story-first-person-script/SKILL.md`, its benchmark, and `../../story-first-person-script/references/push-quality-gate.md`; those editorial rules control knowledge, voice, retention, and true rewriting.
+Read `../../story/references/flan-push-strict-mode.md` for surface lint. For first-person output, use `../../story-first-person-script/SKILL.md` and its push references. For third-person output, use `../../story-third-person-script/SKILL.md` and its push references. Those editorial rules control knowledge, narrator stance, retention, and true rewriting.
 
 ## Person Lock
 
 - First person: narrate only what the protagonist knows, observes, infers, misunderstands, or later learns. Select details through that person's priorities and practical judgment.
-- Third person: use stable, sparse role labels and may show external reactions.
+- Third person: use stable sparse labels, selective external reactions, and an explicit narrator stance. Do not become neutral chronology or head-hop for convenience.
 - Do not alternate viewpoint for convenience.
 - Do not confuse first person with added introspection or a simple pronoun swap.
 
 ## Oral Spine and Opening
 
-For first person, lock the oral spine in `push-quality-gate.md` before drafting. For third person, lock the same fields except narrator mouth.
+Lock the matching viewpoint skill's oral spine before drafting. First person locks narrator mouth and knowledge; third person locks narrator stance, stable labels, external-reaction selection, and knowledge boundary.
 
 Lock a visual story core:
 
@@ -69,4 +69,4 @@ Extract from the previous episode: final event, unresolved pressure, new item/sk
 - Which named companion materially changes the plan, rescue, information, cost, or result?
 - If surface lint ran, is it labeled surface-only rather than quality approval?
 
-For first-person push, complete the full blind-read template in `push-quality-gate.md`. Only a `ready for user read` editorial verdict proceeds to surface lint.
+Complete the matching viewpoint skill's full blind-read template. Only a `ready for user read` editorial verdict proceeds to surface lint.

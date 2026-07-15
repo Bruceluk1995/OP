@@ -22,7 +22,8 @@ Choose one profile from the request. Full capabilities remain available; they ar
 
 - Read `../jp-isekai/references/presentation-modes.md` only when presentation/viewpoint is unclear or the user asks to compare versions.
 - Read `../story/references/flan-push-strict-mode.md` whenever push narration is selected. Its script is a mandatory saved-body format gate and never a quality verdict.
-- Read `../story-first-person-script/SKILL.md` and `../story-first-person-script/references/push-first-person-benchmark.md` whenever first-person push is selected.
+- Read `../story-first-person-script/SKILL.md` and both of its push references whenever first-person push is selected.
+- Read `../story-third-person-script/SKILL.md` and both of its push references whenever third-person push is selected.
 - Read `../jp-short-fiction-studio/references/dynamic-market-learning.md` for push production or current Japanese-market premise discovery. Lao Liu evidence owns topic and story functions; the Flan contract owns presentation.
 - Read `../jp-isekai/references/opening-innovation-engine.md` only when the user requests an opening-card experiment or the current opening needs variation. Cards are optional prompts.
 - Read `references/style-guide.md` for full-project work or when style repair is needed; the fast profile uses the studio editorial core.
@@ -41,7 +42,8 @@ Choose one profile from the request. Full capabilities remain available; they ar
    - Offer options 1-4 only when the choice is genuinely unclear; do not delay a clear request.
    - For multiple selections, draft separate labeled versions from the same premise unless the user requests another arrangement. Never blend viewpoints merely because multiple options were chosen.
    - Traditional first person commonly uses `俺`; traditional third person keeps scene depth and must not collapse into summary.
-   - Push first person keeps the result-first hook, oral lines, causal compression, and dense turns through the protagonist's account; push third person may use `男主`, role labels, and external reactions.
+   - Push first person keeps the result-first hook, oral lines, causal compression, and dense turns through the protagonist's account.
+   - Push third person keeps the same causal density through narrator stance, stable sparse labels, selective external reactions, and protagonist-caused choices; it must not collapse into a neutral synopsis.
    - If the user or project has fixed Japanese-market push narration as the house format, set push without asking for presentation again.
    - Do not use `YouTube`, `朗读`, `推送`, `一口气看完`, length, or an existing outline as a substitute for either choice.
    - If no target is given, use approximately 12,000 Japanese characters for a complete episode in either presentation mode.
@@ -85,7 +87,7 @@ Choose one profile from the request. Full capabilities remain available; they ar
    - Add one record to `男频异世界知识库/generated-ledger.jsonl` with protagonist, cheat, pressure, payoff, venue, aftertaste, and saved path.
 9. Validate:
    - For every saved push body, run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`. A `surface_fail` blocks delivery under the push label and returns the draft to the push narrator; `surface_pass` never approves story quality.
-   - Run the studio blind-editor pass regardless of surface lint. Flowchart narration split into short lines is still a story failure.
+   - Run the selected viewpoint skill's editorial gate and the studio blind-editor pass before surface lint. Flowchart narration split into short lines is still a story failure.
    - Audit every major scene as `entry state -> pressure/choice -> exit state`. At least one of skill knowledge, combat position, inventory/drop, rank, reputation, territory, faction relationship, risk, or next objective must change. Travel, explanation, repeated awe, and status-panel restatement without a state delta must be compressed or removed.
    - Verify the episode promise is paid or meaningfully advanced, the win has a concrete result/cost, and the ending threat grows from the new state rather than appearing as an unrelated cliffhanger.
    - Count Japanese characters with Python.

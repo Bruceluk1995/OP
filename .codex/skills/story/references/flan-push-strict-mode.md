@@ -2,14 +2,14 @@
 
 Use this for every male- or female-audience output selected as 动漫解说／推文口播. It distills reusable presentation mechanics rather than source wording. This file governs subtitle readability and oral surface only. It does not judge story quality, retention, originality, entertainment, or first-person authenticity.
 
-For first-person work, read `../../story-first-person-script/SKILL.md`, `../../story-first-person-script/references/push-first-person-benchmark.md`, and `../../story-first-person-script/references/push-quality-gate.md`. That editorial release gate outranks every metric in this file.
+For first-person work, read `../../story-first-person-script/SKILL.md` and its push references. For third-person work, read `../../story-third-person-script/SKILL.md` and its push references. The matching editorial release gate outranks every metric in this file.
 
 ## Person and Presentation
 
 Presentation and viewpoint are independent, but first person changes more than pronouns:
 
 - First person obeys the narrator's knowledge boundary, selection, judgment, and brief self-reaction.
-- Third person may access external reactions through stable role labels.
+- Third person uses a deliberate narrator stance, stable sparse labels, selective external reactions, and a consistent knowledge boundary.
 - Both may use recap compression and oral lines when push format is selected.
 
 Never convert a novel into push copy by inserting line breaks alone. Never turn first person into diary-like introspection merely because the narrator says 俺／僕／私.
@@ -40,7 +40,7 @@ Every major module must change at least one of: fact, problem, choice, tactic, r
 - Female push may be serious, painful, tender, suspenseful, healing, romantic, or cathartic; jokes are optional.
 - Stop explaining once the audience knows what changed and why it matters. Preserve an active question.
 
-Before delivery, clear `push-quality-gate.md` for first-person work. For third person, use the same opening-gap, state-change, repetition, explanation, middle-change, climax-debt, companion-agency, hook-honesty, and ending-action checks without the pronoun-swap test.
+Before delivery, clear the matching viewpoint skill's `push-quality-gate.md`. Third person must additionally clear neutral-summary, stable-label, knowledge-boundary, and protagonist-agency tests.
 
 ## Surface Lint
 
