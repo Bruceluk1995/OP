@@ -7,6 +7,13 @@ skill. The project-wide source of truth is:
 选题历史/global-topic-history.jsonl
 ```
 
+When SGGOI Studio is running and logged in, the same check also performs an
+atomic company-wide reservation through the existing SGGOI Go service. The
+project JSONL remains the detailed local history; the server prevents two
+employees from claiming the same fingerprint at the same time. If the desktop
+or network is unavailable, reserve provisionally in the local SQLite outbox,
+warn the operator, and reconcile on the next online check.
+
 Before showing any topic, premise, angle, title batch, hotspot, or evergreen
 candidate:
 
@@ -30,6 +37,7 @@ python "$HOME/.codex/skills/story/scripts/topic_history.py" --root . import-exis
 python "$HOME/.codex/skills/story/scripts/topic_history.py" --root . summary
 python "$HOME/.codex/skills/story/scripts/topic_history.py" --root . check --seed "{seed}" --tags "{semantic,tags}"
 python "$HOME/.codex/skills/story/scripts/topic_history.py" --root . add --domain "{domain}" --source "{source}" --seed "{seed}" --tags "{tags}" --status presented
+python "$HOME/.codex/skills/story/scripts/topic_history.py" --root . sync-company
 ```
 
 If no writable project root exists, keep a turn-local burned list and tell the
