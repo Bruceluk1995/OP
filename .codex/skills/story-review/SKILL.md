@@ -5,9 +5,22 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 ---
 # story-review：多视角对抗式审查
 
+Required global read: `../story/references/audience-comprehension-floor.md`. Treat setting-first confusion, unexplained noun stacks, and abstract proof as structural findings; do not repair them with glossary exposition.
+
 你是审查协调器。你的职责是找出小说文本中的结构、角色、文字、设定问题，并给出可执行修改建议。
 
 **执行铁律：审查是找问题，不是验证正确性。**
+
+**角色名审查**：涉及角色命名或项目完整性时，读取 `../story/references/character-name-policy.md`；检查新作品是否复用共享账本中的全名/幻想 given name，并标记日式女频超过 6 字符的日常名、超过 10 字符或三段式的幻想全名。
+
+## 盲读退稿优先
+
+- 在读取作者大纲、目标字数、validator、模板证据和自检报告前，先把正文当作目标读者读一遍，记录最早不想继续的位置。
+- 每个核心 finding 必须回答：当时读者在等什么、文本给了什么替代品、哪个人物选择/后果缺失、应该退回故事核/结构/场景/行文哪一工位。
+- 故事核、人物因果、中段机制和高潮兑现属于不可由文笔分数抵消的门槛。一个稿子不能靠格式、自然度或设定完整“综合及格”。
+- 专门检查同一结论的重复证明、连续流程场、解释清空悬念、主角等待外力解决和高潮只是更大规模展示。
+- 修复建议先删除/合并，再考虑新增；新增内容必须带来新选择、新代价、新关系或新问题。
+- 审稿结论使用 `重做故事核 / 大改结构 / 重写场景 / 行文修改 / 可交读者`，不使用无证据的“整体不错”或单一总分。
 
 ---
 
@@ -71,7 +84,7 @@ Rubric Source: file | embedded fallback
 | 用途 | 规范路径 |
 |---|---|
 | 通用质量清单 | `story-review/references/quality-checklist.md` |
-| 通用内容评分 rubric | `story-review/references/quality-rubric.md` |
+| 通用内容审查门槛 | `story-review/references/quality-rubric.md` |
 | 去 AI 味方法 | `story-review/references/anti-ai-writing.md` |
 | 剧情循环/高潮公式 | `story-review/references/plot-core-methods.md` |
 | 角色关系/好感度 | `story-review/references/character-relations.md` |
@@ -392,7 +405,7 @@ solo 必须执行基础检查：
 1. 格式合规性检查（戏剧单元/画面分段、无机械字数切分、无空行、对话格式、主语/角色名节奏）。
 2. 简单的设定一致性 grep（角色名、属性、关键设定、伏笔关键词）+ 推理型一致性检查（规则边界、设定层级、跨章因果链、可滥用漏洞、代价一致性）。
 3. AI 味与禁用词检查（优先读取 `story-review/references/banned-words.md` 与 `story-review/references/anti-ai-writing.md`，不可读时使用内置 AI 味 / 禁用词 fallback 速查）。
-4. 通用网文内容评分（优先读取 `story-review/references/quality-rubric.md`，不可读时使用内置通用网文内容 rubric）。
+4. 通用网文内容审查门槛（优先读取 `story-review/references/quality-rubric.md`，不可读时使用内置门槛；各项不可相互抵消）。
 5. 按统一 Findings Schema 输出简化版报告。
 
 ### solo 模式输出格式

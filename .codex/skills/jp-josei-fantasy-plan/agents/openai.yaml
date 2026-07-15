@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Josei Fantasy Plan"
   short_description: "Plan josei fantasy romance from trends or benchmarks"
-  default_prompt: "Use $jp-josei-fantasy-plan to confirm format, design the Japanese female-fantasy premise, and randomly draw a compatible fixed opening card for push narration."
+  default_prompt: "Use $jp-josei-fantasy-plan in the fast profile to design a causal Japanese female-fantasy concept and change outline; use research, full project, or opening-card capabilities only when requested."

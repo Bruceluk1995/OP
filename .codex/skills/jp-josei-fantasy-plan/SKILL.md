@@ -6,15 +6,25 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Josei Fantasy Plan
 
+Required global read: `../story/references/audience-comprehension-floor.md`. Reject premises whose pressure is only titles, noble genealogy, engagement law, or church terminology without a visible accusation, loss, choice, or relationship action.
+
 Build Japanese-style female-audience fantasy romance plans. This skill is for concept, market fit, emotional structure, and chapter beats, not final prose.
+
+## Execution Profiles
+
+- **Fast concept (default):** use this skill's heroine-choice workflow and one matching type pack only when needed. Return a compact change outline.
+- **Full project:** retain settings, rolling outlines, tracking, project memory, ledger, and benchmark files.
+- **Research/variation:** retain live market sources, trend conversion, dynamic benchmarks, and optional opening-card draws.
+
+Keep all capabilities, but never load every reference for a normal clear request.
 
 When planning prose beats, design colloquial, direct scene movement: action, dialogue, choices, evidence, romance movement, and social consequence. Do not plan long scenery passages, long psychology passages, or literary mood filler as a way to carry the story.
 
-## Required Reads
+## Conditional Capability Reads
 
-- Read `../jp-josei-fantasy/references/presentation-modes.md` before planning any long or short project. Present its numbered 1-4 menu unless already explicit.
+- Read `../jp-josei-fantasy/references/presentation-modes.md` only when presentation/viewpoint is unclear or comparison is requested.
 - Read `../story/references/flan-push-strict-mode.md` for either push option and plan short narrated evidence/romance beats rather than scene prose, regardless of person.
-- Read `../jp-josei-fantasy/references/push-opening-template-deck.md` when push narration is selected. Filter by lane, randomly draw one compatible card, and record the card ID in the plan.
+- Read `../jp-josei-fantasy/references/push-opening-template-deck.md` only for an explicit variation/card request or when a weak opening needs optional ideation.
 - Read `references/market-patterns.md` when the user asks for hot themes, Syosetu/Kakuyomu fit, or tag combinations.
 - Read `references/planning-template.md` before producing a full concept package.
 - Read `references/terminology.md` whenever adapting from Chinese fantasy or when the user says not to use Chinese elements.
@@ -50,7 +60,7 @@ Benchmark priority:
 
 ## Planning Workflow
 
-1. Resolve the numbered format choice and, for push mode, draw the compatible opening card before locking opening beats.
+1. Resolve presentation/viewpoint only when missing. For push mode, use an opening card only in the optional variation profile.
 2. Choose the central promise:
    - `婚約破棄 -> ざまぁ -> higher-status love`
    - `悪役令嬢 -> fate avoidance -> sincere romance`

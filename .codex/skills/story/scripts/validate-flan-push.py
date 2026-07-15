@@ -17,7 +17,7 @@ def percentile(values: list[int], fraction: float) -> int:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validate Flan-style Japanese push-narration surface metrics.")
+    parser = argparse.ArgumentParser(description="Lint Japanese push-narration surface metrics only; never judge story quality.")
     parser.add_argument("--body", required=True)
     parser.add_argument("--person", choices=("first", "third"), required=True)
     args = parser.parse_args()
@@ -28,7 +28,12 @@ def main() -> int:
     text = Path(args.body).read_text(encoding="utf-8")
     lines = [line.strip() for line in text.splitlines() if line.strip() and not line.lstrip().startswith("#")]
     if len(lines) < 20:
-        print(json.dumps({"status": "fail", "errors": ["need at least 20 spoken lines"]}, ensure_ascii=False))
+        print(json.dumps({
+            "status": "surface_fail",
+            "quality_verdict": "not_evaluated",
+            "manual_editorial_review_required": True,
+            "errors": ["need at least 20 spoken lines"],
+        }, ensure_ascii=False))
         return 2
     lengths = [len(line) for line in lines]
     long_ratio = sum(length > 32 for length in lengths) / len(lines)
@@ -63,7 +68,14 @@ def main() -> int:
         errors.append("turn/causal connector density is below one per 12 lines")
     if args.person == "first" and metrics["first_person_markers"] == 0:
         errors.append("first-person mode has no first-person marker")
-    result = {"status": "fail" if errors else "pass", "person": args.person, "metrics": metrics, "errors": errors}
+    result = {
+        "status": "surface_fail" if errors else "surface_pass",
+        "quality_verdict": "not_evaluated",
+        "manual_editorial_review_required": True,
+        "person": args.person,
+        "metrics": metrics,
+        "errors": errors,
+    }
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 2 if errors else 0
 

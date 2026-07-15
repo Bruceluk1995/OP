@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Isekai Plan"
   short_description: "Plan Japanese male isekai novels and arcs"
-  default_prompt: "Use $jp-isekai-plan to confirm format, build the premise, randomly draw a screenshot-derived push-opening card, and plan its required information chain."
+  default_prompt: "Use $jp-isekai-plan in the fast profile to build a causal Japanese male-isekai concept and change outline; use full project or opening-card capabilities only when requested."

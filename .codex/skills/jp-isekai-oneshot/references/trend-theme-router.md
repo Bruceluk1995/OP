@@ -2,7 +2,7 @@
 
 Use only after the user has selected a specific Google Trends JP, absurd-news, or social-video seed, or explicitly delegated that selection, and before choosing the final title, cheat, or one-shot blueprint. Source/type/tone selection alone is not seed selection.
 
-This router maps a hot seed to a male-isekai theme engine. These routes mirror `../jp-isekai-plan/references/type-packs/`, but the output remains a standalone 14,500-16,500 Japanese-character one-shot. Do not use the six-episode structure from those type packs directly; compress the selected route into 12-18 meaningful one-shot beats.
+This router maps a hot seed to a male-isekai theme engine. These routes mirror `../jp-isekai-plan/references/type-packs/`, but the output remains a standalone one-shot targeting approximately 12,000 Japanese characters. Do not use the six-episode structure from those type packs directly; compress the selected route into a complete change-driven one-shot.
 
 ## Routing Protocol
 

@@ -14,8 +14,9 @@ Create this working blueprint before prose:
 ## Episode Blueprint
 
 - Episode number/title:
-- Target length: default 14,500-16,500 Japanese characters for finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose unless the user says otherwise.
+- Target length: approximately 12,000 Japanese characters for a finished/full episode unless the user says otherwise; this is a budget, not a pass range.
 - Target emotion:
+- Plain social core: familiar accusation/loss/choice -> visible evidence or relationship action -> human/social consequence
 - Episode position: high-pressure humiliation / proof-gathering / romance recognition / zamaa setup / tenderness recovery / court info / low-pressure aftermath
 - First-sentence bomb:
 - Previous-episode bridge: final event / unresolved evidence / carried document or promise / current location / public pressure
@@ -55,14 +56,14 @@ Budget total:
 
 ## 15k Long-Episode Density Contract
 
-For an episode around 15,000 Japanese characters, do not scale by adding scenery, adjectives, etiquette filler, repeated tears, or vague sadness. Scale by adding more social and emotional state changes inside the planned engine.
+For an episode around 12,000 Japanese characters, do not scale by adding scenery, adjectives, etiquette filler, repeated tears, or vague sadness. Scale only through necessary social and emotional state changes.
 
 Functional working shape:
 
 - Do not add a fixed beat quota. Let the beat count follow the episode's outline, rhythm, and emotional target.
 - Use enough dense beats to justify the length; sparse beats may bridge, settle, or prepare later payoff.
 - Any long stretch must have a function: change evidence, reputation, relationship, legal/family pressure, public position, heroine choice, male-lead recognition, antagonist risk, or next decision; or prepare/pay off one of these through a concrete object, etiquette move, witness, document, or choice.
-- Every 2,500-3,000 Japanese characters should contain visible proof, romantic recognition, social cost, zamaa setup/payoff, or a new accusation.
+- Every major module must change evidence, choice, relationship, reputation, safety, cost, pressure, reversal, or payoff; do not schedule these at fixed character intervals.
 - No scene may exist only to describe room mood, beauty, silence, loneliness, destiny, sadness, or noble atmosphere.
 
 Beat test:
@@ -79,7 +80,7 @@ Allowed expansion for 15k: split a dense beat into accusation -> evidence -> her
 
 Each episode needs at least one clear reason to continue watching:
 
-- High-pressure humiliation/proof/zamaa episodes: include one visible payoff every 3000-5000 Japanese characters, with smaller hooks every 800-1200 characters.
+- High-pressure humiliation/proof/zamaa episodes: vary dense and sparse passages naturally, but do not allow consecutive modules with no new choice, consequence, relationship movement, or audience question.
 - Tenderness, aftermath, or court-info episodes: a big zamaa payoff is not required, but include a specific romantic recognition, heroine agency choice, new evidence, rule reveal, or next public threat.
 - Never deliver only atmosphere. If the episode has no revenge payoff, it must have a stronger romance payoff, dignity-recovery payoff, evidence payoff, or next-problem hook.
 
@@ -130,10 +131,11 @@ Do not expand by adding abstract pain, generic beauty, repeated tears, destiny l
 Before delivering:
 
 - First sentence contains a concrete social/emotional bomb.
+- By line five, a casual viewer can answer who is under pressure, what changed, and why it matters without understanding titles, genealogy, church rules, contract jargon, or setting lore.
 - Line five makes the previous hook understandable for new viewers.
 - Long stretches without a concrete beat, setup, consequence, choice, romantic/social pressure change, or public-position change are cut or rewritten.
 - Dense beats are visibly denser than transitions.
 - At least one evidence/romance/status consequence lands on the page.
 - The final paragraph points to the next episode through a specific witness, document, accusation, romantic question, or public choice.
 - Body prose contains no production metadata leakage. `第N話` may appear in title headings, but not in narration or dialogue.
-- Count the saved prose. For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose, 14,500-16,500 Japanese characters is the default pass range. If it is below 14,500, expand only dense beats with new evidence, witness pressure, heroine agency, romantic recognition, legal/family/social consequence, zamaa setup/payoff, or next-hook escalation. Do not pad with etiquette, scenery, repeated tears, or abstract emotion.
+- Count and report the saved prose against the approximately 12,000-character target. If short, add only a genuinely new heroine choice, relationship turn, opponent adaptation, cost, or consequence; otherwise disclose the shortfall. Do not treat length as a pass range.

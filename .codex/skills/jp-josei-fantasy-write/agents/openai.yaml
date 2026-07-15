@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Josei Fantasy Write"
   short_description: "Draft push-ready Japanese female fantasy romance"
-  default_prompt: "Use $jp-josei-fantasy-write to confirm format, randomly draw a compatible female-fantasy push-opening card when needed, then draft with heroine agency, romance/zamaa payoff, and quality gates."
+  default_prompt: "Use $jp-josei-fantasy-write in the fast profile to write and blind-edit the Japanese female-fantasy episode; keep project packaging, research, and opening cards available only when requested."

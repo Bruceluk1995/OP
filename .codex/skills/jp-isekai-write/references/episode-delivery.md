@@ -2,7 +2,7 @@
 
 Use this reference when an episode should be delivered as project files, especially for long-form Japanese isekai YouTube narration workflows.
 
-For finished/full episode, YouTube/朗读/推文 narration, or 6-episode short-season prose, the default body target is 14,500-16,500 Japanese characters unless the user sets another length. Count the saved `正文.md` before handoff and keep expanding dense plot/progression beats if it is below 14,500.
+For a finished/full episode, the default body target is approximately 12,000 Japanese characters unless the user sets another length. Count and report the saved `正文.md`; do not expand merely to cross a minimum.
 
 ## Folder Contract
 

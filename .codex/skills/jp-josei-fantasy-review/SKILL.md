@@ -6,15 +6,25 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Josei Fantasy Review
 
+Required global read: `../story/references/audience-comprehension-floor.md`. Treat title/genealogy/church/contract exposition without a visible accusation, choice, evidence move, or relationship consequence as structural failure.
+
 Review drafts for Japanese female-audience fantasy romance fit, localization quality, and emotional payoff.
+
+## Native Blind-Reader Gate
+
+- Read the body before validator, package, blueprint, and author intention. Mark the earliest point where dignity, relationship recognition, heroine choice, zamaa, safety, or second-life desire stops pulling forward.
+- Require heroine-caused consequences and a middle mechanism change. Repeated humiliation venues, documents, witnesses, public proof, etiquette and male-lead declarations cannot substitute for escalation.
+- For first person, review knowledge boundary, selected details, self-protective judgment and narrator mouth; pronoun correctness alone has no value.
+- Return the draft to `core / structure / scene / Japanese line`; romance prose, localization, or happy-ending labels cannot compensate for passive heroine structure.
+- Surface lint is optional subtitle-shape evidence only. Never require a turn at a fixed 6-10-line interval or call metric pass quality approval.
 
 ## Required Reads
 
 - Read `references/review-checklist.md` before a full review.
 - Read `references/terminology.md` whenever checking Chinese-to-Japanese adaptation leakage.
 - Read `../jp-josei-fantasy-write/references/self-check.md` when reviewing saved episodes, project-bound output, per-episode folders, continuity, plot bugs, package completeness, or Chinese leakage.
-- Read `../story/references/flan-push-strict-mode.md` for every push review and run its validator. First-person romance push that expands into scene prose or inner-monologue paragraphs is blocking.
-- Treat metric-passing but personality-free flowchart narration as blocking; require a hook/reversal/reaction in every 6-10-line block.
+- Read `../story/references/flan-push-strict-mode.md` only when push-surface compliance is part of the review; its result is surface-only.
+- Treat personality-free flowchart narration as blocking through the blind-reader/state-change audit, not a fixed line interval.
 - If the draft or outline names a lane, read the best available benchmark/type-pack material before judging genre fit: project拆文, live benchmark card, project-local `女频幻想恋爱知识库/type-packs/{lane}.md`, then bundled `../jp-josei-fantasy-plan/references/type-packs/{lane}.md` as fallback.
 
 ## Review Workflow
@@ -40,8 +50,8 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
    - Episode has no full episode blueprint logic: unclear target emotion, episode position, core payoff, cost/risk, dense/sparse beat split, or ending hook.
    - Episode 2+ opens as a reset instead of continuing the previous episode's unresolved hook.
    - First sentence is scenery, abstract emotion, destiny, quiet morning, or generic pain instead of a concrete social/emotional bomb.
-   - Mid-episode has two or more 800-1200 character stretches without evidence, public pressure, heroine choice, male-lead action, zamaa setup/payoff, romantic recognition, legal/family/church consequence, or next-hook escalation.
-   - A 15,000-character episode uses length to pad mood, scenery, beauty, sadness, etiquette, or adjectives; long stretches can be deleted without changing evidence, social pressure, relationship, romance, cost, setup, aftershock, or next choice.
+   - Consecutive major modules lack a new heroine choice, consequence, relationship movement, social pressure, reversal, or audience question.
+- A 12,000-character episode uses length to pad mood, scenery, beauty, sadness, etiquette, or adjectives; long stretches can be deleted without changing evidence, social pressure, relationship, romance, cost, setup, aftershock, or next choice.
    - Dense beats are not denser than transitions; the prose spends similar weight on etiquette/scenery/sadness and payoff.
    - Prose is padded with vague AI-flavored adjectives or summary paragraphs instead of documents, witnesses, choices, etiquette, contracts, and consequences.
    - Draft fails JP anti-AI gates: generic destiny/light/silence texture, author explanation, stock summary ending, uniform rhythm, over-polished dialogue, or emotional lines without document/action/social consequence.

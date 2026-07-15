@@ -5,6 +5,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 ---
 # story-import：逆向导入已有小说
 
+Required global read: `../story/references/audience-comprehension-floor.md`. Preserve source facts, but mark imported openings or story engines that require glossary knowledge before a human conflict is visible.
+
 把用户已有小说重建为可续写的写作工程。交付物不是一份孤立分析报告，而是：
 
 - 可被后续写作 skill 直接识别的项目结构；
@@ -13,6 +15,14 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 不要重新实现拆文方法论。长篇调用 `story-long-analyze`，短篇调用 `story-short-analyze`；本 skill 只负责输入确认、完整管道契约、结构迁移、验收和激活。
 
+## 可续写性重建合同
+
+- 导入不是把原文搬进目录。必须提取：读者承诺、主角欲望与误区、人物声线、当前关系状态、每条未偿还问题、最近一次不可逆变化和下一步压力。
+- 原文事实与措辞分开保存：事实/设定/伏笔可继承，旧句不自动成为续写模板。
+- 发现同一结论重复证明、流程段、解释腔或失效故事核时，在迁移报告标注“保留事实 / 重建结构 / 建议删除”，不要默默固化进新工程。
+- 短篇真重写必须从新的故事核与变化大纲起稿，并运行重写相似度检查；长篇续写则保护历史正文，不重写用户未授权章节。
+- 下游交接只给当前写作需要的摘要和正文尾部，不把整本拆文报告塞进每次写作上下文。
+
 ## 执行边界
 
 - 默认目标是“可续写工程”。用户只要拆文分析时，改走对应 analyze skill，不进入迁移阶段。
@@ -20,6 +30,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 - 不把短篇误建成长篇目录，不把长篇压成单文件短篇工程。
 - 不编造拆文证据中没有的关系、副线、钩子或状态；无法确定的字段标 `[待补充]`。
 - 检查专业 agent 时按 `.claude/agents/` → `.opencode/agents/` → `.codex/agents/` 查找；运行时不可用就降级为主线程直接执行并报告 fallback。
+- 导入角色文件后读取 `../story/references/character-name-policy.md` 并运行 `character_names.py import-existing`，把原作已用角色名登记到共享台账；这是续写同作的允许名单，也是其他新作的禁用名单。
 
 ## Phase 1：确认来源与分流
 

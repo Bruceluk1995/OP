@@ -1,70 +1,59 @@
-# Flan-Style Push Narration Strict Mode
+# Push Narration Surface Profile
 
-Use this for every male- or female-audience output selected as 动漫解说／推文口播. It is the default push surface profile, not an optional flavor.
+Use this for male- or female-audience output selected as 动漫解说／推文口播. This file governs subtitle readability and oral surface only. It does not judge story quality, retention, originality, entertainment, or first-person authenticity.
 
-## Non-Negotiable Axis Rule
+For first-person work, read `../../story-first-person-script/SKILL.md` and its benchmark. That editorial gate outranks every metric in this file.
 
-Presentation and person are independent:
+## Person and Presentation
 
-- First person changes only pronouns, knowledge boundaries, and brief self-reaction.
-- Third person changes only role labels and access to external reactions.
-- Both keep the same recap architecture, line compression, turn density, dialogue scarcity, and shot logic.
+Presentation and viewpoint are independent, but first person changes more than pronouns:
 
-Never turn first-person push into web-novel scenes, inner-monologue prose, or complete dialogue exchanges. Convert role labels to 俺／私 or natural subject omission while preserving the push surface.
+- First person obeys the narrator's knowledge boundary, selection, judgment, and brief self-reaction.
+- Third person may access external reactions through stable role labels.
+- Both may use recap compression and oral lines when push format is selected.
 
-## Surface Contract
+Never convert a novel into push copy by inserting line breaks alone. Never turn first person into diary-like introspection merely because the narrator says 俺／僕／私.
 
-- One action, reveal, reaction, consequence, or causal link per non-empty line.
-- For Japanese, target median line length 8-20, 90th percentile <=32, and maximum <=60 characters, excluding headings.
-- Lines over 32 characters must be at most 12 percent.
-- Lines containing two or more 、 must be at most 15 percent.
-- Direct-quote lines containing Japanese quote marks must be at most 5 percent. Narrate most dialogue as intent, refusal, proof, or reaction.
-- Use a turn or causal connector at least once per 12 lines. Vary ところが, すると, だが, しかし, しかも, その直後, 結果, そこで, and equivalent natural phrasing.
-- Establish identity, abnormal event, and curiosity gap within the first 3-6 lines.
-- Keep backstory to the minimum needed for the next payoff. Do not reset into biography after the hook.
-- Every 3-6 lines should produce a new fact, test, reversal, witness reaction, evidence move, romance move, reward, status change, or danger.
-- Do not add timestamps, copied source wording, ASR debris, or disconnected highlight lists.
+## Surface Guidance
 
-## Person-Specific Mapping
+Use these as adjustable diagnostics, not creative targets:
 
-First person:
+- Prefer one main action, reveal, reaction, consequence, or causal link per non-empty line.
+- For Japanese, a median line length around 8-20 characters is usually readable; long lines should be rare.
+- Keep direct-quote lines sparse when the requested format is recap narration.
+- Vary causal connectors and subject omission naturally.
+- Remove timestamps, ASR debris, copied source wording, and disconnected highlight lists.
+- Establish a person, a legible event, and an unanswered pressure early.
 
-- Use 俺／僕／私 only when needed; omit the subject naturally on adjacent lines.
-- Keep self-comment to short practical punchlines.
-- Narrate only known facts or clearly mark later-learned facts.
-- Do not expand thoughts, sensory scene-setting, or dialogue because the viewpoint is intimate.
+Do not shorten a clear, forceful line merely to hit a percentile. Do not add connectors, quoted dialogue, or line breaks solely to satisfy a ratio.
 
-Third person:
+## Editorial Retention Gate
 
-- Use stable Japanese role labels such as 主人公, 男, 少女, 令嬢, 聖女, 公爵, or a name after identification.
-- Keep labels sparse but clear enough for listening.
-- External reactions may be narrated directly.
+Audit by meaningful story modules or scenes, not fixed 6-10-line windows. Human rhythm is uneven.
 
-## Audience Adaptation
+Every major module must change at least one of: fact, problem, choice, tactic, relationship, status, resource, cost, danger, reversal, or payoff. A narrator-specific judgment can sharpen a change but cannot replace one.
 
-- Male: prioritize skill proof, tactical change, monster/item behavior, money/rank/drop, faction reaction, practical complaint, and visible payoff.
-- Female: prioritize accusation, evidence, heroine choice, status/reputation movement, male-lead recognition, romance action, zamaa consequence, and dignity recovery.
-- Female push remains recap narration. Romance does not authorize long psychology, decorative beauty, or dialogue-heavy scenes.
+- One decisive proof is enough for one conclusion. A second demonstration is valid only when it changes mechanism, stakes, relationship, or result.
+- Procedures, staffing, rules, inventories, contracts, tests, training, and chronology are kept only when they alter conflict.
+- Numbers and rules survive only when they change danger, reward, reputation, choice, or status.
+- Male push may use practical complaint, contrast, skill absurdity, enemy misread, loot, or status inflation, but should rotate mechanisms rather than repeat correction scenes.
+- Female push may be serious, painful, tender, suspenseful, healing, romantic, or cathartic; jokes are optional.
+- Stop explaining once the audience knows what changed and why it matters. Preserve an active question.
 
-## Retention and Payoff Contract
+Before delivery, answer the editorial questions in `../../story-first-person-script/SKILL.md` for first-person work. For third person, use the same state-change, repetition, explanation, middle-payoff, climax, and ending checks.
 
-Passing the surface metrics is necessary but insufficient. Block delivery when the result is only a plot outline split into subtitle lines.
+## Surface Lint
 
-- Build each major module as fact -> expectation -> reversal -> narrator/character reaction.
-- Add at least one hook, reversal, meaningful reaction, proof move, relationship move, status change, or satisfying payoff every 6-10 lines.
-- Do not narrate procedures, staffing, rules, inventories, or chronology for more than four consecutive lines without a consequence, character reaction, evidence change, relationship change, or status change.
-- Give the narrator a viewpoint: select, judge, compress, and punch. Do not report every action at equal weight.
-- Keep only numbers and rules that change danger, proof, romance, reward, reputation, choice, or status.
-- Male push should rotate practical complaints, contrast, roast, skill absurdity, enemy misread, witness shock, system loopholes, loot, status inflation, and other humor/payoff mechanisms. Do not repeat the same misunderstanding or correction more than twice in a row.
-- Female push does not require jokes, roasts, comedy, or exaggerated reactions. It may be serious, painful, tender, healing, suspenseful, or cathartic as long as each block advances accusation, evidence, heroine choice, dignity, social pressure, male-lead recognition, romance, zamaa consequence, safety, reputation, or status.
-- When female humor fits the selected lane, use it as an optional flavor through etiquette contradiction, social embarrassment, rival self-exposure, or romantic misunderstanding; never force it into abuse, grief, healing, or solemn romantic beats.
-
-Before delivery, perform a manual retention/payoff audit. Mark every 6-10-line block with its hook, reversal, reaction, proof move, relationship move, choice, or state change. Any unmarked block must be compressed or rewritten. Mechanical validation cannot replace this audit.
-
-## Hard Validation
-
-For every saved push body, run:
+For a saved push body, optionally run:
 
     python .codex/skills/story/scripts/validate-flan-push.py --body <正文.md> --person first
 
-Use --person third for third-person output. A failure blocks delivery. Do not satisfy the validator by chopping a novel mechanically: reread the result and confirm every line is a coherent visual or information beat.
+Use `--person third` for third-person output.
+
+Interpret results literally:
+
+- `surface_pass`: no configured subtitle-shape warning crossed its threshold.
+- `surface_fail`: review oral readability and format; rewrite only where the warning identifies a real problem.
+- `quality_verdict: not_evaluated`: mandatory reminder that this tool cannot approve a script.
+
+A surface failure may block a strict platform-format delivery. A surface pass can never certify quality and must never be reported as “弗兰验证 PASS” or “剧本通过”.

@@ -80,12 +80,12 @@ The object should appear early as ordinary or hidden, then return with a changed
 
 ## Long-Episode Density
 
-For a long narration episode around 15,000 characters, do not stretch the story with weather, room atmosphere, gentle memories, repeated loneliness, or moral commentary. Make the length come from more family/legal/financial/care state changes.
+For a long narration episode around 12,000 characters, do not stretch the story with weather, room atmosphere, gentle memories, repeated loneliness, or moral commentary. Length comes only from necessary family/legal/financial/care state changes.
 
-- When the user asks for YouTube/朗读 "完整正文", treat 14,500-16,500 Japanese characters as the default target unless another number is stated.
+- When the user asks for YouTube/朗读 "完整正文", target approximately 12,000 Japanese characters unless another number is stated.
 - Do not add a fixed state-change quota. Let the beat count follow the outline, emotional target, and silver-life rhythm.
 - Any long stretch changes, prepares, or pays off at least one of: old labor/debt, proof, witness, legal status, money/property, care responsibility, housing, health risk, family relationship, public reputation, or protagonist choice.
-- Every 2,500-3,000 characters lands proof movement, responsibility rebound, public pressure, visible consequence, or late-life recovery step.
+- Every major module changes responsibility, money, housing, care burden, relationship boundary, public position, or recovery direction; do not schedule these at fixed character intervals.
 - Sparse transitions only move time/place and should be brief.
 - No scene may exist only for atmosphere, weather, seasonal memory, empty loneliness, generic kindness, quiet sadness, or elegant phrasing.
 
