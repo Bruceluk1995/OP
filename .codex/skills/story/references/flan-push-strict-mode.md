@@ -2,7 +2,7 @@
 
 Use this for every male- or female-audience output selected as 动漫解说／推文口播. It distills reusable presentation mechanics rather than source wording. This file governs subtitle readability and oral surface only. It does not judge story quality, retention, originality, entertainment, or first-person authenticity.
 
-For first-person work, read `../../story-first-person-script/SKILL.md` and `../../story-first-person-script/references/push-first-person-benchmark.md`. That editorial gate outranks every metric in this file.
+For first-person work, read `../../story-first-person-script/SKILL.md`, `../../story-first-person-script/references/push-first-person-benchmark.md`, and `../../story-first-person-script/references/push-quality-gate.md`. That editorial release gate outranks every metric in this file.
 
 ## Person and Presentation
 
@@ -29,7 +29,7 @@ Do not shorten a clear, forceful line merely to hit a percentile. Do not add con
 
 ## Editorial Retention Gate
 
-Audit by meaningful story modules or scenes, not fixed 6-10-line windows. Human rhythm is uneven.
+Audit by meaningful story modules or scenes, not fixed 6-10-line windows. Human rhythm is uneven. Never require “one hook every three lines”; hooks must arise from changed facts, consequential choices, or live pressure.
 
 Every major module must change at least one of: fact, problem, choice, tactic, relationship, status, resource, cost, danger, reversal, or payoff. A narrator-specific judgment can sharpen a change but cannot replace one.
 
@@ -40,7 +40,7 @@ Every major module must change at least one of: fact, problem, choice, tactic, r
 - Female push may be serious, painful, tender, suspenseful, healing, romantic, or cathartic; jokes are optional.
 - Stop explaining once the audience knows what changed and why it matters. Preserve an active question.
 
-Before delivery, answer the editorial questions in `../../story-first-person-script/SKILL.md` for first-person work. For third person, use the same state-change, repetition, explanation, middle-payoff, climax, and ending checks.
+Before delivery, clear `push-quality-gate.md` for first-person work. For third person, use the same opening-gap, state-change, repetition, explanation, middle-change, climax-debt, companion-agency, hook-honesty, and ending-action checks without the pronoun-swap test.
 
 ## Surface Lint
 

@@ -8,7 +8,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 This skill owns viewpoint craft, not genre routing. Use the selected genre skill for market promise and localization, then apply this first-person workflow directly.
 
-For anime recap/push narration, read `references/push-first-person-benchmark.md` before outlining or rewriting. The benchmark distinguishes a narrator-led oral account from first-person web-novel scenes with short line breaks.
+For anime recap/push narration, read `references/push-first-person-benchmark.md` and `references/push-quality-gate.md` before outlining or rewriting. The benchmark distinguishes a narrator-led oral account from first-person web-novel scenes with short line breaks; the release gate controls retention, narrator mouth, middle change, climax payoff, and ending proof.
 
 ## Narrator Engine
 
@@ -25,6 +25,10 @@ What choice only I would make
 
 First person changes information selection, judgment, misunderstanding, reaction, and sentence flavor. It is not a pronoun replacement and does not require long introspection.
 
+## Push Oral Spine
+
+For push work, lock the compact oral spine from `references/push-quality-gate.md` before prose: abnormal outcome, ordinary cause/choice, immediate cost, audience wait, narrator filter, first proof, middle mechanism change, climax debt, and ending proof action. If any field is missing, do not draft around the gap.
+
 ## Native Workflow
 
 1. State the reader's concrete waiting and the protagonist's desire.
@@ -32,9 +36,13 @@ First person changes information selection, judgment, misunderstanding, reaction
 3. Outline scenes as `entering state -> my choice/interpretation -> exiting state -> live question`.
 4. Draft only what the narrator can observe, infer, remember, misunderstand, or later learn. Let withheld admission create tension; do not hide facts the narrator is actively using.
 5. Keep narration and dialogue compatible with one person's social position and priorities. A practical judgment is stronger than a generic joke.
-6. Blind-read for the earliest point where the narrator becomes a neutral reporter, diary writer, or author explainer; rewrite the whole affected scene, not only pronouns.
+6. Run the four push passes when applicable: report, narrator mouth, change, and payoff.
+7. Blind-read for the earliest point where the narrator becomes a neutral reporter, diary writer, or author explainer; rewrite the whole affected scene, not only pronouns.
+8. Apply every blocking test in `references/push-quality-gate.md` before surface lint. A blocking failure returns to the earliest responsible pass.
 
 For push work, also require result-first opening, causal compression, sparse decisive quotation, narrator-specific practical judgment, and a changed fact/live question at each major module ending.
+
+Do not enforce “one reversal every three lines.” Hooks must come from changed facts, consequential choices, or unresolved pressure. Short lines, slogans, and contrast templates cannot substitute for progression.
 
 ## True Rewrite
 
@@ -47,3 +55,4 @@ Extract user-approved facts and anchors, create a fresh causal/change outline, a
 - No repeated proof or procedure used to keep the narrator talking.
 - No length, pronoun count, short-line ratio, or rewrite-similarity pass used as a quality verdict.
 - No first-person scene transcript delivered as push narration merely because lines are short.
+- No surface lint before the editorial release gate reaches `ready for user read`.

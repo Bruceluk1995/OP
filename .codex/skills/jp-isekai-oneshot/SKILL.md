@@ -21,7 +21,7 @@ When push narration is selected, also read:
 
 5. `../jp-isekai-write/references/push-narration-protocol.md`
 6. `../story/references/flan-push-strict-mode.md`
-7. `../story-first-person-script/SKILL.md` and `../story-first-person-script/references/push-first-person-benchmark.md` for first person
+7. `../story-first-person-script/SKILL.md`, `../story-first-person-script/references/push-first-person-benchmark.md`, and `../story-first-person-script/references/push-quality-gate.md` for first person
 
 Do not load unrelated old blueprints, opening decks, package guides, or ledgers unless the task needs them. Push contracts are not optional when push presentation is selected.
 
@@ -51,7 +51,7 @@ When the premise is missing, resolve or infer presentation and viewpoint, then p
 
 Complete the progressive topic gate and obtain a concrete user-selected or explicitly delegated premise before production.
 
-Run the studio path once: Market Basis -> Producer -> Story Core -> Change Structure -> Japanese Traditional Scene Writer **or** Japanese Push Narrator -> Blind Editor. Restart from the earliest failed stage. First person must use the studio knowledge/voice contract.
+Run the studio path once: Market Basis -> Producer -> Story Core -> Change Structure -> Japanese Traditional Scene Writer **or** Japanese Push Narrator -> Blind Editor -> Surface Lint. Restart from the earliest failed stage. First-person push must clear the oral-spine and editorial release gate before surface lint.
 
 Browse for current Japanese-market rankings, trends, news, or live-source requests and follow the dynamic-market contract. Story-market evidence selects the premise and modules; the Flan contract always owns push delivery. Opening cards, package files, cover prompts, character prompts, and ledgers remain optional.
 
