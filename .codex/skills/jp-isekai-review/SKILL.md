@@ -23,7 +23,7 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
 - Read `references/review-checklist.md` before a full review.
 - Read `references/terminology.md` whenever checking Chinese-to-Japanese adaptation leakage.
 - Read `../jp-isekai-write/references/self-check.md` when reviewing saved episodes, project-bound output, per-episode folders, continuity, plot bugs, package completeness, RPG-rule consistency, or Chinese leakage.
-- For every declared push draft, read `../story/references/flan-push-strict-mode.md` and `../jp-isekai-write/references/push-narration-protocol.md`; for first person also read `../story-first-person-script/SKILL.md` and `../story-first-person-script/references/push-first-person-benchmark.md`.
+- For every declared push draft, read `../story/references/flan-push-strict-mode.md` and `../jp-isekai-write/references/push-narration-protocol.md`; for first person also read `../story-first-person-script/SKILL.md` and its push references; for third person read `../story-third-person-script/SKILL.md` and its push references.
 - Read `../jp-short-fiction-studio/references/dynamic-market-learning.md` when auditing topic selection or claims of Japanese-market validation.
 - Treat personality-free flowchart narration as blocking through the blind-reader/state-change audit, not a fixed line interval.
 - If the draft or outline declares a subtype lane, read the loaded project benchmark card or `对标/{lane}/` report first when available, then the matching `../jp-isekai-plan/references/type-packs/{lane}.md` as fallback, and review against that lane's required payoff loop.
@@ -55,6 +55,7 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
    - Episode 2+ opens as a reset instead of continuing the previous episode's unresolved hook.
    - First sentence is atmosphere, abstract emotion, destiny, scenery, or generic inner monologue instead of a concrete plot bomb.
    - Declared push narration is actually first-person web-novel scene prose, a dialogue transcript, diary narration, or ordinary prose split into short lines.
+   - Declared third-person push narration is neutral chronology, repeated-name summary, head-hopping prose, crowd-reaction proof, or ordinary third-person scenes split into short lines.
    - Consecutive major modules lack a new problem, choice, tactic, consequence, relationship/status change, or audience question.
 - A 12,000-character episode uses length to pad mood, scenery, travel, explanation, or adjectives; long stretches can be deleted without changing plot, pressure, relationship, cost, reward, setup, aftershock, or next choice.
    - Dense beats are not denser than transitions; the prose spends similar weight on travel/mood and payoff.

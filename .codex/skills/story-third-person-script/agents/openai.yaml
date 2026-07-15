@@ -1,0 +1,4 @@
+interface:
+  display_name: "Third-Person Push Script"
+  short_description: "Write narrator-led third-person commercial push scripts"
+  default_prompt: "Use $story-third-person-script to write a narrator-led third-person Japanese push script."

@@ -24,6 +24,7 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
 - Read `references/terminology.md` whenever checking Chinese-to-Japanese adaptation leakage.
 - Read `../jp-josei-fantasy-write/references/self-check.md` when reviewing saved episodes, project-bound output, per-episode folders, continuity, plot bugs, package completeness, or Chinese leakage.
 - Read `../story/references/flan-push-strict-mode.md` only when push-surface compliance is part of the review; its result is surface-only.
+- For every push review, read the selected viewpoint skill and its two push references: `../story-first-person-script/` for first person or `../story-third-person-script/` for third person.
 - Treat personality-free flowchart narration as blocking through the blind-reader/state-change audit, not a fixed line interval.
 - If the draft or outline names a lane, read the best available benchmark/type-pack material before judging genre fit: project拆文, live benchmark card, project-local `女频幻想恋爱知识库/type-packs/{lane}.md`, then bundled `../jp-josei-fantasy-plan/references/type-packs/{lane}.md` as fallback.
 
@@ -51,6 +52,7 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
    - Episode 2+ opens as a reset instead of continuing the previous episode's unresolved hook.
    - First sentence is scenery, abstract emotion, destiny, quiet morning, or generic pain instead of a concrete social/emotional bomb.
    - Consecutive major modules lack a new heroine choice, consequence, relationship movement, social pressure, reversal, or audience question.
+   - Declared third-person push narration is neutral chronology, repeated-name summary, head-hopping prose, crowd-reaction proof, or ordinary third-person scenes split into short lines.
 - A 12,000-character episode uses length to pad mood, scenery, beauty, sadness, etiquette, or adjectives; long stretches can be deleted without changing evidence, social pressure, relationship, romance, cost, setup, aftershock, or next choice.
    - Dense beats are not denser than transitions; the prose spends similar weight on etiquette/scenery/sadness and payoff.
    - Prose is padded with vague AI-flavored adjectives or summary paragraphs instead of documents, witnesses, choices, etiquette, contracts, and consequences.

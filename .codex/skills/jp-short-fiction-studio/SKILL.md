@@ -17,7 +17,7 @@ Read exactly one lane file:
 
 Read `references/dynamic-market-learning.md` for push production or current Japanese-market premise discovery.
 
-When push narration is selected, also read `../jp-isekai-write/references/push-narration-protocol.md` and `../story/references/flan-push-strict-mode.md`. For first-person push, read `../story-first-person-script/SKILL.md` and `../story-first-person-script/references/push-first-person-benchmark.md`. Do not load unrelated opening decks, ledgers, packaging guides, or old blueprint files unless the task needs them.
+When push narration is selected, also read `../jp-isekai-write/references/push-narration-protocol.md` and `../story/references/flan-push-strict-mode.md`. For first-person push, read `../story-first-person-script/SKILL.md` and its two push references. For third-person push, read `../story-third-person-script/SKILL.md` and its two push references. Do not load unrelated opening decks, ledgers, packaging guides, or old blueprint files unless the task needs them.
 
 ## Market-Basis Gate — Lao Liu Dynamic Learning
 
@@ -37,8 +37,8 @@ If the user already gave lane, premise, viewpoint, and presentation, do not ask 
 2. **Producer**: lock reader promise, emotion, protagonist desire, and the concrete event the audience is waiting for.
 3. **Story-core editor**: choose a causal core where the protagonist makes an unusual choice, gets a visible result, and that result creates a new kind of trouble.
 4. **Structure editor**: plan 6-10 flexible change modules; one decisive proof per conclusion; switch the middle mechanism.
-5. **Japanese writer**: select exactly one branch: Traditional Scene Writer or Flan-Style Push Narrator.
-6. **Blind editor**: read the saved body without metrics, identify the earliest boring point or presentation drift, then rewrite from the earliest failed stage.
+5. **Japanese writer**: select exactly one branch: Traditional Scene Writer or Flan-Style Push Narrator. For push, lock an oral spine before drafting.
+6. **Blind editor**: read the saved body without metrics, apply the editorial release gate, identify the earliest boring point or presentation drift, then rewrite from the earliest failed stage.
 
 Planning remains compact and in memory. For chat-only work, output only the requested artifact. For project work, save the body plus one compact `作品决策卡.md`; do not create evidence, ledger, cover, character prompt, and audit files unless requested.
 
@@ -98,7 +98,9 @@ Use this branch whenever presentation is anime recap/push narration:
 - end each major module on a changed fact and a live pressure, not explanation or atmosphere;
 - never treat short lines, `俺`, or a metric pass as proof that the body is push narration.
 
-After editorial rewriting, run `../story/scripts/validate-flan-push.py` on every saved push body. `surface_fail` blocks push-format delivery and sends the body back to this branch; `surface_pass` remains surface-only.
+For first person, draft in four passes from the first-person gate: consequence-led report, narrator mouth, state change, and payoff. For third person, use the third-person gate: consequence-led report, narrator stance/stable labels, state change, and payoff. In both, the opening exposes the abnormal result and causal gap; the middle changes mechanism after first proof; the climax recycles earlier story debt; the ending proves change with an action.
+
+Only after the blind editor reaches `ready for user read`, run `../story/scripts/validate-flan-push.py` on every saved push body. `surface_fail` blocks push-format delivery and sends the body back to this branch; `surface_pass` remains surface-only.
 
 ### Blind Editor
 
@@ -110,7 +112,11 @@ Read before checking length or lint. Use one verdict:
 - `line edit`
 - `ready for user read`
 
-State the earliest loss of interest, what the reader was waiting for, what the text supplied instead, and which earlier role must redo its work. For push, also mark the earliest line where the narrator becomes a scene camera, dialogue transcript, diary voice, or novel broken into subtitles. Never use numeric quality scores or `PASS`.
+State the earliest loss of interest, what the reader was waiting for, what the text supplied instead, and which earlier role must redo its work. For push, also mark the earliest line where the narrator becomes a scene camera, dialogue transcript, diary voice, or novel broken into subtitles; identify the first repeated conclusion, middle mechanism change, climax debt, and ending proof action. Never use numeric quality scores or `PASS`.
+
+### Push Editorial Release Gate
+
+For first person, clear `../story-first-person-script/references/push-quality-gate.md`. For third person, clear `../story-third-person-script/references/push-quality-gate.md`, including narrator stance, stable labels, knowledge boundary, and protagonist agency. A failed gate blocks delivery even when surface lint passes.
 
 ## First-Person Contract
 

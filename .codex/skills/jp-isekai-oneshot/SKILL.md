@@ -21,7 +21,8 @@ When push narration is selected, also read:
 
 5. `../jp-isekai-write/references/push-narration-protocol.md`
 6. `../story/references/flan-push-strict-mode.md`
-7. `../story-first-person-script/SKILL.md` and `../story-first-person-script/references/push-first-person-benchmark.md` for first person
+7. `../story-first-person-script/SKILL.md`, `../story-first-person-script/references/push-first-person-benchmark.md`, and `../story-first-person-script/references/push-quality-gate.md` for first person
+8. `../story-third-person-script/SKILL.md`, `../story-third-person-script/references/push-third-person-benchmark.md`, and `../story-third-person-script/references/push-quality-gate.md` for third person
 
 Do not load unrelated old blueprints, opening decks, package guides, or ledgers unless the task needs them. Push contracts are not optional when push presentation is selected.
 
@@ -51,7 +52,7 @@ When the premise is missing, resolve or infer presentation and viewpoint, then p
 
 Complete the progressive topic gate and obtain a concrete user-selected or explicitly delegated premise before production.
 
-Run the studio path once: Market Basis -> Producer -> Story Core -> Change Structure -> Japanese Traditional Scene Writer **or** Japanese Push Narrator -> Blind Editor. Restart from the earliest failed stage. First person must use the studio knowledge/voice contract.
+Run the studio path once: Market Basis -> Producer -> Story Core -> Change Structure -> Japanese Traditional Scene Writer **or** Japanese Push Narrator -> Blind Editor -> Surface Lint. Restart from the earliest failed stage. Push narration must clear the selected viewpoint's oral-spine and editorial release gate before surface lint.
 
 Browse for current Japanese-market rankings, trends, news, or live-source requests and follow the dynamic-market contract. Story-market evidence selects the premise and modules; the Flan contract always owns push delivery. Opening cards, package files, cover prompts, character prompts, and ledgers remain optional.
 
@@ -74,4 +75,5 @@ For project-bound work, save the Japanese body and one compact decision card. Cr
 - Do not weaken an OP protagonist randomly; use information, restraint, identity, collateral cost, or faction consequence.
 - Do not call length, opening-card, or surface-lint results quality approval.
 - Do not deliver first-person web-novel scenes broken into short lines as push narration.
+- Do not deliver third-person web-novel scenes or neutral chronology broken into short lines as push narration.
 - Do not call a premise market-validated when it has only one work or one list snapshot as evidence.

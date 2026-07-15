@@ -2,27 +2,31 @@
 
 Use for Japanese male-audience isekai video recap or push narration, standalone or serialized. Push narration is a presentation mode, not a viewpoint.
 
-Read `../../story/references/flan-push-strict-mode.md` for optional surface lint. For first-person output, also use `../../story-first-person-script/SKILL.md` and its required benchmark; those editorial rules control knowledge, voice, retention, and true rewriting.
+Read `../../story/references/flan-push-strict-mode.md` for surface lint. For first-person output, use `../../story-first-person-script/SKILL.md` and its push references. For third-person output, use `../../story-third-person-script/SKILL.md` and its push references. Those editorial rules control knowledge, narrator stance, retention, and true rewriting.
 
 ## Person Lock
 
 - First person: narrate only what the protagonist knows, observes, infers, misunderstands, or later learns. Select details through that person's priorities and practical judgment.
-- Third person: use stable, sparse role labels and may show external reactions.
+- Third person: use stable sparse labels, selective external reactions, and an explicit narrator stance. Do not become neutral chronology or head-hop for convenience.
 - Do not alternate viewpoint for convenience.
 - Do not confuse first person with added introspection or a simple pronoun swap.
 
-## Opening
+## Oral Spine and Opening
 
-Lock a visual story core before writing:
+Lock the matching viewpoint skill's oral spine before drafting. First person locks narrator mouth and knowledge; third person locks narrator stance, stable labels, external-reaction selection, and knowledge boundary.
+
+Lock a visual story core:
 
 `ordinary action/loss -> visible change -> human consequence`
 
-Then build the opening as an event:
+Then open result-first:
 
-1. concrete action, evidence, mistake, humiliation, loss, or odd result;
-2. immediate meaning for a person;
-3. narrator/character reaction;
-4. current pressure and scene entry.
+1. abnormal visible outcome or contradiction;
+2. ordinary cause, choice, or profession behind it;
+3. immediate cost, humiliation, or changed status;
+4. unanswered pressure that makes continuation necessary.
+
+Do not delay the strongest contradiction behind routine scene entry. “Every three lines a reversal” is not a substitute for a causal gap.
 
 The opening deck in `../../jp-isekai/references/opening-innovation-engine.md` is optional ideation. Use it only when it improves the event. Normal delivery requires no random draw, card ID, slot evidence, or validator.
 
@@ -59,4 +63,10 @@ Extract from the previous episode: final event, unresolved pressure, new item/sk
 - In first person, which details prove this narrator selected and judged the story?
 - Does the climax solve the changed problem rather than restage the first proof?
 - Does a one-shot close its promise without a next-episode bridge?
+- What changed after the first decisive proof, instead of repeating it?
+- Which earlier choice, tool, relationship, mistake, or restraint pays for the climax?
+- What final action proves change without a moral paragraph?
+- Which named companion materially changes the plan, rescue, information, cost, or result?
 - If surface lint ran, is it labeled surface-only rather than quality approval?
+
+Complete the matching viewpoint skill's full blind-read template. Only a `ready for user read` editorial verdict proceeds to surface lint.
