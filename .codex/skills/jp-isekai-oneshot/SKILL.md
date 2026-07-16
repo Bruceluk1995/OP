@@ -1,6 +1,6 @@
 ---
 name: jp-isekai-oneshot
-description: Fast Japanese male-audience isekai one-shot entry for traditional web-novel prose or anime-recap/push narration, first or third person. Use for 日式男频异世界短篇、男频异世界推文、动漫解说文案、一发完结、battle leveling、OP、追放ざまぁ、dungeon, or a complete Japanese isekai short that must resolve in one file.
+description: Fast Japanese male-audience isekai one-shot entry for traditional web-novel prose or anime-recap/push narration, first or third person. Use for 日式男频异世界短篇、男频异世界推文、动漫解说文案、一发完结、Chinese novel-site inspiration、battle leveling、OP、追放ざまぁ、dungeon, or a complete Japanese isekai short that must resolve in one file.
 metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
@@ -14,6 +14,8 @@ Read:
 
 1. `../jp-short-fiction-studio/SKILL.md`
 2. `../jp-short-fiction-studio/references/male-isekai.md`
+
+When the Chinese novel-site source is selected, also read `../jp-isekai/references/chinese-novel-inspiration.md`. Do not load it for unrelated requests.
 
 Do not also load the old blueprint, anti-water, opening deck, delivery, ledger, or push-validator documents unless the user specifically requests that function.
 
@@ -39,7 +41,7 @@ Do not present a menu when these are already clear. If only one essential choice
 
 Run the studio fast path once: Producer -> Story Core -> Change Structure -> Japanese Scene Writer -> Blind Editor. Restart from the earliest failed stage. First person must use the studio knowledge/voice contract.
 
-Browse only for current market, ranking, trend, news, or live-source requests. Opening cards, surface lint, package files, cover prompts, character prompts, and ledgers are optional.
+Browse only for current market, ranking, trend, news, live-source requests, or an explicitly selected Chinese novel-site inspiration pass. Chinese novel-site popularity is cross-market inspiration only; require a current Japanese cross-check before calling the premise Japanese-market validated. Opening cards, surface lint, package files, cover prompts, character prompts, and ledgers are optional.
 
 For project-bound work, save the Japanese body and one compact decision card. Create a full package only when requested.
 
@@ -57,3 +59,4 @@ For project-bound work, save the Japanese body and one compact decision card. Cr
 - Do not translate Chinese xianxia, sect, court, or son-in-law systems literally.
 - Do not weaken an OP protagonist randomly; use information, restraint, identity, collateral cost, or faction consequence.
 - Do not call length, opening-card, or surface-lint results quality approval.
+- Do not present Chinese novel-site popularity as Japanese-market validation or copy its titles, systems, scene order, or named plot.

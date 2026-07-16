@@ -1,13 +1,13 @@
 # Trend To Theme-Pack Router
 
-Use only after the user has selected a specific Google Trends JP, absurd-news, or social-video seed, or explicitly delegated that selection, and before choosing the final title, cheat, or one-shot blueprint. Source/type/tone selection alone is not seed selection.
+Use only after the user has selected a specific Google Trends JP, absurd-news, social-video, or Chinese novel-site mechanism seed, or explicitly delegated that selection, and before choosing the final title, cheat, or one-shot blueprint. Source/type/tone selection alone is not seed selection.
 
 This router maps a hot seed to a male-isekai theme engine. These routes mirror `../jp-isekai-plan/references/type-packs/`, but the output remains a standalone one-shot targeting approximately 12,000 Japanese characters. Do not use the six-episode structure from those type packs directly; compress the selected route into a complete change-driven one-shot.
 
 ## Routing Protocol
 
 1. Score everyday resonance, absurdity, and video-hook clarity before route selection. Prefer concrete unfairness or visible challenge over remote spectacle.
-2. Extract the hot/news/video seed's reusable fantasy function: desire, fear, object, absurd rule, competition, broken service, hidden cost, challenge, proof, game exploit, disaster, tool, money pressure, social proof, or public accusation.
+2. Extract the hot/news/video/novel-site seed's reusable fantasy function: desire, fear, object, absurd rule, competition, broken service, hidden cost, challenge, proof, game exploit, disaster, tool, money pressure, progression reward, faction pressure, social proof, or public accusation.
 3. Reject direct use of real people, scandals, crime, tragedy, political rage bait, or copyrighted franchise plots.
 4. Choose one primary theme route and one backup route.
 5. Convert the seed into a repeatable cheat or dungeon/guild rule that fits the primary route.

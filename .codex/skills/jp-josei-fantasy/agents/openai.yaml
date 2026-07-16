@@ -1,4 +1,4 @@
 interface:
   display_name: "JP Josei Fantasy Suite"
-  short_description: "Router for josei fantasy romance and hot-topic discovery"
-  default_prompt: "Use $jp-josei-fantasy to route the Japanese female-fantasy task directly when clear, preserving heroine agency, relationship change, and optional research tools."
+  short_description: "Route josei fantasy from Japan trends or China-site ideas"
+  default_prompt: "Use $jp-josei-fantasy to route a Japanese female-fantasy task, treating Chinese women-oriented novel sites as optional cross-market inspiration that requires Japanese-market cross-checking."

@@ -1,6 +1,6 @@
 ---
 name: jp-josei-fantasy-plan
-description: "Plan Japanese female-audience fantasy romance in traditional web-novel or anime-recap/push narration form, with first-person or third-person. Use for 女性向け異世界恋愛, 女频推文, 悪役令嬢, 婚約破棄, ざまぁ, 溺愛, 聖女, 契約婚, family inheritance, loops, court romance, hot-topic conversion, and localization."
+description: "Plan Japanese female-audience fantasy romance in traditional web-novel or anime-recap/push narration form, with first-person or third-person. Use for 女性向け異世界恋愛, 女频推文, 悪役令嬢, 婚約破棄, ざまぁ, 溺愛, 聖女, 契約婚, family inheritance, loops, court romance, hot-topic conversion, Chinese women-oriented novel-site inspiration, and localization."
 metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
@@ -30,6 +30,7 @@ When planning prose beats, design colloquial, direct scene movement: action, dia
 - Read `references/terminology.md` whenever adapting from Chinese fantasy or when the user says not to use Chinese elements.
 - Read `references/dynamic-benchmarking.md` when the user wants current market fit, website-based拆书, hottest works, or when no strong project benchmark exists for the chosen subtype.
 - Read `../jp-josei-fantasy/references/hot-source-router.md` when the user has no premise, wants 热点选题, asks for YouTube/TikTok/Google Trends/news/all-source selection, or rejects the current source as boring.
+- Read `../jp-josei-fantasy/references/chinese-novel-inspiration.md` when the user requests Chinese women-oriented novel sites, selects that source in the hot-source menu, or includes it in an all-source scan. Use it as a cross-market emotion/relationship mechanism layer; it never replaces Japanese-market validation.
 - Read `../jp-josei-fantasy/references/trend-benchmarking.md` when the user wants Google Trends JP or hot/current topic conversion.
 - Read `../jp-josei-fantasy/references/social-video-trends.md` when the user wants YouTube/TikTok/Shorts/video hooks.
 - Read `../jp-josei-fantasy/references/absurd-news-benchmarking.md` when the user wants 离谱新闻, 逆天新闻, or Japanese social-news hooks.
@@ -55,8 +56,9 @@ Benchmark priority:
 
 1. If `对标/{lane}/{work}/拆文报告.md` or `拆文库/{work}/` exists, read it before bundled type packs.
 2. If the user asks for current/hot/platform-fit or there is no project benchmark, browse the relevant public ranking/tag pages and create a Dynamic Benchmark Card from `references/dynamic-benchmarking.md`. If the user asks for Google Trends, YouTube, TikTok, weird news, or all-source discovery, use the hot-source references above and then convert the selected seed with `trend-theme-router.md`.
-3. Read any project-local `女频幻想恋爱知识库/type-packs/{lane}.md`.
-4. Read the bundled `references/type-packs/{lane}.md` only as fallback scaffolding.
+3. If Chinese women-oriented novel-site inspiration is requested, add a separate cross-market function card and Japan cross-check. Do not promote the Chinese source to the primary Japanese benchmark.
+4. Read any project-local `女频幻想恋爱知识库/type-packs/{lane}.md`.
+5. Read the bundled `references/type-packs/{lane}.md` only as fallback scaffolding.
 
 ## Planning Workflow
 
@@ -104,7 +106,7 @@ Benchmark priority:
 
 - Keep the structure readable in Chinese unless the user requests Japanese planning notes.
 - Use Japanese genre labels and terms for titles/tags.
-- For trend-driven concept batches, include source mode, seed, selected josei route, backup route, heroine-empathy score, converted proof/romance mechanism, safety transform, and why the seed works for Japanese female-audience fantasy romance.
+- For trend-driven or cross-market concept batches, include source market/mode, seed, Japan cross-check status, selected josei route, backup route, heroine-empathy score, converted proof/romance mechanism, safety transform, and why the seed works for Japanese female-audience fantasy romance.
 - Do not stack all 30 themes into one story. Pick 3-5 primary tags and 1-2 secondary flavors.
 - Do not leave a project-bound plan only in chat when the user expects a reusable writing project; write the corresponding `设定/`, `大纲/`, and `追踪/` artifacts.
 - If the user asks to write next, hand off to `$jp-josei-fantasy-write` with the tag cluster, heroine wound, romance ladder, and chapter beats.

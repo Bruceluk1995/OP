@@ -7,7 +7,7 @@ Use this after the user selects presentation mode and viewpoint but has not supp
 Present only this menu:
 
 > 先选故事从哪里出发：
-> 1. 搜索日本实时热点，再转译成原创异世界设定
+> 1. 搜索实时热点或小说榜单，再转译成原创日式异世界设定
 > 2. 从经典热门题材中选择
 > 3. 找更冷门、更怪或更新鲜的方向
 > 4. 输入自己的题材或关键词
@@ -23,21 +23,23 @@ When the user selects `1` or legacy `40`, present this source menu before browsi
 2. YouTube Japan 热门视频／Shorts
 3. TikTok Japan 热门机制／话题
 4. 日本离谱新闻／社会新闻
-5. 生活热点优先的全源综合搜索（趋势 + 新闻 + 调查 + 社交平台）
-6. 用户提供链接或关键词
+5. 中国男频小说站榜单／分类趋势（只取机制灵感）
+6. 生活热点优先的全源综合搜索（日本趋势 + 新闻 + 调查 + 社交平台，可选中国小说站）
+7. 用户提供链接或关键词
 
 Then:
 
 - Browse current sources; do not answer from a bundled snapshot alone.
 - Collect 6-10 raw items and present 3-5 viable numbered candidates.
-- For each candidate, include source, date, raw seed, fantasy conversion, recommended male-isekai lane, and a short risk note.
+- For each candidate, include source market, source, date, raw seed, fantasy conversion, recommended male-isekai lane, Japan cross-check status, and a short risk note.
 - Treat source choice and seed choice as separate decisions. Pause for the user's numbered seed choice unless the user explicitly delegates with `你选`, `自动选`, or equivalent.
 - Extract only reusable desires, anxieties, objects, rules, competitions, costs, tools, or social mechanisms. Do not copy creators, copyrighted characters, scenes, scandals, victims, or identifiable private facts.
+- For option 5, read `chinese-novel-inspiration.md`. Use current public ranking/category/tag/synopsis metadata from at least two Chinese fiction sites when accessible. Treat it as cross-market mechanism inspiration, not Japanese-market validation; cross-check the selected mechanism against a current Japanese signal before making a Japanese-market-fit claim.
 - After the seed is selected, propose up to three compact premise variants and route to `$jp-isekai-plan` or `$jp-isekai-oneshot` according to project shape.
 
 ### Lifestyle-First Default
 
-Apply this default to routes 1-5, especially full-source option 5, unless the user requests another trend domain.
+Apply this default to source options 1-4 and 6, especially full-source option 6, unless the user requests another trend domain. Apply it to Chinese novel-site option 5 only when the user asks for daily-life or slow-life mechanisms.
 
 - Prioritize ordinary-life pressures in Japan: wages versus living costs, food and daily-goods prices, rent, utilities, subscriptions and automatic billing, commuting and delivery, workload and AI fatigue, saving behavior, convenience retail, household labor, childcare, caregiving, sleep, practical health concerns, hobbies, dining, and 推し活 spending.
 - Use current news, official statistics, consumer surveys, Google Trends, and social-platform signals. For a full-source pass, collect 6-10 raw signals from at least three source types before selecting candidates.
