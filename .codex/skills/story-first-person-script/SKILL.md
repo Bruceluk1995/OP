@@ -33,12 +33,14 @@ First person changes information selection, judgment, misunderstanding, reaction
 
 ## Push Oral Spine
 
-For push work, lock the compact oral spine from `references/push-quality-gate.md` before prose: abnormal outcome, ordinary cause/choice, immediate cost, audience wait, narrator filter, first proof, middle mechanism change, climax debt, and ending proof action. If any field is missing, do not draft around the gap.
+For push work, lock the compact oral spine from `references/push-quality-gate.md` before prose: abnormal outcome, ordinary cause/choice, immediate pressure or changed status, audience wait, narrator filter, first proof, middle mechanism change, climax debt, and ending proof action. If any field is missing, do not draft around the gap.
+
+Viewpoint craft never requires an ability price. If the genre premise gives the narrator a free, stable, or OP ability, preserve it and source pressure from the surrounding conflict.
 
 ## Native Workflow
 
 1. State the reader's concrete waiting and the protagonist's desire.
-2. Build a causal core: ordinary trouble -> narrator's unusual choice -> visible result -> new-kind trouble -> costly climax choice -> changed ending.
+2. Build a causal core: ordinary trouble -> narrator's unusual choice -> visible result -> new-kind trouble -> decisive climax choice -> changed ending.
 3. Outline scenes as `entering state -> my choice/interpretation -> exiting state -> live question`.
 4. Draft only what the narrator can observe, infer, remember, misunderstand, or later learn. Let withheld admission create tension; do not hide facts the narrator is actively using.
 5. Keep narration and dialogue compatible with one person's social position and priorities. A practical judgment is stronger than a generic joke.

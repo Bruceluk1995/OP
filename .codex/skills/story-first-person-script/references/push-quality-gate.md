@@ -9,7 +9,7 @@ Write these compact answers before drafting:
 ```text
 abnormal outcome:
 ordinary choice/cause behind it:
-immediate cost or status loss:
+immediate pressure, status change, or optional premise-supported cost:
 what the audience is waiting to understand:
 narrator's professional/lived filter:
 first decisive proof:
@@ -34,11 +34,13 @@ The opening must expose the abnormal outcome and causal gap. Do not spend the fi
 - **Camera test**: if routine doors, walking, greetings, and dialogue are acted out in real time, convert the scene to consequence-led reporting.
 - **Middle-change test**: after the first decisive proof, the story must change problem, stakes, tactic, relationship, or cost. Another demonstration of the same conclusion is not progression.
 - **Climax-debt test**: the solution must depend on something established before the climax. A newly disclosed answer, instant skill readout, or stronger final attack is insufficient by itself.
-- **Companion-agency test**: named companions must change the plan, cost, rescue, information, or final result. Agreement, admiration, and surprise do not count.
+- **Companion-agency test**: named companions must change the plan, pressure, rescue, information, consequence, or final result. Agreement, admiration, and surprise do not count.
 - **Ending-action test**: show the changed person, routine, object, status, or relationship. Delete the moral paragraph that merely explains the action.
 - **Hook-honesty test**: hooks come from changed facts and live choices. Generic lines such as “but he did not know” or a forced reversal every three lines do not count.
 
 Any blocking failure sends the draft back to the earliest responsible pass. Do not patch only the failing sentence when the module's function is wrong.
+
+The opening-pressure field is not permission to invent a power tax. Backlash, debt, memory/lifespan loss, loss of control, and self-harm appear only when the approved premise is explicitly cost-driven.
 
 ## Cadence Without Formula
 

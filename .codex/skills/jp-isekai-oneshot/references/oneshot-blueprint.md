@@ -15,9 +15,10 @@ Use before drafting a standalone male-audience isekai short. Plan in flexible mo
 - Audience promise:
 - Protagonist desire:
 - Cheat/skill:
+- Ability economy: free/OP / conditional / information-limited / resource-limited / explicitly cost-driven
 - Visual story core: ordinary action/loss -> visible change -> human consequence
 - Main opposition:
-- Cost or limit:
+- Ability boundary or condition, if useful (no automatic personal price):
 - Decisive proof:
 - New problem created by that proof:
 - Climax choice/mechanism:
@@ -60,7 +61,7 @@ Dense and sparse passages may alternate. Mechanical uniformity is a warning sign
 - Dungeon boss: pressure, pattern, adaptation, result/drop.
 - Academy/game knowledge: route risk, changed choice, suspicious ripple, result.
 - Tamer: behavior problem, bond choice, evolution/skill, relationship or public consequence.
-- Earth commute: ordinary tool creates advantage plus secrecy/cross-world cost.
+- Earth commute: ordinary tool creates advantage plus secrecy, logistics, identity, or cross-world consequence; no automatic personal price.
 - Dungeon master/territory: resource or subordinate choice changes battle or politics.
 - Slow life: comfort must change an object, relationship, safety, or life choice; public proof is optional.
 
@@ -70,4 +71,4 @@ When adapting Chinese xianxia, wuxia, sect, palace, or son-in-law material, iden
 
 ## Ending Rule
 
-Resolve the central promise, reward/cost, and social or emotional change. End on an action, object, choice, or relationship posture. A larger-world aftertaste is allowed only after closure; do not withhold the main payoff for a nonexistent next episode.
+Resolve the central promise, reward/consequence, and social or emotional change. End on an action, object, choice, or relationship posture. A larger-world aftertaste is allowed only after closure; do not withhold the main payoff for a nonexistent next episode.

@@ -40,7 +40,7 @@ Do not draw a card to rescue a weak premise. The card only chooses the entrance;
 - Before drafting, write `ordinary action/loss -> visible change -> human consequence` in one line. If it cannot be understood without terms such as `金色发酵种`, `稀有材料`, `魔力回路`, `F级`, or institution names, rebuild the cheat first.
 - The first proof of a craft/food cheat must be a change the listener can picture: dead dough rises, a cracked bowl overflows, a hard loaf becomes soft, one sack feeds more people, a queue forms, a hungry child can eat. Do not lead with a named magical ingredient, a glowing color, or an inventory list.
 - A magic item may appear after it changes a current action. `面团把木盆顶裂了` can later be called a special starter; `它吐出金色发酵种` cannot carry the opening by itself.
-- If the protagonist's action exists only to display preparation items, replace it with a real choice, cost, embarrassment, hunger, refusal, or rescue.
+- If the protagonist's action exists only to display preparation items, replace it with a real choice, pressure, embarrassment, hunger, refusal, or rescue.
 - No exact-quote evidence is required for normal delivery. Project teams may record examples for research, never as quality proof.
 
 ## Optional Card Diagnostics
@@ -153,9 +153,9 @@ Required chain: abnormal world -> three concrete examples -> protagonist excepti
 
 ### D2 直接上・主角设定连爆型
 
-`直接说出主角的新身份；紧接着给出第一项优势、第二项升级和第三项更夸张的限制／代价；最后用一个正在发生的危机验证这些设定；进入正文。`
+`直接说出主角的新身份；紧接着给出第一项优势、第二项升级和第三项更夸张的新用途／外部压力／操作条件；最后用一个正在发生的危机验证这些设定；进入正文。不得为了凑链路临时发明能力反噬。`
 
-Required chain: identity -> advantage -> escalation -> cost/limit -> live crisis.
+Required chain: identity -> advantage -> escalation -> new use/external pressure/operating condition -> live crisis.
 
 ### E1 经验共识・偏偏反着做型
 
@@ -189,9 +189,9 @@ Required chain: ordinary stake -> three preparations -> ridicule -> hidden futur
 
 ### D3 单一规则连续兑现型
 
-`一句讲明外挂规则；列出两个由小到大的具体兑现案例；第三次兑现落到当前主线危机；补充限制或歪打正着的代价；进入现场。`
+`一句讲明外挂规则；列出两个由小到大的具体兑现案例；第三次兑现落到当前主线危机；补充成功引来的新问题、外部反应或下一种用途；进入现场。能力本身没有代价时不得强加。`
 
-Required chain: rule -> small proof -> larger proof -> current major proof -> limitation/cost.
+Required chain: rule -> small proof -> larger proof -> current major proof -> new pressure/consequence/use.
 
 ## Fill Prompt
 

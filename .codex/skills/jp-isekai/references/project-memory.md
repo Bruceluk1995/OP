@@ -54,7 +54,7 @@ When creating a new serial or a new arc:
 5. After each outline batch, scan new recurring characters, factions, cheat rules, guild rules, dungeon rules, or economy rules and add only reusable ones to `设定/`.
 6. For subtype work, load the best available benchmark first: project拆文 under `对标/{lane}/` or `拆文库/`, then fresh website benchmark cards if requested/needed, then project-specific `男频异世界知识库/type-packs/{lane}.md` notes, and bundled type packs only as fallback.
 
-Each `细纲_第XXX章.md` should include: target emotion, episode promise, cause/development/turn/climax/ending state, dense/sparse beat budget, cheat experiment or public proof, cost/reward/status change, involved characters, and next hook.
+Each `细纲_第XXX章.md` should include: target emotion, episode promise, cause/development/turn/climax/ending state, dense/sparse beat budget, cheat experiment or public proof, ability economy, reward/status/pressure consequence, involved characters, and next hook. Ability price is optional and only recorded for explicitly cost-driven premises.
 
 ## Benchmark Protocol
 

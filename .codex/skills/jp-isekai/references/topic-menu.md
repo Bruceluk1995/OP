@@ -62,6 +62,12 @@ Present only the category menu first:
 
 After the user chooses one category, present only that category's six candidates. Allow multi-select inside the category. If the user wants cross-category mixing, first lock one primary engine, then offer at most two secondary flavors.
 
+### Ability Economy Rule
+
+- Do not rewrite every classic candidate as `strong ability + mandatory personal price`. Ability cost is optional, not a quality requirement.
+- For `生产、经营与慢生活`, default to benefit-first powers that create better products, money, comfort, safety, reputation, territory, or useful scale. Build conflict from demand, rivals, supply, protection, identity, politics, or the next opportunity created by success.
+- Across any generated batch, vary power design: free/OP, conditional, skill-based, information-limited, and cost-driven may coexist. A whole batch using backlash, memory/lifespan loss, debt, future repayment, or loss of control is a failed batch and must be rebuilt before display.
+
 ### Topic Pool
 
 #### 逆袭与打脸
@@ -122,7 +128,7 @@ Use `宠物、幼龙或神兽养成进化` as an optional secondary flavor when 
 
 ## Route 3: Fresh or Strange Directions
 
-Generate exactly five compact candidates. Favor underused combinations, unfamiliar practical occupations, unusual costs, inverted skill rules, nonstandard monsters, or contemporary Japanese anxieties. Give each candidate one-line appeal and one-line risk. Do not show the classic topic pool unless the user asks.
+Generate exactly five compact candidates. Favor underused combinations, unfamiliar practical occupations, unusual rules or optional costs, inverted skill logic, nonstandard monsters, or contemporary Japanese anxieties. Give each candidate one-line appeal and one-line risk. Do not show the classic topic pool unless the user asks.
 
 ## Route 4: User Keywords
 

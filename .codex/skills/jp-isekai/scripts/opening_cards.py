@@ -35,13 +35,13 @@ CARD_SURFACES = {
     "P1": ["odd_action_in_progress", "ridiculous_practical_excuse", "object_replies_with_gain", "witness_forces_next_problem"],
     "P2": ["tiny_need_forces_action", "small_gain_appears", "gain_attracts_big_problem", "protagonist_regrets_the_cheap_solution"],
     "D1": ["abnormal_rule_hits_someone_now", "three_fast_consequences", "protagonist_exception_appears", "immediate_test_breaks_the_pattern"],
-    "D2": ["new_identity_causes_live_crisis", "first_advantage_solves_part", "second_upgrade_overkills_it", "cost_or_limit_interrupts_win"],
+    "D2": ["new_identity_causes_live_crisis", "first_advantage_solves_part", "second_upgrade_overkills_it", "external_pressure_or_operating_condition_changes_the_win"],
     "E1": ["everyone_avoids_one_thing", "protagonist_does_it_anyway", "practical_reason_is_shown", "live_proof_embarrasses_the_experts"],
     "A1": ["mistake_happens_on_screen", "punishment_arrives_first", "mistake_works_visibly", "second_problem_explodes"],
     "B1": ["casual_boast_is_repeated", "literal_result_appears", "listeners_try_to_disprove_it", "stronger_fulfillment_interrupts_them"],
     "C3": ["earned_reward_is_taken_away", "institution_signs_the_wrong_ruling", "protagonist_uses_a_concrete_proof", "ruling_backfires_in_public"],
     "F1": ["ordinary_life_problem", "first_weird_preparation_in_progress", "people_mock_or_stop_it", "later_disaster_signal_arrives_early", "protagonist_commits_to_the_next_preparation"],
-    "D3": ["rule_is_triggered_in_front_of_us", "small_proof_happens", "larger_proof_hits_current_trouble", "cost_turns_the_win_sideways"],
+    "D3": ["rule_is_triggered_in_front_of_us", "small_proof_happens", "larger_proof_hits_current_trouble", "new_pressure_consequence_or_use_changes_the_win"],
 }
 
 REQUIRED_CHAINS = {
@@ -56,11 +56,11 @@ REQUIRED_CHAINS = {
     "P1": ["abnormal_behavior", "practical_excuse", "unexpected_gain", "hidden_rule", "current_action_bridge"],
     "P2": ["tiny_motive", "accidental_gain", "rule_escalation", "large_consequence", "origin_return"],
     "D1": ["abnormal_world", "three_examples", "protagonist_exception", "immediate_test"],
-    "D2": ["new_identity", "first_advantage", "second_escalation", "cost_or_limit", "live_crisis"],
+    "D2": ["new_identity", "first_advantage", "second_escalation", "new_use_external_pressure_or_operating_condition", "live_crisis"],
     "E1": ["shared_experience", "normal_avoidance", "protagonist_violation", "concrete_reason", "live_proof"],
     "A1": ["mistaken_action", "expected_punishment", "successful_anomaly", "second_escalation", "hidden_rule"],
     "B1": ["casual_claim", "literal_fulfillment", "disbelief", "stronger_fulfillment", "rule_reveal"],
     "C3": ["concrete_merit", "opposite_treatment", "institutional_misjudgment", "proof_or_reversal", "origin_bridge"],
     "F1": ["ordinary_stake", "three_preparations", "ridicule_or_obstruction", "hidden_knowledge_or_loophole", "countdown", "first_action_bridge"],
-    "D3": ["rule_statement", "small_proof", "larger_proof", "current_major_proof", "limitation_or_cost"],
+    "D3": ["rule_statement", "small_proof", "larger_proof", "current_major_proof", "new_pressure_consequence_or_use"],
 }

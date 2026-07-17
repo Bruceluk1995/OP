@@ -62,18 +62,19 @@ Choose one profile from the request. Full capabilities remain available; they ar
 3. Build the full episode blueprint from `references/episode-blueprint.md` before prose:
    - Start with the strongest concrete event. Use `opening-innovation-engine.md` only in the optional variation profile.
    - For episode 2 or later, bridge from the exact previous ending before moving into new action.
-   - Set target emotion, episode position, episode promise, core payoff, cost/risk, and ending hook.
+   - Set target emotion, episode position, episode promise, core payoff, pressure/risk/consequence, and ending hook. Ability price is optional and appears only when the premise explicitly requires it.
    - Use a five-part shape: cause, development, turn, climax, ending state.
    - Break the episode into change modules; character budgets are optional production aids.
    - Make dense beats carry skill experiments, monster combat, tactical adjustment, OP restraint/reveal, subordinate reaction, public proof, comic reaction, zamaa, practical reward/drop/rank-up, or new danger.
    - Compress sparse transitions; do not let travel, explanation, or mood become filler.
-   - For a long target, add new conflict, choice, mechanism, cost, or consequence. Do not extend one proof through more tests or witnesses.
+   - For a long target, add new conflict, choice, mechanism, pressure, or consequence. Do not extend one proof through more tests or witnesses.
    - If the chosen route is battle leveling, do not replace the combat/progression payoff with shopkeeping or slow-life comfort. Each episode needs a monster/conflict, a skill use under pressure, a visible win or loss, and a drop/rank/skill/status consequence.
    - If the chosen route is OP dominance, do not fake tension by weakening the protagonist at random. Build tension through enemy misread, restraint, information gaps, collateral risk, subordinate/faction pressure, public identity, and the consequences of revealing power.
+   - For every male-isekai route, keep ability economy separate from story pressure. Do not add backlash, lifespan/memory loss, debt, loss of control, or self-punishment unless the user or approved premise selected that engine. Production, commerce, and slow life default to benefit-first powers.
    - For any other subtype lane, preserve that type pack's required payoff loop. Do not flatten all lanes into generic guild errands, herbs, shopkeeping, or slow-life comfort.
    - End with a specific next-episode trouble hook.
 4. Write in the selected presentation mode and narrative person:
-   - Traditional: write scene-based Japanese web-novel prose. Use `俺` or close/limited third person as chosen; carry scenes through action, dialogue, choice, cost, reward, or consequence.
+   - Traditional: write scene-based Japanese web-novel prose. Use `俺` or close/limited third person as chosen; carry scenes through action, dialogue, choice, pressure, reward, or consequence.
    - Push: follow `references/push-narration-protocol.md`; use one action/reaction/causal link per short line and make the title promise visibly pay off. The protocol applies to both first and third person.
    - In all combinations, reject literary padding and avoid long scenery or psychology blocks.
    - Use short inner-commentary beats for humor.
@@ -96,13 +97,13 @@ Choose one profile from the request. Full capabilities remain available; they ar
    - For every saved push body, run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`. A `surface_fail` blocks delivery under the push label and returns the draft to the push narrator; `surface_pass` never approves story quality.
    - Run the selected viewpoint skill's editorial gate and the studio blind-editor pass before surface lint. Flowchart narration split into short lines is still a story failure.
    - Audit every major scene as `entry state -> pressure/choice -> exit state`. At least one of skill knowledge, combat position, inventory/drop, rank, reputation, territory, faction relationship, risk, or next objective must change. Travel, explanation, repeated awe, and status-panel restatement without a state delta must be compressed or removed.
-   - Verify the episode promise is paid or meaningfully advanced, the win has a concrete result/cost, and the ending threat grows from the new state rather than appearing as an unrelated cliffhanger.
+   - Verify the episode promise is paid or meaningfully advanced, the win has a concrete result/consequence, and the ending threat grows from the new state rather than appearing as an unrelated cliffhanger.
    - Count Japanese characters with Python.
    - Report the actual character count. If below a requested target, return to structure for a genuinely new turn or disclose the shortfall; never add repeated tests, witnesses, or procedure.
    - Scan for banned Chinese leakage using `references/terminology.md`.
    - If the source was Chinese 古言/朝堂/宫斗, verify the power structure was rebuilt for Japanese RPG/fantasy readers instead of directly carrying over emperor, harem, cold-palace, concubine, or legitimate/concubine-born systems.
    - Run the Codex AI story/package audit in `references/self-check.md`; fix story bugs, Chinese leakage, package omissions, unused character prompts, and cover-image problems before reporting completion.
-   - Check the draft against `references/episode-blueprint.md`: target emotion delivered, dense beats expanded, sparse beats compressed, cost/reward/status consequence present, and ending hook specific.
+   - Check the draft against `references/episode-blueprint.md`: target emotion delivered, dense beats expanded, sparse beats compressed, reward/status/pressure consequence present, and ending hook specific.
    - In push mode, scan the opening and whole draft against `references/push-narration-protocol.md`: click promise, causal gap, concrete conflict, oral readability, information turns, title payoff, consistent narrative person, and no subtitle/ASR debris.
    - Scan the whole draft against `references/anti-ai-gates.md`: no generic texture, stock summary lines, author explanation, uniform paragraph rhythm, or model/meta leakage.
    - Confirm the prose stays colloquial and direct, with no long literary scenery or psychology passages.

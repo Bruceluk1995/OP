@@ -10,7 +10,8 @@ Use hot works only as functional references: practical item value, guild/merchan
 
 - Slow life is not "nothing happens"; it is a desired state interrupted by value, demand, jealousy, monsters, nobles, guilds, or supply limits.
 - Every comfort scene must create, spend, protect, or reveal value.
-- The protagonist's craft should have clear inputs, process, output, limitation, customer, and consequence.
+- The protagonist's craft should have clear inputs, process, output, customer, and consequence. A hard limitation or personal price is optional.
+- Default to a benefit-first ability: better quality, faster production, lower waste, new uses, safer work, higher profit, stronger base, or wider comfort. Let usefulness attract demand, rivals, supply pressure, protection duties, or political attention instead of punishing the protagonist for using the skill.
 
 ## Six-Episode Season
 
@@ -34,3 +35,4 @@ Use hot works only as functional references: practical item value, guild/merchan
 - Pure comfort scenes with no value movement.
 - Replacing pressure with endless meals.
 - Letting herbs/shopkeeping become the default for battle or OP premises.
+- Turning every craft, farming, cooking, appraisal, or two-world ability into backlash, debt, future repayment, loss of control, or self-harm.

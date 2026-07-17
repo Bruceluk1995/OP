@@ -25,7 +25,7 @@ Build Japanese-style male-audience isekai plans. This skill is for concept and s
 
 Keep all capabilities, but never load every reference for a normal clear request.
 
-When planning prose beats, design colloquial, direct scene movement: action, dialogue, choices, proof, cost, and consequence. Do not plan long scenery passages, long psychology passages, or literary mood filler as a way to carry the story.
+When planning prose beats, design colloquial, direct scene movement: action, dialogue, choices, proof, pressure, and consequence. Do not plan long scenery passages, long psychology passages, or literary mood filler as a way to carry the story.
 
 ## Conditional Capability Reads
 
@@ -92,14 +92,15 @@ Benchmark priority:
    - Chinese source concept -> Japanese isekai equivalent.
    - Institutions, creatures, rank names, currencies, food, clothes, and place names.
 4. Design the cheat as a repeatable engine:
-   - Input, output, limitation, growth path, misunderstanding surface, and public-facing explanation.
+   - Input, output, growth path, misunderstanding surface, and public-facing explanation. Add a limitation only when it improves the chosen promise; do not invent an ability price by default.
+   - Separate `ability economy` from `story pressure`. Record whether the power is free/OP, conditional, information-limited, resource-limited, or explicitly cost-driven. OP, production, commerce, and slow-life routes default to free/benefit-first or operationally conditional powers.
    - Ensure every episode can generate one discovery, one problem, and one payoff.
    - For battle leveling, ensure every episode can generate one monster/combat problem, one tactical skill use, one visible drop/rank/level/status result, and one stronger next threat.
-   - For OP dominance, the cheat/power may already be maxed. Design limits around unknown world rules, collateral damage, political cost, maintaining a public persona, protecting subordinates, resources, moral line, or incomplete information. Ensure every episode can generate one enemy misread, one restrained choice, one overwhelming reveal/command, and one reputation/territory/faction consequence.
+   - For OP dominance, the cheat/power may already be maxed and need no personal price. Design pressure around unknown world rules, collateral risk, political reaction, maintaining a public persona, protecting subordinates, resources, moral line, or incomplete information. Ensure every episode can generate one enemy misread, one restrained choice, one overwhelming reveal/command, and one reputation/territory/faction consequence.
 5. Design the first arc around a concrete ladder:
    - Bottom status -> first monster win -> first drop/reward -> first helper/party contact -> first guild rank or dungeon access -> first boss/public win -> first stable base.
    - OP route ladder: hidden arrival -> first local insult/misread -> first controlled demonstration -> first subordinate or local faction reacts -> first territory/resource secured -> first larger power notices.
-   - For every planned episode, record `promise -> pressure/test -> proof/payoff -> cost -> state delta -> next pressure`. The state delta must change at least one of power use, inventory/drop, rank, reputation, territory, faction alignment, knowledge, or immediate goal. If two adjacent episodes repeat the same delta, redesign one before drafting.
+   - For every planned episode, record `promise -> pressure/test -> proof/payoff -> consequence -> state delta -> next pressure`. Ability price is recorded only when the premise explicitly uses one. The state delta must change at least one of power use, inventory/drop, rank, reputation, territory, faction alignment, knowledge, or immediate goal. If two adjacent episodes repeat the same delta, redesign one before drafting.
 6. Set the project scale before making outlines:
    - Default for YouTube/push/episode-like serials: short-season novel, fixed 6 episodes/chapters.
    - Keep short-season outlines at exactly 6 episodes/chapters.

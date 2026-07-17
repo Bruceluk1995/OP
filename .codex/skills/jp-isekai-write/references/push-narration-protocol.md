@@ -23,10 +23,12 @@ Then open result-first:
 
 1. abnormal visible outcome or contradiction;
 2. ordinary cause, choice, or profession behind it;
-3. immediate cost, humiliation, or changed status;
+3. immediate pressure, humiliation, changed status, or a cost only when the premise actually uses one;
 4. unanswered pressure that makes continuation necessary.
 
 Do not delay the strongest contradiction behind routine scene entry. “Every three lines a reversal” is not a substitute for a causal gap.
+
+Push format does not require a taxed ability. Do not invent backlash, debt, memory/lifespan loss, or loss of control merely to fill the opening-pressure slot.
 
 The opening deck in `../../jp-isekai/references/opening-innovation-engine.md` is optional ideation. Use it only when it improves the event. Normal delivery requires no random draw, card ID, slot evidence, or validator.
 

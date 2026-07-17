@@ -54,7 +54,8 @@ When the premise is missing, resolve or infer presentation and viewpoint, then p
 - Audience-facing body: natural Japanese; meta notes: Chinese unless requested otherwise.
 - Default complete one-shot budget: approximately 12,000 Japanese characters in either presentation mode.
 - Treat 12,000 as a target, not a minimum gate or permission to pad.
-- Complete the opening promise, main conflict, reward/cost, and changed social/emotional state in this file.
+- Complete the opening promise, main conflict, reward/consequence, and changed social/emotional state in this file.
+- Treat ability cost as optional. OP, production, commerce, and slow-life premises default to benefit-first abilities; create story pressure outside the power unless the user explicitly chooses a curse, exchange, backlash, or sacrifice engine.
 
 ## Execution
 
@@ -80,7 +81,8 @@ For project-bound work, save the Japanese body and one compact decision card. Cr
 
 - Do not drift from battle/OP/adventure into bakery, contracts, audits, training, or inventory unless that is the user's chosen promise.
 - Do not translate Chinese xianxia, sect, court, or son-in-law systems literally.
-- Do not weaken an OP protagonist randomly; use information, restraint, identity, collateral cost, or faction consequence.
+- Do not weaken an OP protagonist randomly; use information, restraint, identity, protection duties, collateral risk, or faction consequence.
+- Do not auto-balance every cheat with backlash, lifespan/memory loss, debt, loss of control, or punishment. Ability boundaries and narrative pressure are separate design decisions.
 - Do not call length, opening-card, or surface-lint results quality approval.
 - Do not deliver first-person web-novel scenes broken into short lines as push narration.
 - Do not deliver third-person web-novel scenes or neutral chronology broken into short lines as push narration.

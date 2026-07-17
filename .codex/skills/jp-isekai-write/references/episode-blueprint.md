@@ -4,7 +4,7 @@ Use this before drafting any Japanese male-audience isekai episode. It ports the
 
 Do not treat this as optional planning. If the user asks for prose, first build this blueprint briefly, then write from it.
 
-Plan for colloquial, direct prose. Every beat should move through action, dialogue, choice, cost, reward, or consequence; do not reserve space for long scenery, atmosphere, or psychology passages.
+Plan for colloquial, direct prose. Every beat should move through action, dialogue, choice, pressure, reward, or consequence; do not reserve space for long scenery, atmosphere, or psychology passages.
 
 ## Required Blueprint
 
@@ -21,7 +21,8 @@ Create this working blueprint before prose:
 - Previous-episode bridge: final event / unresolved hook / carried item or skill / current location / social pressure
 - Episode promise: what the viewer expects to see paid off
 - Core payoff: overwhelming reveal / command result / subordinate loyalty / territory or faction gain / skill result / level-up / skill variant / monster kill / monster drop / guild rank / money / status / public proof / base-building gain
-- Cost or risk: debt / injury / reputation loss / rule breach / enemy attention / resource loss
+- Ability economy: free/OP / conditional / information-limited / resource-limited / explicitly cost-driven
+- Pressure, risk, or consequence: enemy attention / demand / competition / protection duty / reputation shift / rule conflict / resource pressure / optional personal cost only when premise-selected
 - Ending hook: next danger, reward, contradiction, or choice
 
 ### Five-Part Shape
@@ -51,7 +52,7 @@ Budget total:
 - Sparse beats are for travel, scene transfer, basic explanation, and routine setup. Compress them.
 - A dense payoff beat should usually be at least 250 Japanese characters. A major skill reveal, public face-slap, or climax can run 400-600 characters.
 - A sparse transition should usually be one or two sentences. Do not let transition beats become mood essays.
-- Each beat must say "who does what" plus a function tag such as setup, experiment, payoff, face-slap, relationship shift, cost, hook, or world rule.
+- Each beat must say "who does what" plus a function tag such as setup, experiment, payoff, face-slap, relationship shift, pressure, consequence, hook, or world rule.
 
 ## 15k Long-Episode Density Contract
 
@@ -73,7 +74,7 @@ If I delete this paragraph, does the plot state change?
 - no: cut it, or attach it to an object/action/consequence.
 ```
 
-Allowed expansion for 15k: split a dense beat into attempt -> failure -> adjustment -> visible result -> witness reaction -> cost -> new choice. Do not expand by lingering on atmosphere.
+Allowed expansion for 15k: split a dense beat into attempt -> resistance -> adjustment -> visible result -> witness reaction -> consequence -> new choice. Do not expand by lingering on atmosphere.
 
 ## Per-Episode Payoff Floor
 
@@ -83,7 +84,7 @@ Each episode needs at least one clear reason to continue watching:
 - Battle-upgrade/dungeon episodes: include a monster or combat problem, a skill use under pressure, a tactical adjustment, a visible win/loss, and a drop/rank/level/skill/status consequence.
 - Exile zamaa episodes: show what the old party misunderstood, let the protagonist's invisible function solve a visible problem, and give the old party a concrete failure or reputation loss.
 - Academy/game-knowledge episodes: create an exam, route flag, hidden boss, class/job trap, or death flag; pay it off by changing the expected bad outcome.
-- Earth-commute episodes: use modern supply, medicine, food, tools, or safe retreat as the engine; add secrecy cost or cross-world consequence.
+- Earth-commute episodes: use modern supply, medicine, food, tools, or safe retreat as the engine; add secrecy, logistics, identity pressure, or cross-world consequence rather than an automatic personal price.
 - Tamer/familiar episodes: give the companion a behavior problem, growth trigger, evolution, named skill, or public reaction.
 - Dungeon-master/territory episodes: make traps, floor rules, resource placement, subordinate commands, or town economics change the battle/social situation.
 - High-pressure/progression episodes: vary dense and sparse passages naturally, but do not allow consecutive modules with no new pressure, choice, consequence, or audience question.
@@ -108,7 +109,7 @@ The first scene must begin from one of these extracted items. Do not reopen the 
 
 When the draft is short, expand only existing dense beats:
 
-- split a skill experiment into attempt, failure, adjustment, visible result, public reaction, and cost
+- split a skill experiment into attempt, resistance, adjustment, visible result, public reaction, and consequence
 - for OP routes, split dominance into enemy misread -> restrained choice -> controlled reveal/command -> witness reaction -> reputation/territory consequence -> larger-stage hook
 - for battle routes, split combat into monster rule -> failed first use -> tactical adjustment -> hit/result -> drop/status consequence -> stronger next threat
 - add a witness who changes the social pressure
@@ -127,6 +128,6 @@ Before delivering:
 - Dense beats are visibly denser than transitions.
 - OP routes have restraint, information, faction, identity, or collateral stakes; they do not depend on random weakening or empty instant wins.
 - Battle-upgrade routes do not drift into only commerce, herbs, shopkeeping, travel, or comfort scenes.
-- At least one cost/reward/status consequence lands on the page.
+- At least one reward/status/pressure consequence lands on the page; ability cost is not required.
 - The final paragraph points to the next episode through a specific object, danger, reward, or choice.
 - Count and report the saved prose against the approximately 12,000-character target. If short, add only a genuinely new problem, choice, mechanism, cost, or consequence; otherwise disclose the shortfall. Do not treat length as a pass range.

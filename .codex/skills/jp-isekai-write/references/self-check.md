@@ -9,7 +9,7 @@ This self-check is an AI reasoning pass, not a mechanical gate. Spend tokens her
 Mandatory AI audit steps:
 
 1. Read the current outline, previous episode tail, current body, `追踪/上下文.md`, `追踪/伏笔.md`, `追踪/时间线.md`, and `追踪/角色状态.md`.
-2. Reconstruct the episode's cause-effect chain in prose: what problem enters, what skill/rule is tested, what the protagonist chooses, what witnesses see, what reward/cost changes, and what hook remains.
+2. Reconstruct the episode's cause-effect chain in prose: what problem enters, what skill/rule is tested, what the protagonist chooses, what witnesses see, what reward/pressure/consequence changes, and what hook remains.
 3. Compare that chain against the tracking files and the previous episode. Look for contradictions, missing setup, motivation gaps, RPG-rule drift, unexplained drops/rewards, and fake payoffs.
 4. Fix the prose, prompts, package, cover prompt, or tracking files before handoff if the AI audit finds a real issue.
 
@@ -26,7 +26,7 @@ Do not use a mechanical scan as the self-check system. The default self-check is
 - RPG rules: skills, cooldowns, drops, ranks, levels, guild rules, monster behavior, and money values do not contradict earlier episodes.
 - Combat logic: wins come from established ability, tactics, preparation, terrain, enemy misread, or OP reveal; do not randomly nerf or buff characters.
 - Payoff logic: rewards, rank-ups, loot, territory benefits, or slow-life gains follow visible action and witness reaction.
-- Protagonist agency: the protagonist tests, chooses, negotiates, fights, trades, hides power, reveals power, or pays a cost himself.
+- Protagonist agency: the protagonist tests, chooses, negotiates, fights, trades, hides power, reveals power, or accepts responsibility for a consequence. Ability self-punishment is not required.
 - Ending hook: the final hook points to a concrete enemy, quest, guild notice, drop, debt, faction threat, map, or identity problem.
 - No production leakage: body prose does not mention episode numbers, previous/next episode labels, readers, viewers, outline, prompts, cover, or writing workflow.
 

@@ -74,9 +74,11 @@ Outputs five lines: lane/platform, reader promise, dominant emotion, protagonist
 
 Generate up to three genuinely different cores, then choose one:
 
-`ordinary trouble -> unusual protagonist choice -> visible result -> new-kind trouble -> costly climax choice -> changed ending`
+`ordinary trouble -> unusual protagonist choice -> visible result -> new-kind trouble -> decisive climax choice -> changed ending`
 
 Reject luck-only, procedure-only, witness-only, repeated-proof, and “wait for a powerful person/institution to solve it” cores.
+
+For male isekai, do not equate tension with a taxed ability. A cheat may be free, stable, and overwhelmingly useful. Generate pressure through opposition, scale, timing, protection, identity, competition, incomplete information, or the consequences of success unless the user explicitly selects a cost-driven power.
 
 ### Structure Editor
 
@@ -96,7 +98,7 @@ Use this branch only for traditional prose. Do not reuse it for push narration b
 
 Use this branch whenever presentation is anime recap/push narration:
 
-- open result-first: abnormal outcome -> ordinary cause/choice -> immediate cost or live question;
+- open result-first: abnormal outcome -> ordinary cause/choice -> immediate pressure, changed status, or live question;
 - compress around cause and consequence rather than acting out every beat in real time;
 - keep direct quotation sparse and retain only the line whose wording changes conflict, status, or emotion;
 - make each non-empty line carry one action, reveal, reaction, consequence, or causal turn;
@@ -142,7 +144,7 @@ When rewriting an old body:
 
 ## Length and Proof
 
-The default complete Japanese one-shot/episode target is approximately 12,000 Japanese characters. Length is a budget unless the user/platform supplies a real hard limit. If short, add a new obstacle, choice, relationship turn, cost, or consequence through the structure editor. Otherwise report the honest shortfall. Never fill with procedures, lore, scenery, more witnesses, or another test of the same conclusion.
+The default complete Japanese one-shot/episode target is approximately 12,000 Japanese characters. Length is a budget unless the user/platform supplies a real hard limit. If short, add a new obstacle, choice, relationship turn, pressure, or consequence through the structure editor. Otherwise report the honest shortfall. Never fill with procedures, lore, scenery, more witnesses, or another test of the same conclusion.
 
 One decisive proof per conclusion. A later demonstration survives only when mechanism, stakes, relationship, or result changes.
 
