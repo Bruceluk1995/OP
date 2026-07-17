@@ -1,10 +1,16 @@
 ---
 name: jp-josei-fantasy
-description: Router for Japanese female-audience fantasy romance in traditional prose or anime-recap/push narration, first or third person. Use for 女性向け異世界恋愛、悪役令嬢、婚約破棄、ざまぁ、溺愛、聖女、契約結婚、辺境伯、令嬢, Japanese-market one-shots or serial work, localization, trends, writing, and review.
+description: Router for Japanese female-audience fantasy romance in traditional prose or anime-recap/push narration, first or third person. Use for 女性向け異世界恋愛、悪役令嬢、婚約破棄、ざまぁ、溺愛、聖女、契約結婚、辺境伯、令嬢, Japanese-market one-shots or serial work, localization, current trends, Chinese women-oriented novel-site inspiration, writing, and review.
 metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # JP Josei Fantasy Router
+
+Mandatory topic gate: before this route invents, shows, selects, or generates
+any new premise, title, hot/evergreen seed, or episode angle, read
+`../story/references/global-topic-history.md` and obtain the company-wide online
+reservation. This applies to automatic and unattended selection too; local
+recent history cannot replace it.
 
 Route quickly. Do not stack every female-fantasy skill and reference on one request.
 
@@ -38,6 +44,8 @@ Opening decks, random draws, trend routers, ledgers, delivery packages, surface 
 ## Current-Market Work
 
 Browse only when the user asks for current rankings, trends, news, YouTube/TikTok signals, or a live seed. Present dated candidates when the concrete seed is not delegated. Do not browse merely because the story targets Japan.
+
+Chinese women-oriented novel rankings, category pages, tags, and public synopsis-level metadata may be used as an optional cross-market emotion and relationship-mechanism pool. Read `references/chinese-novel-inspiration.md` when that source is requested or selected. Label it as Chinese-market inspiration, never as proof of Japanese demand; rebuild family, marriage, court, revenge, romance, and status functions for Japanese female-fantasy institutions and cross-check the selected mechanism against current Japanese signals before claiming Japanese-market fit.
 
 ## Project Work
 

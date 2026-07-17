@@ -6,6 +6,12 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # 日本商业短篇总编辑部
 
+Mandatory topic gate: before inventing, showing, selecting, or generating any
+new premise, title, hot/evergreen seed, or angle in either lane, read
+`../story/references/global-topic-history.md` and obtain the company-wide online
+reservation. Automatic or unattended production cannot bypass it; local recent
+history cannot replace it.
+
 One fast production chain owns concept, structure, drafting, and rejection. Genre entry skills only select a lane. Optional tools never run unless the task needs them.
 
 ## Minimal Read Set

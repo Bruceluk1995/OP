@@ -5,3 +5,9 @@
 Thumbs.db
 *.log
 
+# Python runtime noise
+__pycache__/
+*.py[cod]
+
+# Machine-local active story selection
+.active-book

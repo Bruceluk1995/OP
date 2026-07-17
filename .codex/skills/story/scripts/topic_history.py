@@ -157,8 +157,9 @@ def check(records: list[dict], seed: str, tags: str, limit: int, root: Path) -> 
             )
             return 2
         if result.get("provisional"):
-            print("WARN: company server unavailable; topic is provisionally reserved in the offline queue.")
-        print("OK: globally new topic.")
+            print("BLOCK: company server unavailable; provisional outbox entry does not authorize this topic.")
+            return 3
+        print("OK: company-wide online reservation confirmed.")
         return 0
     score, common, record = sorted(hits, key=lambda item: item[0], reverse=True)[0]
     print(f"BLOCK: global overlap score={score}; common_tags={','.join(sorted(common)) or '-'}")

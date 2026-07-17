@@ -14,6 +14,29 @@ from pathlib import Path
 FRONTMATTER_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*(?:\n|\Z)", re.DOTALL)
 FIELD_RE = re.compile(r"^([A-Za-z0-9_-]+):\s*(.*)$")
 LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+FIXED_STORY_ROUTER_START = "<!-- FIXED_STORY_ROUTER_V1_START -->"
+FIXED_STORY_ROUTER_END = "<!-- FIXED_STORY_ROUTER_V1_END -->"
+FIXED_STORY_ROUTER_V1 = """```text
+你想做哪种内容？
+
+1. 长篇网文／持续连载
+2. 短季分集小说／连续剧（默认首季6集）
+3. 单篇短篇／一发完结
+4. 视频讲解稿／知识科普
+5. 已有作品处理：续写、改写、审查、去AI味、封面
+6. 拆文／对标／扫榜／热点选题
+7. 不确定，帮我选择
+
+请回复数字。
+```"""
+TOPIC_GENERATING_SKILLS = {
+    "story",
+    "jp-isekai", "jp-isekai-plan", "jp-isekai-write", "jp-isekai-oneshot",
+    "jp-josei-fantasy", "jp-josei-fantasy-plan", "jp-josei-fantasy-write", "jp-josei-fantasy-oneshot",
+    "jp-short-fiction-studio", "silver-literature", "shanhe-explainer", "econ-finance-explainer",
+    "story-long-write", "story-short-write", "story-long-scan", "story-short-scan",
+    "story-first-person-script", "story-third-person-script",
+}
 
 
 @dataclass(frozen=True)
@@ -45,6 +68,18 @@ def parse_frontmatter(text: str) -> dict[str, str] | None:
 
 def add(findings: list[Finding], severity: str, skill: str, code: str, message: str) -> None:
     findings.append(Finding(severity, skill, code, message))
+
+
+def fixed_story_router_problem(text: str) -> str | None:
+    """Return a blocking reason when the user-owned story entry contract drifts."""
+    if text.count(FIXED_STORY_ROUTER_START) != 1 or text.count(FIXED_STORY_ROUTER_END) != 1:
+        return "story router must contain exactly one frozen v1 marker pair"
+    start = text.index(FIXED_STORY_ROUTER_START) + len(FIXED_STORY_ROUTER_START)
+    end = text.index(FIXED_STORY_ROUTER_END, start)
+    actual = text[start:end].strip()
+    if actual != FIXED_STORY_ROUTER_V1:
+        return "frozen story entry menu changed; user authorization is required to alter names, order, or options"
+    return None
 
 
 def audit_skill(skill_dir: Path) -> list[Finding]:
@@ -83,6 +118,18 @@ def audit_skill(skill_dir: Path) -> list[Finding]:
         add(findings, "ERROR", skill, "replacement_character", "SKILL.md contains Unicode replacement characters")
     if re.search(r"\b(?:TODO|FIXME)\b", text):
         add(findings, "WARN", skill, "unfinished_marker", "SKILL.md contains TODO/FIXME")
+    if skill == "story":
+        router_problem = fixed_story_router_problem(text)
+        if router_problem:
+            add(findings, "ERROR", skill, "fixed_router_drift", router_problem)
+    if skill in TOPIC_GENERATING_SKILLS and "global-topic-history.md" not in text:
+        add(
+            findings,
+            "ERROR",
+            skill,
+            "global_topic_dedup_missing",
+            "topic-generating skills must link the mandatory company-wide online topic gate",
+        )
 
     for markdown in sorted(skill_dir.rglob("*.md")):
         if markdown == skill_md:

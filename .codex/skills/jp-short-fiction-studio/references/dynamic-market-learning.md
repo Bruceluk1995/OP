@@ -29,7 +29,7 @@ Never convert missing evidence into confidence.
 
 ## Fixed Presentation Rule
 
-Use Japanese novel rankings, story sites, reader signals, and current Japanese-interest sources to select topic, packaging, emotional promise, story engine, and saturation risk. Do not use this market step to choose or reject the presentation form. The presentation is always Japanese Flan-style anime recap/push narration and is governed by the separate push contract and validator.
+Use Japanese novel rankings, story sites, reader signals, and current Japanese-interest sources to select topic, packaging, emotional promise, story engine, and saturation risk. A lane-specific contract may add a non-Japanese source as a clearly labeled cross-market inspiration layer, but it cannot replace Japanese-market evidence or be reported as Japanese validation. Do not use this market step to choose or reject the presentation form. The presentation is always Japanese Flan-style anime recap/push narration and is governed by the separate push contract and validator.
 
 ## Required Decision Note
 

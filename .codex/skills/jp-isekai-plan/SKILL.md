@@ -1,10 +1,17 @@
 ---
 name: jp-isekai-plan
-description: "Plan Japanese male-audience isekai as traditional web-novel prose or anime-recap/push narration copy, with either first-person or third-person narration. Use for 日式RPG异世界开书, 男频异世界推文/动漫解说文案, なろう系/カクヨム男性向け premise design, localization, cheat design, battle leveling, dungeon arcs, OP/龙傲天, exile reversal, slow life, and long or short story structure."
+description: "Plan Japanese male-audience isekai as traditional web-novel prose or anime-recap/push narration copy, with either first-person or third-person narration. Use for 日式RPG异世界开书, 男频异世界推文/动漫解说文案, なろう系/カクヨム男性向け premise design, localization, Chinese novel-site inspiration, cheat design, battle leveling, dungeon arcs, OP/龙傲天, exile reversal, slow life, and long or short story structure."
 metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # JP Isekai Plan
+
+Mandatory topic gate: before inventing, showing, selecting, or generating any
+new premise, title, hot/evergreen seed, or episode angle, read
+`../story/references/global-topic-history.md` and obtain the company-wide online
+reservation. This applies to automatic and unattended selection too; local
+recent history cannot replace it, and an unavailable online gate stops new
+topic generation.
 
 Required global read: `../story/references/audience-comprehension-floor.md`. Reject premises whose cheat or opening cannot be understood as ordinary action/loss -> visible change -> human consequence without RPG terminology.
 
@@ -32,6 +39,7 @@ When planning prose beats, design colloquial, direct scene movement: action, dia
 - Read `references/market-patterns.md` when the user asks for market fit, popular formulas, or gives なろう/Kakuyomu as reference.
 - Read `references/planning-template.md` before producing a full concept package.
 - Read `references/dynamic-benchmarking.md` when the user wants current market fit, website-based拆书, hottest works, or when no strong project benchmark exists for the chosen subtype.
+- Read `../jp-isekai/references/chinese-novel-inspiration.md` when the user requests Chinese novel sites, selects that source in the topic gate, or includes it in an all-source scan. Use it as a cross-market mechanism layer; it never replaces Japanese-market validation.
 - Read `../jp-isekai/references/project-memory.md` before opening a project, continuing a serial, creating chapter outlines, or trying to avoid repeated premises.
 - Before planning any subtype, resolve its benchmark priority: project拆文 or live website benchmark first, project subtype notes second, bundled type pack only as fallback. Do not rely on the generic isekai rules alone.
 
@@ -51,8 +59,9 @@ Benchmark priority:
 
 1. If `对标/{lane}/{work}/拆文报告.md` or `拆文库/{work}/` exists, read it before bundled type packs.
 2. If the user asks for current/hot/platform-fit or there is no project benchmark, browse the relevant public ranking/tag pages and create a Dynamic Benchmark Card from `references/dynamic-benchmarking.md`.
-3. Read any project-local `男频异世界知识库/type-packs/{lane}.md`.
-4. Read the bundled `references/type-packs/{lane}.md` only as fallback scaffolding.
+3. If Chinese novel-site inspiration is requested, add a separate cross-market function card and Japan cross-check. Do not promote the Chinese source to the primary Japanese benchmark.
+4. Read any project-local `男频异世界知识库/type-packs/{lane}.md`.
+5. Read the bundled `references/type-packs/{lane}.md` only as fallback scaffolding.
 
 ## Planning Workflow
 

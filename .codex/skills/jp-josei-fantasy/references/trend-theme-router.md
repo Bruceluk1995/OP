@@ -1,13 +1,13 @@
 # Trend To Josei Fantasy Route
 
-Use only after the user has selected a specific Google Trends JP seed, absurd-news seed, social-video seed, ranking/tag signal, or all-source candidate, or explicitly delegated that selection, and before choosing the final title, heroine wound, male lead, proof object, or outline. Source/lane/emotion selection alone is not seed selection.
+Use only after the user has selected a specific Google Trends JP seed, absurd-news seed, social-video seed, Japanese ranking/tag signal, Chinese women-oriented novel-site mechanism, or all-source candidate, or explicitly delegated that selection, and before choosing the final title, heroine wound, male lead, proof object, or outline. Source/lane/emotion selection alone is not seed selection.
 
 This router maps a hot seed to a Japanese female-audience fantasy romance engine. These routes mirror `../jp-josei-fantasy-plan/references/type-packs/`, but the output may be either a standalone one-shot or a serial concept. For one-shots, compress the selected route into 12-18 meaningful beats and keep closure.
 
 ## Routing Protocol
 
 1. Score the seed with the matching hot-source reference before route selection.
-2. Extract the reusable female-audience function: humiliation, public accusation, family wound, unfair rule, hidden cost, ceremony, contract, proof object, care desire, letter/message failure, comfort/home desire, status gap, or relationship recognition.
+2. Extract the reusable female-audience function: humiliation, public accusation, family wound, unfair rule, hidden cost, ceremony, contract, proof object, care desire, letter/message failure, comfort/home desire, status gap, stolen credit, pursuit/redemption pressure, identity reversal, or relationship recognition.
 3. Reject direct use of real people, scandals, crime, tragedy, political rage bait, copyrighted franchise plots, creator jokes, songs, or exact video scenes.
 4. Choose one primary josei route and one backup route.
 5. Convert the seed into a heroine wound plus proof/romance mechanism that fits the primary route.

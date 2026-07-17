@@ -6,6 +6,12 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # Shanhe Explainer
 
+Mandatory topic gate: before inventing, showing, selecting, or generating any
+topic, title, hot/evergreen seed, or explanatory angle, read
+`../story/references/global-topic-history.md` and obtain the company-wide online
+reservation. Automatic and unattended selection cannot bypass it; local recent
+history cannot replace it.
+
 Create sharp analytical explainer scripts for Japan-focused history/society, world history, geopolitics, strategy, science, economics, and social common-sense topics. The target is not textbook chronology; it is a short-video argument: a strong question, a vivid hook, layered causal reasoning, dry humor, and a clean final judgment.
 
 ## Source Signal

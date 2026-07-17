@@ -13,6 +13,10 @@ If the user asks for Google Trends, YouTube, TikTok, viral videos, weird news, �
 
 Bundled type packs are fallback scaffolds. They must not override a fresh benchmark, a project-owned拆文 report, or project-local subtype notes.
 
+## Optional Cross-Market Inspiration
+
+When the user requests Chinese women-oriented novel sites or selects that source in the hot-source menu, read `../../jp-josei-fantasy/references/chinese-novel-inspiration.md` and create a separate Chinese-market function card. Keep Japanese ranking/tag or reader-interest evidence as the market-fit authority. Chinese rankings can suggest heroine wounds, relationship pressure, identity reversals, proof objects, pursuit/redemption engines, and family/marriage functions, but cannot prove Japanese demand.
+
 ## Candidate Scan
 
 When browsing is allowed or requested:
@@ -22,12 +26,13 @@ When browsing is allowed or requested:
 - Select one primary benchmark and one or two contrast benchmarks.
 - Prefer currently visible ranking/tag pages over older memory.
 - Use metadata, titles, tags, ranking context, and short public premise signals only. Do not copy prose, scene order, dialogue, or proprietary outlines.
+- If a Chinese-site scan is included, keep those candidates in a labeled cross-market section and record whether the selected mechanism has a current Japanese ranking/tag/reader-interest cross-check.
 
 ## Hot Source Scan
 
 When the request starts from a hot source instead of a novel platform:
 
-- Collect a small batch from the requested source: 5-10 Google Trends JP items, 3-5 YouTube/TikTok hook mechanics, 5-8 weird/social-news seeds, or mixed batches for 全选.
+- Collect a small batch from the requested source: 5-10 Google Trends JP items, 3-5 YouTube/TikTok hook mechanics, 5-8 weird/social-news seeds, 6-10 Chinese women-oriented novel-site mechanisms, or mixed batches for 全选.
 - Score candidates with the matching hot-source reference before choosing one.
 - Convert only the underlying female-audience mechanism: public humiliation, reputation repair, contract pressure, family wound, ceremony, social proof, etiquette trap, comfort desire, or relationship recognition.
 - After selecting a seed, read `../../jp-josei-fantasy/references/trend-theme-router.md` and map the seed to a josei fantasy route before building the Dynamic Benchmark Card or outline.
@@ -54,6 +59,8 @@ Create a compact benchmark card before making the story plan:
 - Episode or arc rhythm inferred from public metadata:
 - Differentiation rule for our project:
 - Forbidden copying:
+- Cross-market inspiration, if any:
+- Japan cross-check status:
 ```
 
 ## If Full Text Is Available

@@ -1,10 +1,16 @@
 ---
 name: jp-isekai-oneshot
-description: Fast Japanese male-audience isekai one-shot entry for traditional web-novel prose or anime-recap/push narration, first or third person. Use for 日式男频异世界短篇、男频异世界推文、动漫解说文案、一发完结、battle leveling、OP、追放ざまぁ、dungeon, or a complete Japanese isekai short that must resolve in one file.
+description: Fast Japanese male-audience isekai one-shot entry for traditional web-novel prose or anime-recap/push narration, first or third person. Use for 日式男频异世界短篇、男频异世界推文、动漫解说文案、一发完结、Chinese novel-site inspiration、battle leveling、OP、追放ざまぁ、dungeon, or a complete Japanese isekai short that must resolve in one file.
 metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
 ---
 
 # JP Isekai One-Shot — Thin Entry
+
+Mandatory topic gate: before inventing, showing, selecting, or generating any
+premise, title, hot/evergreen seed, or angle, read
+`../story/references/global-topic-history.md` and obtain the company-wide online
+reservation. Automatic selection and a user-delegated choice do not bypass the
+gate; local recent history cannot replace it.
 
 This skill selects the male-isekai lane. The single production workflow lives in `../jp-short-fiction-studio/SKILL.md`.
 
@@ -23,6 +29,8 @@ When push narration is selected, also read:
 6. `../story/references/flan-push-strict-mode.md`
 7. `../story-first-person-script/SKILL.md`, `../story-first-person-script/references/push-first-person-benchmark.md`, and `../story-first-person-script/references/push-quality-gate.md` for first person
 8. `../story-third-person-script/SKILL.md`, `../story-third-person-script/references/push-third-person-benchmark.md`, and `../story-third-person-script/references/push-quality-gate.md` for third person
+
+When the Chinese novel-site source is selected, also read `../jp-isekai/references/chinese-novel-inspiration.md`. Do not load it for unrelated requests.
 
 Do not load unrelated old blueprints, opening decks, package guides, or ledgers unless the task needs them. Push contracts are not optional when push presentation is selected.
 
@@ -54,7 +62,7 @@ Complete the progressive topic gate and obtain a concrete user-selected or expli
 
 Run the studio path once: Market Basis -> Producer -> Story Core -> Change Structure -> Japanese Traditional Scene Writer **or** Japanese Push Narrator -> Blind Editor -> Surface Lint. Restart from the earliest failed stage. Push narration must clear the selected viewpoint's oral-spine and editorial release gate before surface lint.
 
-Browse for current Japanese-market rankings, trends, news, or live-source requests and follow the dynamic-market contract. Story-market evidence selects the premise and modules; the Flan contract always owns push delivery. Opening cards, package files, cover prompts, character prompts, and ledgers remain optional.
+Browse for current Japanese-market rankings, trends, news, live-source requests, or an explicitly selected Chinese novel-site inspiration pass and follow the dynamic-market contract plus the source-specific contract. Chinese novel-site popularity is cross-market inspiration only; require a current Japanese cross-check before calling the premise Japanese-market validated. Story-market evidence selects the premise and modules; the Flan contract always owns push delivery. Opening cards, package files, cover prompts, character prompts, and ledgers remain optional.
 
 For a saved push body, run `../story/scripts/validate-flan-push.py`. A `surface_fail` blocks delivery under the label “anime recap/push narration”; it does not reject the story core. A `surface_pass` is format evidence only and never quality approval.
 
@@ -77,3 +85,4 @@ For project-bound work, save the Japanese body and one compact decision card. Cr
 - Do not deliver first-person web-novel scenes broken into short lines as push narration.
 - Do not deliver third-person web-novel scenes or neutral chronology broken into short lines as push narration.
 - Do not call a premise market-validated when it has only one work or one list snapshot as evidence.
+- Do not present Chinese novel-site popularity as Japanese-market validation or copy its titles, systems, scene order, or named plot.

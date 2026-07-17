@@ -6,6 +6,13 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Isekai Write
 
+Mandatory topic gate: when this skill creates or materially changes a premise,
+title, hot/evergreen seed, or episode angle, read
+`../story/references/global-topic-history.md` and obtain the company-wide online
+reservation before drafting. Existing serial continuity may retain its main
+premise, but every genuinely new episode angle still checks online. Local
+recent history cannot replace this gate.
+
 Required global read: `../story/references/audience-comprehension-floor.md`. Apply its plain-core and five-line gates before opening selection, drafting, rewriting, and packaging.
 
 Write Japanese-market male-audience isekai in the selected presentation mode. Traditional prose and anime-recap/push narration are separate branches; use this for final audience-facing copy.

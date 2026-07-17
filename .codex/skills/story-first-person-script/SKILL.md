@@ -6,6 +6,12 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # First-Person Short Script
 
+Mandatory topic gate: when invoked without a fixed source premise and this
+skill must invent, select, or materially change a topic, title, or story angle,
+read `../story/references/global-topic-history.md` and obtain the company-wide
+online reservation before outlining. Viewpoint-only editing of a fixed source
+does not create a new topic.
+
 This skill owns viewpoint craft, not genre routing. Use the selected genre skill for market promise and localization, then apply this first-person workflow directly.
 
 For anime recap/push narration, read `references/push-first-person-benchmark.md` and `references/push-quality-gate.md` before outlining or rewriting. The benchmark distinguishes a narrator-led oral account from first-person web-novel scenes with short line breaks; the release gate controls retention, narrator mouth, middle change, climax payoff, and ending proof.

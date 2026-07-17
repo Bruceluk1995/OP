@@ -6,6 +6,12 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # Third-Person Short Script
 
+Mandatory topic gate: when invoked without a fixed source premise and this
+skill must invent, select, or materially change a topic, title, or story angle,
+read `../story/references/global-topic-history.md` and obtain the company-wide
+online reservation before outlining. Viewpoint-only editing of a fixed source
+does not create a new topic.
+
 Own viewpoint and narrator craft, not genre routing. Use the selected genre skill for market promise and localization.
 
 For anime recap/push narration, read `references/push-third-person-benchmark.md` and `references/push-quality-gate.md` before outlining or rewriting.

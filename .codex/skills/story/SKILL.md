@@ -5,6 +5,13 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 ---
 # story：内容创作工具箱路由
 
+Mandatory topic gate: whenever this router or a downstream route may invent,
+show, select, or generate a new topic, premise, title, hotspot, evergreen idea,
+or episode angle, read `references/global-topic-history.md` and complete its
+company-wide online reservation before the candidate may proceed. Local recent
+history is never a substitute. If online confirmation is unavailable, stop the
+new-topic path instead of silently continuing.
+
 Global content rule: read `references/audience-comprehension-floor.md` before routing or auditing audience-facing creation. Every downstream writing/review skill must prefer ordinary action, visible change, and human consequence over lore, jargon, inventories, titles, or template filling.
 
 你是整个内容创作工具箱的路由入口。用户的请求模糊时由你分发到具体 skill。不要在用户选择前预设他要写男频异世界、女频、银发、讲解稿或传统网文。
@@ -18,31 +25,44 @@ Global content rule: read `references/audience-comprehension-floor.md` before ro
 - 路由输出只传递下游真正需要的决定：受众承诺、题材、载体、视角、长度预算、必须保留事实。不要把整个技能包规则塞进一个 prompt。
 - 若两项规则冲突，以用户明确目标、读者继续阅读欲望、人物因果和核心兑现优先；格式、文件、计数和自动校验靠后。
 
-## 新用户总入口
+## 冻结入口链路 v1
 
-当用户说自己是新用户、刚装好 skills、想从零开始、只说“我要做内容/写作品/写视频/写小说”，或没有明确点名具体 skill 时，先问一级大类：
+这是用户所有的固定产品合同，不是可自由优化的示例。除非用户在当前请求中明确说“修改冻结入口链路”，否则任何 skill 更新、重构、同步或路由优化都不得增删选项、改名、换序、合并或提前进入题材/项目。新增能力只能挂在七个入口之后。
 
+当用户只说“使用剧本 skills”“我要做内容/写作品/写视频/写小说”或没有给出足够形态时，必须原样展示以下一级菜单：
+
+<!-- FIXED_STORY_ROUTER_V1_START -->
 ```text
-你想先做哪类内容？
+你想做哪种内容？
 
-1. 小说/网文创作
-2. 视频讲解稿/知识科普
-3. 拆文/对标/扫榜/热点选题
-4. 已有作品处理：导入、续写、审查、去AI味、封面
-5. 环境部署/检查更新/不知道怎么用
+1. 长篇网文／持续连载
+2. 短季分集小说／连续剧（默认首季6集）
+3. 单篇短篇／一发完结
+4. 视频讲解稿／知识科普
+5. 已有作品处理：续写、改写、审查、去AI味、封面
+6. 拆文／对标／扫榜／热点选题
+7. 不确定，帮我选择
 
 请回复数字。
 ```
+<!-- FIXED_STORY_ROUTER_V1_END -->
 
-用户选择后再进入二级路由：
+固定后续顺序：
 
-- 选 `1 小说/网文创作`：继续问题材方向：`1 日式男频异世界`、`2 日本女频幻想恋爱`、`3 银发文学/熟年逆转`、`4 通用网文`、`5 还不确定，帮我推荐`。
-- 选 `2 视频讲解稿/知识科普`：继续问讲解方向：`1 山河式历史/社会/制度/国际杂谈`、`2 财经/经济学/金融/普通人钱的问题`。
-- 选 `3 拆文/对标/扫榜/热点选题`：继续问长篇、短篇、男频异世界、女频幻想恋爱、银发文学、讲解稿热点，或 Google Trends JP。
-- 选 `4 已有作品处理`：根据用户动作路由到导入、续写、审查、去AI味、封面。
-- 选 `5 环境/更新`：路由到 `$story-setup` 或版本更新检查。
+1. **内容形态**：只能先走上面的七项入口。
+2. **题材**：选择 `1/2/3` 后，再问 `1 日式男频异世界`、`2 日本女频幻想恋爱`、`3 银发文学/熟年逆转`、`4 通用网文`、`5 还不确定，帮我推荐`。
+3. **表现形式与视角**：题材确定后，再确认传统小说正文或动漫解说/推文口播，以及第一人称或第三人称；用户已经说清时不重复问。
+4. **具体动作与长度**：最后确认开新作、续写/改写、审查，以及长度预算；一发完结不得被改成六集连续剧，短季分集不得被改成长篇规划。
 
-只在用户明确选择或语义已经足够明确后，才进入 `$jp-isekai`、`$jp-isekai-oneshot`、`$jp-josei-fantasy`、`$silver-literature`、`$shanhe-explainer`、`$econ-finance-explainer` 等具体 skill。
+分支规则：
+
+- 选 `4 视频讲解稿/知识科普`：继续问 `1 山河式历史/社会/制度/国际杂谈`、`2 财经/经济学/金融/普通人钱的问题`。
+- 选 `5 已有作品处理`：按用户动作路由到续写、改写、审查、去 AI 味或封面；没有用户明确的续写/现有作品意图时，不得读取 `.active-book`、追踪文件或旧项目状态。
+- 选 `6 拆文/对标/扫榜/热点选题`：继续问长篇、短篇、男频异世界、女频幻想恋爱、银发文学或讲解稿。
+- 选 `7 不确定`：只帮助选择内容形态，不得直接生成题材或擅自接入旧项目。
+- 用户直接给足内容形态、题材、表现形式、视角和动作时可跳过已回答的问题，但不得改变未回答问题的固定顺序。
+
+只在内容形态与题材都明确后，才进入 `$jp-isekai`、`$jp-isekai-oneshot`、`$jp-josei-fantasy`、`$silver-literature`、`$story-long-write`、`$story-short-write`、`$shanhe-explainer` 或 `$econ-finance-explainer` 等具体 skill。
 
 ## 路由表
 
@@ -83,8 +103,9 @@ Global content rule: read `references/audience-comprehension-floor.md` before ro
 2. 按优先级匹配：用户显式点名 skill > 一发完结/非连续剧 > 专门题材路由 > 通用长短篇 > 总入口。不能因为出现“短篇/12000字”就盖掉“男频异世界/女性向幻想恋爱”等更具体题材。
 3. 如果能明确匹配，直接调用对应 skill（Claude/OpenCode 可用 `Skill("skill-name")` 或 slash command；Codex 用 `$skill-name` / `/skills`；OpenClaw 用 `/skill skill-name` 或自然语言点名）
 4. 如果无法匹配，询问用户想做什么（从上表中选择）
-5. 如果用户说"我想写小说"但未指定形态，先走「新用户总入口」的小说二级路由，再询问篇幅/工程类型：长篇连载、短篇单篇、短季分集小说（固定首季 6 集，仍按小说章节文件写，不做几百章规划）、日式男频异世界、女频幻想恋爱、银发文学、通用网文。
-6. 如果用户只说"模拟新用户"或"刚装好怎么用"，只展示一级大类，不要直接进入任何具体题材 skill。
+5. 如果用户说“使用剧本 skills”“我想写小说”但未指定形态，原样展示「冻结入口链路 v1」，不得先问题材。
+6. 用户选择 `1/2/3` 后严格按“内容形态 -> 题材 -> 表现形式与视角 -> 具体动作与长度”继续；不得读取旧项目来替代任何一层选择。
+7. 如果用户只说“模拟新用户”或“刚装好怎么用”，同样只展示冻结的一级菜单，不要直接进入任何具体题材 skill。
 
 ### 长正文长度路由
 

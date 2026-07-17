@@ -16,6 +16,7 @@ from unittest.mock import patch
 SCRIPTS = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(SCRIPTS))
 import company_dedup  # noqa: E402
+import topic_history  # noqa: E402
 
 
 class _BridgeHandler(BaseHTTPRequestHandler):
@@ -110,6 +111,16 @@ class CompanyDedupTest(unittest.TestCase):
             self.assertTrue(result["provisional"])
         with closing(sqlite3.connect(self.cache)) as db:
             self.assertEqual(db.execute("SELECT COUNT(*) FROM outbox").fetchone()[0], 1)
+
+    def test_topic_gate_fails_closed_without_online_confirmation(self) -> None:
+        result = topic_history.check(
+            [],
+            "role=porter|engine=weight conversion|pressure=collapse|payoff=rescue|venue=dungeon|aftertaste=respect",
+            "",
+            500,
+            self.root,
+        )
+        self.assertEqual(result, 3)
 
     def test_work_ids_are_stable_but_do_not_trust_common_folder_names(self) -> None:
         project_a = self.root / "machine-a" / "劇本"
