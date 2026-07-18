@@ -14,7 +14,9 @@ Before choosing structure, length, or package shape, present this fixed numbered
 
 Allow one or multiple selections. Presentation mode and narrative person remain separate axes, but the menu makes the four valid combinations easy to choose. Do not infer them from `长篇`, `短篇`, `12,000字`, `YouTube`, `朗读`, `一口气看完`, or the existence of an outline.
 
-For options 3 and 4, read `../../story/references/flan-push-strict-mode.md`. The same Flan-style recap surface is mandatory in both persons. First person changes only pronouns and knowledge boundaries; it must not become web-novel prose.
+Immediately normalize the reply instead of passing its number downstream: `1 -> presentation=traditional, viewpoint=first`; `2 -> presentation=traditional, viewpoint=third`; `3 -> presentation=push, viewpoint=first`; `4 -> presentation=push, viewpoint=third`. A raw menu code has no meaning outside this menu. Once push is selected, keep it sticky until the user explicitly changes presentation.
+
+For options 3 and 4, read `../../story/references/push-prompt-architecture.md`, `../../story/references/push-entertainment-gate.md`, `../../story/references/push-retention-chain.md`, and `../../story/references/flan-push-strict-mode.md`. Lock a concrete speaker/listener and audience emotional contract before story structure. The same Flan-style recap surface is mandatory in both persons. First person changes knowledge boundary, information selection, judgment, reaction, and sentence flavor; it is never a pronoun swap and must not become web-novel prose.
 
 When multiple options are selected, default to producing separate versions from the same premise so the user can compare them. Do not mix first and third person or novel and push presentation inside one body unless the user explicitly requests an intentional hybrid. Before drafting multiple full-length versions, state the expected output scope and follow any requested total/per-version length.
 
@@ -33,7 +35,7 @@ If the user says only `推文`, treat it as push narration presentation but stil
 ### Mode A2: Anime-Recap / Push Narration Copy
 
 - Unit of writing: spoken line, shot, or information beat rather than literary paragraph.
-- Open with the strongest premise-specific attention mechanism selected by `opening-innovation-engine.md`: result, evidence, cost, decision, rule collision, witness reaction, abnormal object, or another derived structure.
+- Open with the shared retention chain's strongest premise-specific attention mechanism: result, evidence, cost, decision, rule collision, witness reaction, abnormal object, or another derived structure. `opening-innovation-engine.md` is optional ideation only.
 - Establish a clear causal or informational gap quickly, but vary what is withheld and the order in which it is revealed.
 - Advance mainly in chronological cause-effect chains. Compress travel, scenery, and repeated emotion.
 - Use colloquial narration, light internet language, and occasional short dialogue only when it sharpens a reaction or turn.
@@ -60,7 +62,7 @@ Choose this after presentation mode. Do not let the choice silently change halfw
 ### First-person push narration
 
 - The protagonist narrates his own abnormal result and causal chain using `我/俺`.
-- Keep a high-clarity hook, oral lineation, causal compression, dense turns, and visible payoff. The hook does not have to be result-first.
+- Keep a high-clarity consequence-led hook, oral lineation, causal compression, dense turns, and visible payoff. Use another information order only when the shared retention chain records the concrete pressure that performs the same function.
 - Use short practical reactions, but do not expand into long interior monologue or literary reflection.
 - Reveal only what the narrator can know, or clearly mark later-learned information.
 

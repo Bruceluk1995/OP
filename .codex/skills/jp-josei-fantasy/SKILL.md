@@ -27,6 +27,8 @@ Explicit one-shot beats a generic “12,000字” or “YouTube” keyword. Expl
 
 If presentation, viewpoint, premise, and length are clear, route immediately. Do not show a format or topic menu. Ask one compact question only when an essential choice would materially change the product.
 
+Accept only the normalized handoff `presentation=<traditional|push>` and `viewpoint=<first|third>` from an upstream menu; raw menu code is not a downstream mode. When `presentation=push`, propagate it plus the selected viewpoint to every downstream plan, write, one-shot, and review route. Push is sticky until the user explicitly changes it. Do not reopen presentation, consult traditional mode as a competing authority, or let first person imply traditional web-novel prose. If the handoff is missing or ambiguous, ask instead of defaulting to traditional.
+
 For one-shots, the only required creative chain is:
 
 `jp-short-fiction-studio + female-romance lane`

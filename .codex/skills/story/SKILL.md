@@ -14,6 +14,8 @@ new-topic path instead of silently continuing.
 
 Global content rule: read `references/audience-comprehension-floor.md` before routing or auditing audience-facing creation. Every downstream writing/review skill must prefer ordinary action, visible change, and human consequence over lore, jargon, inventories, titles, or template filling.
 
+Global push rule: every anime-recap/push-narration branch must read `references/push-prompt-architecture.md`, `references/push-entertainment-gate.md`, and `references/push-retention-chain.md`; lock the speaker/listener and audience emotional contracts before prose; complete the adversarial entertainment read and saved-body evidence map before release; and treat surface lint as subtitle-shape evidence only. A strong first line followed by setup, chronology, technical flowchart, function-only characters, or a long post-payoff tail is a blocking failure, even when every line is short.
+
 你是整个内容创作工具箱的路由入口。用户的请求模糊时由你分发到具体 skill。不要在用户选择前预设他要写男频异世界、女频、银发、讲解稿或传统网文。
 
 ## 单一工位路由合同
@@ -24,6 +26,19 @@ Global content rule: read `references/audience-comprehension-floor.md` before ro
 - “写”“审”“拆”“扫”“去 AI 味”“导入”是不同动作。审稿不擅自改写，扫榜不擅自开写，去 AI 味不掩盖结构失败。
 - 路由输出只传递下游真正需要的决定：受众承诺、题材、载体、视角、长度预算、必须保留事实。不要把整个技能包规则塞进一个 prompt。
 - 若两项规则冲突，以用户明确目标、读者继续阅读欲望、人物因果和核心兑现优先；格式、文件、计数和自动校验靠后。
+
+菜单回答完成后，必须把本地编号归一化为显式交接状态，再进入下游：
+
+```text
+content_form=<long|season|oneshot|...>
+lane=<jp_isekai|jp_josei|...>
+presentation=<traditional|push>
+viewpoint=<first|third>
+operation=<new|continue|rewrite|review>
+length_budget=<explicit value or skill default>
+```
+
+`2a`、`1a`、`3` 等 raw menu code 只在当次菜单中有效，禁止原样传给下游。确认 `presentation=push` 后它是 sticky state：除非用户明确改选，否则任何下游不得重新询问、重新推断、把第一人称解释成传统小说，或让写手再次选择表现分支。上下文丢失且无法恢复时，只补问表现形式，不得默认 traditional。
 
 ## 冻结入口链路 v1
 

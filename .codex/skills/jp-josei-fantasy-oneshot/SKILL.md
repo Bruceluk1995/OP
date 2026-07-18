@@ -21,9 +21,19 @@ Read:
 1. `../jp-short-fiction-studio/SKILL.md`
 2. `../jp-short-fiction-studio/references/female-romance.md`
 
+When push narration is selected, also read:
+
+3. `../story/references/push-prompt-architecture.md`
+4. `../story/references/push-entertainment-gate.md`
+5. `../story/references/push-retention-chain.md`
+6. `../jp-isekai-write/references/push-narration-protocol.md`
+7. `../story/references/flan-push-strict-mode.md`
+8. `../story-first-person-script/SKILL.md`, `../story-first-person-script/references/push-first-person-benchmark.md`, and `../story-first-person-script/references/push-quality-gate.md` for first person
+9. `../story-third-person-script/SKILL.md`, `../story-third-person-script/references/push-third-person-benchmark.md`, and `../story-third-person-script/references/push-quality-gate.md` for third person
+
 When the premise is missing or live-source discovery is requested, read `../jp-josei-fantasy/references/hot-source-router.md`. When the Chinese women-oriented novel-site source is selected, also read `../jp-josei-fantasy/references/chinese-novel-inspiration.md`. After a concrete source seed is selected, read `../jp-josei-fantasy/references/trend-theme-router.md` before production. Do not load these research references for unrelated requests.
 
-Do not also load the old blueprint, anti-water, opening deck, delivery, ledger, or push-validator documents unless the user specifically requests that function.
+Do not also load the old blueprint, anti-water, opening deck, delivery, or ledger documents unless the user specifically requests that function. The active push contracts above are mandatory when push presentation is selected.
 
 ## Fast Intake
 
@@ -33,6 +43,8 @@ Infer from the prompt whenever possible:
 - first or third person;
 - subtype, heroine desire, romance engine, and promised emotional payoff;
 - user/platform length requirement.
+
+Accept the upstream normalized handoff, never its raw menu code. When `presentation=push`, freeze `writer_branch=flan_push` and the selected `viewpoint=<first|third>` before planning. This sticky branch lock forbids traditional scene-writing rules from becoming an authority later in the run; only an explicit user change may unlock it. If the viewpoint is missing, ask for it instead of defaulting to traditional prose.
 
 Do not present a menu when these are clear. Ask only for an essential missing choice or make a safe stated assumption.
 
@@ -45,9 +57,9 @@ Do not present a menu when these are clear. Ask only for an essential missing ch
 
 ## Execution
 
-Run the studio fast path once: Producer -> Story Core -> Change Structure -> Japanese Scene Writer -> Blind Editor. Restart from the earliest failed stage. First person must use the studio knowledge/voice contract.
+Run the studio fast path once: Market Basis -> Producer -> Story Core -> High-Value Event Scan -> Entertainment Editor -> Change Structure -> the already locked Japanese writer branch -> Oral Rewrite -> Blind Editor -> Surface Lint. Restart from the earliest failed stage. Push narration must keep `writer_branch=flan_push`, lock the entertainment/retention chain before prose, draft natural spoken sentences before subtitle splitting, and complete the adversarial entertainment read, saved-body evidence map, and selected viewpoint's editorial release gate before surface lint.
 
-Browse only for current market, ranking, trend, news, live-source requests, or an explicitly selected Chinese women-oriented novel-site inspiration pass. Chinese novel-site popularity is cross-market inspiration only; require a current Japanese cross-check before calling the premise Japanese-market validated. Opening cards, surface lint, package files, cover prompts, character prompts, and ledgers are optional.
+Browse only for current market, ranking, trend, news, live-source requests, or an explicitly selected Chinese women-oriented novel-site inspiration pass. Chinese novel-site popularity is cross-market inspiration only; require a current Japanese cross-check before calling the premise Japanese-market validated. Opening cards, package files, cover prompts, character prompts, and ledgers are optional. Surface lint is mandatory for a saved push body but remains surface-only evidence.
 
 For project-bound work, save the Japanese body and one compact decision card. Create a full package only when requested.
 

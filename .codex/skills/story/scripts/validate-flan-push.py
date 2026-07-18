@@ -27,11 +27,20 @@ def main() -> int:
             reconfigure(encoding="utf-8")
     text = Path(args.body).read_text(encoding="utf-8")
     lines = [line.strip() for line in text.splitlines() if line.strip() and not line.lstrip().startswith("#")]
+    body_text = "".join(lines)
+    non_whitespace_characters = len(re.sub(r"\s+", "", body_text))
     if len(lines) < 20:
         print(json.dumps({
             "status": "surface_fail",
+            "status_scope": "subtitle_shape_only",
             "quality_verdict": "not_evaluated",
+            "retention_verdict": "not_evaluated",
+            "scene_progression_verdict": "not_evaluated",
+            "high_value_event_selection_verdict": "not_evaluated",
+            "warning": "surface lint cannot detect entertainment, human heat, uniform synopsis, narrator personality, payoff placement, or weak closure",
+            "delivery_ready_from_this_tool": False,
             "manual_editorial_review_required": True,
+            "next_required_gate": "repair surface, then complete manual retention and viewpoint review",
             "errors": ["need at least 20 spoken lines"],
         }, ensure_ascii=False))
         return 2
@@ -40,8 +49,13 @@ def main() -> int:
     comma_ratio = sum(line.count("、") >= 2 for line in lines) / len(lines)
     quote_ratio = sum("「" in line or "」" in line for line in lines) / len(lines)
     turn_ratio = sum(bool(TURN_RE.search(line)) for line in lines) / len(lines)
+    spoken_units_per_1000_chars = len(lines) / max(non_whitespace_characters, 1) * 1000
+    short_unit_ratio = sum(length <= 12 for length in lengths) / len(lines)
     metrics = {
         "spoken_lines": len(lines),
+        "non_whitespace_characters": non_whitespace_characters,
+        "spoken_units_per_1000_chars": round(spoken_units_per_1000_chars, 2),
+        "short_unit_ratio": round(short_unit_ratio, 4),
         "median_line": percentile(lengths, 0.5),
         "p90_line": percentile(lengths, 0.9),
         "max_line": max(lengths),
@@ -52,6 +66,7 @@ def main() -> int:
         "first_person_markers": len(FIRST_RE.findall(text)),
     }
     errors: list[str] = []
+    warnings: list[str] = []
     if metrics["median_line"] > 20:
         errors.append("median line length exceeds 20")
     if metrics["p90_line"] > 32:
@@ -64,17 +79,31 @@ def main() -> int:
         errors.append("too many multi-clause lines")
     if quote_ratio > 0.05:
         errors.append("direct-quote lines exceed 5%")
-    if turn_ratio < 1 / 12:
-        errors.append("turn/causal connector density is below one per 12 lines")
+    if metrics["median_line"] <= 12 and spoken_units_per_1000_chars > 80:
+        errors.append("spoken text is over-fragmented into subtitle shards; recombine natural oral sentences before line splitting")
+    if turn_ratio > 0.10:
+        warnings.append("high turn-connector density may indicate formulaic connector stuffing; review by ear instead of targeting a ratio")
     if args.person == "first" and metrics["first_person_markers"] == 0:
         errors.append("first-person mode has no first-person marker")
     result = {
         "status": "surface_fail" if errors else "surface_pass",
+        "status_scope": "subtitle_shape_only",
         "quality_verdict": "not_evaluated",
+        "retention_verdict": "not_evaluated",
+        "scene_progression_verdict": "not_evaluated",
+        "high_value_event_selection_verdict": "not_evaluated",
+        "warning": "surface lint cannot detect entertainment, human heat, uniform synopsis, narrator personality, payoff placement, or weak closure",
+        "delivery_ready_from_this_tool": False,
         "manual_editorial_review_required": True,
+        "next_required_gate": (
+            "repair surface, then complete manual retention and viewpoint review"
+            if errors
+            else "complete manual retention evidence map and viewpoint release gate"
+        ),
         "person": args.person,
         "metrics": metrics,
         "errors": errors,
+        "warnings": warnings,
     }
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 2 if errors else 0
