@@ -37,4 +37,4 @@ Use hot works only as structural references: death trigger, known flag, changed 
 - Solving everything by memory.
 - Repeating the old-life summary instead of staging current choices.
 - Romance that ignores the heroine's fear of the timeline.
-- A tragedy-prevention plot whose decisive changed future does not depend on adult romantic trust or re-choice.
+- A tragedy-prevention plot whose decisive changed future does not depend on romantic trust or re-choice.

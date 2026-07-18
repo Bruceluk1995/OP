@@ -15,7 +15,7 @@ Present only this menu first:
 
 Pause for one category choice. Do not browse, show the creation-entry menu, or generate premises yet.
 
-For automatic or unattended use, do not simulate this menu randomly. Screen every category through the adult-romance exclusion, trusted channel-performance veto, and conditional-risk rules in `theme-taxonomy.md` before locking a pair. Relationship-led lanes are the fallback when current direct evidence or channel fit is insufficient.
+For automatic or unattended use, do not simulate this menu randomly. Screen every category through the channel-fit exclusion, trusted channel-performance veto, and conditional-risk rules in `theme-taxonomy.md` before locking a pair. Relationship-led lanes are the fallback when current direct evidence or channel fit is insufficient.
 
 ## Level 2: Story Subgenre
 
@@ -53,7 +53,7 @@ Present this source menu before browsing:
 Then:
 
 - Search and convert signals only inside the locked broad category and subgenre. A selected `边境、领地经营与慢生活 -> 領地経営・村づくり・農園` cannot return a palace-trial or shop-only premise merely because that signal ranks higher.
-- Apply the automatic adult-romance gate in `theme-taxonomy.md` before collecting or scoring. Excluded child, parenting, custody, adoption, guardianship, and family-reconstruction signals are discarded even when they rank highly.
+- Apply the automatic channel-fit gate in `theme-taxonomy.md` before collecting or scoring. Excluded childcare, parenting, custody, adoption, guardianship, and family-reconstruction signals are discarded even when they rank highly; academy-age or youthful-romance signals are not discarded from age alone.
 - At search start, record `searched_at_jst` and `window_start_jst=searched_at_jst-24h`. A source item qualifies only when its publication/upload time, active-trend time, or ranking snapshot is verifiably inside that rolling window.
 - Use Google Trends `Past 24 hours`; news must be published inside the window; YouTube/TikTok items must be uploaded or explicitly active/trending inside it; novel sites must use realtime/daily/24-hour ranking snapshots captured inside it. Weekly/monthly/all-time charts, old surveys/reports, undated items, and pages merely crawled today do not qualify.
 - Browse live sources; do not answer from a bundled snapshot alone. If a source cannot expose a qualifying timestamp or 24-hour view, exclude it rather than widening the window.
@@ -92,14 +92,15 @@ Ask for one sentence or several keywords. Combine them with the locked broad cat
 
 ## Route 5: Automatic Recommendation
 
-Recommend exactly three candidates inside the locked broad category and subgenre, optimized for oral传播性 and adult-romance centrality. Reject any candidate that fails the romance-removal test or trusted channel-performance history. State one short reason for each, then ask the user to choose one. This does not silently set `presentation=push`; ask presentation and viewpoint after the premise is fixed.
+Recommend exactly three candidates inside the locked broad category and subgenre, optimized for oral传播性 and relationship centrality. Reject any candidate that fails the romance-removal test or trusted channel-performance history. Do not reject academy-age, youthful-engagement, or coming-of-age candidates from age alone. State one short reason for each, then ask the user to choose one. This does not silently set `presentation=push`; ask presentation and viewpoint after the premise is fixed.
 
 ## Candidate Scoring
 
 For live, fresh, or automatic batches, apply these hard gates before scoring:
 
 - Category fidelity (hard gate): the core loop and payoff remain inside the user's locked category.
-- Adult-romance centrality (hard gate): adult heroine/love-interest choices drive the title promise, central pressure, climax, and ending; removing the romance breaks the story.
+- Relationship centrality (hard gate): when the candidate is positioned as romance, the central pair's age-appropriate choices drive the title promise, central pressure, climax, and ending; removing the romance breaks the story.
+- Age fit (hard gate): do not require adulthood. Allow academy-age, youthful-engagement, and coming-of-age romance; reject sexualized minors, exploitative adult/minor pairings, and pre-romance child/parenting premises used as the emotional engine.
 - Channel-performance compatibility (hard gate): trusted low-view or rejected topic history blocks the lane or premise pattern until explicit user re-enable.
 
 Then score the other five dimensions from 1-5:

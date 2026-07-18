@@ -32,7 +32,7 @@ When browsing is allowed or requested:
 - Prefer qualifying 24-hour ranking/tag pages over older memory. If the strict window is thin, report the limitation instead of widening it.
 - Use metadata, titles, tags, ranking context, and short public premise signals only. Do not copy prose, scene order, dialogue, or proprietary outlines.
 - If a Chinese-site scan is included, keep those candidates in a labeled cross-market section and record whether the selected mechanism has a same-window Japanese ranking/tag/reader-interest cross-check.
-- Apply the automatic adult-romance and channel-performance gates from `../../jp-josei-fantasy/references/theme-taxonomy.md`. Childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan-rescue, single-parent-reunion, and family-reconstruction candidates are ineligible for unattended female-channel selection even if they rank highly.
+- Apply the automatic channel-fit and channel-performance gates from `../../jp-josei-fantasy/references/theme-taxonomy.md`. Childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan-rescue, single-parent-reunion, and family-reconstruction premise engines are ineligible for unattended female-channel selection even if they rank highly. Academy-age and youthful-romance candidates remain eligible when age-appropriate.
 
 ## Hot Source Scan
 
@@ -42,7 +42,7 @@ When the request starts from a hot source instead of a novel platform:
 - Score candidates with the matching hot-source reference before choosing one.
 - Convert only the underlying female-audience mechanism: public humiliation, reputation repair, contract pressure, family wound, ceremony, social proof, etiquette trap, comfort desire, or relationship recognition.
 - After selecting a seed, read `../../jp-josei-fantasy/references/trend-theme-router.md` and map the seed to a josei fantasy route before building the Dynamic Benchmark Card or outline.
-- Reject the mapped seed when the adult love interest can be removed without breaking the main conflict, climax, and ending.
+- Reject a romance-labeled mapped seed when the primary relationship can be removed without breaking the main conflict, climax, and ending.
 
 ## Benchmark Card
 
@@ -71,7 +71,7 @@ Create a compact benchmark card before making the story plan:
 - Evidence level: existence / commercial precedent / current heat / channel fit
 - Direct same-subgenre count and surfaces:
 - Channel-performance veto check:
-- Adult-romance removal test:
+- Romance-removal test:
 ```
 
 ## If Full Text Is Available

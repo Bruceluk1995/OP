@@ -16,7 +16,7 @@ Required global read: `../story/references/audience-comprehension-floor.md`. Rej
 
 Build Japanese-style female-audience fantasy romance plans. This skill is for concept, market fit, emotional structure, and chapter beats, not final prose.
 
-For automatic or unattended female-channel planning, enforce an adult-romance-first contract before all other planning: both leads are adults; their relationship drives the title promise, central conflict, climax, and ending; and removing the love interest must break the story. Reject childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan-rescue, single-parent-reunion, and family-reconstruction premises. Trusted channel-performance feedback is a hard veto, not a soft score.
+For automatic or unattended female-channel planning, enforce age-appropriate relationship and channel fit before all other planning. Do not require adult leads: academy-age romance, youthful engagement, villainess/otome-game routes, and coming-of-age relationships remain valid. When the work is positioned as romance, the relationship drives the title promise, central conflict, climax, and ending. Reject childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan-rescue, single-parent-reunion, and family-reconstruction premise engines. Trusted channel-performance feedback is a hard veto, not a soft score.
 
 ## Execution Profiles
 
@@ -56,7 +56,7 @@ Type pack routing:
 - 契約結婚 / 白い結婚 / political marriage / forced proximity -> `references/type-packs/contract-marriage-white-marriage.md`
 - 溺愛公爵 / 辺境伯 / cursed duke or prince / new home -> `references/type-packs/beloved-duke-frontier.md`
 - 職人 / shop / craft / magic tool / job competence -> `references/type-packs/craft-job-competence.md`
-- 王宮 / adult family coldness / inheritance / divorce or mature remarriage -> `references/type-packs/palace-family-inheritance.md`
+- 王宮 / family coldness / inheritance / divorce or remarriage -> `references/type-packs/palace-family-inheritance.md`
 - ループ / やり直し / foreknowledge / tragedy prevention -> `references/type-packs/time-loop-foreknowledge.md`
 - 魔王 / 勇者 / 竜人 / interspecies marriage / culture-gap romance -> `references/type-packs/monster-demon-interspecies-romance.md`
 - 強いヒロイン / status gap / exile action romance -> `references/type-packs/strong-heroine-status-gap.md`
@@ -74,7 +74,7 @@ Benchmark priority:
 
 If the premise is missing, lock the broad category and subgenre, complete the creation-entry gate, and obtain a concrete selected or delegated premise before step 1. Live-source discovery is limited to the rolling 24-hour JST window across every source. Then resolve presentation/viewpoint and continue this workflow.
 
-Before step 1, run the adult-romance gate and romance-removal test from `../jp-josei-fantasy/references/theme-taxonomy.md`. Do not let a high-ranked child/family item, one platform hit, or abstract shared function override the exclusion or channel feedback.
+Before step 1, run the channel-fit gate and romance-removal test from `../jp-josei-fantasy/references/theme-taxonomy.md`. Do not let a high-ranked parenting/family-reconstruction item, one platform hit, or abstract shared function override the exclusion or channel feedback; do not exclude a school-age or youthful-romance route from age alone.
 
 1. Resolve presentation/viewpoint only when missing. For push mode, plan the matching narrator contract: first-person mouth and knowledge boundary, or third-person narrator stance, stable labels, selective reactions, knowledge boundary, and heroine-caused choices. Use an opening card only in the optional variation profile.
 2. Choose the central promise:
@@ -86,7 +86,7 @@ Before step 1, run the adult-romance gate and romance-removal test from `../jp-j
    - `追放 / frontier -> slow life -> competence and beloved place`
    - `loop -> tragedy prevention -> chosen happiness`
    - `craft/job false evaluation -> product proof -> respected work and love`
-   - `palace/adult-family/inheritance wound -> record proof -> lawful independence and chosen adult partnership`
+   - `palace/family/inheritance wound -> record proof -> lawful independence and chosen partnership`
    - `monster/demon/dragon marriage -> culture rule -> accepted bond`
    - `strong heroine/status gap -> action proof -> honored love`
    - `hot trend / video / news seed -> emotion or social rule -> josei fantasy proof and romance route`
