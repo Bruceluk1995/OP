@@ -6,6 +6,7 @@ The goal is not to write a real-world trend story. Extract the hot seed's romanc
 
 ## Source Protocol
 
+0. Record `searched_at_jst` and `window_start_jst=searched_at_jst-24h`. Use only queries shown in Google Trends' `Past 24 hours` view or RSS entries whose activity/publication time is inside that window. A page crawled today is not proof that its item is current; reject undated or older entries and never widen to seven days.
 1. Use Google Trends JP first only for plain trend requests:
    - Page: `https://trends.google.com/trending?geo=JP`
    - RSS fallback: `https://trends.google.com/trending/rss?geo=JP`
@@ -35,7 +36,8 @@ Recommended seed rule:
 
 ## Mandatory User Selection Gate
 
-- Collect raw current trends, score them, and present 3-5 viable numbered candidates instead of silently choosing a main pick.
+- Collect raw trends verified inside the rolling 24-hour window, score them, and present 3-5 viable numbered candidates instead of silently choosing a main pick. Return fewer if the strict window is thin.
+- Show the direct source, activity timestamp, and `searched_at_jst` for every displayed candidate.
 - Show source/date, seed, score, josei conversion, selected/backup route, heroine wound, proof/romance mechanism, one-shot or serial promise, and risk note.
 - Ask the user to choose a number or request another batch, then stop before title lock, outline, drafting, files, or ledger mutation.
 - Selecting `Google Trends JP`, a josei lane, emotion axis, or male-lead function only selects the search lane; it is not seed approval.

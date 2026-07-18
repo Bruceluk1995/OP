@@ -23,16 +23,17 @@ Read:
 3. `../jp-isekai/references/character-prompt-contract.md` whenever the task creates named cast or a script
 4. `../jp-short-fiction-studio/references/dynamic-market-learning.md` for push production or current Japanese-market premise discovery
 5. `../jp-isekai/references/topic-menu.md` when the user has not supplied a concrete premise
+6. `../jp-isekai/references/japanese-classic-subgenre-map.md` whenever a missing premise requires the subgenre screen
 
 When push narration is selected, also read:
 
-5. `../story/references/push-prompt-architecture.md`
-6. `../story/references/push-entertainment-gate.md`
-7. `../story/references/push-retention-chain.md`
-8. `../jp-isekai-write/references/push-narration-protocol.md`
-9. `../story/references/flan-push-strict-mode.md`
-10. `../story-first-person-script/SKILL.md`, `../story-first-person-script/references/push-first-person-benchmark.md`, and `../story-first-person-script/references/push-quality-gate.md` for first person
-11. `../story-third-person-script/SKILL.md`, `../story-third-person-script/references/push-third-person-benchmark.md`, and `../story-third-person-script/references/push-quality-gate.md` for third person
+7. `../story/references/push-prompt-architecture.md`
+8. `../story/references/push-entertainment-gate.md`
+9. `../story/references/push-retention-chain.md`
+10. `../jp-isekai-write/references/push-narration-protocol.md`
+11. `../story/references/flan-push-strict-mode.md`
+12. `../story-first-person-script/SKILL.md`, `../story-first-person-script/references/push-first-person-benchmark.md`, and `../story-first-person-script/references/push-quality-gate.md` for first person
+13. `../story-third-person-script/SKILL.md`, `../story-third-person-script/references/push-third-person-benchmark.md`, and `../story-third-person-script/references/push-quality-gate.md` for third person
 
 When the Chinese novel-site source is selected, also read `../jp-isekai/references/chinese-novel-inspiration.md`. Do not load it for unrelated requests.
 
@@ -53,7 +54,7 @@ Accept the upstream normalized handoff, never its raw menu code. When `presentat
 
 Do not present a menu when these are already clear. If only one essential choice is missing, ask one compact question or make a safe stated assumption.
 
-When the premise is missing, resolve or infer presentation and viewpoint, then present the Level 1 creation-entry menu from `../jp-isekai/references/topic-menu.md`. This gate is required: do not jump directly to a free-form synopsis request, auto-invent the premise, or start the studio fast path. Browse only after the user selects the live-hot-topic route; classic, fresh, keyword, and automatic-recommendation routes do not require live browsing.
+When the premise is missing, run `broad category -> Japanese novel-site subgenre -> five-option creation entry` from the two references above. Lock the subgenre before displaying the source menu, keep every source and candidate inside both fields, and do not wait for presentation, viewpoint, operation, or length. Do not auto-invent the premise or start the studio fast path. After the concrete premise is selected, resolve any still-missing presentation, viewpoint, operation, and length fields. Browse only after the user selects the live-hot-topic route; its news, novel-site, Google Trends, YouTube, TikTok, and all-source signals must be verifiably inside the rolling 24-hour JST window.
 
 ## Defaults
 

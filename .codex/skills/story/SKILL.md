@@ -32,6 +32,9 @@ Global push rule: every anime-recap/push-narration branch must read `references/
 ```text
 content_form=<long|season|oneshot|...>
 lane=<jp_isekai|jp_josei|...>
+broad_category=<lane-specific category or provided>
+subgenre=<lane-specific subcategory or provided>
+topic_origin=<live|classic|fresh|keyword|auto|provided>
 presentation=<traditional|push>
 viewpoint=<first|third>
 operation=<new|continue|rewrite|review>
@@ -65,9 +68,12 @@ length_budget=<explicit value or skill default>
 固定后续顺序：
 
 1. **内容形态**：只能先走上面的七项入口。
-2. **题材**：选择 `1/2/3` 后，再问 `1 日式男频异世界`、`2 日本女频幻想恋爱`、`3 银发文学/熟年逆转`、`4 通用网文`、`5 还不确定，帮我推荐`。
-3. **表现形式与视角**：题材确定后，再确认传统小说正文或动漫解说/推文口播，以及第一人称或第三人称；用户已经说清时不重复问。
-4. **具体动作与长度**：最后确认开新作、续写/改写、审查，以及长度预算；一发完结不得被改成六集连续剧，短季分集不得被改成长篇规划。
+2. **受众题材路线**：选择 `1/2/3` 后，再问 `1 日式男频异世界`、`2 日本女频幻想恋爱`、`3 银发文学/熟年逆转`、`4 通用网文`、`5 还不确定，帮我推荐`。
+3. **故事大类别**：进入日式男频或日本女频新作路线后，先展示该路线固定的六大类别，让用户锁定一个大方向；不得先搜索热点、小说榜单或生成故事候选。
+4. **故事子类目**：大类别锁定后，先展示该类别下的日本小说站子类目，让用户锁定一个主子类目；可附带至多两个次要风味。不得先显示故事来源菜单。
+5. **故事来源**：子类目锁定后，再显示五项创意来源菜单。固定顺序为 `过去24小时实时热点/小说榜单 -> 经典热门题材 -> 冷门/怪/新鲜 -> 用户关键词 -> Codex 按口播传播性自动推荐`。后续搜索和原创候选必须同时限制在已选大类别与子类目内。
+6. **表现形式与视角**：具体故事或选题方向确定后，再确认传统小说正文或动漫解说/推文口播，以及第一人称或第三人称；用户已经说清时不重复问。
+7. **具体动作与长度**：最后确认开新作、续写/改写、审查，以及长度预算；一发完结不得被改成六集连续剧，短季分集不得被改成长篇规划。
 
 分支规则：
 
@@ -75,6 +81,8 @@ length_budget=<explicit value or skill default>
 - 选 `5 已有作品处理`：按用户动作路由到续写、改写、审查、去 AI 味或封面；没有用户明确的续写/现有作品意图时，不得读取 `.active-book`、追踪文件或旧项目状态。
 - 选 `6 拆文/对标/扫榜/热点选题`：继续问长篇、短篇、男频异世界、女频幻想恋爱、银发文学或讲解稿。
 - 选 `7 不确定`：只帮助选择内容形态，不得直接生成题材或擅自接入旧项目。
+- 日式男频／日本女频新作如果已经给出具体 premise、标题梗概或关键词，继承可确定的 `broad_category`、`subgenre` 与 `topic_origin=provided`，只补问无法判断的必需层；否则按 `六大类别 -> 子类目 -> 五项创意来源` 逐层选择。
+- 选择实时热点／小说榜单后，所有来源统一使用检索时刻向前滚动24小时的窗口。Google Trends、新闻、YouTube、TikTok、日本或中国小说榜单都不得用周榜、月榜、旧调查或超过24小时的发布物冒充热点；无法核实时间则不进入候选。
 - 用户直接给足内容形态、题材、表现形式、视角和动作时可跳过已回答的问题，但不得改变未回答问题的固定顺序。
 
 只在内容形态与题材都明确后，才进入 `$jp-isekai`、`$jp-isekai-oneshot`、`$jp-josei-fantasy`、`$silver-literature`、`$story-long-write`、`$story-short-write`、`$shanhe-explainer` 或 `$econ-finance-explainer` 等具体 skill。
@@ -119,7 +127,7 @@ length_budget=<explicit value or skill default>
 3. 如果能明确匹配，直接调用对应 skill（Claude/OpenCode 可用 `Skill("skill-name")` 或 slash command；Codex 用 `$skill-name` / `/skills`；OpenClaw 用 `/skill skill-name` 或自然语言点名）
 4. 如果无法匹配，询问用户想做什么（从上表中选择）
 5. 如果用户说“使用剧本 skills”“我想写小说”但未指定形态，原样展示「冻结入口链路 v1」，不得先问题材。
-6. 用户选择 `1/2/3` 后严格按“内容形态 -> 题材 -> 表现形式与视角 -> 具体动作与长度”继续；不得读取旧项目来替代任何一层选择。
+6. 用户选择 `1/2/3` 后严格按“内容形态 -> 受众题材路线 -> 故事大类别 -> 故事子类目 -> 故事来源 -> 具体 premise -> 表现形式与视角 -> 具体动作与长度”继续；这些选题层只用于缺少具体 premise 的日式男频／女频新作，不得读取旧项目来替代任何一层选择。
 7. 如果用户只说“模拟新用户”或“刚装好怎么用”，同样只展示冻结的一级菜单，不要直接进入任何具体题材 skill。
 
 ### 长正文长度路由

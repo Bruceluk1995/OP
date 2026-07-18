@@ -33,7 +33,8 @@ When planning prose beats, design colloquial, direct scene movement: action, dia
 - Read `../story/references/flan-push-strict-mode.md` for either push option and plan information/shot lines, narrated reactions, and sparse direct dialogue regardless of person.
 - For first-person push planning, read `../story-first-person-script/SKILL.md` and its push-quality gate. For third-person push planning, read `../story-third-person-script/SKILL.md` and its push-quality gate.
 - Read `../jp-short-fiction-studio/references/dynamic-market-learning.md` for push production or current Japanese-market premise discovery. Use it to select topic, packaging, story engine, emotional payoff, and saturation risk; do not reopen platform selection.
-- Read `../jp-isekai/references/topic-menu.md` when the user has not supplied a concrete premise. Do not replace the full grouped topic menu with a tiny handful of examples.
+- Read `../jp-isekai/references/topic-menu.md` and `../jp-isekai/references/japanese-classic-subgenre-map.md` when the user has not supplied a concrete premise. Run `six-category screen -> selected category's Japanese-site subgenre screen -> five-option creation-entry menu` before asking presentation, viewpoint, operation, or length. Do not replace the grouped topic menu with a tiny handful of examples.
+- Preserve `broad category -> Japanese novel-site subgenre -> creation source -> original premise`. The classic route uses the already locked subgenre and must not show it again.
 - Read `../jp-isekai/references/opening-innovation-engine.md` only for an explicit variation/card request or when a weak opening needs optional ideation.
 - Read `references/terminology.md` whenever adapting from Chinese fantasy or when the user says "不要中式".
 - Read `references/market-patterns.md` when the user asks for market fit, popular formulas, or gives なろう/Kakuyomu as reference.
@@ -65,6 +66,8 @@ Benchmark priority:
 5. Read the bundled `references/type-packs/{lane}.md` only as fallback scaffolding.
 
 ## Planning Workflow
+
+If the premise is missing, lock broad category and subgenre, complete the creation-entry gate, and obtain a concrete selected or delegated premise before step 1. Live-source discovery is limited to the rolling 24-hour JST window across every source. Then resolve presentation/viewpoint and continue this workflow.
 
 1. Resolve format/viewpoint only when missing:
    - Offer options 1-4 only when the user has not already chosen.

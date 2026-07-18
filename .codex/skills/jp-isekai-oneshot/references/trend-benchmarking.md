@@ -6,6 +6,7 @@ The goal is not to write a real-world news story. The goal is to extract the hot
 
 ## Source Protocol
 
+0. Record `searched_at_jst` and `window_start_jst=searched_at_jst-24h`. Use only queries shown in Google Trends' `Past 24 hours` view or RSS entries whose activity/publication time is inside that window. A page crawled today is not proof that its item is current; reject undated or older entries and never widen to seven days.
 1. Use Google Trends JP first only for plain trend requests:
    - Page: `https://trends.google.com/trending?geo=JP`
    - RSS fallback: `https://trends.google.com/trending/rss?geo=JP`
@@ -36,8 +37,8 @@ Recommended seed rule:
 
 ## Mandatory User Selection Gate
 
-- Collect 6-10 raw current trends, score them, and present 3-5 viable numbered candidates.
-- For each candidate, show the source/date, raw seed, score, fantasy conversion, primary/backup route, one-shot promise, and risk note.
+- Collect 6-10 raw trends verified inside the rolling 24-hour window when available, score them, and present 3-5 viable numbered candidates. Return fewer if the strict window is thin.
+- For each candidate, show the direct source, activity timestamp, `searched_at_jst`, raw seed, score, fantasy conversion, primary/backup route, one-shot promise, and risk note.
 - Ask the user to choose a number or request another batch, then stop before final title, blueprint, prose, files, or ledger mutation.
 - Choosing `Google Trends JP`, a subtype, payoff, or tone only selects the search lane; it is not approval of a concrete seed.
 - Continue without the pause only when the user gives the exact seed/link/keyword or explicitly delegates the decision. State the selected candidate when using delegated choice.

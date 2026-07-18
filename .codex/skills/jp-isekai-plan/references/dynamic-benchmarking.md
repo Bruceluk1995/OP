@@ -2,6 +2,8 @@
 
 Use this before planning a Japanese male-audience isekai subtype when the user wants market fit, current popular works, website-based book analysis, or when no strong project benchmark exists.
 
+For any `hot`, `current ranking`, or live-source claim, record `searched_at_jst` and use only realtime/daily/24-hour ranking snapshots verified inside the rolling 24-hour window. Weekly/monthly/all-time rankings and undated pages may be historical benchmark context only, never current heat evidence.
+
 ## Priority
 
 1. Project benchmark report: `对标/{lane}/{work}/拆文报告.md` or `拆文库/{work}/`.
@@ -22,8 +24,8 @@ When browsing is allowed or requested:
 - Search the matching platform/category/tag page for the selected lane.
 - Collect 3-5 candidates with title, URL, ranking context, visible tags, update date if shown, public synopsis/premise, and why it matches the lane.
 - Select one primary benchmark and one or two contrast benchmarks.
-- Prefer currently visible ranking/tag pages over old memory.
-- If a Chinese-site scan is included, keep those candidates in a labeled cross-market section and record whether the chosen mechanism has a current Japanese ranking/tag/reader-interest cross-check.
+- Prefer qualifying 24-hour ranking/tag pages over old memory. If the strict window is thin, report the limitation instead of widening it.
+- If a Chinese-site scan is included, keep those candidates in a labeled cross-market section and record whether the chosen mechanism has a same-window Japanese ranking/tag/reader-interest cross-check.
 
 ## Benchmark Card
 

@@ -4,18 +4,18 @@ Use this only when the user selects Chinese novel sites, asks to search Chinese 
 
 ## Source Role
 
-- Browse current public ranking, category, tag, title, and short synopsis metadata from Chinese male-audience fiction sites. Useful starting surfaces include 起点中文网、番茄小说、七猫中文网、纵横中文网, but use whichever current public pages are actually accessible.
-- Prefer at least two independent sites or lists when describing a repeated mechanism. Record source, page/list context, capture date and timezone, and any visible metric or missing field.
+- For a live/hot-source request, record `searched_at_jst` and `window_start_jst=searched_at_jst-24h`, then browse only public realtime/daily/24-hour ranking, category, tag, title, and short synopsis metadata whose snapshot is verified inside that window. Weekly/monthly/all-time lists and undated pages do not qualify as hotspots. A user-supplied older work may still be analyzed as provided inspiration but not called current.
+- Prefer at least two independent sites or lists when describing a repeated mechanism. Record source, page/list context, exact capture time/timezone, visible ranking period, and any missing field.
 - Do not bypass login, paywalls, anti-bot controls, or copy full chapters. User-provided or legitimately accessible text may be analyzed only under the normal anti-copy rules.
 - Treat one title or one list snapshot as an example. Treat repetition across sites, categories, or capture times as a Chinese-market signal only.
 
 ## Candidate Gate
 
-1. Collect 6-10 current items and extract only the functional mechanism: protagonist status, cheat, pressure source, progression token, faction relation, public proof, payoff, and ending promise.
+1. Collect 6-10 qualifying items when available and extract only the functional mechanism: protagonist status, cheat, pressure source, progression token, faction relation, public proof, payoff, and ending promise. Return fewer instead of widening the 24-hour window.
 2. Score each mechanism from 1-5 for transferability, Japanese male-isekai fit, localization distance, originality space, and saturation risk.
 3. Present 3-5 viable numbered candidates. Include Chinese source/date, raw mechanism, proposed Japanese lane, localization rebuild, Japan cross-check status, and risk note.
 4. Stop for the user's numbered choice unless the user supplied the exact work/link/keyword or explicitly delegated selection.
-5. After selection, cross-check the mechanism against at least one current Japanese ranking, tag, reader-interest, or comparable public signal before calling it Japanese-market fit. If no Japanese confirmation is found, label it `cross-market hypothesis` and propose a small test.
+5. After selection, cross-check the mechanism against at least one same-window Japanese ranking, tag, reader-interest, or comparable public signal before calling it Japanese-market fit. If no Japanese confirmation is found, label it `cross-market hypothesis` and propose a small test.
 
 ## Functional Rebuild
 
