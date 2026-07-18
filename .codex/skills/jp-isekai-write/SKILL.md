@@ -28,6 +28,7 @@ Choose one profile from the request. Full capabilities remain available; they ar
 ## Conditional Capability Reads
 
 - Read `../jp-isekai/references/presentation-modes.md` only when presentation/viewpoint is unclear or the user asks to compare versions.
+- Read `../story/references/push-prompt-architecture.md`, `../story/references/push-entertainment-gate.md`, and `../story/references/push-retention-chain.md` whenever push narration is selected. Lock the speaker/listener contract, audience emotional contract, human-collision/payoff shape, and retention chain before prose; complete the adversarial read and saved-body evidence map before release.
 - Read `../story/references/flan-push-strict-mode.md` whenever push narration is selected. Its script is a mandatory saved-body format gate and never a quality verdict.
 - Read `../story-first-person-script/SKILL.md` and both of its push references whenever first-person push is selected.
 - Read `../story-third-person-script/SKILL.md` and both of its push references whenever third-person push is selected.
@@ -65,16 +66,17 @@ Choose one profile from the request. Full capabilities remain available; they ar
    - Set target emotion, episode position, episode promise, core payoff, cost/risk, and ending hook.
    - Use a five-part shape: cause, development, turn, climax, ending state.
    - Break the episode into change modules; character budgets are optional production aids.
-   - Make dense beats carry skill experiments, monster combat, tactical adjustment, OP restraint/reveal, subordinate reaction, public proof, comic reaction, zamaa, practical reward/drop/rank-up, or new danger.
-   - Compress sparse transitions; do not let travel, explanation, or mood become filler.
+   - Before push prose, scan candidate events and label them `expand / one-line bridge / cut`. High-value functions include conflict, reversal, information, relationship, visual proof, status/reward, costly choice, and payoff. Every expanded event must pass the entertainment map: present desire, blocker, human collision, price/status/relationship risk, narrator take, memorable action/decisive line, and new question.
+   - Make dense beats carry skill experiments, monster combat, tactical adjustment, OP restraint/reveal, relationship change, public proof, practical reward/drop/rank-up, costly choice, or new danger.
+   - Compress sparse transitions to one bridge; do not let travel, explanation, routine dialogue, repeated reactions, or mood receive the same depth as a high-value event.
    - For a long target, add new conflict, choice, mechanism, cost, or consequence. Do not extend one proof through more tests or witnesses.
    - If the chosen route is battle leveling, do not replace the combat/progression payoff with shopkeeping or slow-life comfort. Each episode needs a monster/conflict, a skill use under pressure, a visible win or loss, and a drop/rank/skill/status consequence.
    - If the chosen route is OP dominance, do not fake tension by weakening the protagonist at random. Build tension through enemy misread, restraint, information gaps, collateral risk, subordinate/faction pressure, public identity, and the consequences of revealing power.
    - For any other subtype lane, preserve that type pack's required payoff loop. Do not flatten all lanes into generic guild errands, herbs, shopkeeping, or slow-life comfort.
-   - End with a specific next-episode trouble hook.
+   - For a serialized episode, end with a specific next-episode event, decision, or trouble hook. For a closed one-shot, pay the promise and end on observable aftermath without a forced continuation tease.
 4. Write in the selected presentation mode and narrative person:
    - Traditional: write scene-based Japanese web-novel prose. Use `俺` or close/limited third person as chosen; carry scenes through action, dialogue, choice, cost, reward, or consequence.
-   - Push: follow `references/push-narration-protocol.md`; use one action/reaction/causal link per short line and make the title promise visibly pay off. The protocol applies to both first and third person.
+   - Push: follow `references/push-narration-protocol.md` and the shared entertainment/retention chain; expand selected human collisions, bridge technical state changes and necessary chronology once, cut the rest, sustain the opening through distinct pressures, reach proof/conflict before setup drains the hook, and make the title promise visibly pay near the final arc without a long administrative tail. Draft natural spoken sentences before subtitle splitting. The protocol applies to both first and third person.
    - In all combinations, reject literary padding and avoid long scenery or psychology blocks.
    - Use short inner-commentary beats for humor.
    - Keep paragraphs readable for web serialization.
@@ -93,8 +95,8 @@ Choose one profile from the request. Full capabilities remain available; they ar
    - Update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
    - Add one record to `男频异世界知识库/generated-ledger.jsonl` with protagonist, cheat, pressure, payoff, venue, aftertaste, and saved path.
 9. Validate:
-   - For every saved push body, run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`. A `surface_fail` blocks delivery under the push label and returns the draft to the push narrator; `surface_pass` never approves story quality.
-   - Run the selected viewpoint skill's editorial gate and the studio blind-editor pass before surface lint. Flowchart narration split into short lines is still a story failure.
+   - Complete the shared entertainment adversarial read and saved-body retention evidence map, then run the selected viewpoint skill's editorial gate plus the studio blind-editor pass before surface lint. Uniform outline retelling, flowchart narration, function-only companions, a strong hook followed by backstory, early payoff with a long tail, repeated high-point functions, or same-conclusion proof split into short lines is still a story failure.
+   - For every saved push body, run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`. A `surface_fail` blocks delivery under the push label and returns the draft to the push narrator; `surface_pass` never approves story quality and `delivery_ready_from_this_tool` remains false.
    - Audit every major scene as `entry state -> pressure/choice -> exit state`. At least one of skill knowledge, combat position, inventory/drop, rank, reputation, territory, faction relationship, risk, or next objective must change. Travel, explanation, repeated awe, and status-panel restatement without a state delta must be compressed or removed.
    - Verify the episode promise is paid or meaningfully advanced, the win has a concrete result/cost, and the ending threat grows from the new state rather than appearing as an unrelated cliffhanger.
    - Count Japanese characters with Python.
@@ -107,7 +109,7 @@ Choose one profile from the request. Full capabilities remain available; they ar
    - Scan the whole draft against `references/anti-ai-gates.md`: no generic texture, stock summary lines, author explanation, uniform paragraph rhythm, or model/meta leakage.
    - Confirm the prose stays colloquial and direct, with no long literary scenery or psychology passages.
    - For project-bound output, verify the outline was read, tracking files were updated, and the ledger record was appended.
-   - If below target by more than 10%, expand existing dense beats rather than adding random scenes. If at target but padded, cut the padded text first and then expand real dense beats.
+   - If below target by more than 10%, return to the event scan and add or deepen a distinct conflict, reversal, relationship turn, costly choice, or consequence. Do not slow one action or restore cut material. If at target but padded, cut the padding before adding a real event beat.
    - If a cover is expected, verify `封面.png` exists, is 16:9, includes the episode click-title and the series/work title, and is an actual image file rather than only a prompt.
 
 ## Quality Bar

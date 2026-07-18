@@ -25,10 +25,13 @@ Read:
 
 When push narration is selected, also read:
 
-5. `../jp-isekai-write/references/push-narration-protocol.md`
-6. `../story/references/flan-push-strict-mode.md`
-7. `../story-first-person-script/SKILL.md`, `../story-first-person-script/references/push-first-person-benchmark.md`, and `../story-first-person-script/references/push-quality-gate.md` for first person
-8. `../story-third-person-script/SKILL.md`, `../story-third-person-script/references/push-third-person-benchmark.md`, and `../story-third-person-script/references/push-quality-gate.md` for third person
+5. `../story/references/push-prompt-architecture.md`
+6. `../story/references/push-entertainment-gate.md`
+7. `../story/references/push-retention-chain.md`
+8. `../jp-isekai-write/references/push-narration-protocol.md`
+9. `../story/references/flan-push-strict-mode.md`
+10. `../story-first-person-script/SKILL.md`, `../story-first-person-script/references/push-first-person-benchmark.md`, and `../story-first-person-script/references/push-quality-gate.md` for first person
+11. `../story-third-person-script/SKILL.md`, `../story-third-person-script/references/push-third-person-benchmark.md`, and `../story-third-person-script/references/push-quality-gate.md` for third person
 
 When the Chinese novel-site source is selected, also read `../jp-isekai/references/chinese-novel-inspiration.md`. Do not load it for unrelated requests.
 
@@ -45,6 +48,8 @@ Infer from the prompt whenever possible:
 
 If the user or project has already fixed the house format as Japanese-market push narration, set presentation to push without asking again.
 
+Accept the upstream normalized handoff, never its raw menu code. When `presentation=push`, freeze `writer_branch=flan_push` and the selected `viewpoint=<first|third>` before planning. This sticky branch lock forbids traditional scene-writing rules from becoming an authority later in the run; only an explicit user change may unlock it. If the viewpoint is missing, ask for it instead of defaulting to traditional prose.
+
 Do not present a menu when these are already clear. If only one essential choice is missing, ask one compact question or make a safe stated assumption.
 
 When the premise is missing, resolve or infer presentation and viewpoint, then present the Level 1 creation-entry menu from `../jp-isekai/references/topic-menu.md`. This gate is required: do not jump directly to a free-form synopsis request, auto-invent the premise, or start the studio fast path. Browse only after the user selects the live-hot-topic route; classic, fresh, keyword, and automatic-recommendation routes do not require live browsing.
@@ -60,7 +65,7 @@ When the premise is missing, resolve or infer presentation and viewpoint, then p
 
 Complete the progressive topic gate and obtain a concrete user-selected or explicitly delegated premise before production.
 
-Run the studio path once: Market Basis -> Producer -> Story Core -> Change Structure -> Japanese Traditional Scene Writer **or** Japanese Push Narrator -> Blind Editor -> Surface Lint. Restart from the earliest failed stage. Push narration must clear the selected viewpoint's oral-spine and editorial release gate before surface lint.
+Run the studio path once: Market Basis -> Producer -> Story Core -> High-Value Event Scan -> Entertainment Editor -> Change Structure -> the already locked Japanese writer branch -> Oral Rewrite -> Blind Editor -> Surface Lint. Restart from the earliest failed stage. Push narration must keep `writer_branch=flan_push`, lock the entertainment/retention chain before prose, draft natural spoken sentences before subtitle splitting, and complete the adversarial entertainment read, saved-body evidence map, and selected viewpoint's editorial release gate before surface lint.
 
 Browse for current Japanese-market rankings, trends, news, live-source requests, or an explicitly selected Chinese novel-site inspiration pass and follow the dynamic-market contract plus the source-specific contract. Chinese novel-site popularity is cross-market inspiration only; require a current Japanese cross-check before calling the premise Japanese-market validated. Story-market evidence selects the premise and modules; the Flan contract always owns push delivery. Opening cards, package files, cover prompts, character prompts, and ledgers remain optional.
 

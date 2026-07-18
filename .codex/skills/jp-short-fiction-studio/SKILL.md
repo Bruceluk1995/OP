@@ -23,7 +23,7 @@ Read exactly one lane file:
 
 Read `references/dynamic-market-learning.md` for push production or current Japanese-market premise discovery.
 
-When push narration is selected, also read `../jp-isekai-write/references/push-narration-protocol.md` and `../story/references/flan-push-strict-mode.md`. For first-person push, read `../story-first-person-script/SKILL.md` and its two push references. For third-person push, read `../story-third-person-script/SKILL.md` and its two push references. Do not load unrelated opening decks, ledgers, packaging guides, or old blueprint files unless the task needs them.
+When push narration is selected, also read `../story/references/push-prompt-architecture.md`, `../story/references/push-entertainment-gate.md`, `../story/references/push-retention-chain.md`, `../jp-isekai-write/references/push-narration-protocol.md`, and `../story/references/flan-push-strict-mode.md`. For first-person push, read `../story-first-person-script/SKILL.md` and its two push references. For third-person push, read `../story-third-person-script/SKILL.md` and its two push references. Do not load unrelated opening decks, ledgers, packaging guides, or old blueprint files unless the task needs them.
 
 ## Market-Basis Gate — Lao Liu Dynamic Learning
 
@@ -37,14 +37,18 @@ For this Japanese push workflow, the target market and presentation are fixed. L
 
 ## Fast Path — Default
 
-If the user already gave lane, premise, viewpoint, and presentation, do not ask a menu. Run six passes:
+If the user already gave lane, premise, viewpoint, and presentation, do not ask a menu. Run eight passes:
+
+First preserve the normalized handoff as an immutable run lock: `presentation=<traditional|push>`, `viewpoint=<first|third>`, and `writer_branch=<traditional_scene|flan_push>`. Raw menu code is never a branch value. When `presentation=push`, set `writer_branch=flan_push`; no later role may reopen or reinterpret it unless the user explicitly changes presentation.
 
 1. **Market-basis editor**: record evidence mode, validated Japanese-market story functions, unvalidated assumptions, saturation/negative signal, and the smallest next test.
-2. **Producer**: lock reader promise, emotion, protagonist desire, and the concrete event the audience is waiting for.
+2. **Producer**: lock the speaker/listener contract, audience emotional contract, reader promise, protagonist desire, and the concrete event the audience is waiting for.
 3. **Story-core editor**: choose a causal core where the protagonist makes an unusual choice, gets a visible result, and that result creates a new kind of trouble.
-4. **Structure editor**: plan 6-10 flexible change modules; one decisive proof per conclusion; switch the middle mechanism.
-5. **Japanese writer**: select exactly one branch: Traditional Scene Writer or Flan-Style Push Narrator. For push, lock an oral spine before drafting.
-6. **Blind editor**: read the saved body without metrics, apply the editorial release gate, identify the earliest boring point or presentation drift, then rewrite from the earliest failed stage.
+4. **High-value event scanner**: label candidate events `expand / one-line bridge / cut`; rotate conflict, reversal, information, relationship, visual proof, status, choice, and payoff instead of compressing every event evenly.
+5. **Entertainment editor**: apply the `Push Entertainment Gate`; reject technical state changes without human collision, companion-as-function choreography, paraphrase-only conflict, early central payoff with a long tail, and any middle that is better described as a procedure than a confrontation.
+6. **Structure editor**: group the selected event beats into 6-10 flexible change modules; one decisive proof per conclusion; switch the middle mechanism. For push, lock the `1 + 3 + N` retention chain before prose.
+7. **Japanese writer**: execute the already locked branch. Select a branch only when the upstream handoff is genuinely missing; ask if ambiguous instead of defaulting to traditional. For push, keep `writer_branch=flan_push`, lock an oral spine, draft natural spoken sentences, and postpone subtitle splitting.
+8. **Blind editor**: read the saved body without metrics, apply the entertainment and editorial release gates, identify the earliest boring point or presentation drift, then rewrite from the earliest failed stage.
 
 Planning remains compact and in memory. For chat-only work, output only the requested artifact. For project work, save the body plus one compact `作品决策卡.md`; do not create evidence, ledger, cover, character prompt, and audit files unless requested.
 
@@ -78,39 +82,57 @@ Generate up to three genuinely different cores, then choose one:
 
 Reject luck-only, procedure-only, witness-only, repeated-proof, and “wait for a powerful person/institution to solve it” cores.
 
+### High-Value Event Scanner
+
+Use the shared prompt contract in `../story/references/push-retention-chain.md`.
+
+For every candidate event, record the visible before/after, human effect, emotional job, protagonist response, narrative function, and `expand / bridge / cut` decision. Keep the smallest set that forms a complete causal and emotional story.
+
+Reject uniform compression. A page of travel may become one line; a five-second betrayal may deserve a full beat. Do not draft until the selected path alternates at least several functions such as conflict, information, relationship, tactic, status, cost, and payoff.
+
+### Entertainment Editor
+
+Use `../story/references/push-prompt-architecture.md` and `../story/references/push-entertainment-gate.md`. First lock one imagined listener, speaker mouth, dominant pressure emotion, mid-story emotional conversion, final release emotion, concrete object/action/line anchors, and title promise. For every `expand` event, require a present desire, active blocker, visible collision, human price, protagonist response, narrator take, emotional change, memorable action or decisive exact line, and a new audience question.
+
+Relabel rule, route, pipe, contract, skill-system, registry, or policy changes as `bridge` unless they force a person to choose, refuse, lose, expose, betray, risk, or change relationship/status. Reject a roster whose members merely perform assigned functions. Lock the title-promise payoff position and the expected post-final-payoff share before the Structure Editor proceeds.
 ### Structure Editor
 
-For each module record only:
+Group several selected event beats inside each major module when the length needs it. For each beat record only:
 
 `entering state -> event/choice -> exiting state -> live audience question`
 
-Every module changes fact, problem, tactic, choice, relationship, status, resource, cost, danger, reversal, or payoff. Two consecutive preparation/explanation/travel/test/audit/sadness modules are forbidden.
+Every expanded beat changes fact, problem, tactic, choice, relationship, status, resource, cost, danger, reversal, or payoff through human collision. A technical state change alone does not qualify. Bridges stay to one line. Two consecutive preparation/explanation/travel/test/audit/sadness beats are forbidden.
 
 ### Traditional Scene Writer
 
 Enter scenes near pressure, give the viewpoint character a current want, let action/dialogue force a choice or new interpretation, select character-specific details, and exit on the strongest changed fact or decision. Do not explain a punch after it lands.
 
-Use this branch only for traditional prose. Do not reuse it for push narration by inserting extra line breaks.
+Use this branch only when `presentation=traditional` and `writer_branch=traditional_scene`. Do not apply it, even partially, after push has been locked; do not reuse it for push narration by inserting extra line breaks.
 
 ### Flan-Style Push Narrator
 
-Use this branch whenever presentation is anime recap/push narration:
+Use this branch whenever `presentation=push` and require `writer_branch=flan_push`:
 
 - open result-first: abnormal outcome -> ordinary cause/choice -> immediate cost or live question;
+- follow the stop hook with three different opening pressures; do not spend the opening block paying off the hook with biography or lore;
+- expand only the selected high-value events, bridge necessary chronology in one line, and cut the rest; never retell the full outline at uniform depth;
 - compress around cause and consequence rather than acting out every beat in real time;
-- keep direct quotation sparse and retain only the line whose wording changes conflict, status, or emotion;
+- for teaching, training, crafting, diagnosis, or repeated upgrades, compress to `decisive correction -> visible proof -> external consequence`; normally reach proof within 2-4 spoken lines;
+- keep professional judgment shorter than the proof and consequence it unlocks; a teacher premise is not a tutorial request;
+- keep direct quotation sparse but preserve the few lines whose wording changes conflict, status, allegiance, humiliation, danger, or choice; paraphrase-only human conflict fails;
 - make each non-empty line carry one action, reveal, reaction, consequence, or causal turn;
 - preserve the narrator's practical judgment, misunderstanding, complaint, or contrast so first person never becomes a neutral camera;
 - end each major module on a changed fact and a live pressure, not explanation or atmosphere;
-- never treat short lines, `俺`, or a metric pass as proof that the body is push narration.
+- never treat short lines, `俺`, or a metric pass as proof that the body is push narration;
+- draft natural spoken sentences and oral paragraphs through the locked speaker/listener contract first; split subtitles only after the entertainment, retention, and viewpoint gates pass; never add connectors to hit a ratio.
 
-For first person, draft in four passes from the first-person gate: consequence-led report, narrator mouth, state change, and payoff. For third person, use the third-person gate: consequence-led report, narrator stance/stable labels, state change, and payoff. In both, the opening exposes the abnormal result and causal gap; the middle changes mechanism after first proof; the climax recycles earlier story debt; the ending proves change with an action.
+For first person, draft in five passes from the first-person gate: consequence-led report, event selection, narrator mouth, state change, and payoff. For third person, also use five: consequence-led report, event selection, narrator stance/stable labels, state change, and payoff. Then run the shared oral rewrite. In both, the opening exposes the abnormal result and causal gap; the first concrete proof arrives before setup can drain the hook; the main irreversible conflict starts early; the middle changes mechanism after first proof; the climax recycles earlier story debt; the ending proves change with an action.
 
 Only after the blind editor reaches `ready for user read`, run `../story/scripts/validate-flan-push.py` on every saved push body. `surface_fail` blocks push-format delivery and sends the body back to this branch; `surface_pass` remains surface-only.
 
 ### Blind Editor
 
-Read before checking length or lint. Use one verdict:
+Read before checking length or lint. Complete the exact-anchor/character-percentage evidence map in `../story/references/push-retention-chain.md` for push work, then use one verdict:
 
 - `rebuild core`
 - `major structural rewrite`
@@ -118,7 +140,7 @@ Read before checking length or lint. Use one verdict:
 - `line edit`
 - `ready for user read`
 
-State the earliest loss of interest, what the reader was waiting for, what the text supplied instead, and which earlier role must redo its work. For push, also mark the earliest line where the narrator becomes a scene camera, dialogue transcript, diary voice, or novel broken into subtitles; identify the first repeated conclusion, middle mechanism change, climax debt, and ending proof action. Never use numeric quality scores or `PASS`.
+State the earliest loss of interest, what the reader was waiting for, what the text supplied instead, and which earlier role must redo its work. For push, also mark the first low-value event expanded too far, first high-value event compressed too much, first repeated high-point function, first 200-400-character flowchart/procedure run, first module without human collision, first character used only as a function, and earliest line where the narrator becomes a scene camera, neutral report, dialogue transcript, diary voice, tutorial lecturer, or novel broken into subtitles. Then identify the middle mechanism change, climax debt, title-promise payoff position, stronger promise after it or none, post-final-payoff share, ending proof action, five memorable post-opening lines/choices/actions, audio-only verdict, and whether the closed/serialized ending branch was honored. An incomplete or outline-only entertainment/retention map forbids `ready for user read`. Never use numeric quality scores or `PASS`.
 
 ### Push Editorial Release Gate
 
@@ -142,7 +164,7 @@ When rewriting an old body:
 
 ## Length and Proof
 
-The default complete Japanese one-shot/episode target is approximately 12,000 Japanese characters. Length is a budget unless the user/platform supplies a real hard limit. If short, add a new obstacle, choice, relationship turn, cost, or consequence through the structure editor. Otherwise report the honest shortfall. Never fill with procedures, lore, scenery, more witnesses, or another test of the same conclusion.
+The default complete Japanese one-shot/episode target is approximately 12,000 Japanese characters. Length is a budget unless the user/platform supplies a real hard limit. If short, return to the high-value event scanner and Entertainment Editor, then add a distinct human obstacle, refusal, consequential choice, relationship turn, cost, reversal, memorable confrontation, or consequence. Otherwise report the honest shortfall. Never slow one event, restore cut material, or fill with procedures, lore, scenery, more witnesses, policy settlement, or another test of the same conclusion.
 
 One decisive proof per conclusion. A later demonstration survives only when mechanism, stakes, relationship, or result changes.
 

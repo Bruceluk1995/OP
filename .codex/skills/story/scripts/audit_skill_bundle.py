@@ -37,6 +37,67 @@ TOPIC_GENERATING_SKILLS = {
     "story-long-write", "story-short-write", "story-long-scan", "story-short-scan",
     "story-first-person-script", "story-third-person-script",
 }
+PUSH_RETENTION_SKILLS = {
+    "story",
+    "jp-short-fiction-studio",
+    "jp-isekai-oneshot", "jp-josei-fantasy-oneshot",
+    "jp-isekai-write", "jp-josei-fantasy-write",
+    "jp-isekai-review", "jp-josei-fantasy-review",
+    "story-first-person-script", "story-third-person-script",
+}
+PUSH_ROUTE_LOCK_REQUIREMENTS = {
+    "story": ("presentation=<traditional|push>", "raw menu code", "sticky state"),
+    "jp-isekai": ("normalized handoff", "raw menu code", "Push is sticky", "cannot override `presentation=push`"),
+    "jp-josei-fantasy": ("normalized handoff", "raw menu code", "Push is sticky"),
+    "jp-isekai-oneshot": ("writer_branch=flan_push", "raw menu code", "sticky branch lock"),
+    "jp-josei-fantasy-oneshot": ("writer_branch=flan_push", "raw menu code", "sticky branch lock"),
+    "jp-short-fiction-studio": ("writer_branch=<traditional_scene|flan_push>", "raw menu code", "writer_branch=flan_push"),
+}
+PUSH_MODE_REFERENCE_REQUIREMENTS = {
+    "jp-isekai": ("push-prompt-architecture.md", "push-entertainment-gate.md", "push-retention-chain.md", "A raw menu code has no meaning", "never a pronoun swap"),
+    "jp-josei-fantasy": ("push-prompt-architecture.md", "push-entertainment-gate.md", "push-retention-chain.md", "A raw menu code has no meaning", "never a pronoun swap"),
+}
+LEGACY_PUSH_DRIFT_PATTERNS = (
+    "First person changes only pronouns and knowledge boundaries",
+    "intimacy changes pronouns and knowledge only",
+    "Push mode uses the fixed-template random draw",
+    "select exactly one branch: Traditional Scene Writer or Flan-Style Push Narrator",
+    "turn/causal connector density is below one per 12 lines",
+    "每300字至少一次自我拆台",
+    "一句一段≥70%",
+)
+PUSH_GLOBAL_CHAIN_REQUIREMENTS = (
+    "Global Production Prompt Contract",
+    "Push Prompt Architecture",
+    "Speaker and Listener Contract",
+    "Audience Emotional Contract",
+    "one-listener test",
+    "neutral event-log version",
+    "emotional job",
+    "Push Entertainment Gate",
+    "expand / one-line bridge / cut",
+    "first low-value event expanded too far",
+    "post-final-payoff share",
+    "spoken_units_per_1000_chars",
+    "Hide the production process",
+    "high_value_event_selection_verdict",
+)
+PUSH_VIEWPOINT_GATE_REQUIREMENTS = (
+    "Selection pass",
+    "Uniform-depth test",
+    "High-point rotation test",
+    "Production-leak test",
+    "Speaker/listener test",
+    "Emotional-job test",
+    "Human-heat test",
+    "Flowchart/procedure-run test",
+    "Decisive-voice test",
+    "Payoff-placement test",
+    "Post-payoff-tail test",
+    "Audio-only test",
+    "Over-fragmentation test",
+    "Connector-stuffing test",
+)
 
 
 @dataclass(frozen=True)
@@ -122,6 +183,56 @@ def audit_skill(skill_dir: Path) -> list[Finding]:
         router_problem = fixed_story_router_problem(text)
         if router_problem:
             add(findings, "ERROR", skill, "fixed_router_drift", router_problem)
+        prompt_architecture_file = skill_dir / "references" / "push-prompt-architecture.md"
+        retention_file = skill_dir / "references" / "push-retention-chain.md"
+        entertainment_file = skill_dir / "references" / "push-entertainment-gate.md"
+        validator_file = skill_dir / "scripts" / "validate-flan-push.py"
+        combined = ""
+        for required_file in (prompt_architecture_file, entertainment_file, retention_file, validator_file):
+            if not required_file.exists():
+                add(findings, "ERROR", skill, "push_global_chain_file_missing", str(required_file))
+                continue
+            combined += required_file.read_text(encoding="utf-8")
+        for required in PUSH_GLOBAL_CHAIN_REQUIREMENTS:
+            if required not in combined:
+                add(
+                    findings,
+                    "ERROR",
+                    skill,
+                    "push_global_chain_contract_missing",
+                    f"shared push production chain must preserve token: {required}",
+                )
+    if skill == "jp-short-fiction-studio" and "High-Value Event Scanner" not in text:
+        add(
+            findings,
+            "ERROR",
+            skill,
+            "push_high_value_scanner_missing",
+            "studio push chain must include the High-Value Event Scanner role",
+        )
+    if skill == "jp-short-fiction-studio" and "Entertainment Editor" not in text:
+        add(
+            findings,
+            "ERROR",
+            skill,
+            "push_entertainment_editor_missing",
+            "studio push chain must include the Entertainment Editor role",
+        )
+    if skill in {"story-first-person-script", "story-third-person-script"}:
+        gate_file = skill_dir / "references" / "push-quality-gate.md"
+        if not gate_file.exists():
+            add(findings, "ERROR", skill, "push_viewpoint_gate_missing", str(gate_file))
+        else:
+            gate_text = gate_file.read_text(encoding="utf-8")
+            for required in PUSH_VIEWPOINT_GATE_REQUIREMENTS:
+                if required not in gate_text:
+                    add(
+                        findings,
+                        "ERROR",
+                        skill,
+                        "push_viewpoint_gate_contract_missing",
+                        f"viewpoint release gate must preserve token: {required}",
+                    )
     if skill in TOPIC_GENERATING_SKILLS and "global-topic-history.md" not in text:
         add(
             findings,
@@ -130,6 +241,56 @@ def audit_skill(skill_dir: Path) -> list[Finding]:
             "global_topic_dedup_missing",
             "topic-generating skills must link the mandatory company-wide online topic gate",
         )
+    if skill in PUSH_RETENTION_SKILLS and "push-retention-chain.md" not in text:
+        add(
+            findings,
+            "ERROR",
+            skill,
+            "push_retention_chain_missing",
+            "push entry, writing, viewpoint, and review skills must link the shared retention gate",
+        )
+    if skill in PUSH_RETENTION_SKILLS and "push-entertainment-gate.md" not in text:
+        add(
+            findings,
+            "ERROR",
+            skill,
+            "push_entertainment_gate_missing",
+            "push entry, writing, viewpoint, and review skills must link the shared entertainment gate",
+        )
+    if skill in PUSH_RETENTION_SKILLS and "push-prompt-architecture.md" not in text:
+        add(
+            findings,
+            "ERROR",
+            skill,
+            "push_prompt_architecture_missing",
+            "push entry, writing, viewpoint, and review skills must link the shared speaker/emotion prompt architecture",
+        )
+    for required in PUSH_ROUTE_LOCK_REQUIREMENTS.get(skill, ()):
+        if required.lower() not in text.lower():
+            add(
+                findings,
+                "ERROR",
+                skill,
+                "push_route_lock_missing",
+                f"SKILL.md must preserve normalized sticky push routing token: {required}",
+            )
+
+    mode_requirements = PUSH_MODE_REFERENCE_REQUIREMENTS.get(skill, ())
+    if mode_requirements:
+        mode_file = skill_dir / "references" / "presentation-modes.md"
+        if not mode_file.exists():
+            add(findings, "ERROR", skill, "presentation_modes_missing", "references/presentation-modes.md is required")
+        else:
+            mode_text = mode_file.read_text(encoding="utf-8")
+            for required in mode_requirements:
+                if required.lower() not in mode_text.lower():
+                    add(
+                        findings,
+                        "ERROR",
+                        skill,
+                        "push_mode_lock_missing",
+                        f"presentation-modes.md must preserve push lock token: {required}",
+                    )
 
     for markdown in sorted(skill_dir.rglob("*.md")):
         if markdown == skill_md:
@@ -144,6 +305,9 @@ def audit_skill(skill_dir: Path) -> list[Finding]:
         source = markdown.relative_to(skill_dir).as_posix()
         if "\ufffd" in markdown_text:
             add(findings, "ERROR", skill, "replacement_character", f"{source} contains Unicode replacement characters")
+        for pattern in LEGACY_PUSH_DRIFT_PATTERNS:
+            if pattern in markdown_text:
+                add(findings, "ERROR", skill, "legacy_push_drift", f"{source} contains legacy push drift: {pattern}")
         for target in LINK_RE.findall(markdown_text):
             target = target.strip().strip("<>").split("#", 1)[0]
             if not target or target.startswith(("http://", "https://", "mailto:", "#")):

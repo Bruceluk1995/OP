@@ -6,24 +6,26 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Josei Fantasy Review
 
-Required global read: `../story/references/audience-comprehension-floor.md`. Treat title/genealogy/church/contract exposition without a visible accusation, choice, evidence move, or relationship consequence as structural failure.
+Required global reads: `../story/references/audience-comprehension-floor.md` and, for push, `../story/references/push-prompt-architecture.md` plus `../story/references/push-entertainment-gate.md`. Treat title/genealogy/church/contract exposition, technical state change without human collision, and a missing speaker/listener or emotional contract as structural failure.
 
 Review drafts for Japanese female-audience fantasy romance fit, localization quality, and emotional payoff.
 
 ## Native Blind-Reader Gate
 
 - Read the body before validator, package, blueprint, and author intention. Mark the earliest point where dignity, relationship recognition, heroine choice, zamaa, safety, or second-life desire stops pulling forward.
+- Compare the body with the locked speaker/listener and audience emotional contracts. Mark the first expanded module where the selected mouth disappears or the audience's pressure emotion/desired next action does not change.
 - Require heroine-caused consequences and a middle mechanism change. Repeated humiliation venues, documents, witnesses, public proof, etiquette and male-lead declarations cannot substitute for escalation.
 - For first person, review knowledge boundary, selected details, self-protective judgment and narrator mouth; pronoun correctness alone has no value.
 - Return the draft to `core / structure / scene / Japanese line`; romance prose, localization, or happy-ending labels cannot compensate for passive heroine structure.
 - Surface lint is optional subtitle-shape evidence only. Never require a turn at a fixed 6-10-line interval or call metric pass quality approval.
+- A strong opening cannot subsidize an event-log middle. Require memorable human choices, actions, refusals, recognition, or decisive voices after the opening.
 
 ## Required Reads
 
 - Read `references/review-checklist.md` before a full review.
 - Read `references/terminology.md` whenever checking Chinese-to-Japanese adaptation leakage.
 - Read `../jp-josei-fantasy-write/references/self-check.md` when reviewing saved episodes, project-bound output, per-episode folders, continuity, plot bugs, package completeness, or Chinese leakage.
-- Read `../story/references/flan-push-strict-mode.md` only when push-surface compliance is part of the review; its result is surface-only.
+- For every push review, read `../story/references/push-prompt-architecture.md`, `../story/references/push-entertainment-gate.md`, and `../story/references/push-retention-chain.md`. Read `../story/references/flan-push-strict-mode.md` when push-surface compliance is part of the review; its result is surface-only.
 - For every push review, read the selected viewpoint skill and its two push references: `../story-first-person-script/` for first person or `../story-third-person-script/` for third person.
 - Treat personality-free flowchart narration as blocking through the blind-reader/state-change audit, not a fixed line interval.
 - If the draft or outline names a lane, read the best available benchmark/type-pack material before judging genre fit: project拆文, live benchmark card, project-local `女频幻想恋爱知识库/type-packs/{lane}.md`, then bundled `../jp-josei-fantasy-plan/references/type-packs/{lane}.md` as fallback.
@@ -53,6 +55,14 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
    - First sentence is scenery, abstract emotion, destiny, quiet morning, or generic pain instead of a concrete social/emotional bomb.
    - Consecutive major modules lack a new heroine choice, consequence, relationship movement, social pressure, reversal, or audience question.
    - Declared third-person push narration is neutral chronology, repeated-name summary, head-hopping prose, crowd-reaction proof, or ordinary third-person scenes split into short lines.
+   - Declared push narration changes many documents, contracts, titles, skill rules, registries, or institutional states but remains a flowchart: roughly 200-400 characters pass without a consequential human desire, blocker, choice, refusal, loss, voice, status, or relationship change.
+   - Named companions, rivals, or the love interest function as evidence/solution modules rather than people with distinct desire, refusal, risk, choice, recognition, or decisive voice.
+   - A long social or romantic conflict is paraphrased entirely into neutral narration; no exact line, action, or refusal remains memorable after the opening.
+   - The title/central promise pays early without a stronger different promise remaining, or the final central payoff is followed by more than a short consequence/ending-proof tail containing new mechanisms, policy lists, another proof venue, another climax, or extended procedure.
+   - The script was drafted as subtitle shards rather than speech: clause-by-clause lines, audio-only ambiguity, connector stuffing, or the combined over-fragmentation diagnostic from the shared entertainment gate.
+   - First-person heroine selection/judgment disappears inside expanded modules, or third-person narrator stance becomes a neutral event inventory.
+   - Declared first-person push narration is a diary, scene transcript, pronoun-swapped web-novel passage, or a strong hook followed by biography/chronology.
+   - The saved-body retention/entertainment map is missing, uses outline intentions instead of exact anchors, places first proof/main conflict late without compensating live pressure, calls another humiliation/evidence venue a mechanism-changing reversal, cannot name five memorable post-opening lines/choices/actions, omits title-promise payoff position/post-final-payoff share, or fails the audio-only read.
 - A 12,000-character episode uses length to pad mood, scenery, beauty, sadness, etiquette, or adjectives; long stretches can be deleted without changing evidence, social pressure, relationship, romance, cost, setup, aftershock, or next choice.
    - Dense beats are not denser than transitions; the prose spends similar weight on etiquette/scenery/sadness and payoff.
    - Prose is padded with vague AI-flavored adjectives or summary paragraphs instead of documents, witnesses, choices, etiquette, contracts, and consequences.
@@ -73,6 +83,7 @@ Review drafts for Japanese female-audience fantasy romance fit, localization qua
    - Density gaps: paragraphs or stretches that can be deleted without changing social/emotional story state.
    - A concise fix plan.
    - Optional rewritten sample only for the affected paragraph unless the user asks for a full rewrite.
+   - For saved push work, complete the retention evidence map before any surface lint and report surface results as subtitle-shape evidence only.
 
 ## Review Stance
 

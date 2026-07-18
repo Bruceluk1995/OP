@@ -28,7 +28,7 @@ Explicit one-shot beats a generic “12,000字” or “YouTube” keyword. Expl
 
 If presentation, viewpoint, premise, and length are already clear, route immediately. Do not show a format or topic menu. Ask one compact question only when an essential choice would materially change the product.
 
-If the user or project has fixed the house format as Japanese-market anime-recap/push narration, propagate `presentation=push` to every downstream plan, write, one-shot, and review route. Do not ask the presentation question again and do not let first person imply traditional web-novel prose.
+Accept only the normalized handoff `presentation=<traditional|push>` and `viewpoint=<first|third>` from an upstream menu; raw menu code is not a downstream mode. If the user or project has fixed Japanese-market anime-recap/push narration, propagate `presentation=push` plus the selected viewpoint to every downstream plan, write, one-shot, and review route. Push is sticky until the user explicitly changes it. Do not ask the presentation question again, consult traditional mode as a competing authority, or let first person imply traditional web-novel prose. If the handoff is missing or ambiguous, ask instead of defaulting to traditional.
 
 For one-shots, the only required creative chain is:
 
@@ -39,7 +39,7 @@ Opening decks, random draws, trend routers, ledgers, delivery packages, surface 
 ## Japanese Male-Isekai Contract
 
 - Audience-facing prose is natural Japanese; planning notes may be Chinese.
-- Use Japanese RPG/light-novel mechanisms and social institutions, not translated xianxia/sect/court defaults.
+- Use Japanese RPG/fantasy mechanisms and social institutions, not translated xianxia/sect/court defaults. Any light-novel benchmark is genre/localization evidence only; it cannot override `presentation=push` or authorize traditional scene prose.
 - Match the promised lane: battle and OP stories need tactical/identity/faction consequences; slow-life stories need tangible comfort/relationship/safety change.
 - The protagonist's choices cause the plot. Enemies learn; allies are not applause devices.
 - A one-shot changes problem after first proof and closes in one file.
@@ -48,7 +48,7 @@ Opening decks, random draws, trend routers, ledgers, delivery packages, surface 
 
 Browse only when the user asks for current rankings, trends, news, YouTube/TikTok signals, or a live seed. Present dated candidates when the concrete seed is not delegated. Do not browse merely because the story targets Japan.
 
-Chinese male-audience novel rankings, category pages, tags, and public synopsis-level metadata may be used as an optional cross-market mechanism pool. Read `references/chinese-novel-inspiration.md` when that source is requested or selected. Label it as Chinese-market inspiration, never as proof of Japanese demand; rebuild the mechanism for Japanese RPG/light-novel institutions and cross-check it against current Japanese signals before claiming Japanese-market fit.
+Chinese male-audience novel rankings, category pages, tags, and public synopsis-level metadata may be used as an optional cross-market mechanism pool. Read `references/chinese-novel-inspiration.md` when that source is requested or selected. Label it as Chinese-market inspiration, never as proof of Japanese demand; rebuild the mechanism for Japanese RPG/fantasy institutions and cross-check it against current Japanese signals before claiming Japanese-market fit.
 
 ## Project Work
 

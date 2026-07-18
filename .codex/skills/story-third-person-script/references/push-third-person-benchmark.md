@@ -2,6 +2,8 @@
 
 Use this synthetic benchmark for anime recap/push narration. Learn functions, not wording.
 
+Read `../../story/references/push-prompt-architecture.md` before using it. The target example is written as natural spoken sentences; subtitle breaks come later. Do not copy its line length or wording as a format template.
+
 ## Reject: Third-Person Novel Scene Broken into Lines
 
 ```text
@@ -29,18 +31,15 @@ This reports chronology without causal pressure, narrator stance, tactical choic
 ## Target: Narrator-Led Third-Person Push
 
 ```text
-廃棄寸前の門を選んだ修理工は
-その場で勇者隊を追放された
-ところが一時間後
-無傷の聖剣では止められなかった魔王軍を
-救ったのはその腐った門だった
-修理工カイルに見えていたのは強度ではない
-門が壊れるまで残り四十七分
-だから彼は門を強くせず
-敵の初撃と同時に壊れるよう梁を削った
+廃棄寸前の門を選んだ修理工は、その場で勇者隊を追放された。
+ところが一時間後、無傷の聖剣では止められなかった魔王軍を救ったのは、その腐った門だった。
+修理工カイルに見えていたのは強度ではない。門が壊れるまで残り四十七分。
+だから彼は門を強くせず、敵の初撃と同時に壊れるよう梁を削った。
 ```
 
 The narrator leads with outcome, selects a practical contrast, compresses cause and result, and keeps the protagonist central without repeating his name.
+
+This short sample proves only the opening distinction. A full body must also clear `../../story/references/push-retention-chain.md`; one strong opening followed by biography or neutral chronology still fails.
 
 ## Stable-Label Test
 

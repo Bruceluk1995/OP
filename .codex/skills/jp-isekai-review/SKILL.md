@@ -6,24 +6,27 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 # JP Isekai Review
 
-Required global read: `../story/references/audience-comprehension-floor.md`. Treat RPG-jargon-first openings and abstract skill proof as structural failures, not localization polish.
+Required global reads: `../story/references/audience-comprehension-floor.md` and, for push, `../story/references/push-prompt-architecture.md` plus `../story/references/push-entertainment-gate.md`. Treat RPG-jargon-first openings, abstract skill proof, technical state change without human collision, and a missing speaker/listener or emotional contract as structural failures, not localization polish.
 
 Review drafts for Japanese male-audience isekai fit and localization quality.
 
 ## Native Blind-Reader Gate
 
 - Read the body once before validator, package, blueprint, and intended explanation. Mark the earliest point where the promised battle, OP, exile, dungeon, identity, or slow-life desire stops pulling forward.
+- Compare the body with the locked speaker/listener and audience emotional contracts. Mark the first expanded module where the selected mouth disappears or the audience's pressure emotion/desired next action does not change.
+- Compare the body with its high-value event scan. Mark the first routine/low-value event expanded too far, first high-value event rushed, and first repeated high-point function.
 - Require a protagonist-caused chain and a middle mechanism change. Repeated skill tests, guild witnesses, contracts, audits, inventory, travel, and larger public proof cannot substitute for escalation.
 - For first person, review knowledge boundary, selected details, practical judgment, and narrator mouth; pronoun correctness alone has no value.
 - Return the draft to `core / structure / scene / Japanese line` rather than compensating a structural failure with localization quality.
 - Surface lint is mandatory format evidence for saved push bodies and never a story-quality verdict. Never require hooks at fixed 6-10-line intervals or call a metric pass quality approval.
+- A strong opening cannot subsidize an event-log middle. Require memorable human choices, actions, refusals, or decisive voices after the opening.
 
 ## Required Reads
 
 - Read `references/review-checklist.md` before a full review.
 - Read `references/terminology.md` whenever checking Chinese-to-Japanese adaptation leakage.
 - Read `../jp-isekai-write/references/self-check.md` when reviewing saved episodes, project-bound output, per-episode folders, continuity, plot bugs, package completeness, RPG-rule consistency, or Chinese leakage.
-- For every declared push draft, read `../story/references/flan-push-strict-mode.md` and `../jp-isekai-write/references/push-narration-protocol.md`; for first person also read `../story-first-person-script/SKILL.md` and its push references; for third person read `../story-third-person-script/SKILL.md` and its push references.
+- For every declared push draft, read `../story/references/push-prompt-architecture.md`, `../story/references/push-entertainment-gate.md`, `../story/references/push-retention-chain.md`, `../story/references/flan-push-strict-mode.md`, and `../jp-isekai-write/references/push-narration-protocol.md`; for first person also read `../story-first-person-script/SKILL.md` and its push references; for third person read `../story-third-person-script/SKILL.md` and its push references.
 - Read `../jp-short-fiction-studio/references/dynamic-market-learning.md` when auditing topic selection or claims of Japanese-market validation.
 - Treat personality-free flowchart narration as blocking through the blind-reader/state-change audit, not a fixed line interval.
 - If the draft or outline declares a subtype lane, read the loaded project benchmark card or `对标/{lane}/` report first when available, then the matching `../jp-isekai-plan/references/type-packs/{lane}.md` as fallback, and review against that lane's required payoff loop.
@@ -38,6 +41,10 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
    - If the project house format is Japanese-market push narration, do not reopen platform or presentation selection.
 2. Check blocking issues first:
    - Two or more consecutive major scenes end with the same material state: no new skill knowledge, combat position, drop/resource, rank, reputation, territory, faction relation, risk, or objective. Mark the exact stagnant span and recommend merge/compression or a concrete state-changing beat.
+   - Push outline or body retells candidate events at uniform depth instead of selecting `expand / one-line bridge / cut`.
+   - Three consecutive beats are bridges, setup, explanation, routine dialogue, travel, or neutral chronology without a changed problem, choice, relation, status, rule, cost, or result.
+   - Adjacent high points repeat the same function—larger skill display, another witness, another rank, another enemy reaction—without changing information, relationship, tactic, choice, cost, or consequence.
+   - The strongest high point arrives early and the remaining body falls into flat summary instead of opening a different live question.
    - The episode advertises a monster/skill/OP/zamaa promise but only postpones it; a cliffhanger is not a substitute for visible proof, result, or consequence.
    - Project-bound draft has no matching `大纲/细纲_第XXX章.md`, or the prose clearly ignores the available outline.
    - Project-bound continuation did not read/update `追踪/上下文.md`, `追踪/伏笔.md`, `追踪/时间线.md`, or relevant `追踪/角色状态.md`.
@@ -55,8 +62,19 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
    - Episode 2+ opens as a reset instead of continuing the previous episode's unresolved hook.
    - First sentence is atmosphere, abstract emotion, destiny, scenery, or generic inner monologue instead of a concrete plot bomb.
    - Declared push narration is actually first-person web-novel scene prose, a dialogue transcript, diary narration, or ordinary prose split into short lines.
+   - Declared push narration is a uniformly compressed synopsis: it preserves low-value chronology while rushing conflict, reversal, relationship change, visual proof, costly choice, or payoff.
+   - Declared push narration changes many rules, routes, pipes, contracts, skills, registries, or institutional states but remains a flowchart: roughly 200-400 characters pass without a consequential human desire, blocker, choice, refusal, loss, voice, status, or relationship change.
+   - Named companions function as skill modules or assigned solution steps rather than people with distinct desire, refusal, risk, choice, or decisive voice.
+   - A long human conflict is paraphrased entirely into neutral narration; no exact line, action, or refusal remains memorable after the opening.
+   - The title/central promise pays early without a stronger different promise remaining, or the final central payoff is followed by more than a short consequence/ending-proof tail containing new mechanisms, policy lists, another test, another climax, or extended procedure.
+   - The script was drafted as subtitle shards rather than speech: clause-by-clause lines, audio-only ambiguity, connector stuffing, or the combined over-fragmentation diagnostic from the shared entertainment gate.
+   - First-person selection/judgment disappears inside expanded modules, or third-person narrator stance becomes a neutral event inventory.
    - Declared third-person push narration is neutral chronology, repeated-name summary, head-hopping prose, crowd-reaction proof, or ordinary third-person scenes split into short lines.
+   - The saved-body retention map is missing, uses outline intentions instead of exact anchors, places first proof/main conflict late without compensating live pressure, or calls a scale increase a mechanism-changing reversal.
    - Consecutive major modules lack a new problem, choice, tactic, consequence, relationship/status change, or audience question.
+   - Narration only repeats what the imagined image shows and adds no cause, judgment, implication, contrast, or consequence.
+   - A closed one-shot imports a generic next-episode tease, or a serialized cliff hides information the narrator already knows instead of introducing a concrete new event.
+   - A blind editor cannot name five memorable post-opening lines, choices, or actions, identify title-promise payoff position/post-final-payoff share, or pass the audio-only read, yet labels the body ready.
 - A 12,000-character episode uses length to pad mood, scenery, travel, explanation, or adjectives; long stretches can be deleted without changing plot, pressure, relationship, cost, reward, setup, aftershock, or next choice.
    - Dense beats are not denser than transitions; the prose spends similar weight on travel/mood and payoff.
    - Prose is padded with vague AI-flavored adjectives or summary paragraphs instead of scene-level objects, choices, witnesses, and consequences.
@@ -79,7 +97,7 @@ Review drafts for Japanese male-audience isekai fit and localization quality.
    - Density gaps: paragraphs or stretches that can be deleted without changing plot state.
    - A concise fix plan.
    - Optional rewritten sample only for the affected paragraph unless the user asks for a full rewrite.
-   - For every saved push body, run the Flan validator. Treat `surface_fail` as a blocking presentation finding and `surface_pass` as surface-only evidence.
+   - For every saved push body, complete the retention evidence map before running the Flan validator. Treat `surface_fail` as a blocking presentation finding and `surface_pass` as surface-only evidence; the validator never sets delivery ready.
 
 ## Review Stance
 

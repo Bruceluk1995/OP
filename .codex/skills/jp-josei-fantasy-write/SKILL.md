@@ -15,11 +15,11 @@ recent history cannot replace this gate.
 
 Required global read: `../story/references/audience-comprehension-floor.md`. Apply its plain-core and five-line gates before opening selection, drafting, rewriting, and packaging.
 
-Write Japanese web-novel prose for female-audience fantasy romance. Use this for audience-facing scenes, chapters, rewrites, and localization.
+Write Japanese-market female-audience fantasy romance in the selected traditional-prose or anime-recap/push presentation. Use this for audience-facing scenes, chapters, scripts, rewrites, and localization.
 
 ## Execution Profiles
 
-- **Fast draft (default):** read the current outline/context and matching lane material; draft through heroine choice and relationship change, blind-edit, and save the requested body. Skip unrelated menus, cards, packages, ledgers, and lint.
+- **Fast draft (default):** read the current outline/context and matching lane material; draft through heroine choice and relationship change, blind-edit, and save the requested body. Skip unrelated menus, cards, packages, and ledgers; a saved push body still requires its surface lint after editorial release.
 - **Full project:** retain project memory, tracking, ledger, delivery package, character prompts, cover, and self-check capabilities below.
 - **Research/variation:** retain live market sources, benchmarks, type packs, and optional opening-card experiments when requested.
 
@@ -28,7 +28,8 @@ Choose one profile. Capabilities remain available without becoming simultaneous 
 ## Conditional Capability Reads
 
 - Read `../jp-josei-fantasy/references/presentation-modes.md` only when presentation/viewpoint is unclear or comparison is requested.
-- Read `../story/references/flan-push-strict-mode.md` only for push formatting; its script is optional surface lint, never a quality verdict.
+- Read `../story/references/push-prompt-architecture.md`, `../story/references/push-entertainment-gate.md`, and `../story/references/push-retention-chain.md` whenever push narration is selected. Lock the speaker/listener contract, audience emotional contract, human-collision/payoff shape, and retention chain before prose; complete the adversarial read and saved-body evidence map before release.
+- Read `../story/references/flan-push-strict-mode.md` only for push formatting; its script is mandatory surface lint for a saved push body and never a quality verdict.
 - For first-person push, read `../story-first-person-script/SKILL.md` and both push references. For third-person push, read `../story-third-person-script/SKILL.md` and both push references. The selected viewpoint gate decides release before surface lint.
 - Read `../jp-josei-fantasy/references/push-opening-template-deck.md` only for an explicit card experiment or when the opening needs variation.
 - Read `references/style-guide.md` for full-project work or style repair; the fast profile uses the studio editorial core.
@@ -64,8 +65,10 @@ Choose one profile. Capabilities remain available without becoming simultaneous 
    - Preserve the selected lane's payoff loop. Do not flatten craft, saintess, villainess, contract marriage, palace-family, interspecies, loop, or strong-heroine stories into generic court romance.
    - For a long target, add a new heroine choice, relationship turn, opponent adaptation, cost, or consequence. Do not extend one conclusion through more venues or proof scenes.
    - End with a romance question, social threat, witness, document, or next-stage proof.
-4. Write in Japanese prose:
-   - Reject literary prose: use colloquial, direct everyday language; avoid long scenery/environment blocks and long psychology/inner-monologue blocks. Push each paragraph through action, dialogue, choice, evidence, romance movement, or social consequence.
+4. Write in the selected Japanese presentation:
+   - Traditional: use colloquial, direct web-novel prose with natural scenes and paragraphs.
+   - Push: use the selected viewpoint contract and shared entertainment/retention chain; sustain the stop hook through three distinct opening pressures, reach proof/conflict before setup drains the hook, expand human collision instead of document/procedure changes, compress routine movement, draft natural spoken sentences before subtitle splitting, and end each module on changed relationship/social facts plus live pressure.
+   - In both, reject literary padding: avoid long scenery/environment blocks and long psychology/inner-monologue blocks. Push each unit through action, dialogue, choice, evidence, romance movement, or social consequence.
    - Use natural Japanese paragraphing and dialogue.
    - Let status, rank, magic, and setting emerge through action and social behavior.
    - Make `溺愛` visible through concrete choices: protection, listening, resources, public acknowledgement, remembering details.
@@ -82,9 +85,9 @@ Choose one profile. Capabilities remain available without becoming simultaneous 
    - Update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
    - Add one record to `女频幻想恋爱知识库/generated-ledger.jsonl` with heroine, wound, romance, pressure, proof, venue, aftertaste, and saved path.
 8. Validate:
-   - In push mode, clear the selected first- or third-person quality gate before surface lint. A failed editorial gate blocks delivery even if the surface validator passes.
-   - In strict push-surface work, optionally run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`. A `surface_fail` blocks only the requested surface format; `surface_pass` never approves story quality.
-   - After the script passes, run the strict profile's manual retention/payoff audit. Short-line plot summary without evidence, choice, emotional, social, status, or romance movement still blocks delivery. Jokes and comedy are optional, not a female-push requirement.
+   - In push mode, complete the shared entertainment adversarial read and saved-body retention evidence map and clear the selected first- or third-person quality gate before surface lint. Function-only characters, paraphrase-only conflict, early payoff with a long tail, flowchart narration, or subtitle-shard drafting blocks delivery even if the surface validator passes.
+   - For every saved push body, run `python .codex/skills/story/scripts/validate-flan-push.py --body <saved-body> --person <first|third>`. A `surface_fail` blocks the requested push format; `surface_pass` never approves story quality and `delivery_ready_from_this_tool` remains false.
+   - The script runs only after the manual retention/payoff audit. Short-line plot summary without evidence, choice, emotional, social, status, or romance movement still blocks delivery. Jokes and comedy are optional, not a female-push requirement.
    - Audit every major scene as `entry state -> pressure/choice -> exit state`. At least one of evidence, public reputation, safety, legal/family position, resources, romantic trust, social status, risk, or next choice must change. Repeated sadness, etiquette, beauty, misunderstanding, or consolation without a state delta must be compressed or rewritten.
    - Verify the episode's advertised romance/zamaa/tag promise is paid or materially advanced, and that the ending threat follows from the heroine's new state rather than resetting her progress.
    - Count Japanese characters with Python.
