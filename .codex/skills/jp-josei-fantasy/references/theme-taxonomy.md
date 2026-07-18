@@ -11,17 +11,38 @@ These are editorial routing labels, not official platform genre names and not a 
 3. 圣女、魔女与职业女主
 4. 契约结婚、溺爱与身份差恋爱
 5. 边境、领地经营与慢生活
-6. 王宫、家庭与异类／特殊关系
+6. 王宫、继承与异类／特殊关系
 7. Evidence Index
 
 ## Interaction Contract
 
 1. Inherit the broad category already selected in `hot-source-router.md`; do not show the six-category screen again.
-2. Show only that locked category's seven numbered subgenres below. Do not show story premises yet.
+2. Show only that locked category's available numbered subgenres below. Do not show story premises yet; category 6 intentionally has six entries.
 3. Ask the user to choose one primary subgenre. Accept at most two secondary flavors, but keep one primary heroine/relationship engine explicit.
 4. After the subgenre choice, return normalized `broad_category` and `subgenre` to `hot-source-router.md`, then show its five-option creation-entry menu. Do not generate premises yet.
 5. Every later live, classic, fresh, keyword, or automatic route must stay inside this locked subgenre unless the user explicitly switches it.
 6. Never copy a source title, character, signature proof object, scene order, or named plot. The pages below prove that a subgenre exists; they are not adaptation targets.
+
+## Automatic Adult-Romance Gate
+
+Apply this hard gate to every automatic or unattended recommendation for the female-romance channel:
+
+- Keep both the heroine and the primary love interest adult. The title, opening promise, main pressure, climax, and ending payoff must be driven by their romantic choice, dignity, reputation, or shared future.
+- Do not present, recommend, or auto-select childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan rescue, single-parent reunion, or family-reconstruction premises. A minor may appear only incidentally and may not carry the title hook, emotional center, central choice, climax, or payoff.
+- Run the romance-removal test: if removing the adult love interest leaves the premise, climax, and ending substantially intact, reject or rebuild the candidate. Career, territory, inheritance, church proof, loops, battle, found family, and social reform cannot substitute for the adult romance engine.
+- Trusted channel-performance feedback overrides generic platform evidence. A lane or premise pattern marked as low-performing remains ineligible for automatic selection until the user explicitly re-enables it.
+- An explicit user-supplied request may be handled outside this automatic menu, but do not describe an excluded premise as the recommended market choice for this channel.
+
+### Conditional-risk subgenres
+
+The following remain valid Japanese female-fantasy subgenres but are support-engine heavy and must not be auto-selected unless the adult romance visibly changes the midpoint and climax:
+
+- 職人・店・研究・料理 and other job-competence lanes: reject shop or career success followed by an optional romantic reward.
+- 領地経営・村づくり・現代知識・共同体スローライフ・もふもふ／従魔: reject territory, community, food, pet, or creature bonding as the emotional center; the adult couple's shared decision must carry the climax.
+- 王宮・継承・家督・財産: reject document/legal victory with an epilogue pairing; the love interest must take a costly action that changes the heroine's legal/social options.
+- 聖女 proof, loops, and strong-heroine/action lanes: reject institutional proof, tragedy prevention, or battle victory that resolves without adult romantic trust or re-choice.
+
+These are conditional, not default automatic fallbacks. When current evidence is thin or channel fit is unknown, prefer an adult relationship-led lane such as 婚約破棄, 悪役令嬢 romance, 契約結婚, 辺境伯／溺愛, すれ違い恋愛, or explicit adult interspecies marriage.
 
 ## 1. 婚约破弃、追放与ざまぁ
 
@@ -93,19 +114,18 @@ Present:
 
 Boundary: slow life is a reader promise. Repeated payoff must be home, food, useful work, safety, companionship, family, or community. Conflict may test that life but must not replace it with palace trials, war, or power scaling. Category 3 owns career-proof stories; category 5 owns the life and community built through that work.
 
-## 6. 王宫、家庭与异类／特殊关系
+## 6. 王宫、继承与异类／特殊关系
 
 Present:
 
 1. 後宮・妃候補・女官から始まる恋 — 在后宫、王妃选拔或女官职责中处理权力与亲密关系
 2. 隠し王族・出生の秘密・身分逆転 — 隐藏血统或身份曝光改变女主的选择与婚姻位置
 3. 継承・家督・財産をめぐる王宮／家族劇 — 围绕继承、家主、嫁妆或财产展开制度和感情冲突
-4. 継母・子育て・契約親・家族再生 — 与没有血缘的孩子或破碎家庭建立真实归属
-5. 魔王・勇者・敵対陣営ロマンス — 敌对身份之间通过共同目标和价值选择建立关系
-6. 竜人・獣人・番・異種族婚 — 以种族习俗、番制度或寿命差考验双方同意与理解
-7. 神・精霊・妖・人外との婚姻 — 与神灵、精灵、妖怪或其他非人存在形成跨规则关系
+4. 魔王・勇者・敵対陣営ロマンス — 敌对身份之间通过共同目标和价值选择建立关系
+5. 竜人・獣人・番・異種族婚 — 以种族习俗、番制度或寿命差考验双方同意与理解
+6. 神・精霊・妖・人外との婚姻 — 与神灵、精灵、妖怪或其他非人存在形成跨规则关系
 
-Boundary: explain the relationship rule through an ordinary choice, not a genealogy lecture. Culture, lifespan, family, succession, or instinct may create pressure, but consent and the heroine's future remain explicit.
+Boundary: explain the relationship rule through an ordinary adult romantic choice, not a genealogy lecture. Culture, lifespan, adult-family conflict, succession, or instinct may create pressure, but consent and the heroine's shared future with the love interest remain explicit. Do not convert inheritance or palace pressure into a child-custody, parenting, or guardian-selection story.
 
 ## Combination Rule
 
@@ -137,7 +157,6 @@ Representative official-site evidence for category 4:
 - Kakuyomu: [白い結婚から契約妻の溺愛へ](https://kakuyomu.jp/works/16818622175632402614)
 - Kakuyomu: [契約結婚と年上公爵の溺愛](https://kakuyomu.jp/works/16818093078178545182)
 - Kakuyomu: [年の差・すれ違いから過保護な愛へ](https://kakuyomu.jp/works/16817330656565597364)
-- 小説家になろう: [白い結婚・後見・領地経営・家族再生](https://ncode.syosetu.com/n6460mg/)
 
 Representative official-site evidence for category 5:
 
@@ -149,6 +168,5 @@ Representative official-site evidence for category 5:
 Representative official-site evidence for category 6:
 
 - Kakuyomu: [元女官が妃候補になる後宮恋愛](https://kakuyomu.jp/works/16816700427753566349)
-- Kakuyomu: [悪役令嬢の継母転生と子育て](https://kakuyomu.jp/works/16816452218472266922)
 - Kakuyomu: [獣人国での異種族婚](https://kakuyomu.jp/works/16817330653474811194)
 - 小説家になろう: [海に捨てられた王女と竜王の番](https://ncode.syosetu.com/n2453hv/)

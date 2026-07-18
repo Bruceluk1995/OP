@@ -7,11 +7,12 @@ This router maps a hot seed to a Japanese female-audience fantasy romance engine
 ## Routing Protocol
 
 1. Score the seed with the matching hot-source reference before route selection.
-2. Extract the reusable female-audience function: humiliation, public accusation, family wound, unfair rule, hidden cost, ceremony, contract, proof object, care desire, letter/message failure, comfort/home desire, status gap, stolen credit, pursuit/redemption pressure, identity reversal, or relationship recognition.
+2. Extract the reusable adult female-audience function: humiliation, public accusation, adult-family wound, unfair rule, hidden cost, ceremony, contract, proof object, romantic care desire, letter/message failure, couple/home desire, status gap, stolen credit, pursuit/redemption pressure, identity reversal, or relationship recognition.
 3. Reject direct use of real people, scandals, crime, tragedy, political rage bait, copyrighted franchise plots, creator jokes, songs, or exact video scenes.
-4. Choose one primary josei route and one backup route.
-5. Convert the seed into a heroine wound plus proof/romance mechanism that fits the primary route.
-6. Run the ledger check with `trend_seed`, `josei_route`, `heroine_wound`, `proof_object`, `male_lead_recognition`, and `payoff_engine` before drafting when a ledger exists.
+4. Reject childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan rescue, single-parent reunion, and family-reconstruction conversions for automatic female-channel work. Apply trusted channel-performance vetoes before route selection.
+5. Choose one primary josei route and one backup route.
+6. Convert the seed into an adult heroine wound plus proof/romance mechanism that fits the primary route, then run the romance-removal test.
+7. Run the ledger check with `trend_seed`, `josei_route`, `heroine_wound`, `proof_object`, `male_lead_recognition`, and `payoff_engine` before drafting when a ledger exists.
 
 ## Josei Routes
 
@@ -23,7 +24,7 @@ This router maps a hot seed to a Japanese female-audience fantasy romance engine
 | `contract-marriage-white-marriage` | hidden fees, contracts, weddings, cohabitation, practical care, deadline | cold contract -> shared problem -> mutual care/proof -> public choosing |
 | `beloved-duke-frontier` | weather, shelter, home repair, food/care, cursed person, remote place | rejected heroine -> feared home/manor -> competence and care -> safe belonging |
 | `craft-job-competence` | food, prices, work skill, before/after, room/shop transformation, product proof | mocked work -> visible result -> stolen credit exposed -> love respects her craft |
-| `palace-family-inheritance` | money, inheritance, dowry, family exploitation, records, property conflict | family wound -> ledger/legal proof -> chosen family or lawful shelter -> status restoration |
+| `palace-family-inheritance` | money, inheritance, dowry, adult-family exploitation, divorce/remarriage pressure, records, property conflict | adult heroine's legal wound -> ledger/legal proof -> romantic alliance and lawful independence -> status restoration |
 | `time-loop-foreknowledge` | deadlines, travel delays, repeated failure, "if only I knew", bad-ending anxiety | memory/loop -> changed action -> suspicious ripple -> tragedy prevention and chosen love |
 | `monster-demon-interspecies-romance` | animals, pets, monsters, culture gap, misunderstood outsider, rescue | feared being/creature trusts heroine -> cultural rule -> acceptance proof -> protective devotion |
 | `strong-heroine-status-gap` | sports, trials, public tests, action, underestimated competence | status gap -> public challenge -> heroine acts -> honored recognition |
@@ -32,6 +33,7 @@ This router maps a hot seed to a Japanese female-audience fantasy romance engine
 ## Selection Bias
 
 - Prefer routes that create heroine agency plus public proof. A trend is not enough if the heroine only receives rescue.
+- Reject any route whose adult romance can be removed while leaving the premise, climax, and ending intact. This especially applies to territory management, shop/craft, palace inheritance, loops, church procedure, and action-heavy seeds.
 - For romance-heavy requests, prefer `contract-marriage-white-marriage`, `beloved-duke-frontier`, `letter-misunderstanding-comedy`, or `monster-demon-interspecies-romance`.
 - For revenge/catharsis requests, prefer `engagement-annulment-zamaa`, `saint-replacement-church`, `palace-family-inheritance`, or `craft-job-competence`.
 - For video hooks with visible before/after, prefer `craft-job-competence`, `beloved-duke-frontier`, or `engagement-annulment-zamaa`.

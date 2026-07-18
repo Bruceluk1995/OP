@@ -10,7 +10,7 @@ Use hot works only as structural references: contract clause, forced proximity, 
 
 - The relationship starts with explicit terms: duration, no love, heir issue, debt, reputation repair, curse cure, estate management, or political cover.
 - Every episode should pressure one clause of the contract.
-- The heroine's value appears through household work, negotiation, healing, accounts, etiquette, child care, territory management, or emotional steadiness.
+- The heroine's value appears through household work, negotiation, healing, accounts, etiquette, territory management, or emotional steadiness.
 - The male lead's love grows through specific recognition: he changes a rule, protects her status, remembers a detail, or lets her into a guarded space.
 - The payoff is the shift from "contract obligation" to "chosen partner".
 
@@ -37,3 +37,4 @@ Use hot works only as structural references: contract clause, forced proximity, 
 - Instant溺愛 with no forced-proximity ladder.
 - Contract terms that never matter.
 - Making the heroine a household saint with no personal desire.
+- Turning contract marriage into a step-parenting, childcare, custody, adoption, guardian, or family-reconstruction story whose adult romance is optional.

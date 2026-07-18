@@ -22,6 +22,7 @@ Create this working blueprint before prose:
 - Previous-episode bridge: final event / unresolved evidence / carried document or promise / current location / public pressure
 - Episode promise: what the viewer expects to see paid off
 - Core payoff: evidence / heroine choice / male-lead recognition / social reversal / legal or family consequence / tenderness beat
+- Adult-romance necessity: what the love interest does that materially changes the heroine's risk, available action, climax, and chosen future
 - Cost or risk: reputation loss / family threat / contract term / curse damage / public shame / lost protection
 - Ending hook: next witness, document, accusation, romantic question, or public choice
 
@@ -94,7 +95,7 @@ When a plan names a subtype lane, every episode must carry that lane's engine at
 - Contract marriage: contract clause, household proof, forced-proximity pressure, rule change, or public spouse recognition.
 - Frontier/duke: old rejection, new-home problem, estate consequence, protective respect, or home choice.
 - Craft/job: named product or service, customer proof, money/reputation/access change, or romance through work respect.
-- Palace/family/inheritance: record, will, ledger, child/stepfamily bond, palace office pressure, or legal correction.
+- Palace/adult-family/inheritance: record, will, ledger, marriage/property pressure, palace office pressure, consequential romantic alliance, or legal correction. Do not introduce child, parenting, custody, adoption, or guardianship engines.
 - Loop/foreknowledge: known flag, changed choice, unexpected ripple, trust decision, or hidden-cause evidence.
 - Monster/demon/dragon romance: interspecies rule, culture misunderstanding, nonhuman tenderness, ritual/public choice, or human-side threat.
 - Strong heroine/status gap: visible action, status pressure, risk, male-lead respect for capability, or public re-evaluation.
@@ -136,6 +137,7 @@ Before delivering:
 - Long stretches without a concrete beat, setup, consequence, choice, romantic/social pressure change, or public-position change are cut or rewritten.
 - Dense beats are visibly denser than transitions.
 - At least one evidence/romance/status consequence lands on the page.
+- The adult love interest is indispensable under the romance-removal test; removing that character breaks the central conflict, climax, and ending rather than only deleting an epilogue pairing.
 - The final paragraph points to the next episode through a specific witness, document, accusation, romantic question, or public choice.
 - Body prose contains no production metadata leakage. `第N話` may appear in title headings, but not in narration or dialogue.
 - Count and report the saved prose against the approximately 12,000-character target. If short, add only a genuinely new heroine choice, relationship turn, opponent adaptation, cost, or consequence; otherwise disclose the shortfall. Do not treat length as a pass range.

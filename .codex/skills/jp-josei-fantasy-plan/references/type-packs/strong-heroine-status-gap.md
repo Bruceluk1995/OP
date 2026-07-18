@@ -36,3 +36,4 @@ Use hot works only as structural references: action proof, status gap pressure, 
 - Action that removes romance and social consequence.
 - "Strong heroine" who only talks sharply but makes no costly choice.
 - Status gap that is solved by one declaration.
+- A battle or competence climax that leaves the adult partnership as an optional epilogue reward.

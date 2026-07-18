@@ -16,6 +16,8 @@ Required global read: `../story/references/audience-comprehension-floor.md`. Rej
 
 Build Japanese-style female-audience fantasy romance plans. This skill is for concept, market fit, emotional structure, and chapter beats, not final prose.
 
+For automatic or unattended female-channel planning, enforce an adult-romance-first contract before all other planning: both leads are adults; their relationship drives the title promise, central conflict, climax, and ending; and removing the love interest must break the story. Reject childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan-rescue, single-parent-reunion, and family-reconstruction premises. Trusted channel-performance feedback is a hard veto, not a soft score.
+
 ## Execution Profiles
 
 - **Fast concept (default):** use this skill's heroine-choice workflow and one matching type pack only when needed. Return a compact change outline.
@@ -54,7 +56,7 @@ Type pack routing:
 - 契約結婚 / 白い結婚 / political marriage / forced proximity -> `references/type-packs/contract-marriage-white-marriage.md`
 - 溺愛公爵 / 辺境伯 / cursed duke or prince / new home -> `references/type-packs/beloved-duke-frontier.md`
 - 職人 / shop / craft / magic tool / job competence -> `references/type-packs/craft-job-competence.md`
-- 王宮 / family coldness / inheritance / stepfamily / divorce or remarriage -> `references/type-packs/palace-family-inheritance.md`
+- 王宮 / adult family coldness / inheritance / divorce or mature remarriage -> `references/type-packs/palace-family-inheritance.md`
 - ループ / やり直し / foreknowledge / tragedy prevention -> `references/type-packs/time-loop-foreknowledge.md`
 - 魔王 / 勇者 / 竜人 / interspecies marriage / culture-gap romance -> `references/type-packs/monster-demon-interspecies-romance.md`
 - 強いヒロイン / status gap / exile action romance -> `references/type-packs/strong-heroine-status-gap.md`
@@ -72,6 +74,8 @@ Benchmark priority:
 
 If the premise is missing, lock the broad category and subgenre, complete the creation-entry gate, and obtain a concrete selected or delegated premise before step 1. Live-source discovery is limited to the rolling 24-hour JST window across every source. Then resolve presentation/viewpoint and continue this workflow.
 
+Before step 1, run the adult-romance gate and romance-removal test from `../jp-josei-fantasy/references/theme-taxonomy.md`. Do not let a high-ranked child/family item, one platform hit, or abstract shared function override the exclusion or channel feedback.
+
 1. Resolve presentation/viewpoint only when missing. For push mode, plan the matching narrator contract: first-person mouth and knowledge boundary, or third-person narrator stance, stable labels, selective reactions, knowledge boundary, and heroine-caused choices. Use an opening card only in the optional variation profile.
 2. Choose the central promise:
    - `婚約破棄 -> ざまぁ -> higher-status love`
@@ -82,7 +86,7 @@ If the premise is missing, lock the broad category and subgenre, complete the cr
    - `追放 / frontier -> slow life -> competence and beloved place`
    - `loop -> tragedy prevention -> chosen happiness`
    - `craft/job false evaluation -> product proof -> respected work and love`
-   - `palace/family/inheritance wound -> record proof -> chosen family`
+   - `palace/adult-family/inheritance wound -> record proof -> lawful independence and chosen adult partnership`
    - `monster/demon/dragon marriage -> culture rule -> accepted bond`
    - `strong heroine/status gap -> action proof -> honored love`
    - `hot trend / video / news seed -> emotion or social rule -> josei fantasy proof and romance route`
@@ -95,6 +99,7 @@ If the premise is missing, lock the broad category and subgenre, complete the cr
    - Rank or social force: prince, duke, frontier count, knight captain, cursed emperor, mage, black knight.
    - First value to the heroine: safety, fair evaluation, legal shelter, practical partnership, emotional respect.
    - Private vulnerability and public choosing scene.
+   - Verify that his choices materially change the heroine's risk, available action, climax, and future; if he is removable, the premise is not ready.
 5. Build a clean antagonist system:
    - Antagonists should expose themselves through greed, lies, abuse, class arrogance, stolen credit, or political overreach.
    - Ensure the punishment follows social/legal logic, not author fiat.
