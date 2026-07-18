@@ -14,7 +14,7 @@ When the user wants current market fit or when no strong project benchmark exist
 - Exile to home-building: banishment becomes the place where she gains money, allies, and belonging.
 - Loop or foreknowledge: the heroine uses known tragedy to avoid flags and choose agency.
 - Craft/job competence: the heroine proves value through a visible product, service, account, magic tool, or shop result.
-- Palace/adult-family/inheritance pressure: domestic records, wills, marriage law, divorce/remarriage, and office work drive the reversal while the adult romantic partnership remains indispensable.
+- Palace/family/inheritance pressure: domestic records, wills, marriage law, divorce/remarriage, and office work drive the reversal while the primary romantic relationship remains indispensable.
 - Interspecies romance: demon, dragon, monster, or hero/enemy romance pays through culture rules and public acceptance.
 - Strong heroine/status gap: capability is misread as improper, then publicly honored.
 - Letter/misunderstanding comedy: a concrete message object creates action, social embarrassment, and sincere re-choice.
@@ -29,7 +29,7 @@ If the user only says "女频" or "日本女频幻想恋爱", offer a compact ch
 - 契約結婚/白い結婚: forced proximity, household proof, slow devotion.
 - 辺境伯/溺愛公爵: exile to new home, protective romance, estate healing.
 - 職人/店铺/仕事チート: product proof, reputation economy, practical romance.
-- 王宮/相続/成人家族劇: domestic legal pressure, office competence, lawful independence, adult romantic alliance.
+- 王宮/相続/家族劇: domestic legal pressure, office competence, lawful independence, romantic alliance.
 - ループ/やり直し: tragedy prevention, flags, changed timeline.
 - 魔王/竜人/異類婚姻: culture-gap romance, feared spouse, acceptance.
 - 強いヒロイン/身分差: action proof plus social recognition.
@@ -48,7 +48,8 @@ If the user only says "女频" or "日本女频幻想恋爱", offer a compact ch
 ## Automatic Selection Guardrail
 
 - Exclude childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan rescue, single-parent reunion, and family reconstruction from automatic female-channel selection.
-- Reject any craft, slow-life, inheritance, loop, church, or action premise that still works after removing the adult love interest.
+- Do not impose an adults-only filter. Academy-age, youthful-engagement, villainess/otome-game, and coming-of-age romance remain valid when age-appropriate.
+- Reject any romance-labeled craft, slow-life, inheritance, loop, church, or action premise that still works after removing the primary relationship.
 - Treat trusted channel underperformance as stronger evidence than generic platform popularity until the user explicitly re-enables that pattern.
 
 ## Zamaa Guardrails

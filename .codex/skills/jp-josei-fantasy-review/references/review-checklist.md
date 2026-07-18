@@ -7,8 +7,9 @@ Use this for Japanese female-audience fantasy romance reviews.
 - The draft uses Chinese cultivation, sect, dan medicine, or Chinese palace terms without explicit user request.
 - The heroine has no agency and only waits for rescue.
 - The romance is generic: the male lead loves her because the plot says so, not because he observes specific value.
-- For automatic or unattended female-channel work, either lead is a minor, or childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan rescue, single-parent reunion, or family reconstruction is the title hook, central pressure, climax, or payoff.
-- Removing the adult love interest leaves the premise, climax, and ending substantially unchanged; career, territory, inheritance, church proof, loops, action, or social reform has replaced the romance engine.
+- For automatic or unattended female-channel work, childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan rescue, single-parent reunion, or family reconstruction is the title hook, central pressure, climax, or payoff. Do not fail a work from school-age or youthful leads alone.
+- A school-age or youthful romance is sexualized, lacks developmental parity, or turns an exploitative adult/minor power gap into romantic payoff.
+- Removing the primary love interest leaves the premise, climax, and ending substantially unchanged; career, territory, inheritance, church proof, loops, action, or social reform has replaced the romance engine.
 - `ざまぁ` lacks evidence, public consequence, or social/legal logic.
 - The opening does not show the tag promise early enough.
 - The prose drifts into literary style: long scenery, long psychology, decorative atmosphere, vague beauty, or essay-like inner monologue instead of direct action, dialogue, evidence, and consequence.

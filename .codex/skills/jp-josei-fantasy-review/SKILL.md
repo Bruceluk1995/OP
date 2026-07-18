@@ -10,7 +10,7 @@ Required global reads: `../story/references/audience-comprehension-floor.md` and
 
 Review drafts for Japanese female-audience fantasy romance fit, localization quality, and emotional payoff.
 
-For automatic or unattended female-channel output, treat adult-romance centrality as blocking. Both leads must be adults; childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan-rescue, single-parent-reunion, and family-reconstruction premises are ineligible. If removing the adult love interest leaves the title promise, central conflict, climax, and ending substantially intact, fail the draft and return it to replanning.
+For automatic or unattended female-channel output, treat age-appropriate relationship and channel fit as blocking. Do not require adult leads: academy-age romance, youthful engagement, villainess/otome-game routes, and coming-of-age relationships remain valid. Childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan-rescue, single-parent-reunion, and family-reconstruction premise engines are ineligible. If removing the primary love interest leaves a romance-labeled title promise, central conflict, climax, and ending substantially intact, fail the draft and return it to replanning.
 
 ## Native Blind-Reader Gate
 
@@ -48,8 +48,9 @@ For automatic or unattended female-channel output, treat adult-romance centralit
    - Chinese fantasy institutions, xianxia terms, or Chinese sentence logic leaking into a Japanese fantasy-romance setting.
    - Chinese court-drama institutions or social logic leaking through literal translation: emperor/harem/cold-palace/concubine/嫡庶/夺嫡 logic remains instead of Japanese noble, church, court, or social-season mechanisms.
    - Male-audience progression systems overpowering romance and dignity recovery.
-   - A minor, child-parent bond, custody/guardianship choice, parenting task, or family reconstruction carries the title hook, emotional center, climax, or payoff while the adult romance is secondary.
-   - The adult love interest can be removed without materially changing the heroine's pressure, climax, ending, and chosen future; career, territory, inheritance, church proof, loops, battle, or social reform has replaced the romance engine.
+   - A child-parent bond, custody/guardianship choice, parenting task, or family reconstruction carries the title hook, emotional center, climax, or payoff while the promised romance is secondary. Age alone is not a failure.
+   - A school-age or youthful romance is sexualized, ignores developmental parity, or uses an exploitative adult/minor power relationship as automatic romantic payoff.
+   - The primary love interest can be removed without materially changing the heroine's pressure, climax, ending, and chosen future; career, territory, inheritance, church proof, loops, battle, or social reform has replaced the romance engine.
    - Passive heroine who only waits to be rescued.
    - Male lead's love reads as generic possession rather than specific recognition.
    - Zamaa payoff lacks evidence, social logic, or emotional clarity.
@@ -77,7 +78,7 @@ For automatic or unattended female-channel output, treat adult-romance centralit
    - Clear heroine wound and agency.
    - Tag promise appears early.
    - Romantic tension grows through action, not only declarations.
-   - Adult romance is indispensable under the romance-removal test and appears in both the central pressure and climax, not only the epilogue.
+   - The primary romance is indispensable under the romance-removal test and appears in both the central pressure and climax, not only the epilogue.
    - Noble/court/church/family rules produce believable pressure.
    - Happy-ending direction remains visible even during abuse or revenge.
    - The selected lane has its own visible engine: engagement evidence, villainess flags, saintess proof, contract clauses, craft products, palace/family records, loop flags, interspecies rules, strong-heroine action, or misunderstanding objects. Do not accept generic court romance as a replacement for the lane promise.

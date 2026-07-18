@@ -37,4 +37,4 @@ Use hot works only as structural references: false evaluation, church inquiry, r
 - "She is the real saintess" without showing how the power works.
 - Healing as a vague glow with no cost, condition, or consequence.
 - Church villains who are evil without any social mechanism.
-- A church-proof story whose outcome and climax remain intact after removing the adult love interest's costly recognition or partnership.
+- A church-proof story whose outcome and climax remain intact after removing the primary love interest's costly recognition or partnership.

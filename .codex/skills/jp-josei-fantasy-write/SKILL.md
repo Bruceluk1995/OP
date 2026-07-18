@@ -17,7 +17,7 @@ Required global read: `../story/references/audience-comprehension-floor.md`. App
 
 Write Japanese-market female-audience fantasy romance in the selected traditional-prose or anime-recap/push presentation. Use this for audience-facing scenes, chapters, scripts, rewrites, and localization.
 
-For automatic or unattended female-channel work, do not draft an excluded child/parenting premise: both leads must be adults, and childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan rescue, single-parent reunion, or family reconstruction cannot carry the title hook, emotional center, climax, or payoff. Run the romance-removal test before prose; if the adult love interest can be removed without breaking the central conflict, climax, and ending, return to planning.
+For automatic or unattended female-channel work, do not draft an excluded caregiving/parenting premise: childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan rescue, single-parent reunion, or family reconstruction cannot carry the title hook, emotional center, climax, or payoff. Do not reject academy-age, youthful-engagement, villainess/otome-game, or coming-of-age romance from age alone; keep it age-appropriate and non-sexualized. Run the romance-removal test before prose; if the primary relationship can be removed without breaking the central conflict, climax, and ending, return to planning.
 
 ## Execution Profiles
 
@@ -65,7 +65,7 @@ Choose one profile. Capabilities remain available without becoming simultaneous 
    - Make dense beats carry humiliation, evidence, heroine choice, male-lead recognition, zamaa, tenderness, or social consequence.
    - Compress sparse transitions; do not let etiquette, scenery, or sadness become filler.
    - Preserve the selected lane's payoff loop. Do not flatten craft, saintess, villainess, contract marriage, palace-family, interspecies, loop, or strong-heroine stories into generic court romance.
-   - Keep adult romance indispensable across every lane. Career, territory, inheritance, church proof, loops, battle, and social reform may support the story but cannot replace the adult couple's decisive relationship choice.
+   - Keep the promised romance indispensable across every romance-labeled lane. Career, territory, inheritance, church proof, loops, battle, and social reform may support the story but cannot replace the central pair's decisive relationship choice.
    - For a long target, add a new heroine choice, relationship turn, opponent adaptation, cost, or consequence. Do not extend one conclusion through more venues or proof scenes.
    - End with a romance question, social threat, witness, document, or next-stage proof.
 4. Write in the selected Japanese presentation:

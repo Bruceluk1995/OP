@@ -23,26 +23,27 @@ These are editorial routing labels, not official platform genre names and not a 
 5. Every later live, classic, fresh, keyword, or automatic route must stay inside this locked subgenre unless the user explicitly switches it.
 6. Never copy a source title, character, signature proof object, scene order, or named plot. The pages below prove that a subgenre exists; they are not adaptation targets.
 
-## Automatic Adult-Romance Gate
+## Automatic Channel-Fit Gate
 
 Apply this hard gate to every automatic or unattended recommendation for the female-romance channel:
 
-- Keep both the heroine and the primary love interest adult. The title, opening promise, main pressure, climax, and ending payoff must be driven by their romantic choice, dignity, reputation, or shared future.
-- Do not present, recommend, or auto-select childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan rescue, single-parent reunion, or family-reconstruction premises. A minor may appear only incidentally and may not carry the title hook, emotional center, central choice, climax, or payoff.
-- Run the romance-removal test: if removing the adult love interest leaves the premise, climax, and ending substantially intact, reject or rebuild the candidate. Career, territory, inheritance, church proof, loops, battle, found family, and social reform cannot substitute for the adult romance engine.
+- Do not impose an adults-only rule. Academy-age romance, youthful engagement, villainess/otome-game routes, and coming-of-age stories are valid Japanese female-fantasy lanes when the relationship is age-appropriate and non-sexualized.
+- Do not present, recommend, or auto-select childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan rescue, single-parent reunion, or family-reconstruction premises. Exclude the caregiving/parenting engine, not every protagonist below adulthood.
+- Do not auto-select pre-romance child-POV premises built mainly on cuteness, adults raising/protecting the child, or a child repairing a household. Age-appropriate academy, engagement, rivalry, reputation, and first-love pressure remain eligible.
+- Run the romance-removal test for romance-labeled candidates: if removing the primary relationship leaves the premise, climax, and ending substantially intact, reject or rebuild the candidate. Career, territory, inheritance, church proof, loops, battle, found family, and social reform cannot substitute for the promised romance engine.
 - Trusted channel-performance feedback overrides generic platform evidence. A lane or premise pattern marked as low-performing remains ineligible for automatic selection until the user explicitly re-enables it.
 - An explicit user-supplied request may be handled outside this automatic menu, but do not describe an excluded premise as the recommended market choice for this channel.
 
 ### Conditional-risk subgenres
 
-The following remain valid Japanese female-fantasy subgenres but are support-engine heavy and must not be auto-selected unless the adult romance visibly changes the midpoint and climax:
+The following remain valid Japanese female-fantasy subgenres but are support-engine heavy and must not be auto-selected unless the primary romance visibly changes the midpoint and climax:
 
 - 職人・店・研究・料理 and other job-competence lanes: reject shop or career success followed by an optional romantic reward.
-- 領地経営・村づくり・現代知識・共同体スローライフ・もふもふ／従魔: reject territory, community, food, pet, or creature bonding as the emotional center; the adult couple's shared decision must carry the climax.
+- 領地経営・村づくり・現代知識・共同体スローライフ・もふもふ／従魔: reject territory, community, food, pet, or creature bonding as the emotional center; the central pair's shared decision must carry the climax.
 - 王宮・継承・家督・財産: reject document/legal victory with an epilogue pairing; the love interest must take a costly action that changes the heroine's legal/social options.
-- 聖女 proof, loops, and strong-heroine/action lanes: reject institutional proof, tragedy prevention, or battle victory that resolves without adult romantic trust or re-choice.
+- 聖女 proof, loops, and strong-heroine/action lanes: reject institutional proof, tragedy prevention, or battle victory that resolves without romantic trust or re-choice.
 
-These are conditional, not default automatic fallbacks. When current evidence is thin or channel fit is unknown, prefer an adult relationship-led lane such as 婚約破棄, 悪役令嬢 romance, 契約結婚, 辺境伯／溺愛, すれ違い恋愛, or explicit adult interspecies marriage.
+These are conditional, not default automatic fallbacks. When current evidence is thin or channel fit is unknown, prefer a relationship-led lane such as 婚約破棄, 悪役令嬢 romance, 契約結婚, 辺境伯／溺愛, すれ違い恋愛, or explicit interspecies romance/marriage.
 
 ## 1. 婚约破弃、追放与ざまぁ
 
@@ -125,7 +126,7 @@ Present:
 5. 竜人・獣人・番・異種族婚 — 以种族习俗、番制度或寿命差考验双方同意与理解
 6. 神・精霊・妖・人外との婚姻 — 与神灵、精灵、妖怪或其他非人存在形成跨规则关系
 
-Boundary: explain the relationship rule through an ordinary adult romantic choice, not a genealogy lecture. Culture, lifespan, adult-family conflict, succession, or instinct may create pressure, but consent and the heroine's shared future with the love interest remain explicit. Do not convert inheritance or palace pressure into a child-custody, parenting, or guardian-selection story.
+Boundary: explain the relationship rule through an ordinary, age-appropriate romantic choice, not a genealogy lecture. Culture, lifespan, family conflict, succession, or instinct may create pressure, but consent and the heroine's shared future with the love interest remain explicit. Do not convert inheritance or palace pressure into a child-custody, parenting, or guardian-selection story.
 
 ## Combination Rule
 

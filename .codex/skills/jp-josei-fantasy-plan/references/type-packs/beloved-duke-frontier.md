@@ -37,4 +37,4 @@ Use hot works only as structural references: exile/home-building, misunderstood 
 - Frontier as only scenery.
 - Male lead loving her for being pitiful.
 - Healing the duke without the heroine having a future of her own.
-- Territory, home-building, food, or community success replacing the adult couple's decisive relationship choice.
+- Territory, home-building, food, or community success replacing the central pair's decisive relationship choice.

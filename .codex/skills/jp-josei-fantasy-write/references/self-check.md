@@ -27,8 +27,8 @@ Do not use a mechanical scan as the self-check system. The default self-check is
 - Rules: saintess power, contract clauses, church authority, noble law, curse rules, and demon/magic rules do not contradict earlier episodes.
 - Zamaa logic: public punishment follows evidence, witness, title, law, church record, or social rule; it is not only narrator judgment.
 - Romance logic: the male lead's protection is shown through a specific action or cost, not generic possession or sudden devotion.
-- Adult-romance centrality: for automatic/unattended female-channel work, both leads are adults; no childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan-rescue, single-parent-reunion, or family-reconstruction premise carries the title hook, emotional center, climax, or payoff.
-- Romance-removal test: removing the adult love interest must break the heroine's pressure chain, climax, ending, and chosen future. Career, territory, inheritance, church proof, loops, action, or social reform cannot leave the romance as an epilogue reward.
+- Age and channel fit: do not require adult leads. Academy-age, youthful-engagement, villainess/otome-game, and coming-of-age romance are valid when age-appropriate and non-sexualized; no childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan-rescue, single-parent-reunion, or family-reconstruction premise carries the title hook, emotional center, climax, or payoff.
+- Romance-removal test: removing the primary love interest must break the heroine's pressure chain, climax, ending, and chosen future. Career, territory, inheritance, church proof, loops, action, or social reform cannot leave the promised romance as an epilogue reward.
 - Heroine agency: the heroine chooses, asks, refuses, signs, testifies, heals, reveals evidence, or pays a cost herself.
 - Ending hook: the final hook points to a concrete witness, document, public choice, romantic question, injury, or relic problem.
 - No production leakage: body prose does not mention episode numbers, previous/next episode labels, readers, viewers, outline, prompts, cover, or writing workflow.

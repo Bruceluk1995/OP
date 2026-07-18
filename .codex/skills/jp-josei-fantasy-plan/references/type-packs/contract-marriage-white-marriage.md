@@ -37,4 +37,4 @@ Use hot works only as structural references: contract clause, forced proximity, 
 - Instant溺愛 with no forced-proximity ladder.
 - Contract terms that never matter.
 - Making the heroine a household saint with no personal desire.
-- Turning contract marriage into a step-parenting, childcare, custody, adoption, guardian, or family-reconstruction story whose adult romance is optional.
+- Turning contract marriage into a step-parenting, childcare, custody, adoption, guardian, or family-reconstruction story whose central romance is optional.
