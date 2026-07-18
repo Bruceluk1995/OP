@@ -28,10 +28,12 @@ class _BridgeHandler(BaseHTTPRequestHandler):
         "reserved": True,
         "same_work": False,
     }
+    commit_status = 200
+    commit_body: dict = {"status": "generated"}
 
-    def _reply(self, body: dict) -> None:
+    def _reply(self, body: dict, status: int = 200) -> None:
         encoded = json.dumps(body).encode("utf-8")
-        self.send_response(200)
+        self.send_response(status)
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(encoded)))
         self.end_headers()
@@ -42,9 +44,9 @@ class _BridgeHandler(BaseHTTPRequestHandler):
         payload = json.loads(self.rfile.read(length) or b"{}")
         self.requests.append(("POST", self.path, self.headers.get("Authorization", ""), payload))
         if self.path.endswith("/reserve"):
-            self._reply({"results": [self.reserve_result]})
+            self._reply({"results": [dict(self.reserve_result) for _ in payload.get("items", [])]})
         else:
-            self._reply({"status": payload.get("status", "selected")})
+            self._reply(self.commit_body, self.commit_status)
 
     def do_GET(self) -> None:  # noqa: N802
         self.requests.append(("GET", self.path, self.headers.get("Authorization", ""), {}))
@@ -74,6 +76,8 @@ class CompanyDedupTest(unittest.TestCase):
             "reserved": True,
             "same_work": False,
         }
+        _BridgeHandler.commit_status = 200
+        _BridgeHandler.commit_body = {"status": "generated"}
 
     def tearDown(self) -> None:
         self.env.stop()
@@ -167,6 +171,82 @@ class CompanyDedupTest(unittest.TestCase):
             queued = db.execute("SELECT COUNT(*) FROM outbox").fetchone()[0]
         self.assertEqual(state, "synced")
         self.assertEqual(queued, 0)
+
+    def test_current_reservation_does_not_wait_for_stale_outbox(self) -> None:
+        with closing(company_dedup._connect()) as db, db:
+            company_dedup._enqueue(db, "commit", {
+                "kind": "topic", "fingerprint": "missing-old-topic",
+                "work_id": "old-work", "status": "generated",
+            })
+        _BridgeHandler.commit_status = 404
+        _BridgeHandler.commit_body = {"error": "reservation not found"}
+        server, thread = self._start_bridge()
+        try:
+            result = company_dedup.reserve(
+                kind="topic", fingerprint="new-topic", work_id="new-work", label="new topic",
+            )
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join(timeout=2)
+        self.assertTrue(result["reserved"])
+        self.assertFalse(result["provisional"])
+        paths = [request[1] for request in _BridgeHandler.requests]
+        self.assertNotIn("/api/story-dedup/commit", paths)
+        with closing(sqlite3.connect(self.cache)) as db:
+            self.assertEqual(db.execute("SELECT COUNT(*) FROM outbox").fetchone()[0], 1)
+
+    def test_permanent_poison_entry_moves_to_dead_letter_and_queue_continues(self) -> None:
+        with closing(company_dedup._connect()) as db, db:
+            company_dedup._enqueue(db, "commit", {
+                "kind": "topic", "fingerprint": "missing-old-topic",
+                "work_id": "old-work", "status": "generated",
+            })
+            item = {
+                "kind": "topic", "fingerprint": "queued-topic", "work_id": "queued-work",
+                "label": "queued", "tags": [], "source": "test", "metadata": {},
+                "status": "presented",
+            }
+            company_dedup._save_record(db, item, "pending")
+            company_dedup._enqueue(db, "reserve", {"items": [item]})
+        _BridgeHandler.commit_status = 404
+        _BridgeHandler.commit_body = {"error": "reservation not found"}
+        server, thread = self._start_bridge()
+        try:
+            conflicts = company_dedup.flush_outbox()
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join(timeout=2)
+        self.assertEqual(conflicts, [])
+        with closing(sqlite3.connect(self.cache)) as db:
+            self.assertEqual(db.execute("SELECT COUNT(*) FROM outbox").fetchone()[0], 0)
+            self.assertEqual(db.execute("SELECT COUNT(*) FROM dead_letter").fetchone()[0], 1)
+            self.assertEqual(
+                db.execute("SELECT server_state FROM records WHERE fingerprint='queued-topic'").fetchone()[0],
+                "synced",
+            )
+
+    def test_reserve_outbox_is_sent_in_one_batch(self) -> None:
+        with closing(company_dedup._connect()) as db, db:
+            for suffix in ("a", "b"):
+                item = {
+                    "kind": "topic", "fingerprint": f"queued-{suffix}",
+                    "work_id": f"work-{suffix}", "label": suffix, "tags": [],
+                    "source": "test", "metadata": {}, "status": "presented",
+                }
+                company_dedup._save_record(db, item, "pending")
+                company_dedup._enqueue(db, "reserve", {"items": [item]})
+        server, thread = self._start_bridge()
+        try:
+            company_dedup.flush_outbox()
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join(timeout=2)
+        reserve_requests = [request for request in _BridgeHandler.requests if request[1].endswith("/reserve")]
+        self.assertEqual(len(reserve_requests), 1)
+        self.assertEqual(len(reserve_requests[0][3]["items"]), 2)
 
     def test_server_conflict_is_cached_for_offline_checks(self) -> None:
         _BridgeHandler.reserve_result = {

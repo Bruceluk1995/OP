@@ -19,9 +19,18 @@ from pathlib import Path
 from typing import Any
 
 
-TIMEOUT_SECONDS = 1.5
+TIMEOUT_SECONDS = 8.0
 SNAPSHOT_MAX_AGE_SECONDS = 60
 _network_failed = False
+
+
+class BridgeRequestError(ConnectionError):
+    """A bridge request failed with a classified HTTP or transport error."""
+
+    def __init__(self, message: str, *, status_code: int = 0, retryable: bool = True) -> None:
+        super().__init__(message)
+        self.status_code = status_code
+        self.retryable = retryable
 
 
 def _codex_home() -> Path:
@@ -36,7 +45,7 @@ def _cache_path() -> Path:
 def _bridge_paths() -> list[Path]:
     paths: list[Path] = []
     if override := os.environ.get("STORY_DEDUP_BRIDGE", "").strip():
-        paths.append(Path(override))
+        return [Path(override)]
     if appdata := os.environ.get("APPDATA", "").strip():
         paths.append(Path(appdata) / "sggoi-studio" / "story-dedup-bridge.json")
     paths.extend([
@@ -105,6 +114,14 @@ def _connect() -> sqlite3.Connection:
           payload TEXT NOT NULL,
           created_at TEXT NOT NULL
         );
+        CREATE TABLE IF NOT EXISTS dead_letter (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          outbox_id INTEGER NOT NULL,
+          action TEXT NOT NULL,
+          payload TEXT NOT NULL,
+          error TEXT NOT NULL,
+          failed_at TEXT NOT NULL
+        );
         CREATE TABLE IF NOT EXISTS meta (
           key TEXT PRIMARY KEY,
           value TEXT NOT NULL
@@ -128,12 +145,12 @@ def _load_bridge() -> dict[str, str]:
 def _request(method: str, path: str, payload: dict[str, Any] | None = None) -> dict[str, Any]:
     global _network_failed
     if _network_failed:
-        raise ConnectionError("SGGOI Studio bridge unavailable in this process")
+        raise BridgeRequestError("SGGOI Studio bridge unavailable in this process", retryable=True)
     try:
         bridge = _load_bridge()
-    except ConnectionError:
+    except ConnectionError as exc:
         _network_failed = True
-        raise
+        raise BridgeRequestError(str(exc), retryable=True) from exc
     data = None if payload is None else json.dumps(payload, ensure_ascii=False).encode("utf-8")
     req = urllib.request.Request(bridge["url"] + path, data=data, method=method)
     req.add_header("Authorization", "Bearer " + bridge["token"])
@@ -147,13 +164,15 @@ def _request(method: str, path: str, payload: dict[str, Any] | None = None) -> d
             message = json.loads(exc.read().decode("utf-8")).get("error", str(exc))
         except Exception:
             message = str(exc)
-        _network_failed = True
-        raise ConnectionError(message) from exc
+        retryable = exc.code in (401, 403, 408, 425, 429) or exc.code >= 500
+        if retryable:
+            _network_failed = True
+        raise BridgeRequestError(message, status_code=exc.code, retryable=retryable) from exc
     except (OSError, ValueError) as exc:
         _network_failed = True
-        raise ConnectionError(str(exc)) from exc
+        raise BridgeRequestError(str(exc), retryable=True) from exc
     if body.get("error"):
-        raise ConnectionError(str(body["error"]))
+        raise BridgeRequestError(str(body["error"]), retryable=False)
     return body
 
 
@@ -180,42 +199,112 @@ def _enqueue(db: sqlite3.Connection, action: str, payload: dict[str, Any]) -> No
     )
 
 
-def flush_outbox() -> list[str]:
+def _dead_letter(db: sqlite3.Connection, row: sqlite3.Row, error: Exception) -> None:
+    db.execute(
+        "INSERT INTO dead_letter(outbox_id, action, payload, error, failed_at) VALUES (?, ?, ?, ?, ?)",
+        (row["id"], row["action"], row["payload"], str(error), _now()),
+    )
+    db.execute("DELETE FROM outbox WHERE id=?", (row["id"],))
+
+
+def _apply_reserve_result(
+    db: sqlite3.Connection, item: dict[str, Any], result: dict[str, Any], conflicts: list[str],
+) -> None:
+    key = canonical_key(item["fingerprint"])
+    if result.get("reserved"):
+        db.execute(
+            "UPDATE records SET server_state='synced', updated_at=? WHERE kind=? AND canonical_key=?",
+            (_now(), item["kind"], key),
+        )
+        return
+    db.execute(
+        """UPDATE records SET work_id=?, status=?, server_state='conflict', updated_at=?
+           WHERE kind=? AND canonical_key=?""",
+        (
+            result.get("existing_work_id", ""), result.get("existing_status", "presented"),
+            _now(), item["kind"], key,
+        ),
+    )
+    conflicts.append(item.get("label") or item["fingerprint"])
+
+
+def _flush_reserve_rows(
+    db: sqlite3.Connection, rows: list[sqlite3.Row], conflicts: list[str],
+) -> bool:
+    """Flush reserve rows in batches. Return False only for a retryable outage."""
+    valid: list[tuple[sqlite3.Row, dict[str, Any]]] = []
+    for row in rows:
+        try:
+            payload = json.loads(row["payload"])
+            items = payload.get("items", [])
+            if len(items) != 1 or not isinstance(items[0], dict):
+                raise ValueError("reserve outbox payload must contain exactly one item")
+            valid.append((row, items[0]))
+        except (ValueError, TypeError, json.JSONDecodeError) as exc:
+            _dead_letter(db, row, exc)
+    if not valid:
+        return True
+
+    try:
+        response = _request("POST", "/api/story-dedup/reserve", {"items": [item for _, item in valid]})
+        results = response.get("results", [])
+        if len(results) != len(valid):
+            raise BridgeRequestError("reserve response count mismatch", retryable=True)
+        for (row, item), result in zip(valid, results):
+            _apply_reserve_result(db, item, result, conflicts)
+            db.execute("DELETE FROM outbox WHERE id=?", (row["id"],))
+        return True
+    except BridgeRequestError as exc:
+        if exc.retryable:
+            return False
+
+    # A permanent batch error may belong to only one item. Isolate it so one
+    # poison record cannot block the rest of the queue.
+    for row, item in valid:
+        try:
+            response = _request("POST", "/api/story-dedup/reserve", {"items": [item]})
+            results = response.get("results", [])
+            if len(results) != 1:
+                raise BridgeRequestError("reserve response count mismatch", retryable=True)
+            _apply_reserve_result(db, item, results[0], conflicts)
+            db.execute("DELETE FROM outbox WHERE id=?", (row["id"],))
+        except BridgeRequestError as exc:
+            if exc.retryable:
+                return False
+            _dead_letter(db, row, exc)
+    return True
+
+
+def flush_outbox(limit: int = 100) -> list[str]:
     global _network_failed
     _network_failed = False
     conflicts: list[str] = []
     with closing(_connect()) as db, db:
-        rows = db.execute("SELECT id, action, payload FROM outbox ORDER BY id LIMIT 100").fetchall()
-        for row in rows:
-            payload = json.loads(row["payload"])
+        rows = db.execute(
+            "SELECT id, action, payload FROM outbox ORDER BY id LIMIT ?", (limit,)
+        ).fetchall()
+        index = 0
+        while index < len(rows):
+            row = rows[index]
+            if row["action"] == "reserve":
+                batch: list[sqlite3.Row] = []
+                while index < len(rows) and rows[index]["action"] == "reserve" and len(batch) < 50:
+                    batch.append(rows[index])
+                    index += 1
+                if not _flush_reserve_rows(db, batch, conflicts):
+                    break
+                continue
             try:
-                if row["action"] == "reserve":
-                    response = _request("POST", "/api/story-dedup/reserve", payload)
-                    results = response.get("results", [])
-                    if results:
-                        item = payload["items"][0]
-                        key = canonical_key(item["fingerprint"])
-                        if results[0].get("reserved"):
-                            db.execute(
-                                "UPDATE records SET server_state='synced', updated_at=? WHERE kind=? AND canonical_key=?",
-                                (_now(), item["kind"], key),
-                            )
-                        else:
-                            db.execute(
-                                """UPDATE records SET work_id=?, status=?, server_state='conflict', updated_at=?
-                                   WHERE kind=? AND canonical_key=?""",
-                                (
-                                    results[0].get("existing_work_id", ""),
-                                    results[0].get("existing_status", "presented"),
-                                    _now(), item["kind"], key,
-                                ),
-                            )
-                            conflicts.append(item.get("label") or item["fingerprint"])
-                else:
-                    _request("POST", "/api/story-dedup/commit", payload)
+                payload = json.loads(row["payload"])
+                _request("POST", "/api/story-dedup/commit", payload)
                 db.execute("DELETE FROM outbox WHERE id=?", (row["id"],))
-            except ConnectionError:
-                break
+            except (ValueError, TypeError, json.JSONDecodeError) as exc:
+                _dead_letter(db, row, exc)
+            except BridgeRequestError as exc:
+                if exc.retryable:
+                    break
+                _dead_letter(db, row, exc)
+            index += 1
     return conflicts
 
 
@@ -224,6 +313,7 @@ def reserve(
     tags: list[str] | None = None, source: str = "codex", metadata: dict[str, Any] | None = None,
     status: str = "presented",
 ) -> dict[str, Any]:
+    global _network_failed
     item = {
         "kind": kind,
         "fingerprint": fingerprint,
@@ -235,11 +325,13 @@ def reserve(
         "status": status,
     }
     key = canonical_key(fingerprint)
-    flush_outbox()
+    _network_failed = False
     try:
         sync_snapshot()
     except ConnectionError:
-        pass
+        # Snapshot freshness must not prevent an independent current reserve
+        # attempt. A stale outbox or a transient GET failure cannot veto it.
+        _network_failed = False
     with closing(_connect()) as db, db:
         existing = db.execute(
             "SELECT work_id, status, server_state FROM records WHERE kind=? AND canonical_key=?",
