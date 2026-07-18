@@ -36,3 +36,4 @@ Use hot works only as structural references: craft rule, customer problem, false
 - Craft scenes that only list cozy actions.
 - "She is talented" without a product test.
 - Treating job competence as side decoration after romance.
+- A shop/career victory that remains unchanged when the adult love interest and romantic choice are removed.

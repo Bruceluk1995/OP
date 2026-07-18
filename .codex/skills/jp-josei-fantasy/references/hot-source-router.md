@@ -11,9 +11,11 @@ Present only this menu first:
 3. 圣女、魔女与职业女主
 4. 契约结婚、溺爱与身份差恋爱
 5. 边境、领地经营与慢生活
-6. 王宫、家庭与异类／特殊关系
+6. 王宫、继承与异类／特殊关系
 
 Pause for one category choice. Do not browse, show the creation-entry menu, or generate premises yet.
+
+For automatic or unattended use, do not simulate this menu randomly. Screen every category through the adult-romance exclusion, trusted channel-performance veto, and conditional-risk rules in `theme-taxonomy.md` before locking a pair. Relationship-led lanes are the fallback when current direct evidence or channel fit is insufficient.
 
 ## Level 2: Story Subgenre
 
@@ -51,10 +53,12 @@ Present this source menu before browsing:
 Then:
 
 - Search and convert signals only inside the locked broad category and subgenre. A selected `边境、领地经营与慢生活 -> 領地経営・村づくり・農園` cannot return a palace-trial or shop-only premise merely because that signal ranks higher.
+- Apply the automatic adult-romance gate in `theme-taxonomy.md` before collecting or scoring. Excluded child, parenting, custody, adoption, guardianship, and family-reconstruction signals are discarded even when they rank highly.
 - At search start, record `searched_at_jst` and `window_start_jst=searched_at_jst-24h`. A source item qualifies only when its publication/upload time, active-trend time, or ranking snapshot is verifiably inside that rolling window.
 - Use Google Trends `Past 24 hours`; news must be published inside the window; YouTube/TikTok items must be uploaded or explicitly active/trending inside it; novel sites must use realtime/daily/24-hour ranking snapshots captured inside it. Weekly/monthly/all-time charts, old surveys/reports, undated items, and pages merely crawled today do not qualify.
 - Browse live sources; do not answer from a bundled snapshot alone. If a source cannot expose a qualifying timestamp or 24-hour view, exclude it rather than widening the window.
 - Collect 6-10 verified raw items when available and present 3-5 viable numbered candidates. If the strict window produces fewer, return fewer and state the shortage; never pad with older material.
+- Separate `subgenre exists` from `subgenre is currently hot`. A publication, adaptation, award, old hit, or one high-ranked item proves existence only. Claim current heat only from at least three direct item-level matches across two independent Japanese realtime/daily/24-hour surfaces. Abstract similarities such as refusal, care, home, or unfairness do not count as direct subtype matches.
 - For each candidate, include source market, direct source, publication/activity time, `searched_at_jst`, source seed, locked category/subgenre, heroine wound or desire, proof/romance mechanism, Japan cross-check status, title hook, payoff, and safety transform.
 - Treat source choice and seed choice as separate decisions. Pause for the user's numbered seed choice unless the user explicitly delegates with `你选`, `自动选`, or equivalent.
 - For source option 5, read `chinese-novel-inspiration.md`. Keep it labeled as cross-market inspiration and require a same-window Japanese cross-check before claiming Japanese-market fit.
@@ -88,20 +92,25 @@ Ask for one sentence or several keywords. Combine them with the locked broad cat
 
 ## Route 5: Automatic Recommendation
 
-Recommend exactly three candidates inside the locked broad category and subgenre, optimized for oral传播性. State one short reason for each, then ask the user to choose one. This does not silently set `presentation=push`; ask presentation and viewpoint after the premise is fixed.
+Recommend exactly three candidates inside the locked broad category and subgenre, optimized for oral传播性 and adult-romance centrality. Reject any candidate that fails the romance-removal test or trusted channel-performance history. State one short reason for each, then ask the user to choose one. This does not silently set `presentation=push`; ask presentation and viewpoint after the premise is fixed.
 
 ## Candidate Scoring
 
-For live, fresh, or automatic batches, treat category fidelity as a hard gate, then score the other five dimensions from 1-5:
+For live, fresh, or automatic batches, apply these hard gates before scoring:
 
 - Category fidelity (hard gate): the core loop and payoff remain inside the user's locked category.
+- Adult-romance centrality (hard gate): adult heroine/love-interest choices drive the title promise, central pressure, climax, and ending; removing the romance breaks the story.
+- Channel-performance compatibility (hard gate): trusted low-view or rejected topic history blocks the lane or premise pattern until explicit user re-enable.
+
+Then score the other five dimensions from 1-5:
+
 - Heroine empathy: immediate humiliation, exhaustion, unfairness, loneliness, fear, or desire.
 - Romance/zamaa engine: public proof, social consequence, contract reversal, recognition, or earned devotion.
 - Japanese female-fantasy fit: institutions and relationship logic feel native to the target market.
 - Safety/copy distance: no real-person gossip, tragedy exploitation, copyrighted scenes, creators, songs, or copied plots.
 - Title clickability: the Japanese title promises the payoff without knowledge of the source trend.
 
-For scored live candidates, prefer totals of at least 19/25 and heroine empathy of at least 3/5. A category-fidelity failure cannot be compensated by a high score.
+For scored live candidates, prefer totals of at least 19/25 and heroine empathy of at least 3/5. No hard-gate failure can be compensated by a high score or a single ranking position.
 
 ## Source-Specific Use
 
@@ -129,3 +138,5 @@ For scored live candidates, prefer totals of at least 19/25 and heroine empathy 
 - Never use a representative Japanese work as an adaptation target; extract only a category or mechanism signal.
 - Never let a louder live signal override the broad category the user selected.
 - Never treat `ざまぁ`, `溺愛`, `ハッピーエンド`, or a noble title as a complete premise by itself.
+- Never infer a current subtype trend from one item or from several items sharing only an abstract emotional function.
+- Never auto-select a child-centered or parenting-centered story for the female-romance channel, even when a same-day ranking item performs well.

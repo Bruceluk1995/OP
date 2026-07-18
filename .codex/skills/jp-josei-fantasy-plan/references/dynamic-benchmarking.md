@@ -4,6 +4,8 @@ Use this before planning a Japanese female-audience fantasy romance subtype when
 
 For any `hot`, `current ranking`, or live-source claim, record `searched_at_jst` and use only realtime/daily/24-hour ranking snapshots verified inside the rolling 24-hour window. Weekly/monthly/all-time rankings and undated pages may be historical benchmark context only, never current heat evidence.
 
+Separate four claims explicitly: `subgenre exists`, `subgenre has commercial precedent`, `subgenre is currently hot`, and `subgenre fits this channel`. A representative work proves only existence; publication, awards, or adaptation prove commercial precedent; at least three direct same-subgenre item-level matches across two independent Japanese realtime/daily/24-hour surfaces are required for a current-heat claim; trusted channel performance decides channel fit. Never infer heat from several works sharing only an abstract function such as refusal, care, home, injustice, or recognition.
+
 If the user asks for Google Trends, YouTube, TikTok, viral videos, weird news, 热点选题, or 全源选题, first use `../../jp-josei-fantasy/references/hot-source-router.md` and the matching hot-source reference, then return here only when ranking/tag benchmarking is also needed.
 
 ## Priority
@@ -25,10 +27,12 @@ When browsing is allowed or requested:
 
 - Search the matching platform/category/tag page for the selected lane.
 - Collect 3-5 candidates with title, URL, ranking context, visible tags, update date if shown, public synopsis/premise, and why it matches the lane.
+- Count only direct subtype matches visible in title, tags, or public premise metadata. Do not turn a nearby relationship function into subtype evidence.
 - Select one primary benchmark and one or two contrast benchmarks.
 - Prefer qualifying 24-hour ranking/tag pages over older memory. If the strict window is thin, report the limitation instead of widening it.
 - Use metadata, titles, tags, ranking context, and short public premise signals only. Do not copy prose, scene order, dialogue, or proprietary outlines.
 - If a Chinese-site scan is included, keep those candidates in a labeled cross-market section and record whether the selected mechanism has a same-window Japanese ranking/tag/reader-interest cross-check.
+- Apply the automatic adult-romance and channel-performance gates from `../../jp-josei-fantasy/references/theme-taxonomy.md`. Childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan-rescue, single-parent-reunion, and family-reconstruction candidates are ineligible for unattended female-channel selection even if they rank highly.
 
 ## Hot Source Scan
 
@@ -38,6 +42,7 @@ When the request starts from a hot source instead of a novel platform:
 - Score candidates with the matching hot-source reference before choosing one.
 - Convert only the underlying female-audience mechanism: public humiliation, reputation repair, contract pressure, family wound, ceremony, social proof, etiquette trap, comfort desire, or relationship recognition.
 - After selecting a seed, read `../../jp-josei-fantasy/references/trend-theme-router.md` and map the seed to a josei fantasy route before building the Dynamic Benchmark Card or outline.
+- Reject the mapped seed when the adult love interest can be removed without breaking the main conflict, climax, and ending.
 
 ## Benchmark Card
 
@@ -63,6 +68,10 @@ Create a compact benchmark card before making the story plan:
 - Forbidden copying:
 - Cross-market inspiration, if any:
 - Japan cross-check status:
+- Evidence level: existence / commercial precedent / current heat / channel fit
+- Direct same-subgenre count and surfaces:
+- Channel-performance veto check:
+- Adult-romance removal test:
 ```
 
 ## If Full Text Is Available

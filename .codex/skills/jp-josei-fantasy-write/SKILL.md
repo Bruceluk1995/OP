@@ -17,6 +17,8 @@ Required global read: `../story/references/audience-comprehension-floor.md`. App
 
 Write Japanese-market female-audience fantasy romance in the selected traditional-prose or anime-recap/push presentation. Use this for audience-facing scenes, chapters, scripts, rewrites, and localization.
 
+For automatic or unattended female-channel work, do not draft an excluded child/parenting premise: both leads must be adults, and childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan rescue, single-parent reunion, or family reconstruction cannot carry the title hook, emotional center, climax, or payoff. Run the romance-removal test before prose; if the adult love interest can be removed without breaking the central conflict, climax, and ending, return to planning.
+
 ## Execution Profiles
 
 - **Fast draft (default):** read the current outline/context and matching lane material; draft through heroine choice and relationship change, blind-edit, and save the requested body. Skip unrelated menus, cards, packages, and ledgers; a saved push body still requires its surface lint after editorial release.
@@ -63,6 +65,7 @@ Choose one profile. Capabilities remain available without becoming simultaneous 
    - Make dense beats carry humiliation, evidence, heroine choice, male-lead recognition, zamaa, tenderness, or social consequence.
    - Compress sparse transitions; do not let etiquette, scenery, or sadness become filler.
    - Preserve the selected lane's payoff loop. Do not flatten craft, saintess, villainess, contract marriage, palace-family, interspecies, loop, or strong-heroine stories into generic court romance.
+   - Keep adult romance indispensable across every lane. Career, territory, inheritance, church proof, loops, battle, and social reform may support the story but cannot replace the adult couple's decisive relationship choice.
    - For a long target, add a new heroine choice, relationship turn, opponent adaptation, cost, or consequence. Do not extend one conclusion through more venues or proof scenes.
    - End with a romance question, social threat, witness, document, or next-stage proof.
 4. Write in the selected Japanese presentation:
@@ -96,6 +99,7 @@ Choose one profile. Capabilities remain available without becoming simultaneous 
    - If the source was Chinese 古言/宫斗/朝堂, verify the court-drama function was rebuilt for Japanese female-fantasy readers instead of directly carrying over emperor, harem, cold-palace, concubine, or legitimate/concubine-born systems.
    - Run the Codex AI story/package audit in `references/self-check.md`; fix story bugs, Chinese leakage, package omissions, unused character prompts, and cover-image problems before reporting completion.
    - Check that the heroine acts, the romance advances, and the scene promise matches the chosen tags.
+   - Run the romance-removal test over the completed body. The love interest must materially change the heroine's risk, available action, climax, ending, and chosen future; an epilogue-only pairing blocks delivery.
    - Check the draft against `references/episode-blueprint.md`: target emotion delivered, dense beats expanded, sparse beats compressed, evidence/romance/status consequence present, and ending hook specific.
    - In push mode, scan the first 600 Japanese characters against the selected card and `references/push-episode-delivery.md`: heroine identity, immediate event, required escalation, proof/romance promise, body handoff, and no generic AI-flavored filler.
    - Scan the whole draft against `references/anti-ai-gates.md`: no generic texture, stock summary lines, author explanation, uniform paragraph rhythm, or model/meta leakage.

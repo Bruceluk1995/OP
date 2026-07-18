@@ -41,6 +41,8 @@ Opening decks, random draws, trend routers, ledgers, delivery packages, surface 
 
 - Audience-facing prose is natural Japanese; planning notes may be Chinese.
 - Center heroine agency, dignity, specific romantic recognition, and a satisfying future.
+- For automatic or unattended female-channel work, keep the heroine and primary love interest adult and make their romance structurally indispensable. Reject childcare, step-parenting, contract-parent, custody, adoption, guardianship, orphan-rescue, single-parent-reunion, and family-reconstruction premises; a minor cannot carry the title hook, emotional center, climax, or payoff.
+- Run the romance-removal test before accepting a premise: if the adult love interest can be removed without breaking the central conflict, climax, and ending, rebuild or reject it. Career, territory, inheritance, church proof, loops, action, and social reform are support engines, not replacements for romance.
 - Rebuild Chinese court/family functions into Japanese female-fantasy institutions rather than translating terms.
 - For topic discovery, read `references/hot-source-router.md` and `references/theme-taxonomy.md`. Preserve `broad category -> Japanese-site subgenre -> creation source -> source candidate -> original premise`; broad categories, subgenres, and standalone payoff tags are never premise candidates.
 - Zamaa follows character action and social causality; 溺愛 respects the heroine's choice.
@@ -51,6 +53,8 @@ Opening decks, random draws, trend routers, ledgers, delivery packages, surface 
 Browse only when the user asks for current rankings, trends, news, YouTube/TikTok signals, or a live seed. Every live/hot search uses a strict rolling 24-hour window measured at search time in JST, including Japanese or Chinese novel rankings. Exclude unverifiable timestamps, weekly/monthly charts, old reports, and items outside the window instead of widening it. Present timestamped candidates when the concrete seed is not delegated. Do not browse merely because the story targets Japan.
 
 Chinese women-oriented novel rankings, category pages, tags, and public synopsis-level metadata may be used as an optional cross-market emotion and relationship-mechanism pool. Read `references/chinese-novel-inspiration.md` when that source is requested or selected. Label it as Chinese-market inspiration, never as proof of Japanese demand; rebuild family, marriage, court, revenge, romance, and status functions for Japanese female-fantasy institutions and cross-check the selected mechanism against current Japanese signals before claiming Japanese-market fit.
+
+Do not equate one ranked item, an adaptation, an award, or a representative work with current subtype heat. Automatic selection requires direct same-subtype density across current Japanese surfaces and must honor trusted channel-performance rejections even when the general market signal is positive.
 
 ## Project Work
 
