@@ -36,7 +36,8 @@ When planning prose beats, design colloquial, direct scene movement: action, dia
 - Read `references/planning-template.md` before producing a full concept package.
 - Read `references/terminology.md` whenever adapting from Chinese fantasy or when the user says not to use Chinese elements.
 - Read `references/dynamic-benchmarking.md` when the user wants current market fit, website-based拆书, hottest works, or when no strong project benchmark exists for the chosen subtype.
-- Read `../jp-josei-fantasy/references/hot-source-router.md` when the user has no premise, wants 热点选题, asks for YouTube/TikTok/Google Trends/news/all-source selection, or rejects the current source as boring.
+- Read `../jp-josei-fantasy/references/hot-source-router.md` and `../jp-josei-fantasy/references/theme-taxonomy.md` when the user has no premise, wants 热点选题, asks for YouTube/TikTok/Google Trends/news/all-source selection, or rejects the current source as boring. For a missing premise, run `six-category screen -> selected category's Japanese-site subgenre screen -> five-option creation-entry menu` before asking presentation, viewpoint, operation, or length.
+- Preserve `broad category -> Japanese-site subgenre -> creation source -> original premise`. The classic route uses the already locked subgenre and must not show it again.
 - Read `../jp-josei-fantasy/references/chinese-novel-inspiration.md` when the user requests Chinese women-oriented novel sites, selects that source in the hot-source menu, or includes it in an all-source scan. Use it as a cross-market emotion/relationship mechanism layer; it never replaces Japanese-market validation.
 - Read `../jp-josei-fantasy/references/trend-benchmarking.md` when the user wants Google Trends JP or hot/current topic conversion.
 - Read `../jp-josei-fantasy/references/social-video-trends.md` when the user wants YouTube/TikTok/Shorts/video hooks.
@@ -68,6 +69,8 @@ Benchmark priority:
 5. Read the bundled `references/type-packs/{lane}.md` only as fallback scaffolding.
 
 ## Planning Workflow
+
+If the premise is missing, lock the broad category and subgenre, complete the creation-entry gate, and obtain a concrete selected or delegated premise before step 1. Live-source discovery is limited to the rolling 24-hour JST window across every source. Then resolve presentation/viewpoint and continue this workflow.
 
 1. Resolve presentation/viewpoint only when missing. For push mode, plan the matching narrator contract: first-person mouth and knowledge boundary, or third-person narrator stance, stable labels, selective reactions, knowledge boundary, and heroine-caused choices. Use an opening card only in the optional variation profile.
 2. Choose the central promise:

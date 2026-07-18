@@ -2,6 +2,8 @@
 
 Use this before planning a Japanese female-audience fantasy romance subtype when the user wants market fit, current popular works, website-based book analysis, or when no strong project benchmark exists.
 
+For any `hot`, `current ranking`, or live-source claim, record `searched_at_jst` and use only realtime/daily/24-hour ranking snapshots verified inside the rolling 24-hour window. Weekly/monthly/all-time rankings and undated pages may be historical benchmark context only, never current heat evidence.
+
 If the user asks for Google Trends, YouTube, TikTok, viral videos, weird news, 热点选题, or 全源选题, first use `../../jp-josei-fantasy/references/hot-source-router.md` and the matching hot-source reference, then return here only when ranking/tag benchmarking is also needed.
 
 ## Priority
@@ -24,9 +26,9 @@ When browsing is allowed or requested:
 - Search the matching platform/category/tag page for the selected lane.
 - Collect 3-5 candidates with title, URL, ranking context, visible tags, update date if shown, public synopsis/premise, and why it matches the lane.
 - Select one primary benchmark and one or two contrast benchmarks.
-- Prefer currently visible ranking/tag pages over older memory.
+- Prefer qualifying 24-hour ranking/tag pages over older memory. If the strict window is thin, report the limitation instead of widening it.
 - Use metadata, titles, tags, ranking context, and short public premise signals only. Do not copy prose, scene order, dialogue, or proprietary outlines.
-- If a Chinese-site scan is included, keep those candidates in a labeled cross-market section and record whether the selected mechanism has a current Japanese ranking/tag/reader-interest cross-check.
+- If a Chinese-site scan is included, keep those candidates in a labeled cross-market section and record whether the selected mechanism has a same-window Japanese ranking/tag/reader-interest cross-check.
 
 ## Hot Source Scan
 

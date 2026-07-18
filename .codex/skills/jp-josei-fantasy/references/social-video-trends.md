@@ -6,7 +6,7 @@ The goal is not to copy a creator, video, character, franchise, joke, song, or e
 
 ## Source Protocol
 
-Use current sources before claiming what is trending.
+Record `searched_at_jst` and `window_start_jst=searched_at_jst-24h`. A video or mechanism qualifies as a hotspot only when its upload time or explicit active-trend time is inside that rolling window. A trending page captured today is insufficient when the listed video's age is older or unknown. Exclude unverifiable items and return fewer results rather than widening the window. A user-supplied older link may be used as a provided inspiration seed, but never labeled a current hotspot.
 
 ### YouTube Japan
 
@@ -69,8 +69,8 @@ Recommended pick:
 
 ## Mandatory User Selection Gate
 
-1. Collect and score 6-10 raw current items.
-2. Present 3-5 viable numbered candidates with source/date or recency, direct link when available, video seed, scores, extracted hook, selected/backup route, heroine wound, proof/romance mechanism, one-shot or serial promise, and safety transform.
+1. Collect and score 6-10 raw items verified inside the rolling 24-hour window when available.
+2. Present 3-5 viable numbered candidates with direct source, upload/activity timestamp, `searched_at_jst`, video seed, scores, extracted hook, selected/backup route, heroine wound, proof/romance mechanism, one-shot or serial promise, and safety transform.
 3. Ask the user to choose a candidate number or request another batch, then stop.
 4. Do not treat `YouTube/TikTok`, a category, josei lane, emotion, or male-lead preference as selection of a concrete video seed.
 5. Do not lock the title, outline, draft prose, save files, or mutate a ledger until the user selects one.

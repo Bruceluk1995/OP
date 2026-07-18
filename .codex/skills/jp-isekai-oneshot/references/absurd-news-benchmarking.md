@@ -6,7 +6,7 @@ The goal is not to retell real news. Extract the absurd mechanism: unfair rule, 
 
 ## Source Protocol
 
-Browse current sources before claiming a news item is current. Prefer public, non-paywalled summaries:
+Record `searched_at_jst` and `window_start_jst=searched_at_jst-24h`. A news item qualifies only when its publication time is verifiably inside that rolling window. Search-result recency, page crawl time, or an updated index is not enough. Exclude undated or older items and never widen the window. Prefer public, non-paywalled summaries:
 
 - Public odd-news starting points:
   - Excite びっくりニュース: `https://www.excite.co.jp/news/odd/`
@@ -43,8 +43,8 @@ Recommended pick:
 
 ## Mandatory User Selection Gate
 
-- Collect 6-10 safe current news mechanisms, score them, and present 3-5 viable numbered candidates rather than silently choosing one.
-- Show source/date, abstracted absurdity, scores, fictional institution, primary/backup route, converted skill, one-shot promise, and safety transform.
+- Collect 6-10 safe news mechanisms verified inside the rolling 24-hour window when available, score them, and present 3-5 viable numbered candidates rather than silently choosing one.
+- Show direct source, publication timestamp, `searched_at_jst`, abstracted absurdity, scores, fictional institution, primary/backup route, converted skill, one-shot promise, and safety transform.
 - Ask the user to choose a candidate number or request another batch, then stop before title lock, blueprint, drafting, package creation, or ledger mutation.
 - Selecting “离谱新闻/逆天新闻” only selects the source lane. It does not select the concrete news seed.
 - Bypass the pause only for an exact user-supplied item/link/keyword or explicit `你选/自动选` delegation; state the delegated selection before continuing.

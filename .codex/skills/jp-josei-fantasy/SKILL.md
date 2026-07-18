@@ -27,6 +27,8 @@ Explicit one-shot beats a generic “12,000字” or “YouTube” keyword. Expl
 
 If presentation, viewpoint, premise, and length are clear, route immediately. Do not show a format or topic menu. Ask one compact question only when an essential choice would materially change the product.
 
+For a new work with no concrete premise, run `broad category -> Japanese-site subgenre -> five-option creation entry` from `references/hot-source-router.md` and `references/theme-taxonomy.md`. Lock the subgenre before showing where the story comes from, and keep every search or candidate inside both fields. Complete all three layers before presentation, viewpoint, operation, or length is asked. If the user already supplied a premise or keywords, infer any answered category/subgenre/source fields and ask only what remains missing.
+
 Accept only the normalized handoff `presentation=<traditional|push>` and `viewpoint=<first|third>` from an upstream menu; raw menu code is not a downstream mode. When `presentation=push`, propagate it plus the selected viewpoint to every downstream plan, write, one-shot, and review route. Push is sticky until the user explicitly changes it. Do not reopen presentation, consult traditional mode as a competing authority, or let first person imply traditional web-novel prose. If the handoff is missing or ambiguous, ask instead of defaulting to traditional.
 
 For one-shots, the only required creative chain is:
@@ -40,12 +42,13 @@ Opening decks, random draws, trend routers, ledgers, delivery packages, surface 
 - Audience-facing prose is natural Japanese; planning notes may be Chinese.
 - Center heroine agency, dignity, specific romantic recognition, and a satisfying future.
 - Rebuild Chinese court/family functions into Japanese female-fantasy institutions rather than translating terms.
+- For topic discovery, read `references/hot-source-router.md` and `references/theme-taxonomy.md`. Preserve `broad category -> Japanese-site subgenre -> creation source -> source candidate -> original premise`; broad categories, subgenres, and standalone payoff tags are never premise candidates.
 - Zamaa follows character action and social causality; 溺愛 respects the heroine's choice.
 - A one-shot changes problem after decisive evidence and closes its wound/relationship promise in one file.
 
 ## Current-Market Work
 
-Browse only when the user asks for current rankings, trends, news, YouTube/TikTok signals, or a live seed. Present dated candidates when the concrete seed is not delegated. Do not browse merely because the story targets Japan.
+Browse only when the user asks for current rankings, trends, news, YouTube/TikTok signals, or a live seed. Every live/hot search uses a strict rolling 24-hour window measured at search time in JST, including Japanese or Chinese novel rankings. Exclude unverifiable timestamps, weekly/monthly charts, old reports, and items outside the window instead of widening it. Present timestamped candidates when the concrete seed is not delegated. Do not browse merely because the story targets Japan.
 
 Chinese women-oriented novel rankings, category pages, tags, and public synopsis-level metadata may be used as an optional cross-market emotion and relationship-mechanism pool. Read `references/chinese-novel-inspiration.md` when that source is requested or selected. Label it as Chinese-market inspiration, never as proof of Japanese demand; rebuild family, marriage, court, revenge, romance, and status functions for Japanese female-fantasy institutions and cross-check the selected mechanism against current Japanese signals before claiming Japanese-market fit.
 

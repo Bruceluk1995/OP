@@ -31,7 +31,7 @@ When push narration is selected, also read `../story/references/push-prompt-arch
 
 Before the Producer pass, choose exactly one evidence mode from `references/dynamic-market-learning.md`:
 
-- `current evidence`: browse and validate current signals when the user asks what is hot, requests live sources, or delegates commercial premise discovery;
+- `current evidence`: when the user asks what is hot, requests live sources, or delegates commercial premise discovery, browse only signals verified inside a rolling 24-hour JST window; return fewer signals rather than padding with older evidence;
 - `provided evidence`: use a fresh user/project benchmark or decision card and record its scope;
 - `hypothesis only`: when the user gives a fixed premise or explicitly skips research, proceed without pretending it is market-validated and attach a small-test plan.
 
@@ -175,7 +175,7 @@ One decisive proof per conclusion. A later demonstration survives only when mech
 
 ## Optional Tools
 
-- Browse only for current/ranking/trend claims or a requested live seed.
+- Browse only for current/ranking/trend claims or a requested live seed. Any item presented as hot/live, including novel rankings, news, YouTube, TikTok, and Google Trends, must be timestamp-verifiable inside the rolling 24-hour JST window.
 - Opening cards are optional ideation; no random draw or quote evidence is required.
 - Push surface lint is mandatory for saved push delivery and optional for unsaved snippets. It cannot approve story quality.
 - Ledger/package/cover generation runs only for project memory or explicit delivery requests.

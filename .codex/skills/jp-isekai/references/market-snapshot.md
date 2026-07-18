@@ -2,6 +2,8 @@
 
 Use this as a lightweight pattern note, not as fixed market truth. Refresh by browsing when the user asks for current rankings.
 
+If the user asks for hot/current rankings, use only realtime/daily/24-hour snapshots captured inside a rolling 24-hour JST window. The monthly examples below remain historical pattern context and cannot support a current-heat claim.
+
 Observed from public ranking/tag pages on 2026-07-05:
 
 - Sources checked: Kakuyomu 異世界ファンタジー daily/monthly long rankings; Kakuyomu tags 主人公最強, いずれ主人公最強, ダンジョン, 追放; 小説家になろう ハイファンタジー daily ranking and search/tag surfaces.
