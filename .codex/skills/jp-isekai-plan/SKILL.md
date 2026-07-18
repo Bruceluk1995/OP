@@ -41,6 +41,7 @@ When planning prose beats, design colloquial, direct scene movement: action, dia
 - Read `references/dynamic-benchmarking.md` when the user wants current market fit, website-based拆书, hottest works, or when no strong project benchmark exists for the chosen subtype.
 - Read `../jp-isekai/references/chinese-novel-inspiration.md` when the user requests Chinese novel sites, selects that source in the topic gate, or includes it in an all-source scan. Use it as a cross-market mechanism layer; it never replaces Japanese-market validation.
 - Read `../jp-isekai/references/project-memory.md` before opening a project, continuing a serial, creating chapter outlines, or trying to avoid repeated premises.
+- Read `../jp-isekai/references/character-prompt-contract.md` whenever the plan creates named characters or a reusable cast. The prompt companion is mandatory for that cast, even when cover/package generation is otherwise skipped.
 - Before planning any subtype, resolve its benchmark priority: project拆文 or live website benchmark first, project subtype notes second, bundled type pack only as fallback. Do not rely on the generic isekai rules alone.
 
 Type pack routing:
@@ -107,12 +108,13 @@ Benchmark priority:
    - Keep the prose and files novel-style (`细纲_第XXX章.md`, episode folders, tracking files); do not switch to screenplay format.
    - Do not plan a hundred-chapter roadmap unless the user explicitly asks for a long webnovel.
 7. If the task is project-bound, materialize the plan into the common project files:
-   - Create or update `设定/题材定位.md`, reusable `设定/角色/`, `设定/势力/`, and `设定/世界观/` files.
+   - Create or update `设定/题材定位.md`, reusable `设定/角色/`, `设定/角色提示词.md`, `设定/势力/`, and `设定/世界观/` files.
+   - For every newly introduced major named character, write one Japanese-only neutral reference paragraph under `设定/角色提示词.md`. Keep hands empty; move every symbolic object, weapon, work tool, skill effect, and scene action to a later cover/shot prompt.
    - Create `大纲/大纲.md`, `大纲/卷纲_第X卷.md`, and the first rolling batch of `大纲/细纲_第XXX章.md`.
    - Create or update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
    - Run the `男频异世界知识库` ledger check before finalizing a premise or outline engine, then add a compact record after generation.
 8. Output a usable package:
-   - Japanese title candidates, premise, protagonist, cheat, world rules, first arc, episode 1 beats, terminology map, banned Chinese leakage list.
+   - Japanese title candidates, premise, protagonist, cheat, world rules, first arc, episode 1 beats, terminology map, banned Chinese leakage list, and the character-prompt companion for every named cast member created by the plan.
 
 ## Output Rules
 
@@ -120,3 +122,4 @@ Benchmark priority:
 - Avoid explaining the Chinese original unless useful for mapping.
 - Do not leave a project-bound plan only in chat when the user expects a reusable writing project; write the corresponding `设定/`, `大纲/`, and `追踪/` artifacts.
 - If the user asks for Japanese prose next, hand off to `$jp-isekai-write` with the localization map and episode beats.
+- Run `../jp-isekai/scripts/validate-character-prompts.py` on every saved character-prompt asset before handoff.

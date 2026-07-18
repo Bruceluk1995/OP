@@ -22,7 +22,10 @@ Do not use a mechanical scan as the self-check system. The default self-check is
 - Continuity: the first scene follows the previous episode's exact unresolved item, location, enemy, debt, quest, drop, rank, injury, or public pressure.
 - Cause and effect: every new skill use, boss weakness, rescue, reward, guild judgment, or faction reaction has setup on the page or in prior tracking.
 - Character state: names, roles, injuries, equipment, money, rank, companions, monsters, and faction reputation match the tracking files.
-- Character presence: `角色提示词.md` only lists characters who actually appear or are directly needed for the cover of this episode.
+- Character presence: every major named character introduced or used by the script has one prompt; `角色提示词.md` does not add anonymous extras merely for a cover.
+- Prompt language and identity: prompt bodies are Japanese-only and lock face, hair, body, clothing, colors, and worn accessories rather than scene behavior.
+- Empty-hand reference: no prompt contains a symbolic possession, keepsake, weapon, tool, work object, skill effect, aura, summoned creature, action pose, camera, or background scene. Move those details to a cover/shot prompt.
+- Heroine lane: named female leads/companions retain distinct Japanese male-audience isekai harem-anime heroine appeal unless the user or premise explicitly requires another visual direction; occupation or hardship alone never justifies an old/tired documentary design.
 - RPG rules: skills, cooldowns, drops, ranks, levels, guild rules, monster behavior, and money values do not contradict earlier episodes.
 - Combat logic: wins come from established ability, tactics, preparation, terrain, enemy misread, or OP reveal; do not randomly nerf or buff characters.
 - Payoff logic: rewards, rank-ups, loot, territory benefits, or slow-life gains follow visible action and witness reaction.
@@ -50,3 +53,5 @@ For per-episode delivery folders, require:
 - `封面.png` or `cover.png`
 
 If a cover is expected, verify the image is an actual file, landscape 16:9, and the cover prompt asks for both the episode click-title and the series/work title inside the image.
+
+Run `../../jp-isekai/scripts/validate-character-prompts.py <prompt-file>` and fix every finding before package delivery.

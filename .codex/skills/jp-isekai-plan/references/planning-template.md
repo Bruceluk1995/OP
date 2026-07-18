@@ -81,6 +81,16 @@ List 8-12 beats, each with:
 - Witness/subordinate reaction:
 - Upgrade/drop/status payoff or hook:
 
+## Character Prompt Companion
+
+Whenever this plan creates named cast, add or update `设定/角色提示词.md` under the rules in `../../jp-isekai/references/character-prompt-contract.md`:
+
+- one compact `## 共通画風` paragraph in Japanese;
+- one heading and one Japanese identity paragraph per major named character;
+- distinct Japanese isekai harem-anime heroine lanes for female leads/companions unless explicitly overridden;
+- neutral reference posture and empty hands;
+- no symbolic possessions, weapons, tools, work objects, skill effects, action, or scene composition.
+
 ## First Season / Episode List
 
 For short-season projects, list all 6 episode/chapter promises. Each item should include:

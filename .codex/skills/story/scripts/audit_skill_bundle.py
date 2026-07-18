@@ -98,6 +98,20 @@ PUSH_VIEWPOINT_GATE_REQUIREMENTS = (
     "Over-fragmentation test",
     "Connector-stuffing test",
 )
+MALE_CHARACTER_PROMPT_SKILLS = {
+    "jp-isekai",
+    "jp-isekai-plan",
+    "jp-isekai-write",
+    "jp-isekai-oneshot",
+    "jp-short-fiction-studio",
+}
+MALE_CHARACTER_PROMPT_CONTRACT_REQUIREMENTS = (
+    "No-Held-Prop Reference Rule",
+    "Male-Audience Heroine Look",
+    "Write prompt bodies in natural Japanese only",
+    "Keep both hands empty",
+    "validate-character-prompts.py",
+)
 
 
 @dataclass(frozen=True)
@@ -218,6 +232,31 @@ def audit_skill(skill_dir: Path) -> list[Finding]:
             "push_entertainment_editor_missing",
             "studio push chain must include the Entertainment Editor role",
         )
+    if skill in MALE_CHARACTER_PROMPT_SKILLS and "character-prompt-contract.md" not in text:
+        add(
+            findings,
+            "ERROR",
+            skill,
+            "male_character_prompt_contract_missing",
+            "male-isekai planning/writing routes must link the shared Japanese no-held-prop character prompt contract",
+        )
+    if skill == "jp-isekai":
+        prompt_contract = skill_dir / "references" / "character-prompt-contract.md"
+        prompt_validator = skill_dir / "scripts" / "validate-character-prompts.py"
+        for required_file in (prompt_contract, prompt_validator):
+            if not required_file.exists():
+                add(findings, "ERROR", skill, "male_character_prompt_file_missing", str(required_file))
+        if prompt_contract.exists():
+            contract_text = prompt_contract.read_text(encoding="utf-8")
+            for required in MALE_CHARACTER_PROMPT_CONTRACT_REQUIREMENTS:
+                if required not in contract_text:
+                    add(
+                        findings,
+                        "ERROR",
+                        skill,
+                        "male_character_prompt_rule_missing",
+                        f"shared character prompt contract must preserve token: {required}",
+                    )
     if skill in {"story-first-person-script", "story-third-person-script"}:
         gate_file = skill_dir / "references" / "push-quality-gate.md"
         if not gate_file.exists():

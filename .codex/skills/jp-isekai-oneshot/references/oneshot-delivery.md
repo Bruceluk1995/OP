@@ -33,13 +33,15 @@ Do not deliver only a mixed markdown file containing title, blueprint, body, cov
 
 ## Character Prompt File
 
-Write `角色提示词/角色提示词.md` as direct, single-paragraph visual prompts, not field-by-field sheets.
+Follow `../../jp-isekai/references/character-prompt-contract.md`. Write `角色提示词/角色提示词.md` in Japanese as direct, single-paragraph identity prompts, not field-by-field sheets.
 
 Include the protagonist, major companions, major antagonist, and any story-relevant creature or boss that needs visual continuity. Keep one heading per character, then one complete paragraph that can be pasted into an image/character generation tool.
 
-Default order inside each paragraph: age and role/species; height and body type; hair color, hairstyle, and texture; eye color, facial features, expression, and temperament; clothing, accessories, stable weapon/tool, emblem, and wear/cleanliness.
+Use one reusable `## 共通画風` paragraph, then order each character paragraph as: age and role/species; height and body type; hair color, hairstyle, and texture; eye color, facial features, expression, and temperament; clothing silhouette, colors, and worn accessories.
 
-Character prompts are stable visual identity only. Do not add cover composition, camera framing, scene action, one-off plot movement, or lines such as `适合封面姿态：`, `本集重点姿态：`, `封面构图：`, or `画面中：`. Put those instructions only in `封面/封面.md`.
+Female leads and companions default to distinct Japanese commercial isekai harem-anime heroine designs unless the premise or user explicitly chooses another visual lane. Do not infer an old face, tired body, or documentary workwear from occupation, hardship, widowhood, motherhood, or trauma.
+
+Keep hands empty. Do not include symbolic possessions, keepsakes, weapons, tools, work objects, skill effects, aura, summoned creatures, action, camera, background scene, or cover composition. Move them into `封面/封面.md` or the exact shot prompt that needs them. Run `../../jp-isekai/scripts/validate-character-prompts.py <prompt-file>` before delivery.
 
 ## Cover File
 

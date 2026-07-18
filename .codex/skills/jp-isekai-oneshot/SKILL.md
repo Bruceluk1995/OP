@@ -20,8 +20,9 @@ Read:
 
 1. `../jp-short-fiction-studio/SKILL.md`
 2. `../jp-short-fiction-studio/references/male-isekai.md`
-3. `../jp-short-fiction-studio/references/dynamic-market-learning.md` for push production or current Japanese-market premise discovery
-4. `../jp-isekai/references/topic-menu.md` when the user has not supplied a concrete premise
+3. `../jp-isekai/references/character-prompt-contract.md` whenever the task creates named cast or a script
+4. `../jp-short-fiction-studio/references/dynamic-market-learning.md` for push production or current Japanese-market premise discovery
+5. `../jp-isekai/references/topic-menu.md` when the user has not supplied a concrete premise
 
 When push narration is selected, also read:
 
@@ -68,11 +69,11 @@ Complete the progressive topic gate and obtain a concrete user-selected or expli
 
 Run the studio path once: Market Basis -> Producer -> Story Core -> High-Value Event Scan -> Entertainment Editor -> Change Structure -> the already locked Japanese writer branch -> Oral Rewrite -> Blind Editor -> Surface Lint. Restart from the earliest failed stage. Push narration must keep `writer_branch=flan_push`, lock the entertainment/retention chain before prose, draft natural spoken sentences before subtitle splitting, and complete the adversarial entertainment read, saved-body evidence map, and selected viewpoint's editorial release gate before surface lint.
 
-Browse for current Japanese-market rankings, trends, news, live-source requests, or an explicitly selected Chinese novel-site inspiration pass and follow the dynamic-market contract plus the source-specific contract. Chinese novel-site popularity is cross-market inspiration only; require a current Japanese cross-check before calling the premise Japanese-market validated. Story-market evidence selects the premise and modules; the Flan contract always owns push delivery. Opening cards, package files, cover prompts, character prompts, and ledgers remain optional.
+Browse for current Japanese-market rankings, trends, news, live-source requests, or an explicitly selected Chinese novel-site inspiration pass and follow the dynamic-market contract plus the source-specific contract. Chinese novel-site popularity is cross-market inspiration only; require a current Japanese cross-check before calling the premise Japanese-market validated. Story-market evidence selects the premise and modules; the Flan contract always owns push delivery. Opening cards, cover prompts, full package files, and ledgers remain optional. The character-prompt companion is required when named cast or a script is created, unless the user explicitly requests body-only output.
 
 For a saved push body, run `../story/scripts/validate-flan-push.py`. A `surface_fail` blocks delivery under the label “anime recap/push narration”; it does not reject the story core. A `surface_pass` is format evidence only and never quality approval.
 
-For project-bound work, save the Japanese body and one compact decision card. Create a full package only when requested.
+For project-bound work, save the Japanese body, one compact decision card, and `角色提示词/角色提示词.md`. Create the remaining full package only when requested. For chat-only work, append a compact prompt block after the requested artifact or save it beside a long body. Run `../jp-isekai/scripts/validate-character-prompts.py` on every saved prompt file.
 
 ## Male-Isekai Closure
 
@@ -93,3 +94,4 @@ For project-bound work, save the Japanese body and one compact decision card. Cr
 - Do not deliver third-person web-novel scenes or neutral chronology broken into short lines as push narration.
 - Do not call a premise market-validated when it has only one work or one list snapshot as evidence.
 - Do not present Chinese novel-site popularity as Japanese-market validation or copy its titles, systems, scene order, or named plot.
+- Do not put symbolic possessions, weapons, tools, skill effects, action poses, or scene composition into character mother prompts.

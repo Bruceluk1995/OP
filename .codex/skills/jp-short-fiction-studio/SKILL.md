@@ -21,6 +21,8 @@ Read exactly one lane file:
 - male isekai: `references/male-isekai.md`
 - female fantasy romance: `references/female-romance.md`
 
+For the male-isekai lane, also read `../jp-isekai/references/character-prompt-contract.md` whenever the task creates named cast or a script. This character-prompt companion is a lane deliverable, not optional cover packaging.
+
 Read `references/dynamic-market-learning.md` for push production or current Japanese-market premise discovery.
 
 When push narration is selected, also read `../story/references/push-prompt-architecture.md`, `../story/references/push-entertainment-gate.md`, `../story/references/push-retention-chain.md`, `../jp-isekai-write/references/push-narration-protocol.md`, and `../story/references/flan-push-strict-mode.md`. For first-person push, read `../story-first-person-script/SKILL.md` and its two push references. For third-person push, read `../story-third-person-script/SKILL.md` and its two push references. Do not load unrelated opening decks, ledgers, packaging guides, or old blueprint files unless the task needs them.
@@ -50,7 +52,7 @@ First preserve the normalized handoff as an immutable run lock: `presentation=<t
 7. **Japanese writer**: execute the already locked branch. Select a branch only when the upstream handoff is genuinely missing; ask if ambiguous instead of defaulting to traditional. For push, keep `writer_branch=flan_push`, lock an oral spine, draft natural spoken sentences, and postpone subtitle splitting.
 8. **Blind editor**: read the saved body without metrics, apply the entertainment and editorial release gates, identify the earliest boring point or presentation drift, then rewrite from the earliest failed stage.
 
-Planning remains compact and in memory. For chat-only work, output only the requested artifact. For project work, save the body plus one compact `作品决策卡.md`; do not create evidence, ledger, cover, character prompt, and audit files unless requested.
+Planning remains compact and in memory. For chat-only work, output only the requested artifact, plus the male-isekai character-prompt companion when named cast or a script is created. For project work, save the body plus one compact `作品决策卡.md`; in the male-isekai lane also save the required character-prompt asset. Do not create evidence, ledger, cover, or audit files unless requested.
 
 ## Deep Path — Only When Needed
 
@@ -192,3 +194,4 @@ Report the lane, evidence mode, presentation branch, operation, actual character
 - No copied old body plus appended ending called a rewrite.
 - No Chinese genre machinery translated word for word into Japanese.
 - No `surface_fail` body delivered under a push-narration label.
+- In the male-isekai lane, no newly created named cast without Japanese-only empty-hand character prompts, and no symbolic object, weapon, tool, skill effect, action, or scene composition inside those prompts.

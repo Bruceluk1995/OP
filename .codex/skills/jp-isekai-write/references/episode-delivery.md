@@ -83,12 +83,12 @@ After packaging a project-bound episode, update the project memory files describ
 - one generated-history record in `男频异世界知识库/generated-ledger.jsonl`
 ## Character Prompt Format
 
-Write `角色提示词.md` as direct, single-paragraph visual prompts, not field-by-field bullet sheets. Keep one heading per character, then one complete paragraph that can be pasted into an image/character generation tool.
+Follow `../../jp-isekai/references/character-prompt-contract.md`. Write `角色提示词.md` in Japanese as direct, single-paragraph identity prompts, not field-by-field bullet sheets. Use one shared `## 共通画風` paragraph, then one heading and one complete paragraph per character.
 
-Default order inside each paragraph: age and identity/species; height and body type; hair color, hairstyle, and hair texture; eye color, facial features, expression, and temperament; clothing, accessories, stable weapons/tools, emblem, and cleanliness/wear.
+Default order inside each paragraph: age and identity/species; height and body type; hair color, hairstyle, and hair texture; eye color, facial features, expression, and temperament; clothing silhouette, colors, and worn accessories.
 
-Template style:
+Female leads and companions default to distinct Japanese commercial isekai harem-anime heroine designs unless the premise or user explicitly chooses another visual lane. Do not infer an old face, tired body, or documentary workwear from occupation, hardship, widowhood, motherhood, or trauma.
 
-`一位17岁左右的西欧系贵族少年，身高176cm左右，体型修长挺拔，银色短发到耳下，发丝柔顺，有贵族感，蓝灰色眼睛，五官精致，表情从容自信。脸型清秀，气质优雅但不阴柔。身穿异世界贵族少年剑士服：白色或浅灰色高领上衣，深蓝色短披风，银色纽扣，腰间佩戴细剑，胸前或肩部有贵族纹章装饰，靴子干净精致。`
+Character mother prompts use neutral reference posture and empty hands. Do not include symbolic possessions, keepsakes, weapons, tools, work objects, skill effects, aura, summoned creatures, action, camera, background scene, or cover composition. Move all of those into `封面.md` or the exact shot prompt that needs them.
 
-Character prompts are stable visual identity only. Do not add cover composition, camera framing, scene action, one-off plot movement, or lines such as `适合封面姿态：`, `本集重点姿态：`, `封面构图：`, or `画面中：`. Put those instructions only in `封面.md`.
+Run `../../jp-isekai/scripts/validate-character-prompts.py <prompt-file>` before delivery.

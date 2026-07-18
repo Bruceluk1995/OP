@@ -54,9 +54,14 @@ Chinese male-audience novel rankings, category pages, tags, and public synopsis-
 
 Load project memory only for an existing project, serial continuity, or explicit anti-homogenization request. Normal chat generation does not require a ledger, package tree, or deployment setup.
 
+## Character Prompt Companion
+
+Read `references/character-prompt-contract.md` whenever this route or any downstream male-isekai route invents named characters, outputs a cast, drafts a script with named characters, or saves a plan/episode/one-shot. Character prompts are part of the male-isekai character handoff, not optional cover packaging. Create Japanese-only neutral reference prompts with empty hands and no symbolic object, weapon, tool, skill effect, action, or scene composition. Apply the contract's distinct Japanese harem-anime heroine design by default unless the user or premise explicitly selects another visual lane.
+
 ## Hard Rules
 
 - One router selects one downstream route; do not run plan, write, one-shot, and review as simultaneous authorities.
 - Do not use a random opening card or fixed character count as a quality gate.
 - Do not copy ranking works, source IP, dialogue, scene order, or named plots.
 - Do not call a copied body plus appended ending a rewrite.
+- Do not deliver a newly created named male-isekai cast without its character-prompt companion unless the user explicitly requests body-only output.

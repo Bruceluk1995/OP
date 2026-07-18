@@ -19,7 +19,7 @@ Write Japanese-market male-audience isekai in the selected presentation mode. Tr
 
 ## Execution Profiles
 
-- **Fast draft (default):** read the current outline/context and matching lane material; draft through protagonist choice and state change, blind-edit, and save the requested body. Do not run unrelated menus, cards, package generation, or ledger checks. Saved push bodies still require their push contracts and surface gate.
+- **Fast draft (default):** read the current outline/context and matching lane material; draft through protagonist choice and state change, blind-edit, and save the requested body. Do not run unrelated menus, cards, cover generation, or ledger checks. A character-prompt companion remains required when the draft creates or uses named cast, unless the user explicitly requests body-only output. Saved push bodies still require their push contracts and surface gate.
 - **Full project:** retain all project memory, tracking, ledger, delivery package, character prompt, cover, and self-check capabilities below.
 - **Research/variation:** retain market browsing, dynamic benchmarks, type packs, and optional opening-card experiments when requested.
 
@@ -42,6 +42,7 @@ Choose one profile from the request. Full capabilities remain available; they ar
 - Read `references/push-narration-protocol.md` whenever push narration mode is selected, and for serial continuity in that mode.
 - Read `references/self-check.md` before final delivery of any saved episode, project-bound output, or per-episode folder.
 - Read `../jp-isekai/references/project-memory.md` before writing any saved/project-bound episode, continuing a serial, or checking anti-homogenization.
+- Read `../jp-isekai/references/character-prompt-contract.md` whenever drafting a script with named characters or creating/updating cast. This contract overrides older delivery wording that allowed stable weapons, tools, symbolic possessions, or skill effects inside character mother prompts.
 - If the outline or user request names a subtype lane, read the loaded project benchmark card or `对标/{lane}/` report first when available, then project subtype notes, then the matching `../jp-isekai-plan/references/type-packs/{lane}.md` only as fallback. The episode must follow the selected lane's benchmark/payoff engine instead of generic isekai.
 
 ## Drafting Workflow
@@ -91,6 +92,7 @@ Choose one profile from the request. Full capabilities remain available; they ar
 6. Save long outputs to a file when the result would be too large for chat. For project-bound episodes, create the per-episode delivery folder described in `references/episode-delivery.md`.
 7. Package delivery assets when applicable:
    - `正文.md`, `标题.md`, `角色提示词.md`, `封面.md`, and an actual generated `封面.png`.
+   - Create/update `角色提示词.md` alongside every saved script that contains named characters, even when the user does not request a cover. Write Japanese-only identity prompts with empty hands and no symbolic object, weapon, tool, skill effect, action, or scene composition.
    - Continue syncing a flat `episodes/episode_XXX_ja.md` only for compatibility when the project already uses it.
 8. After saving a project-bound episode, update project memory:
    - Update `追踪/伏笔.md`, `追踪/时间线.md`, `追踪/角色状态.md`, and `追踪/上下文.md`.
@@ -105,6 +107,7 @@ Choose one profile from the request. Full capabilities remain available; they ar
    - Scan for banned Chinese leakage using `references/terminology.md`.
    - If the source was Chinese 古言/朝堂/宫斗, verify the power structure was rebuilt for Japanese RPG/fantasy readers instead of directly carrying over emperor, harem, cold-palace, concubine, or legitimate/concubine-born systems.
    - Run the Codex AI story/package audit in `references/self-check.md`; fix story bugs, Chinese leakage, package omissions, unused character prompts, and cover-image problems before reporting completion.
+   - Run `python .codex/skills/jp-isekai/scripts/validate-character-prompts.py <saved-prompt-file>` for every saved character-prompt asset; a failure blocks package delivery until prop/effect/action leakage is removed.
    - Check the draft against `references/episode-blueprint.md`: target emotion delivered, dense beats expanded, sparse beats compressed, reward/status/pressure consequence present, and ending hook specific.
    - In push mode, scan the opening and whole draft against `references/push-narration-protocol.md`: click promise, causal gap, concrete conflict, oral readability, information turns, title payoff, consistent narrative person, and no subtitle/ASR debris.
    - Scan the whole draft against `references/anti-ai-gates.md`: no generic texture, stock summary lines, author explanation, uniform paragraph rhythm, or model/meta leakage.
